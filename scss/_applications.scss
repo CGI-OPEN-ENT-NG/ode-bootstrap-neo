@@ -1,0 +1,356 @@
+.application {
+    &__title {
+        color: $secondary;
+    }
+    &__item {
+        width: 150px;
+        margin: 10px;
+        text-align: center;
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            color: $text-color;
+            &:hover {
+                color: $primary;
+            }
+        }
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+            color: white;
+            // A supprimer une fois les icones là :
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background-color: $gray-400;
+        }
+        span {
+            padding-top: 10px;
+            line-height: 1.2;
+        }
+    }
+}
+
+.applications {
+    &__search {
+        @extend .my-5;
+        input[type="search"] {
+            background-color: white;
+            border-radius: $border-radius;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__favorite {
+        background-color: $white;
+        @extend .p-3;
+    }
+    &__connector {
+        h2 {
+            span {
+                padding-right: 10px;
+                background-color: $gray-100;
+            }
+            &::after {
+                display: block;
+                content: "";
+                border-top: 1px dashed $gray-500;
+                margin-top: -17px;
+            }
+        }
+    }
+}
+
+.application__item {
+    // ICON COLOR : RED
+    &.notes,
+    &.notes-large, 
+
+    &.pages,
+    &.pages-large,
+
+    &.rbs,
+    &.rbs-large,
+
+    &.support,
+    &.support-large,
+    
+    &.wiki,
+    &.wiki-large,
+
+    &.workspace,
+    &.workspace-large {
+        color: $red;
+    }
+
+    // ICON COLOR : ORANGE
+    &.paths,
+    &.paths-large,
+    
+    &.blog,
+    &.blog-large,
+
+    &.forum,
+    &.forum-large,
+    
+    &.userbook,
+    &.userbook-large {
+        color: $orange;
+    }
+
+    // ICON COLOR : YELLOW
+    &.archive,
+    &.archive-large,
+
+    &.attendance,
+    &.attendance-large,
+    
+    &.calendar,
+    &.calendar-large
+
+    &.conversation,
+    &.conversation-large,
+
+    &.library,
+    &.library-large,
+    
+    &.timelinegenerator,
+    &.timelinegenerator-large {
+        color: $yellow;
+    }
+
+    // ICON COLOR : GREEN
+    &.collaborative-wall,
+    &.collaborative-wall-large,
+    
+    &.notebook,
+    &.notebook-large,
+    
+    &.schoolbook,
+    &.schoolbook-large,
+
+    &.scrap-book,
+    &.scrap-book-large {
+        color: $green;
+    }
+
+    // ICON COLOR : CYAN
+    &.rack,
+    &.rack-large,
+    
+    &.cahier-de-texte,
+    &.cahier-de-texte-large,
+    
+    &.mindmap,
+    &.mindmap-large,
+    
+    &.pad,
+    &.pad-large,
+    
+    &.polls,
+    &.poll-large {
+        color: $cyan;
+    }
+
+    // ICON COLOR : INDIGO
+
+    // ICON COLOR : PURPLE
+    &.account,
+    &.account-large,
+
+    &.actualites,
+    &.actualites-large,
+    
+    &.admin,
+    &.admin-large,
+    
+    &.community,
+    &.community-large,
+
+    &.cns,
+    &.cns-large,
+    
+    &.exercizer,
+    &.exercizer-large,
+
+    &.settings-class,
+    &.settings-class-large,
+
+    &.sharebigfiles,
+    &.sharebigfiles-large,
+
+    &.stats,
+    &.stats-large,
+
+    &.statistics,
+    &.statistics-large,
+    
+    &.visioconf,
+    &.visioconf-large {
+        color: $purple;
+    }
+
+
+    // Définit l'image à utiliser pour l'icone
+    &.rack,
+    &.rack-large {
+        i:before {content:'\e80d';}
+    }
+    &.schoolbook,
+    &.schoolbook-large {
+        i:before {content:'\e91e';}
+    }
+    &.archive,
+    &.archive-large {
+        i:before {content:'\e81d';}
+    }
+    &.admin,
+    &.admin-large {
+        i:before {content:'\e81a';}
+    }
+    &.cahier-de-texte,
+    &.cahier-de-texte-large {
+        i:before {content:'\e910';}
+    }
+    &.wiki,
+    &.wiki-large {
+        i:before {content:'\e813';}
+    }
+    &.cns,
+    &.cns-large {
+        i:before {content:'\e88a';}
+    }
+    &.conversation,
+    &.conversation-large {
+        i:before {content:'\e804';}
+    }
+    &.paths,
+    &.paths-large {
+        i:before {content:'\e94d';}
+    }
+    &.notebook,
+    &.notebook-large {
+        i:before {content:'\e8d4';}
+    }
+    &.scrap-book,
+    &.scrap-book-large {
+        i:before {content:'\e8d4';}
+    }
+    &.blog,
+    &.blog-large {
+        i:before {content:'\e809';}
+    }
+    &.account,
+    &.account-large {
+        i:before {content:'\e905';}
+    }
+    &.support,
+    &.support-large {
+        i:before {content:'\e835';}
+    }
+    &.workspace,
+    &.workspace-large {
+        i:before {content:'\e911';}
+    }
+    &.admin-portal,
+    &.admin-portal-large {
+        i:before {content:'\e908';}
+    }
+    &.stats,
+    &.stats-large {
+        i:before {content:'\e909';}
+    }
+    &.userbook,
+    &.userbook-large {
+        i:before {content:'\e811';}
+    }
+    &.mindmap,
+    &.mindmap-large {
+        i:before {content:'\e859';}
+    }
+    &.timelinegenerator,
+    &.timelinegenerator-large {
+        i:before {content:'\e819';}
+    }
+    &.actualites,
+    &.actualites-large {
+        i:before {content:'\e85b';}
+    }
+    &.pad,
+    &.pad-large {
+        i:before {content:'\e829';}
+    }
+    &.settings-class,
+    &.settings-class-large {
+      i:before {content: '\e942';}
+    }
+    &.library,
+    &.library-large {
+      i:before {content: '\e94c';}
+    }
+    &.visioconf,
+    &.visioconf-large {
+        i::before {content: "\e957";}
+    }
+    &.notes,
+    &.notes-large {
+        i:before {content:'\e832';}
+    }
+    &.attendance,
+    &.attendance-large {
+        i:before {content:'\e80b';}
+    }
+    &.exercizer,
+    &.exercizer-large {
+        i:before {content:'\e833';}
+    &.calendar,
+    &.calendar-large {
+        i:before {content:'\e834';}
+    }
+    &.collaborative-wall,
+    &.collaborative-wall-large {
+        i:before {content:'\e800';}
+    }
+    &.statistics,
+    &.statistics-large {
+        i:before {content:'\e810';}
+    }
+    &.polls,
+    &.poll-large {
+        i:before {content:'\e832';}
+    }
+    &.community,
+    &.community-large {
+        i:before {content:'\e814';}
+    }
+    &.forum,
+    &.forum-large {
+        i:before {content:'\e81e';}
+    }
+    &.pages,
+    &.pages-large {
+        i:before {content:'\e876';}
+    }
+    &.rbs,
+    &.rbs-large {
+        i:before {content:'\e80e';}
+    }
+    &.sharebigfiles,
+    &.sharebigfiles-large {
+        i:before {content:'\e8cb';}
+    }
+
+    // APPS 1D: add bullet for specify this app is 1D
+    // &.exercizer,
+    // &.exercizer-large {
+    //     &:after {@include app1d;}
+    // }
+}}
