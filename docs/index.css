@@ -5017,7 +5017,7 @@ END DOCUMENTATION */
     font-size: 87.5%;
     color: #fff;
     background-color: #212529;
-    border-radius: 5px; }
+    border-radius: 2px; }
     .ode-bootstrap-neo kbd kbd {
       padding: 0;
       font-size: 100%;
@@ -8773,21 +8773,21 @@ END DOCUMENTATION */
     font-size: 1.25rem;
     line-height: 1.5; }
   .ode-bootstrap-neo .pagination-lg .page-item:first-child .page-link {
-    border-top-left-radius: 0.3rem;
-    border-bottom-left-radius: 0.3rem; }
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; }
   .ode-bootstrap-neo .pagination-lg .page-item:last-child .page-link {
-    border-top-right-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem; }
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; }
   .ode-bootstrap-neo .pagination-sm .page-link {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
     line-height: 1.5; }
   .ode-bootstrap-neo .pagination-sm .page-item:first-child .page-link {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem; }
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px; }
   .ode-bootstrap-neo .pagination-sm .page-item:last-child .page-link {
-    border-top-right-radius: 0.2rem;
-    border-bottom-right-radius: 0.2rem; }
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; }
   .ode-bootstrap-neo .badge {
     display: inline-block;
     padding: 5px 20px;
@@ -11135,14 +11135,16 @@ END DOCUMENTATION */
     margin-left: 1.5rem !important; }
   .ode-bootstrap-neo .m-5 {
     margin: 3rem !important; }
-  .ode-bootstrap-neo .mt-5,
-  .ode-bootstrap-neo .my-5 {
+  .ode-bootstrap-neo .mt-5, .ode-bootstrap-neo .applications__favorite,
+  .ode-bootstrap-neo .my-5,
+  .ode-bootstrap-neo .applications__search {
     margin-top: 3rem !important; }
   .ode-bootstrap-neo .mr-5,
   .ode-bootstrap-neo .mx-5 {
     margin-right: 3rem !important; }
   .ode-bootstrap-neo .mb-5,
-  .ode-bootstrap-neo .my-5 {
+  .ode-bootstrap-neo .my-5,
+  .ode-bootstrap-neo .applications__search {
     margin-bottom: 3rem !important; }
   .ode-bootstrap-neo .ml-5,
   .ode-bootstrap-neo .mx-5 {
@@ -11175,7 +11177,7 @@ END DOCUMENTATION */
   .ode-bootstrap-neo .pl-1,
   .ode-bootstrap-neo .px-1 {
     padding-left: 0.25rem !important; }
-  .ode-bootstrap-neo .p-2 {
+  .ode-bootstrap-neo .p-2, .ode-bootstrap-neo .applications__favorite {
     padding: 0.5rem !important; }
   .ode-bootstrap-neo .pt-2,
   .ode-bootstrap-neo .py-2 {
@@ -13453,6 +13455,30 @@ END DOCUMENTATION */
           opacity: 0.5; }
       .ode-bootstrap-neo .toaster__open.checked::before {
         opacity: 1; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/roboto/Roboto-Regular.ttf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/roboto/Roboto-Italic.ttf);
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/roboto/Roboto-Bold.ttf);
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/roboto/Roboto-BoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic; }
 
 @font-face {
   font-family: "Roboto";

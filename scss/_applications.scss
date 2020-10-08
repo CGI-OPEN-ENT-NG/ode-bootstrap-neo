@@ -85,6 +85,32 @@
         .opacity-50 {
             opacity: 0.5;
         }
+        &.app-1d::before {
+            content: "1D";
+            position: absolute;
+            top: 0;
+            right: 25px;
+            background-color: $primary;
+            color: $white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            font-size: 0.9rem;
+        }
+    }
+}
+@include media-breakpoint-down(sm) {
+    .application {
+        &__item {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            i {
+                font-size: 3rem;
+                width: 75px;
+                height: 75px;
+            }
+        }
     }
 }
 
@@ -247,9 +273,6 @@
 
     &.archive,
     &.archive-large,
-
-    &.attendance,
-    &.attendance-large,
     
     &.calendar,
     &.calendar-large,
