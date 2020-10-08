@@ -106,6 +106,9 @@
             i {
                 transition: color 0.1s ease-in-out;
                 color: $primary;
+                i {
+                    color: $primary;
+                }
             }
             .application__item--add,
             .application__item--remove {
@@ -153,6 +156,32 @@
             }
             span {
                 font-size: 0.9rem;
+            }
+        }
+        &.app-1d::before {
+            content: "1D";
+            position: absolute;
+            top: 0;
+            right: 25px;
+            background-color: $primary;
+            color: $white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            font-size: 0.9rem;
+        }
+    }
+}
+@include media-breakpoint-down(sm) {
+    .application {
+        &__item {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            i {
+                font-size: 3rem;
+                width: 75px;
+                height: 75px;
             }
         }
     }

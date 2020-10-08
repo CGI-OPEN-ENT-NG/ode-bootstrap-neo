@@ -1,5 +1,53 @@
-.logo {
-    display: inline-block;
-    height: 40px;
-    margin: 5px;
+
+header.navbar.navbar-dark {
+    padding: 5px 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000000;
+    a {
+        color: $white;
+    }
+    .logo {
+        display: inline-block;
+        height: 35px;
+        margin: 5px;
+        padding-bottom: 5px;
+    }
+    .navigation {
+        a {
+            display: inline-block;
+            text-decoration: none!important;
+            border-bottom: 5px solid transparent;
+            margin: 0 5px;
+            padding: 0 5px;
+            &:hover {
+                border-bottom: 5px solid $primary;
+            }
+            i[class*="ic-"] {
+                color: $white;
+                font-size: 1.8rem;
+            }
+        }
+    } 
+}
+@include media-breakpoint-down(sm) {
+    header.navbar.navbar-dark {
+        padding-bottom: 3px;
+        .navigation {
+            a {
+                margin: 0 5px;
+                padding: 0;
+                i[class*="ic-"] {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        a.application__title {
+            display: block;
+            width: calc(100% - 250px);
+        }
+        .logo {height: 30px}
+    }
 }

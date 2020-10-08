@@ -1,0 +1,25 @@
+// Initialize good style and good font sur all icons
+i[class*="ic-"] {
+    font-family: "generic-icons";
+    font-style: normal;
+}
+
+// Icons list
+.ic-home {
+    &::before {content: '\e82b'}
+}
+.ic-apps {
+    &::before {content: '\e86c'}
+}
+.ic-conversation {
+    &::before {content: '\e804'}
+}
+.ic-search {
+    &::before {content: '\e8d0'}
+}
+.ic-help {
+    &::before {content: '\e835'}
+}
+.ic-disconnect {
+    &::before {content: '\e842'}
+}
