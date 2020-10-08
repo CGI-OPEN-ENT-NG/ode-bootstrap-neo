@@ -1,0 +1,19 @@
+.input-group {
+    .btn {
+    box-shadow: none!important;
+    }
+}
+
+.form-control::placeholder {
+    font-style: italic;
+}
+
+.input-searchbar {
+    .fa-search {
+        position: absolute;
+        right: 30px;
+        top: 15px;
+        font-size: 1.3rem;
+        color: $cyan;
+    }
+}

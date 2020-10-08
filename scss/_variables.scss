@@ -63,7 +63,7 @@ $colors: map-merge(
     "teal":       $teal,
     "cyan":       $cyan,
     "white":      $white,
-    "gray":       $gray-600,
+    "gray":       $gray-400,
     "gray-dark":  $gray-800
   ),
   $colors
@@ -135,6 +135,8 @@ $theme-colors: map-merge(
     "teal":       $teal,
     "cyan":       $cyan,
     "white":      $white,
+    "gray":       $gray-400,
+    "gray-dark":  $gray-800,
     "black":      $black
   ),
   $theme-colors
@@ -511,7 +513,7 @@ $label-margin-bottom:                   .5rem ;
 $input-padding-y:                       $input-btn-padding-y ;
 $input-padding-x:                       $input-btn-padding-x ;
 $input-font-family:                     "Roboto" ;
-$input-font-size:                       0.9rem ;
+$input-font-size:                       1rem ;
 $input-font-weight:                     $font-weight-base ;
 $input-line-height:                     $input-btn-line-height ;
 
