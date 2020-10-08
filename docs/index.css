@@ -11159,14 +11159,16 @@ END DOCUMENTATION */
     margin-left: 1.5rem !important; }
   .ode-bootstrap-neo .m-5 {
     margin: 3rem !important; }
-  .ode-bootstrap-neo .mt-5,
-  .ode-bootstrap-neo .my-5 {
+  .ode-bootstrap-neo .mt-5, .ode-bootstrap-neo .applications__favorite,
+  .ode-bootstrap-neo .my-5,
+  .ode-bootstrap-neo .applications__search {
     margin-top: 3rem !important; }
   .ode-bootstrap-neo .mr-5,
   .ode-bootstrap-neo .mx-5 {
     margin-right: 3rem !important; }
   .ode-bootstrap-neo .mb-5,
-  .ode-bootstrap-neo .my-5 {
+  .ode-bootstrap-neo .my-5,
+  .ode-bootstrap-neo .applications__search {
     margin-bottom: 3rem !important; }
   .ode-bootstrap-neo .ml-5,
   .ode-bootstrap-neo .mx-5 {
@@ -11199,7 +11201,7 @@ END DOCUMENTATION */
   .ode-bootstrap-neo .pl-1,
   .ode-bootstrap-neo .px-1 {
     padding-left: 0.25rem !important; }
-  .ode-bootstrap-neo .p-2 {
+  .ode-bootstrap-neo .p-2, .ode-bootstrap-neo .applications__favorite {
     padding: 0.5rem !important; }
   .ode-bootstrap-neo .pt-2,
   .ode-bootstrap-neo .py-2 {
@@ -13477,6 +13479,30 @@ END DOCUMENTATION */
           opacity: 0.5; }
       .ode-bootstrap-neo .toaster__open.checked::before {
         opacity: 1; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/roboto/Roboto-Regular.ttf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/roboto/Roboto-Italic.ttf);
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/roboto/Roboto-Bold.ttf);
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/roboto/Roboto-BoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic; }
 
 /*TODO define skins here if there is not variable changes. Else define in specific files (and release build should take all of them)*/
 .ode-bootstrap-neo {
