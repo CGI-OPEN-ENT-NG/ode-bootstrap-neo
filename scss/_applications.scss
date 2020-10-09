@@ -6,8 +6,27 @@
         position: relative;
         width: 160px;
         height: 160px;
-        margin: 10px;
+        margin: 5px;
+        padding: 10px;
         text-align: center;
+        border: 1px dashed transparent;
+        border-radius: $border-radius;
+        transition: border 0.25s ease-in-out, opacity 0.4s ease-in-out;
+        &::after {
+            font-family: "FontAwesome";
+            content:"\f0b2";
+            line-height: 130px;
+            font-size: 3rem;
+            color: $accent;
+            background-color: rgba($accent,0.1);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.25s ease-in-out;
+        }
         a {
             display: flex;
             flex-direction: column;
@@ -16,12 +35,6 @@
             align-items: center;
             color: $text-color;
             text-decoration: none;
-            &:hover {
-                color: $primary;
-                i {
-                    color: $primary;
-                }
-            }
         }
         i {
             display: flex;
@@ -33,7 +46,7 @@
             color: $text-color;
         }
         span {
-            padding-top: 10px;
+            padding-top: 5px;
             line-height: 1.2;
         }
         &.app-1d::before {
@@ -47,6 +60,19 @@
             height: 25px;
             border-radius: 50%;
             font-size: 0.9rem;
+        }
+        &:hover { // A transformer au grab
+            transition: border 0.25s ease-in-out, opacity 0.4s ease-in-out;
+            border-color: $accent;
+            &::after {
+                opacity: 1;
+            }
+            a {
+                color: $primary;
+                i {
+                    color: rgba($primary, 0.25);
+                }
+            }
         }
     }
 }
@@ -110,6 +136,7 @@
     }
 }
 
+// APPLICATIONS ICONS
 .application {
     font-family: "generic-icons";
     font-style: normal;

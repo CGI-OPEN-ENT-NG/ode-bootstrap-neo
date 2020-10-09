@@ -12589,8 +12589,26 @@ readers do not read off random characters that represent icons */
   position: relative;
   width: 160px;
   height: 160px;
-  margin: 10px;
-  text-align: center; }
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  border: 1px dashed transparent;
+  border-radius: 5px;
+  transition: border 0.25s ease-in-out, opacity 0.4s ease-in-out; }
+  .ode-bootstrap-neo .application__item::after {
+    font-family: "FontAwesome";
+    content: "\f0b2";
+    line-height: 130px;
+    font-size: 3rem;
+    color: #FF8500;
+    background-color: rgba(255, 133, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out; }
   .ode-bootstrap-neo .application__item a {
     display: flex;
     flex-direction: column;
@@ -12599,10 +12617,6 @@ readers do not read off random characters that represent icons */
     align-items: center;
     color: #3f454f;
     text-decoration: none; }
-    .ode-bootstrap-neo .application__item a:hover {
-      color: #FF8500; }
-      .ode-bootstrap-neo .application__item a:hover i {
-        color: #FF8500; }
   .ode-bootstrap-neo .application__item i {
     display: flex;
     justify-content: center;
@@ -12612,7 +12626,7 @@ readers do not read off random characters that represent icons */
     font-size: 5rem;
     color: #3f454f; }
   .ode-bootstrap-neo .application__item span {
-    padding-top: 10px;
+    padding-top: 5px;
     line-height: 1.2; }
   .ode-bootstrap-neo .application__item.app-1d::before {
     content: "1D";
@@ -12625,6 +12639,15 @@ readers do not read off random characters that represent icons */
     height: 25px;
     border-radius: 50%;
     font-size: 0.9rem; }
+  .ode-bootstrap-neo .application__item:hover {
+    transition: border 0.25s ease-in-out, opacity 0.4s ease-in-out;
+    border-color: #FF8500; }
+    .ode-bootstrap-neo .application__item:hover::after {
+      opacity: 1; }
+    .ode-bootstrap-neo .application__item:hover a {
+      color: #FF8500; }
+      .ode-bootstrap-neo .application__item:hover a i {
+        color: rgba(255, 133, 0, 0.25); }
 
 @media (max-width: 767.98px) {
   .ode-bootstrap-neo .application__item {
@@ -12890,6 +12913,11 @@ readers do not read off random characters that represent icons */
       width: calc(100% - 250px); }
     .ode-bootstrap-neo header.navbar.navbar-dark .logo {
       height: 30px; } }
+
+.ode-bootstrap-neo .transition-hover {
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease; }
 
 .ode-theme-v1 {
   background: none; }
