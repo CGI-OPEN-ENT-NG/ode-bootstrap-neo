@@ -97,6 +97,19 @@
             border-radius: 50%;
             font-size: 0.9rem;
         }
+        &:hover { // A transformer au grab
+            transition: border 0.25s ease-in-out, opacity 0.4s ease-in-out;
+            border-color: $accent;
+            &::after {
+                opacity: 1;
+            }
+            a {
+                color: $primary;
+                i {
+                    color: rgba($primary, 0.25);
+                }
+            }
+        }
     }
 }
 @include media-breakpoint-down(sm) {
