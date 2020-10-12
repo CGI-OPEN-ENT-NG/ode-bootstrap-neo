@@ -9,9 +9,9 @@
         margin: 5px;
         padding: 10px;
         text-align: center;
-        border: 1px dashed transparent;
-        border-radius: $border-radius;
-        transition: border 0.25s ease-in-out, opacity 0.4s ease-in-out;
+        border: 1px solid transparent;
+        border-radius: $border-radius-lg;
+        transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.35s ease-in-out;
         &::after {
             font-family: "FontAwesome";
             content:"\f0b2";
@@ -47,7 +47,7 @@
         }
         span {
             padding-top: 5px;
-            line-height: 1.2;
+            line-height: 1.1;
         }
         &.app-1d::before {
             content: "1D";
@@ -62,30 +62,46 @@
             font-size: 0.9rem;
         }
         &:hover { // A transformer au grab
-            transition: border 0.25s ease-in-out, opacity 0.4s ease-in-out;
-            border-color: $accent;
-            &::after {
-                opacity: 1;
-            }
+            background-color: rgba($white, 0.5);
+            border: 1px solid $gray-300;
+            box-shadow: 5px 5px 15px rgba($black, 0.1);
+            transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.35s ease-in-out;
+            // style du grab
+            // transition: border 0.25s ease-in-out, opacity 0.4s ease-in-out;
+            // border-color: $accent;
+            // &::after {
+            //     opacity: 1;
+            // }
             a {
+                transition: color 0.1s ease-in-out;
                 color: $primary;
                 i {
-                    color: rgba($primary, 0.25);
+                    transition: color 0.1s ease-in-out;
+                    color: $primary;
                 }
             }
+        }
+        &:active {
+            background-color: rgba($white, 0.8);
+            border-color: $accent;
+            box-shadow: 2px 2px 10px rgba($black, 0.1) inset;
+            transition: background-color 0.25s ease-in-out, box-shadow 0.35s ease-in-out, border 0.15s ease-in-out;
         }
     }
 }
 @include media-breakpoint-down(sm) {
     .application {
         &__item {
-            width: 120px;
-            height: 120px;
+            width: 115px;
+            height: 140px;
             margin: 5px;
             i {
                 font-size: 3rem;
                 width: 75px;
                 height: 75px;
+            }
+            span {
+                font-size: 0.9rem;
             }
         }
     }
@@ -104,7 +120,7 @@
         justify-content: center;
     }
     &__favorite {
-        border: 2px solid $cyan;
+        border: 1px solid $cyan;
         border-radius: $border-radius;
         @extend .p-2;
         @extend .mt-5;
