@@ -171,30 +171,46 @@
             font-size: 0.9rem;
         }
         &:hover { // A transformer au grab
-            transition: border 0.25s ease-in-out, opacity 0.4s ease-in-out;
-            border-color: $accent;
-            &::after {
-                opacity: 1;
-            }
+            background-color: rgba($white, 0.5);
+            border: 1px solid $gray-300;
+            box-shadow: 5px 5px 15px rgba($black, 0.1);
+            transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.35s ease-in-out;
+            // style du grab
+            // transition: border 0.25s ease-in-out, opacity 0.4s ease-in-out;
+            // border-color: $accent;
+            // &::after {
+            //     opacity: 1;
+            // }
             a {
+                transition: color 0.1s ease-in-out;
                 color: $primary;
                 i {
-                    color: rgba($primary, 0.25);
+                    transition: color 0.1s ease-in-out;
+                    color: $primary;
                 }
             }
+        }
+        &:active {
+            background-color: rgba($white, 0.8);
+            border-color: $accent;
+            box-shadow: 2px 2px 10px rgba($black, 0.1) inset;
+            transition: background-color 0.25s ease-in-out, box-shadow 0.35s ease-in-out, border 0.15s ease-in-out;
         }
     }
 }
 @include media-breakpoint-down(sm) {
     .application {
         &__item {
-            width: 120px;
-            height: 120px;
+            width: 115px;
+            height: 140px;
             margin: 5px;
             i {
                 font-size: 3rem;
                 width: 75px;
                 height: 75px;
+            }
+            span {
+                font-size: 0.9rem;
             }
         }
     }
