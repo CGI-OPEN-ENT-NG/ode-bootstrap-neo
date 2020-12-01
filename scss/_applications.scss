@@ -97,7 +97,7 @@
             border-radius: 50%;
             font-size: 0.9rem;
         }
-        &:hover { // A transformer au grab
+        &:hover {
             background-color: rgba($white, 0.5);
             border: 1px solid $gray-300;
             box-shadow: 5px 5px 15px rgba($black, 0.1);
