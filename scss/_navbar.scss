@@ -6,7 +6,9 @@ header.navbar.navbar-dark {
     left: 0;
     right: 0;
     z-index: 1000000;
+    box-shadow: 0 2px 5px $shadow-light;
     a {
+        display: block;
         color: $white;
     }
     .logo {
@@ -15,15 +17,25 @@ header.navbar.navbar-dark {
         margin: 5px;
         padding-bottom: 5px;
     }
+    .avatar #my-photo {
+        width: 30px;
+        border-radius: 50%;
+        background-color: white; // A retirer quand on aura refait l'avatar
+    }
     .navigation {
-        a {
+        &__item {
             display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
             text-decoration: none!important;
             border-bottom: 5px solid transparent;
-            margin: 0 5px;
-            padding: 0 5px;
+            margin: 0 2px;
+            padding: 10px 5px;
             &:hover {
                 border-bottom: 5px solid $primary;
+            }
+            a:hover {
+                text-decoration: none;
             }
             i[class*="ic-"] {
                 color: $white;
@@ -36,7 +48,7 @@ header.navbar.navbar-dark {
     header.navbar.navbar-dark {
         padding-bottom: 3px;
         .navigation {
-            a {
+            &__item {
                 margin: 0 5px;
                 padding: 0;
                 i[class*="ic-"] {
