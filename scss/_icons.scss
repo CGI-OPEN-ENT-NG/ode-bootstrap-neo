@@ -8,6 +8,9 @@ i[class*="ic-"] {
 .ic-home {
     &::before {content: '\e82b'}
 }
+.ic-community {
+    &::before {content: '\e814'}
+}
 .ic-apps {
     &::before {content: '\e86c'}
 }
