@@ -1,8 +1,13 @@
+.no-2d {
+    display: none;
+}
+
 main.main {
     margin: 80px 25px 25px;
 }
 
-// A déporter plus tard : contient tout le css du composant popover
+
+// TODO : A déporter plus tard - contient tout le css du composant popover
 popover {
     position: relative;
     display: inline-block;
@@ -45,49 +50,47 @@ popover popover-content {
         margin: auto;
         padding: 25px 15px;
     }
-}
-
-.bookmarked-app {
-    margin: 1px;
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    text-align: center;
-    border: 1px solid transparent;
-    border-radius: $border-radius;
-    &:hover {
-        border-color: $gray-200;
+    .bookmarked-app {
+        margin: 1px;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        border: 1px solid transparent;
+        border-radius: $border-radius;
+        &:hover {
+            border-color: $gray-200;
+        }
+        .application {
+            font-size: 3rem;
+        }
     }
-    .application {
-        font-size: 3rem;
+    .more {
+        padding: 10px;
+        text-align: center;
+        background: $gray-500;
+        transition: background 250ms ease;
+        &:hover {
+            background: $primary; 
+        }
     }
-}
-.more {
-    padding: 10px;
-    text-align: center;
-    background: $gray-500;
-    transition: background 250ms ease;
-    &:hover {
-        background: $primary; 
+    .search-text .searchInput {
+        border: 1px solid $gray-200;
+        margin: 10px -2px 10px 25px;
+        height: 29px;
     }
-}
-
-.search-text .searchInput {
-    border: 1px solid $gray-200;
-    margin: 10px -2px 10px 25px;
-    height: 29px;
-}
-.search-text .searchButton {
-    @extend .btn-primary;
-    border: none;
-    float: left;
-    padding: 0;
-    margin-top: 10px;
-    height: 29px;
-    box-shadow: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    line-height: 27px;
-    width: 30px;
-    text-align: center;
+    .search-text .searchButton {
+        @extend .btn-primary;
+        border: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        float: left;
+        padding: 0;
+        margin-top: 10px;
+        width: 30px;
+        height: 29px;
+        box-shadow: none;
+        line-height: 27px;
+        text-align: center;
+    }
 }
