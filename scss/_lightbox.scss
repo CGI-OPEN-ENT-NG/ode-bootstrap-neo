@@ -48,9 +48,14 @@ section.lightbox-window {
 			float: right;
 		}
 	}
-	.close-lightbox{
-		i::before{content: '\e866'}
-	}
+  .close-lightbox{
+    i.close-2x {
+      font-family: "generic-icons";
+      &::before{
+        content: '\e866';
+      }
+    }
+  }
 }
 
 .lightbox-buttons{
@@ -95,8 +100,22 @@ section.tiny-lightbox {
 			position: absolute;
 			top: 0;
 			left: 0;
-		}
+    }
 	}
+  .close-lightbox{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px;
+    cursor: pointer;
+    i.close-2x {
+      font-family: "generic-icons";
+      font-style: normal;
+      &::before{
+        content: '\e866';
+      }
+    }
+  }
 	> div.content {
 		border-radius: 5px;
 		width: 720px;
@@ -446,4 +465,19 @@ section.lightbox > .background + div.content > .twelve.cell {
     background: url(../../img/illustrations/logo.png) 23px 0px no-repeat $shadow;
     background-size: contain;
     box-shadow: 0 2px 5px $shadow;
+}
+
+@include media-breakpoint-down(md) {
+  body {
+    section.lightbox {
+      > div.content {
+          padding: 20px;
+          min-height: calc(100% - 50px);
+          width: calc(100% - 50px);
+          margin: 25px;
+          border-radius: 0;
+          box-sizing: border-box;
+      }
+    }
+  }
 }
