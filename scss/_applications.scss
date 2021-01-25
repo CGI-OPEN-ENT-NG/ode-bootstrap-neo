@@ -3,39 +3,22 @@
         color: $secondary;
     }
     &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        background-color: transparent;
         position: relative;
         width: 160px;
         height: 160px;
         margin: 5px;
         padding: 10px;
+        color: $text-color;
         text-align: center;
         border: 1px solid transparent;
         border-radius: $border-radius-lg;
         transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.35s ease-in-out;
-        &::after {
-            font-family: "FontAwesome";
-            content:"\f0b2";
-            line-height: 130px;
-            font-size: 3rem;
-            color: $accent;
-            background-color: rgba($accent,0.1);
-            // position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity: 0;
-            transition: opacity 0.25s ease-in-out;
-        }
-        a {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
-            color: $text-color;
-            text-decoration: none;
-        }
         i {
             display: flex;
             justify-content: center;
@@ -66,19 +49,10 @@
             border: 1px solid $gray-300;
             box-shadow: 5px 5px 15px rgba($black, 0.1);
             transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.35s ease-in-out;
-            // style du grab
-            // transition: border 0.25s ease-in-out, opacity 0.4s ease-in-out;
-            // border-color: $accent;
-            // &::after {
-            //     opacity: 1;
-            // }
-            a {
+            color: $primary;
+            i {
                 transition: color 0.1s ease-in-out;
                 color: $primary;
-                i {
-                    transition: color 0.1s ease-in-out;
-                    color: $primary;
-                }
             }
         }
         &:active {
