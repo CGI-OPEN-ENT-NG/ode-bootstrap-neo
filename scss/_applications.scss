@@ -102,19 +102,10 @@
             border: 1px solid $gray-300;
             box-shadow: 5px 5px 15px rgba($black, 0.1);
             transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.35s ease-in-out;
-            // style du grab
-            // transition: border 0.25s ease-in-out, opacity 0.4s ease-in-out;
-            // border-color: $accent;
-            // &::after {
-            //     opacity: 1;
-            // }
-            a {
+            color: $primary;
+            i {
                 transition: color 0.1s ease-in-out;
                 color: $primary;
-                i {
-                    transition: color 0.1s ease-in-out;
-                    color: $primary;
-                }
             }
         }
         &:active {
