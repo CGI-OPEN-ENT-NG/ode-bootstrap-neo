@@ -26,6 +26,9 @@
             height: 80px;
             font-size: 3.5rem;
             color: $text-color;
+            &.opacity-25 { // A déporter dans une mixin ?
+                opacity: .25;
+            }
         }
         span {
             padding-top: 5px;
@@ -116,6 +119,12 @@
                     color: $white;
                 }
             }
+            .application__item--add,
+            .application__item--remove {
+                i {
+                    color: $white;
+                }
+            }
         }
         &:active {
             background-color: rgba($white, 0.8);
@@ -195,7 +204,7 @@
             width: 115px;
             height: 130px;
             margin: 5px;
-            i {
+            > i {
                 font-size: 3rem;
                 width: 75px;
                 height: 75px;
