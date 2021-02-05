@@ -19,7 +19,7 @@
         border: 1px solid transparent;
         border-radius: $border-radius-lg;
         transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.35s ease-in-out;
-        i {
+        > i {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -27,6 +27,9 @@
             height: 100px;
             font-size: 5rem;
             color: $text-color;
+            &.opacity-25 { // A déporter dans une mixin ?
+                opacity: .25;
+            }
         }
         span {
             padding-top: 5px;
@@ -54,6 +57,12 @@
                 transition: color 0.1s ease-in-out;
                 color: $primary;
             }
+            .application__item--add,
+            .application__item--remove {
+                i {
+                    color: $white;
+                }
+            }
         }
         &:active {
             background-color: rgba($white, 0.8);
@@ -64,6 +73,20 @@
         &.blue-background-class {
             background-color: rgba($secondary, 0.15);
         }
+        &--add,
+        &--remove {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            i {
+                color: $white;
+                font-size: 1.3rem;
+                line-height: 50px;
+            }
+        }
+        &--add {background-color: $yellow;}
+        &--remove {background-color: $red;}
     }
 }
 @include media-breakpoint-down(sm) {
@@ -72,7 +95,7 @@
             width: 115px;
             height: 130px;
             margin: 5px;
-            i {
+            > i {
                 font-size: 3rem;
                 width: 75px;
                 height: 75px;
@@ -86,9 +109,9 @@
 
 .applications {
     &__search {
-        @extend .my-5;
+        @extend .mt-4;
         input[type="search"] {
-            box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 3px 3px 15px rgba(0,0,0,0.05); // A variabiliser
         }
     }
     &__list {
@@ -97,23 +120,23 @@
         justify-content: center;
     }
     &__favorite {
-        border: 1px solid $cyan;
-        border-radius: $border-radius;
-        @extend .p-2;
-        @extend .mt-5;
+        border: 1px solid $gray-300;
+        border-radius: $border-radius-lg;
+        background-color: rgba($white, .75);
+        box-shadow: 3px 3px 15px rgba(0,0,0,0.05);
+        @extend .p-3;
+        @extend .mt-4;
         h2 {
-            margin-top: -20px;
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-weight: bold;
-            span {
-            padding: 0 10px;
-            background-color: $gray-100;
-            }
         }
     }
+    &__list,
     &__connector {
         h2 {
-            font-size: 1rem;
+            @extend .mb-3;
+            flex-basis: 100%;
+            font-size: 1.2rem;
             font-weight: bold;
             span {
                 padding-right: 10px;
@@ -122,7 +145,7 @@
             &::after {
                 display: block;
                 content: "";
-                border-top: 2px dotted $cyan;
+                border-top: 1px solid $gray-300;
                 margin-top: -10px;
             }
         }

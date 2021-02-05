@@ -9,11 +9,14 @@
 }
 
 .input-searchbar {
-    .fa-search {
+    .ic-search {
         position: absolute;
-        right: 30px;
-        top: 15px;
+        left: 30px;
+        top: 7px;
         font-size: 1.3rem;
-        color: $cyan;
+        color: $gray-500;
+    }
+    .ic-search + input {
+        padding-left: 50px;
     }
 }

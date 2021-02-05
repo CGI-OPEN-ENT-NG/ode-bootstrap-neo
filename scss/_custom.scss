@@ -3,7 +3,9 @@
 }
 
 main.main {
-    margin: 25px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 25px;
 }
 
 // TODO : A déporter plus tard - contient tout le css du composant popover
