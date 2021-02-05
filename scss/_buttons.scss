@@ -5,6 +5,11 @@
   .btn[class*=btn-outline-] {
     box-shadow: none;
   }
+
+  .btn-outline-orange:hover,
+  .btn-outline-orange.active {
+    color: $white!important;
+  }
   
   .btn-primary {
     color: $white;
