@@ -143,13 +143,13 @@
 @include media-breakpoint-down(sm) {
     .application {
         &__item {
-            width: 115px;
-            height: 130px;
+            width: 110px;
+            height: 110px;
             margin: 5px;
             > i {
                 font-size: 3rem;
-                width: 75px;
-                height: 75px;
+                width: 60px;
+                height: 60px;
             }
             span {
                 font-size: 0.9rem;
