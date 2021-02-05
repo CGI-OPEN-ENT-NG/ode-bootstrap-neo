@@ -167,6 +167,9 @@
     &.pages,
     &.pages-large,
 
+    &.parametrage,
+    &.parametrage-large,
+
     &.rack,
     &.rack-large,
 
@@ -245,7 +248,18 @@
    &.poll-large,
    
    &.searchengine,
-   &.searchengine-large {
+   &.searchengine-large,
+
+   &.video,
+   &.video-large,
+
+   &.visioconf,
+   &.visioconf-large,
+   &.Web-conference,
+   &.Web-conference-large,
+
+   &.website,
+   &.website-large {
         color: $cyan;
     }
 
@@ -261,6 +275,12 @@
     
     &.exercizer,
     &.exercizer-large,
+
+    &.kne,
+    &.kne-large,
+
+    &.paths,
+    &.paths-large,
     
     &.sharebigfiles,
     &.sharebigfiles-large,
@@ -424,7 +444,9 @@
         &::before {content: '\e94c'}
     }
     &.visioconf,
-    &.visioconf-large {
+    &.visioconf-large,
+    &.Web-conference,
+    &.Web-conference-large {
         &::before {content: "\e957"}
     }
     &.notes,
@@ -474,5 +496,25 @@
     &.sharebigfiles,
     &.sharebigfiles-large {
         &::before {content: '\e8cb'}
+    }
+    &.website,
+    &.website-large {
+        &::before {content: '\e94a'}
+    }
+    &.parametrage,
+    &.parametrage-large {
+       &::before {content: '\e92f'}
+    }
+    &.video,
+    &.video-large {
+        &::before {content: '\e872'}
+    }
+    &.kne,
+    &.kne-large {
+        &::before {content: '\e81f'}
+    }
+    &.sacoche,
+    &.sacoche-large {
+        &::before {content: '\e899'}
     }
 }
