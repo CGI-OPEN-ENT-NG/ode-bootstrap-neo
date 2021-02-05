@@ -265,7 +265,10 @@
 
     // ICON COLOR : INDIGO
     &.blog,
-    &.blog-large {
+    &.blog-large,
+    
+    &.sacoche,
+    &.sacoche-large {
         color: $indigo;
     }
 
