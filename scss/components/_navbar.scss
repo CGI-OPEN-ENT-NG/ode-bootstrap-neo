@@ -1,25 +1,23 @@
 
 header.navbar.navbar-dark {
-    padding: 0 10px;
+    padding: 5px 10px 0;
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    z-index: $zindex-sticky;
+    z-index: 1000000;
     box-shadow: 0 2px 5px $shadow-light;
-    > .btn {
-        font-size: 1.5rem;
-        &:first-child {
-            margin-right: auto;
-        }
+    a {
+        display: block;
+        color: $white;
     }
     .logo {
         display: inline-block;
-        height: 40px;
-        padding: 5px;
+        height: 45px;
+        padding-bottom: 5px;
     }
     .avatar #my-photo {
-        height: 28px;
+        width: 28px;
         border-radius: 50%;
         background-color: white; // A retirer quand on aura refait l'avatar
     }
@@ -44,7 +42,7 @@ header.navbar.navbar-dark {
             }
             .new-mails {
                 position: relative;
-                bottom: -5px;
+                top: -15px;
                 right: 10px;
                 display: inline-block;
                 height: 20px;
@@ -61,26 +59,22 @@ header.navbar.navbar-dark {
         }
     } 
 }
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(sm) {
     header.navbar.navbar-dark {
-        > .btn {
-            font-size: 1.25rem;
-            &:first-child {
-                margin-right: auto;
+        padding-bottom: 3px;
+        .navigation {
+            &__item {
+                margin: 0 5px;
+                padding: 0;
+                i[class*="ic-"] {
+                    font-size: 1.5rem;
+                }
             }
         }
         a.application__title {
             display: block;
-            // width: calc(100% - 300px); //A REVOIR
-            color: $white;
+            width: calc(100% - 300px);
         }
         .logo {height: 30px}
-        .dropdown {
-            i[class*="ic-"] {
-                font-size: 1.25rem;
-                vertical-align: middle;
-                margin-right: 10px;
-            }
-        }
     }
 }
