@@ -12,7 +12,6 @@
 /*TODO define skins here if there is not variable changes. Else define in specific files (and release build should take all of them)*/
 
 #{$root-selector}{
-    @import "applications";
     @import "custom";
     
     @import "tokens/display";
