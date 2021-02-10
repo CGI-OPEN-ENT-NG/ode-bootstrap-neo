@@ -1,0 +1,17 @@
+
+#{$root-selector}{
+  @import "../index";
+
+  @import '../components/alerts'; // C'est notifications actuellement
+  @import '../components/breadcrumbs';
+  @import "../components/buttons";
+  @import '../components/cards'; // Renommer en tiles ?
+  @import '../components/dominos'; 
+  @import '../components/forms';
+  @import '../components/lists';
+  @import '../components/modals';
+  @import "../components/navbar";  
+  @import '../components/search';
+  @import '../components/sidebar';
+  @import '../components/toaster';
+}
