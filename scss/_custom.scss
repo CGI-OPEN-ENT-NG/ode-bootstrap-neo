@@ -347,6 +347,21 @@ popover popover-content {
     }
 }
 
+.main-content {
+    background-color: $white;
+    padding: 25px;
+}
+
+@include media-breakpoint-down(sm) {
+    .container,
+    .main-content {
+        padding: 15px;
+    }
+}
+
+// DEBUG CSS
+// aside, main {border: 1px solid red;}
+
 // TODO : A déporter plus tard - contient tout le css du composant popover
 popover {
     position: relative;
