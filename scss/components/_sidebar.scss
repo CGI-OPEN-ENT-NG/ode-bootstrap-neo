@@ -1,0 +1,93 @@
+/* DOCUMENTATION
+<aside class="sidebar sidebar--left">
+  <h1 class="sidebar__title">Titre de l'application</h1>
+  <ul class="sidebar__tree">
+    <li>Mes ressources
+      <ul>
+        <li>Dossier 1</li>
+        <li>Dossier 2
+          <ul>
+            <li>Sous-dossier 1</li>
+            <li>Sous-dossier 2</li>
+            <li>Sous-dossier 3</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Ma corbeille</li>
+  </ul>
+  <a class="btn-secondary btn-block">Créer un dossier</a>
+  <a class="btn-secondary btn-block">Importer</a>
+</aside>
+<main class="main-content"></main>
+END DOCUMENTATION */
+
+/* VARIABLES*/ 
+$sidebar-width: 250px;
+
+/* COMPONENT */
+/*aside*/.sidebar {
+  background-color: rgba($white, 0.8);
+  color: $gray-600;
+  width: $sidebar-width;
+  padding: 25px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  box-shadow: -5px 5px 10px rgba(0,0,0,0.05);
+  &__title {
+    color: $secondary;
+    font-size: 1.375rem; //26px
+    font-weight: bold;
+  }
+  &__tree {
+    margin-left: 0;
+    padding-left: 0;
+    ul {
+      margin-left: 0;
+      padding-left: 10px;
+    }
+    li {
+      list-style-type: none;
+    }
+    a {
+      display: block;
+      padding: 7px 15px;
+      margin: 5px 0;
+      color: $gray-600;
+      border-radius: $border-radius;
+      line-height: 1.2;
+      &:hover {
+        background-color: rgba($secondary, 0.05);
+        color: $secondary;
+      }
+      &.active,
+      &:active {
+        background-color: rgba($secondary, 0.2);
+        color: $secondary;
+      }
+    }
+  }
+}
+
+.sidebar--left {
+  border-radius: $border-radius 0 0 $border-radius;
+}
+.sidebar--right {
+  border-radius: 0 $border-radius $border-radius 0;
+}
+
+.sidebar + .main-content {
+  width: calc(100% - #{$sidebar-width});
+  border-radius: 0 $border-radius $border-radius 0;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.05);
+}
+
+@include media-breakpoint-down(md) {
+  .sidebar {
+    display: none;
+  }
+  .sidebar + .main-content {
+    width: 100%;
+    border-radius: $border-radius;
+  }
+}
