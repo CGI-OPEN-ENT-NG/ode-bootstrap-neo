@@ -134,7 +134,6 @@
 		"../node_modules/ode-bootstrap/scss/components/_toaster.scss",
 		"../scss/_mixins-neo.scss",
 		"../scss/_fonts.scss",
-		"../scss/_applications.scss",
 		"../scss/_custom.scss",
 		"../scss/_breadcrumb.scss",
 		"../scss/_buttons.scss",

@@ -1,0 +1,28 @@
+#explorer {
+
+}
+
+.explorer {
+  &__header {
+    h2 {
+      color: $gray-700;
+      font-size: 1.375rem;
+    }
+  }
+  &__view {
+    height: calc(100vh - 250px);
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: $gray-500 $gray-200;
+    border: 1px solid $gray-100;
+    border-radius: $border-radius;
+    padding: 10px;
+  }
+}
+@include media-breakpoint-down(sm) {
+  .explorer {
+    &__view {
+      height: calc(100vh - 195px);
+    }
+  }
+}

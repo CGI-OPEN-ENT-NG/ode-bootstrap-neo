@@ -3,7 +3,9 @@
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
+@import "variables";
 @import "node_modules/ode-bootstrap/scss/index";
+@import "fonts";
 
 /*TODO define skins here if there is not variable changes. Else define in specific files (and release build should take all of them)*/
 
@@ -11,11 +13,25 @@
     @import "custom";
     
     @import "tokens/display";
-    @import "tokens/fonts";
+    // @import "tokens/fonts";
     @import "tokens/icons";
     @import "tokens/mixins";
     @import "tokens/transitions";
-    @import "tokens/variables";
+
+
+    // A déplacer dans explorer.scss quand on aura résolu le souci de build
+    @import "components/breadcrumbs";
+    @import "components/buttons";
+    // @import 'components/cards'; // Renommer en tiles ?
+    @import "components/dominos"; 
+    @import "components/explorer";
+    @import "components/forms";
+    @import "components/lists";
+    @import "components/modals";
+    @import "components/navbar";  
+    @import "components/search";
+    @import "components/sidebar";
+    @import "components/toaster";
 }
 
 @import "retrocompat";
