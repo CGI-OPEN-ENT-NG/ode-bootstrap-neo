@@ -106,6 +106,16 @@ $domino-width: 240px;
   &:active,
   &.active {
     background-color: rgba($secondary, 0.1);
+    border-color: $secondary;
+  }
+  &.active {
+    .domino__overlay {
+      background-color: rgba(0,0,0,0.5);
+      &--left,
+      &--right {
+        opacity: 1;
+      }
+    }
   }
 }
 

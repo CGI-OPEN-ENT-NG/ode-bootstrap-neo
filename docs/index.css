@@ -6060,9 +6060,9 @@ readers do not read off random characters that represent icons */
     .ode-bootstrap-neo .form-control:focus {
       color: #5b6472;
       background-color: #fff;
-      border-color: #FF8500;
+      border-color: #4bafd5;
       outline: 0;
-      box-shadow: 0 0 0 0.2rem rgba(255, 133, 0, 0.25); }
+      box-shadow: 0 0 0 0.2rem rgba(75, 175, 213, 0.25); }
     .ode-bootstrap-neo .form-control::placeholder {
       color: #8c939e;
       opacity: 1; }
@@ -6363,7 +6363,7 @@ readers do not read off random characters that represent icons */
       text-decoration: none; }
     .ode-bootstrap-neo .btn:focus, .ode-bootstrap-neo .btn.focus {
       outline: 0;
-      box-shadow: 0 0 0 0.2rem rgba(255, 133, 0, 0.25); }
+      box-shadow: 0 0 0 0.2rem rgba(75, 175, 213, 0.25); }
     .ode-bootstrap-neo .btn.disabled, .ode-bootstrap-neo .btn:disabled {
       opacity: 0.65; }
     .ode-bootstrap-neo .btn:not(:disabled):not(.disabled) {
@@ -7490,7 +7490,7 @@ readers do not read off random characters that represent icons */
     list-style: none;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px; }
   .ode-bootstrap-neo .dropdown-menu-left {
     right: auto;
@@ -7600,21 +7600,21 @@ readers do not read off random characters that represent icons */
     padding: 0.25rem 1.5rem;
     clear: both;
     font-weight: 400;
-    color: #212529;
+    color: #5b6472;
     text-align: inherit;
     white-space: nowrap;
     background-color: transparent;
     border: 0; }
     .ode-bootstrap-neo .dropdown-item:hover, .ode-bootstrap-neo .dropdown-item:focus {
-      color: #16181b;
+      color: #505864;
       text-decoration: none;
       background-color: #f0f2f4; }
     .ode-bootstrap-neo .dropdown-item.active, .ode-bootstrap-neo .dropdown-item:active {
       color: #fff;
       text-decoration: none;
-      background-color: #FF8500; }
+      background-color: #4bafd5; }
     .ode-bootstrap-neo .dropdown-item.disabled, .ode-bootstrap-neo .dropdown-item:disabled {
-      color: #8c939e;
+      color: #b1b6bf;
       pointer-events: none;
       background-color: transparent; }
   .ode-bootstrap-neo .dropdown-menu.show {
@@ -7629,7 +7629,7 @@ readers do not read off random characters that represent icons */
   .ode-bootstrap-neo .dropdown-item-text {
     display: block;
     padding: 0.25rem 1.5rem;
-    color: #212529; }
+    color: #5b6472; }
   .ode-bootstrap-neo .btn-group,
   .ode-bootstrap-neo .btn-group-vertical {
     position: relative;
@@ -7862,16 +7862,16 @@ readers do not read off random characters that represent icons */
     opacity: 0; }
     .ode-bootstrap-neo .custom-control-input:checked ~ .custom-control-label::before {
       color: #fff;
-      border-color: #FF8500;
-      background-color: #FF8500; }
+      border-color: #4bafd5;
+      background-color: #4bafd5; }
     .ode-bootstrap-neo .custom-control-input:focus ~ .custom-control-label::before {
-      box-shadow: 0 0 0 0.2rem rgba(255, 133, 0, 0.25); }
+      box-shadow: 0 0 0 0.2rem rgba(75, 175, 213, 0.25); }
     .ode-bootstrap-neo .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
-      border-color: #FF8500; }
+      border-color: #4bafd5; }
     .ode-bootstrap-neo .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
       color: #fff;
-      background-color: #ffdab3;
-      border-color: #ffdab3; }
+      background-color: #dceff7;
+      border-color: #dceff7; }
     .ode-bootstrap-neo .custom-control-input[disabled] ~ .custom-control-label, .ode-bootstrap-neo .custom-control-input:disabled ~ .custom-control-label {
       color: #8c939e; }
       .ode-bootstrap-neo .custom-control-input[disabled] ~ .custom-control-label::before, .ode-bootstrap-neo .custom-control-input:disabled ~ .custom-control-label::before {
@@ -7905,8 +7905,8 @@ readers do not read off random characters that represent icons */
   .ode-bootstrap-neo .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e"); }
   .ode-bootstrap-neo .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
-    border-color: #FF8500;
-    background-color: #FF8500; }
+    border-color: #4bafd5;
+    background-color: #4bafd5; }
   .ode-bootstrap-neo .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3e%3cpath stroke='%23fff' d='M0 2h4'/%3e%3c/svg%3e"); }
   .ode-bootstrap-neo .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
@@ -7958,9 +7958,9 @@ readers do not read off random characters that represent icons */
     border-radius: 5px;
     appearance: none; }
     .ode-bootstrap-neo .custom-select:focus {
-      border-color: #FF8500;
+      border-color: #4bafd5;
       outline: 0;
-      box-shadow: 0 0 0 0.2rem rgba(255, 133, 0, 0.25); }
+      box-shadow: 0 0 0 0.2rem rgba(75, 175, 213, 0.25); }
       .ode-bootstrap-neo .custom-select:focus::-ms-value {
         color: #5b6472;
         background-color: #fff; }
@@ -8002,8 +8002,8 @@ readers do not read off random characters that represent icons */
     margin: 0;
     opacity: 0; }
     .ode-bootstrap-neo .custom-file-input:focus ~ .custom-file-label {
-      border-color: #FF8500;
-      box-shadow: 0 0 0 0.2rem rgba(255, 133, 0, 0.25); }
+      border-color: #4bafd5;
+      box-shadow: 0 0 0 0.2rem rgba(75, 175, 213, 0.25); }
     .ode-bootstrap-neo .custom-file-input[disabled] ~ .custom-file-label,
     .ode-bootstrap-neo .custom-file-input:disabled ~ .custom-file-label {
       background-color: #e9ebef; }
@@ -8050,18 +8050,18 @@ readers do not read off random characters that represent icons */
     .ode-bootstrap-neo .custom-range:focus {
       outline: none; }
       .ode-bootstrap-neo .custom-range:focus::-webkit-slider-thumb {
-        box-shadow: 0 0 0 1px #f0f2f4, 0 0 0 0.2rem rgba(255, 133, 0, 0.25); }
+        box-shadow: 0 0 0 1px #f0f2f4, 0 0 0 0.2rem rgba(75, 175, 213, 0.25); }
       .ode-bootstrap-neo .custom-range:focus::-moz-range-thumb {
-        box-shadow: 0 0 0 1px #f0f2f4, 0 0 0 0.2rem rgba(255, 133, 0, 0.25); }
+        box-shadow: 0 0 0 1px #f0f2f4, 0 0 0 0.2rem rgba(75, 175, 213, 0.25); }
       .ode-bootstrap-neo .custom-range:focus::-ms-thumb {
-        box-shadow: 0 0 0 1px #f0f2f4, 0 0 0 0.2rem rgba(255, 133, 0, 0.25); }
+        box-shadow: 0 0 0 1px #f0f2f4, 0 0 0 0.2rem rgba(75, 175, 213, 0.25); }
     .ode-bootstrap-neo .custom-range::-moz-focus-outer {
       border: 0; }
     .ode-bootstrap-neo .custom-range::-webkit-slider-thumb {
       width: 1rem;
       height: 1rem;
       margin-top: -0.25rem;
-      background-color: #FF8500;
+      background-color: #4bafd5;
       border: 0;
       border-radius: 1rem;
       transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -8070,7 +8070,7 @@ readers do not read off random characters that represent icons */
         .ode-bootstrap-neo .custom-range::-webkit-slider-thumb {
           transition: none; } }
       .ode-bootstrap-neo .custom-range::-webkit-slider-thumb:active {
-        background-color: #ffdab3; }
+        background-color: #dceff7; }
     .ode-bootstrap-neo .custom-range::-webkit-slider-runnable-track {
       width: 100%;
       height: 0.5rem;
@@ -8082,7 +8082,7 @@ readers do not read off random characters that represent icons */
     .ode-bootstrap-neo .custom-range::-moz-range-thumb {
       width: 1rem;
       height: 1rem;
-      background-color: #FF8500;
+      background-color: #4bafd5;
       border: 0;
       border-radius: 1rem;
       transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -8091,7 +8091,7 @@ readers do not read off random characters that represent icons */
         .ode-bootstrap-neo .custom-range::-moz-range-thumb {
           transition: none; } }
       .ode-bootstrap-neo .custom-range::-moz-range-thumb:active {
-        background-color: #ffdab3; }
+        background-color: #dceff7; }
     .ode-bootstrap-neo .custom-range::-moz-range-track {
       width: 100%;
       height: 0.5rem;
@@ -8106,7 +8106,7 @@ readers do not read off random characters that represent icons */
       margin-top: 0;
       margin-right: 0.2rem;
       margin-left: 0.2rem;
-      background-color: #FF8500;
+      background-color: #4bafd5;
       border: 0;
       border-radius: 1rem;
       transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -8115,7 +8115,7 @@ readers do not read off random characters that represent icons */
         .ode-bootstrap-neo .custom-range::-ms-thumb {
           transition: none; } }
       .ode-bootstrap-neo .custom-range::-ms-thumb:active {
-        background-color: #ffdab3; }
+        background-color: #dceff7; }
     .ode-bootstrap-neo .custom-range::-ms-track {
       width: 100%;
       height: 0.5rem;
@@ -8193,7 +8193,7 @@ readers do not read off random characters that represent icons */
   .ode-bootstrap-neo .nav-pills .nav-link.active,
   .ode-bootstrap-neo .nav-pills .show > .nav-link {
     color: #fff;
-    background-color: #FF8500; }
+    background-color: #4bafd5; }
   .ode-bootstrap-neo .nav-fill > .nav-link,
   .ode-bootstrap-neo .nav-fill .nav-item {
     flex: 1 1 auto;
@@ -8636,7 +8636,7 @@ readers do not read off random characters that represent icons */
     .ode-bootstrap-neo .page-link:focus {
       z-index: 3;
       outline: 0;
-      box-shadow: 0 0 0 0.2rem rgba(255, 133, 0, 0.25); }
+      box-shadow: 0 0 0 0.2rem rgba(75, 175, 213, 0.25); }
   .ode-bootstrap-neo .page-item:first-child .page-link {
     margin-left: 0;
     border-top-left-radius: 5px;
@@ -8647,8 +8647,8 @@ readers do not read off random characters that represent icons */
   .ode-bootstrap-neo .page-item.active .page-link {
     z-index: 3;
     color: #fff;
-    background-color: #FF8500;
-    border-color: #FF8500; }
+    background-color: #4bafd5;
+    border-color: #4bafd5; }
   .ode-bootstrap-neo .page-item.disabled .page-link {
     color: #8c939e;
     pointer-events: none;
@@ -9198,8 +9198,8 @@ readers do not read off random characters that represent icons */
     .ode-bootstrap-neo .list-group-item.active {
       z-index: 2;
       color: #fff;
-      background-color: #FF8500;
-      border-color: #FF8500; }
+      background-color: #4bafd5;
+      border-color: #4bafd5; }
     .ode-bootstrap-neo .list-group-item + .ode-bootstrap-neo .list-group-item {
       border-top-width: 0; }
       .ode-bootstrap-neo .list-group-item + .ode-bootstrap-neo .list-group-item.active {
@@ -12748,6 +12748,8 @@ END DOCUMENTATION */
     content: '\e85e'; }
   .ode-bootstrap-neo .ic-minus::before {
     content: '\e95b'; }
+  .ode-bootstrap-neo .ic-user::before {
+    content: '\e905'; }
   .ode-bootstrap-neo .ic-public::before {
     content: '\e8d1'; }
   .ode-bootstrap-neo .ic-share::before {
@@ -12758,10 +12760,32 @@ END DOCUMENTATION */
     content: '\e8d2'; }
   .ode-bootstrap-neo .ic-chevron-right::before {
     content: '\e823'; }
+  .ode-bootstrap-neo .ic-filter::before {
+    content: '\e8a1'; }
+  .ode-bootstrap-neo .ic-grid::before {
+    content: '\e940'; }
+  .ode-bootstrap-neo .ic-list::before {
+    content: '\e84f'; }
   .ode-bootstrap-neo .transition-hover {
     transition-property: all;
     transition-duration: 1s;
     transition-timing-function: ease; }
+  .ode-bootstrap-neo .avatar {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%; }
+    .ode-bootstrap-neo .avatar--20 {
+      width: 20px;
+      height: 20px; }
+    .ode-bootstrap-neo .avatar--25 {
+      width: 25px;
+      height: 25px; }
+    .ode-bootstrap-neo .avatar--50 {
+      width: 50px;
+      height: 50px; }
+    .ode-bootstrap-neo .avatar--100 {
+      width: 100px;
+      height: 100px; }
   .ode-bootstrap-neo .btn {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.3); }
   .ode-bootstrap-neo .btn-link,
@@ -12847,7 +12871,12 @@ END DOCUMENTATION */
         .ode-bootstrap-neo .domino:hover .domino__overlay--left, .ode-bootstrap-neo .domino:hover .domino__overlay--right {
           opacity: 1; }
     .ode-bootstrap-neo .domino:active, .ode-bootstrap-neo .domino.active {
-      background-color: rgba(75, 175, 213, 0.1); }
+      background-color: rgba(75, 175, 213, 0.1);
+      border-color: #4bafd5; }
+    .ode-bootstrap-neo .domino.active .domino__overlay {
+      background-color: rgba(0, 0, 0, 0.5); }
+      .ode-bootstrap-neo .domino.active .domino__overlay--left, .ode-bootstrap-neo .domino.active .domino__overlay--right {
+        opacity: 1; }
   .ode-bootstrap-neo .dominos--square .domino {
     width: 240px;
     height: 240px; }
@@ -12857,11 +12886,14 @@ END DOCUMENTATION */
   .ode-bootstrap-neo .dominos--horizontal .domino {
     width: 240px;
     height: calc($domino-width / 2); }
+  .ode-bootstrap-neo .dropdown-item input[type="checkbox"] {
+    vertical-align: middle; }
   .ode-bootstrap-neo .explorer__header h2 {
     color: #5b6472;
-    font-size: 1.375rem; }
+    font-size: 1.375rem;
+    margin-bottom: 0; }
   .ode-bootstrap-neo .explorer__view {
-    height: calc(100vh - 250px);
+    height: calc(100vh - 260px);
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: #b1b6bf #e9ebef;
@@ -12870,7 +12902,15 @@ END DOCUMENTATION */
     padding: 10px; }
   @media (max-width: 767.98px) {
     .ode-bootstrap-neo .explorer__view {
-      height: calc(100vh - 195px); } }
+      height: calc(100vh - 200px); } }
+  .ode-bootstrap-neo .filters .btn {
+    color: #8c939e;
+    box-shadow: none; }
+    .ode-bootstrap-neo .filters .btn.inactive {
+      color: #c9ced5; }
+    .ode-bootstrap-neo .filters .btn:hover {
+      color: #fff;
+      background-color: #4bafd5; }
   .ode-bootstrap-neo .input-group .btn {
     box-shadow: none !important; }
   .ode-bootstrap-neo .form-control::placeholder {
@@ -12882,6 +12922,48 @@ END DOCUMENTATION */
     color: #b1b6bf; }
   .ode-bootstrap-neo .input-searchbar .ic-search + input {
     padding-left: 40px; }
+  .ode-bootstrap-neo .list__header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem !important;
+    font-weight: bold;
+    color: #8c939e;
+    padding: 5px 15px; }
+  .ode-bootstrap-neo .list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e9ebef;
+    margin: 5px 0;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: #8c939e;
+    font-size: 0.875rem; }
+    .ode-bootstrap-neo .list__item .list__title {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #5b6472;
+      margin: 0; }
+      .ode-bootstrap-neo .list__item .list__title i {
+        vertical-align: middle;
+        font-size: 1.3rem;
+        padding-right: 5px; }
+    .ode-bootstrap-neo .list__item .list__status {
+      text-align: right;
+      font-size: 1rem;
+      padding-right: 20px; }
+      .ode-bootstrap-neo .list__item .list__status > * {
+        margin: 0 5px; }
+    .ode-bootstrap-neo .list__item .list__modifiedBy {
+      font-size: 0.75rem; }
+  .ode-bootstrap-neo .list__title {
+    width: calc(100% - 450px); }
+  .ode-bootstrap-neo .list__status {
+    width: 75px; }
+  .ode-bootstrap-neo .list__owner {
+    width: 200px; }
+  .ode-bootstrap-neo .list__modification {
+    width: 175px; }
   .ode-bootstrap-neo header.navbar.navbar-dark {
     padding: 5px 10px 0;
     position: sticky;
@@ -12957,8 +13039,13 @@ END DOCUMENTATION */
       font-size: 1.375rem;
       font-weight: bold; }
     .ode-bootstrap-neo .sidebar__tree {
+      max-height: calc(100vh - 305px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #b1b6bf #e9ebef;
       margin-left: 0;
-      padding-left: 0; }
+      padding-left: 0;
+      padding-right: 5px; }
       .ode-bootstrap-neo .sidebar__tree ul {
         margin-left: 0;
         padding-left: 10px; }
