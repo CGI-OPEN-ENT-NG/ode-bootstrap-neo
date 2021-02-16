@@ -17,11 +17,22 @@
     border-radius: $border-radius-lg;
     color: $gray-600;
     font-size: 0.875rem;
+    &:hover {
+      border-color: $secondary;
+    }
+    &:active,
+    &.active {
+      border-color: $secondary;
+      background-color: rgba($secondary, 0.1);
+    }
     .list__title {
       font-size: 1rem;
       font-weight: bold;
       color: $gray-700;
       margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
       i {
         vertical-align: middle;
         font-size: 1.3rem;
@@ -31,7 +42,7 @@
     .list__status {
       text-align: right;
       font-size: 1rem;
-      padding-right: 20px;
+      padding-right: 10px;
       > * {
         margin: 0 5px;
       }
