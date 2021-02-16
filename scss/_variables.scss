@@ -224,7 +224,7 @@ $body-color:                $gray-700 ;
 
 $text-light:            $gray-300 ;
 $text-lightest:         $white ;
-$text-color:            $gray-800 ;
+$text-color:            $gray-700 ;
 
 // Links
 //
@@ -305,7 +305,7 @@ $box-shadow:                  0 .5rem 1rem rgba($black, .15) ;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) ;
 
 $component-active-color:      $white ;
-$component-active-bg:         theme-color("primary") ;
+$component-active-bg:         theme-color("secondary") ;
 
 $caret-width:                 .3em ;
 $caret-vertical-align:        $caret-width * .85 ;
@@ -540,7 +540,7 @@ $input-border-radius-lg:                $border-radius-lg ;
 $input-border-radius-sm:                $border-radius-sm ;
 
 $input-focus-bg:                        $input-bg ;
-$input-focus-border-color:              $primary ;
+$input-focus-border-color:              $secondary ;
 $input-focus-color:                     $input-color ;
 $input-focus-width:                     $input-btn-focus-width ;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow ;
@@ -819,7 +819,7 @@ $dropdown-spacer:                   .125rem ;
 $dropdown-font-size:                $font-size-base ;
 $dropdown-color:                    $body-color ;
 $dropdown-bg:                       $white ;
-$dropdown-border-color:             rgba($black, .15) ;
+$dropdown-border-color:             rgba($black, .1) ;
 $dropdown-border-radius:            $border-radius ;
 $dropdown-border-width:             $border-width ;
 $dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width) ;
@@ -827,14 +827,14 @@ $dropdown-divider-bg:               $gray-200 ;
 $dropdown-divider-margin-y:         $nav-divider-margin-y ;
 $dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175) ;
 
-$dropdown-link-color:               $gray-900 ;
-$dropdown-link-hover-color:         darken($gray-900, 5%) ;
+$dropdown-link-color:               $gray-700 ;
+$dropdown-link-hover-color:         darken($gray-700, 5%) ;
 $dropdown-link-hover-bg:            $gray-100 ;
 
 $dropdown-link-active-color:        $component-active-color ;
 $dropdown-link-active-bg:           $component-active-bg ;
 
-$dropdown-link-disabled-color:      $gray-600 ;
+$dropdown-link-disabled-color:      $gray-500 ;
 
 $dropdown-item-padding-y:           .25rem ;
 $dropdown-item-padding-x:           1.5rem ;
