@@ -7,10 +7,11 @@
     h2 {
       color: $gray-700;
       font-size: 1.375rem;
+      margin-bottom: 0;
     }
   }
   &__view {
-    height: calc(100vh - 250px);
+    height: calc(100vh - 260px);
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: $gray-500 $gray-200;
@@ -22,7 +23,7 @@
 @include media-breakpoint-down(sm) {
   .explorer {
     &__view {
-      height: calc(100vh - 195px);
+      height: calc(100vh - 200px);
     }
   }
 }
