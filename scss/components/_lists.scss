@@ -11,3 +11,29 @@
     }
   }
 }
+
+@include media-breakpoint-down(sm) {
+  .list {
+    &__header {
+      display: none;
+    }
+   &__item {
+     flex-wrap: wrap;
+     padding: 10px;
+     .list__title {
+       width: calc(100% - 100px); // 100% - .list__item--preview - .list__status
+     }
+     .list__status {
+       width: 60px;
+       padding: 0;
+     }
+     .list__owner {
+       width: 50%;
+     }
+     .list__modification {
+       width: 50%;
+       text-align: right;
+     }
+   }
+  }
+}
