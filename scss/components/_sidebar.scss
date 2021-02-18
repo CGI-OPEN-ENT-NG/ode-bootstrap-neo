@@ -61,9 +61,11 @@ $sidebar-width: 250px;
       color: $gray-600;
       border-radius: $border-radius;
       line-height: 1.2;
+      @extend .transition-hover-slow;
       &:hover {
         background-color: rgba($secondary, 0.05);
         color: $secondary;
+        @extend .transition-hover-fast;
       }
       &.active,
       &:active {

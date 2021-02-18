@@ -254,6 +254,10 @@ help {
     }
 }
 
+a {
+    @extend .transition-hover-fast;
+}
+
 // DEBUG CSS
 // aside, main {border: 1px solid red;}
 
