@@ -12766,9 +12766,21 @@ END DOCUMENTATION */
     content: '\e940'; }
   .ode-bootstrap-neo .ic-list::before {
     content: '\e84f'; }
-  .ode-bootstrap-neo .transition-hover {
+  .ode-bootstrap-neo .transition-hover-fast, .ode-bootstrap-neo a, .ode-bootstrap-neo .list__item:hover, .ode-bootstrap-neo .sidebar__tree a:hover {
     transition-property: all;
-    transition-duration: 1s;
+    transition-duration: 0.25s;
+    transition-timing-function: ease; }
+  .ode-bootstrap-neo .transition-hover, .ode-bootstrap-neo .domino, .ode-bootstrap-neo .domino:hover .domino__overlay--left, .ode-bootstrap-neo .domino:hover .domino__overlay--right, .ode-bootstrap-neo .list__item {
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease; }
+  .ode-bootstrap-neo .transition-hover-slow, .ode-bootstrap-neo .domino:hover, .ode-bootstrap-neo .sidebar__tree a {
+    transition-property: all;
+    transition-duration: 0.75s;
+    transition-timing-function: ease; }
+  .ode-bootstrap-neo .transition-hover-very-slow {
+    transition-property: all;
+    transition-duration: 0.75s;
     transition-timing-function: ease; }
   .ode-bootstrap-neo .avatar {
     display: inline-block;
@@ -12812,7 +12824,8 @@ END DOCUMENTATION */
   .ode-bootstrap-neo .dominos {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    align-content: flex-start; }
   .ode-bootstrap-neo .domino {
     background-color: #fff;
     border-radius: 10px;
@@ -12824,10 +12837,31 @@ END DOCUMENTATION */
       justify-content: space-between;
       align-items: flex-start;
       height: 160px;
-      border-radius: 10px 10px 0 0;
+      border-radius: 10px 10px 0 0; }
+    .ode-bootstrap-neo .domino.folder .domino__image {
       background-color: rgba(75, 175, 213, 0.1);
-      background-image: url("https://www.professionvoyages.com/wp-content/uploads/2020/04/Kronotsky-lake-russie.jpg");
+      justify-content: center;
+      align-items: center;
+      font-size: 4.5rem; }
+    .ode-bootstrap-neo .domino.item .domino__image {
+      background-image: url("https://loremflickr.com/240/160/");
       background-size: cover; }
+    .ode-bootstrap-neo .domino.item:nth-of-type(1) .domino__image {
+      background-image: url("https://loremflickr.com/240/160?random=1"); }
+    .ode-bootstrap-neo .domino.item:nth-of-type(2) .domino__image {
+      background-image: url("https://loremflickr.com/240/160?random=2"); }
+    .ode-bootstrap-neo .domino.item:nth-of-type(3) .domino__image {
+      background-image: url("https://loremflickr.com/240/160?random=3"); }
+    .ode-bootstrap-neo .domino.item:nth-of-type(4) .domino__image {
+      background-image: url("https://loremflickr.com/240/160?random=4"); }
+    .ode-bootstrap-neo .domino.item:nth-of-type(5) .domino__image {
+      background-image: url("https://loremflickr.com/240/160?random=5"); }
+    .ode-bootstrap-neo .domino.item:nth-of-type(6) .domino__image {
+      background-image: url("https://loremflickr.com/240/160?random=6"); }
+    .ode-bootstrap-neo .domino.item:nth-of-type(7) .domino__image {
+      background-image: url("https://loremflickr.com/240/160?random=7"); }
+    .ode-bootstrap-neo .domino.item:nth-of-type(8) .domino__image {
+      background-image: url("https://loremflickr.com/240/160?random=8"); }
     .ode-bootstrap-neo .domino__overlay {
       display: flex;
       justify-content: space-between;
@@ -12849,6 +12883,8 @@ END DOCUMENTATION */
     .ode-bootstrap-neo .domino__infos {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      height: calc(240px - 160px);
       padding: 10px; }
       .ode-bootstrap-neo .domino__infos .domino__title {
         color: #5b6472;
@@ -12882,10 +12918,10 @@ END DOCUMENTATION */
     height: 240px; }
   .ode-bootstrap-neo .dominos--vertical .domino {
     width: 240px;
-    height: calc($domino-width + ($domino-width / 2)); }
+    height: calc(240px + (240px / 2)); }
   .ode-bootstrap-neo .dominos--horizontal .domino {
     width: 240px;
-    height: calc($domino-width / 2); }
+    height: calc(240px / 2); }
   .ode-bootstrap-neo .dropdown-item input[type="checkbox"] {
     vertical-align: middle; }
   .ode-bootstrap-neo .explorer__header h2 {
@@ -12939,19 +12975,33 @@ END DOCUMENTATION */
     border-radius: 10px;
     color: #8c939e;
     font-size: 0.875rem; }
+    .ode-bootstrap-neo .list__item:hover {
+      border-color: #4bafd5; }
+    .ode-bootstrap-neo .list__item:active, .ode-bootstrap-neo .list__item.active {
+      border-color: #4bafd5;
+      background-color: rgba(75, 175, 213, 0.1); }
+    .ode-bootstrap-neo .list__item .list__item--preview {
+      width: 40px;
+      vertical-align: middle;
+      font-size: 1.3rem;
+      text-align: center; }
     .ode-bootstrap-neo .list__item .list__title {
       font-size: 1rem;
       font-weight: bold;
       color: #5b6472;
-      margin: 0; }
-      .ode-bootstrap-neo .list__item .list__title i {
-        vertical-align: middle;
-        font-size: 1.3rem;
-        padding-right: 5px; }
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .ode-bootstrap-neo .list__item .list__image {
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      margin-right: 5px; }
     .ode-bootstrap-neo .list__item .list__status {
       text-align: right;
       font-size: 1rem;
-      padding-right: 20px; }
+      padding-right: 10px; }
       .ode-bootstrap-neo .list__item .list__status > * {
         margin: 0 5px; }
     .ode-bootstrap-neo .list__item .list__modifiedBy {

@@ -17,13 +17,21 @@
     border-radius: $border-radius-lg;
     color: $gray-600;
     font-size: 0.875rem;
+    @extend .transition-hover;
     &:hover {
       border-color: $secondary;
+      @extend .transition-hover-fast;
     }
     &:active,
     &.active {
       border-color: $secondary;
       background-color: rgba($secondary, 0.1);
+    }
+    .list__item--preview {
+      width: 40px;
+      vertical-align: middle;
+      font-size: 1.3rem;
+      text-align: center;
     }
     .list__title {
       font-size: 1rem;
@@ -33,11 +41,12 @@
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      i {
-        vertical-align: middle;
-        font-size: 1.3rem;
-        padding-right: 5px;
-      }
+    }
+    .list__image {
+      width: 30px;
+      height: 30px;
+      border-radius: $border-radius;
+      margin-right: 5px;
     }
     .list__status {
       text-align: right;

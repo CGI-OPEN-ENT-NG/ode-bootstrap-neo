@@ -23,12 +23,14 @@ END DOCUMENTATION */
 
 /* VARIABLES */
 $domino-width: 240px;
+$overlay-width: $domino-width / 1.5;
 
 /* COMPONENT */
 .dominos {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 .domino {
@@ -37,16 +39,33 @@ $domino-width: 240px;
   border: 1px solid $gray-200;
   margin: 10px;
   cursor: pointer;
+  @extend .transition-hover;
   &__image {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    height: 160px;
+    height: $overlay-width;
     border-radius: $border-radius-lg $border-radius-lg 0 0;
+  }
+  &.folder .domino__image {
     background-color: rgba($secondary, 0.1);
-    background-image: url("https://www.professionvoyages.com/wp-content/uploads/2020/04/Kronotsky-lake-russie.jpg");
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5rem;
+  }
+  &.item .domino__image {
+    background-image: url("https://loremflickr.com/240/160/");
     background-size: cover;
   }
+  // A SUPPRIMER, JUSTE POUR L'EXEMPLE
+  &.item:nth-of-type(1) .domino__image {background-image: url("https://loremflickr.com/240/160?random=1");}
+  &.item:nth-of-type(2) .domino__image {background-image: url("https://loremflickr.com/240/160?random=2");}
+  &.item:nth-of-type(3) .domino__image {background-image: url("https://loremflickr.com/240/160?random=3");}
+  &.item:nth-of-type(4) .domino__image {background-image: url("https://loremflickr.com/240/160?random=4");}
+  &.item:nth-of-type(5) .domino__image {background-image: url("https://loremflickr.com/240/160?random=5");}
+  &.item:nth-of-type(6) .domino__image {background-image: url("https://loremflickr.com/240/160?random=6");}
+  &.item:nth-of-type(7) .domino__image {background-image: url("https://loremflickr.com/240/160?random=7");}
+  &.item:nth-of-type(8) .domino__image {background-image: url("https://loremflickr.com/240/160?random=8");}
   &__overlay {
     display: flex;
     justify-content: space-between;
@@ -73,6 +92,8 @@ $domino-width: 240px;
   &__infos {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    height: calc(#{$domino-width} - #{$overlay-width});
     padding: 10px;
     .domino__title {
       color: $gray-700;
@@ -95,11 +116,13 @@ $domino-width: 240px;
   }
   &:hover {
     border-color: $secondary;
+    @extend .transition-hover-slow;
     .domino__overlay {
       background-color: rgba(0,0,0,0.5);
       &--left,
       &--right {
         opacity: 1;
+        @extend .transition-hover;
       }
     }
   }
@@ -125,9 +148,9 @@ $domino-width: 240px;
 }
 .dominos--vertical .domino {
   width: $domino-width;
-  height: calc($domino-width + ($domino-width / 2));
+  height: calc(#{$domino-width} + (#{$domino-width} / 2));
 }
 .dominos--horizontal .domino {
   width: $domino-width;
-  height: calc($domino-width / 2);
+  height: calc(#{$domino-width} / 2);
 }
