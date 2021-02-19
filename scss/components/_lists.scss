@@ -13,6 +13,12 @@
 }
 
 @include media-breakpoint-down(sm) {
+  .explorer__view.list {
+    padding: 5px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
   .list {
     &__header {
       display: none;
@@ -20,6 +26,8 @@
    &__item {
      flex-wrap: wrap;
      padding: 10px;
+     margin: 10px 0;
+     border-color: $gray-300;
      .list__title {
        width: calc(100% - 100px); // 100% - .list__item--preview - .list__status
      }
