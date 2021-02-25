@@ -247,7 +247,7 @@ help {
     padding: 25px;
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
     .container,
     .main-content {
         padding: 15px;

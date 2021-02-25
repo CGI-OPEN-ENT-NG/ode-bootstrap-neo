@@ -1,11 +1,11 @@
 
 header.navbar.navbar-dark {
-    padding: 5px 10px 0;
+    padding: 0 10px;
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000000;
+    z-index: $zindex-sticky;
     box-shadow: 0 2px 5px $shadow-light;
     // background: linear-gradient(to bottom right, $secondary, darken($secondary, 10%))!important;
     a {
@@ -14,8 +14,8 @@ header.navbar.navbar-dark {
     }
     .logo {
         display: inline-block;
-        height: 45px;
-        padding-bottom: 5px;
+        height: 40px;
+        padding: 5px;
     }
     .avatar #my-photo {
         height: 28px;
@@ -60,22 +60,26 @@ header.navbar.navbar-dark {
         }
     } 
 }
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
     header.navbar.navbar-dark {
-        padding-bottom: 3px;
-        .navigation {
-            &__item {
-                margin: 0 5px;
-                padding: 0;
-                i[class*="ic-"] {
-                    font-size: 1.5rem;
-                }
+        .btn {
+            font-size: 1.25rem;
+            &:first-child {
+                margin-right: auto;
             }
         }
         a.application__title {
             display: block;
-            width: calc(100% - 300px);
+            // width: calc(100% - 300px); //A REVOIR
+            color: $white;
         }
         .logo {height: 30px}
+        .dropdown {
+            i[class*="ic-"] {
+                font-size: 1.25rem;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+        }
     }
 }

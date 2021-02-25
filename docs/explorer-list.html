@@ -12,58 +12,41 @@
 
 <body id="explorer">
   <header class="no-1d navbar navbar-dark bg-secondary">
-    <a class="d-mobile-none" href="">
+    <a class="btn btn-secondary" href="/timeline/timeline" title="Accueil">
         <img class="logo" src="/assets/images/logo.png" alt="Logo de l'ENT">
-        <span class="text-truncate d-desktop-none">
-            <i18n><span class="no-style ng-scope">Blog</span></i18n>
-        </span>
     </a>
-    <a class="application__title d-desktop-none text-truncate" href="/welcome">
-        <i18n><span class="no-style ng-scope">Blog</span></i18n>
-    </a>
-    <nav class="navigation">
-        <div class="navigation__item">
-            <a href="/timeline/timeline" title="Accueil"><i class="ic-home"></i></a>
-        </div>
-        <div class="navigation__item">
-           <a class="zero-mobile ng-scope" href="/community" title="Communautés"><i class="ic-community"></i></a>
-        </div>
-        <div class="navigation__item">
-            <popover>
-                <a href="" title="Mes applis"><i class="ic-apps"></i></a>
-            </popover>
-        </div>
-        <div class="navigation__item">
-            <span ng-include="template.containers.portal.conversationUnread" class="ng-scope">
-              <a href="/conversation/conversation" tooltip="navbar.messages">
-                <i class="mail ic-conversation"></i>
-              </a>
-            </span>
-        </div>
-        <div class="navigation__item">
-           <popover class="searchengine">
-                <a href="/searchengine" title="Recherche transverse">
-                    <i class="ic-search"></i>
-                </a>
-            </popover>
-        </div>
-       <div ng-if="currentLanguage == 'fr'" class="navigation__item ng-scope">
-            <a title="Aide en ligne">
-                <i18n><span class="no-style ng-scope"><help class="ng-isolate-scope"><i class="navbar-help ic-help"></i><lightbox show="display.read" on-close="display.read = false" class="ng-isolate-scope"><section class="lightbox" ng-class="{'lightbox': !tiny, 'tiny-lightbox': tiny}" style="display: none;"><div class="background"></div><div class="content"><div class="twelve cell" ng-transclude=""><div class="ng-scope"></div></div><div class="close-lightbox"><i class="close-2x"></i></div></div></section></lightbox></help></span></i18n>
-            </a>
-        </div><!-- end ngIf: currentLanguage == 'fr' -->
-        <div class="navigation__item">
-            <a class="avatar ng-scope" href="/userbook/mon-compte" title="Mon compte" pulsar="{ index: 4, i18n: 'portal.pulsar.account', position: 'bottom center'}">
-                <img data-ng-src="/userbook/avatar/91c22b66-ba1b-4fde-a3fe-95219cc18d4a?thumbnail=48x48" id="my-photo" src="/userbook/avatar/91c22b66-ba1b-4fde-a3fe-95219cc18d4a?thumbnail=48x48">
-            </a>
-        </div>
-        <div class="navigation__item">
-            <a href="/auth/logout?callback=" logout="" title="Déconnexion">
-                <i class="ic-disconnect"></i>
-            </a>
-        </div>
-    </nav>
-</header>
+    <button class="btn btn-secondary d-none d-sm-block">
+      <i class="ic-community"></i>
+    </button>
+    <button class="btn btn-secondary">
+      <i class="fas fa-th"></i>
+    </button>
+    <button class="btn btn-secondary">
+      <i class="fas fa-envelope"></i>
+    </button>
+    <button class="btn btn-secondary d-none d-sm-block">
+      <i class="fas fa-search"></i>
+    </button>
+    <button class="btn btn-secondary">
+      <i class="fas fa-question-circle"></i>
+    </button>
+    <button class="btn btn-secondary d-none d-sm-block">
+      <i class="fas fa-user-circle"></i>
+    </button>
+    <button class="btn btn-secondary d-none d-sm-block">
+      <i class="fas fa-power-off"></i>
+    </button>
+    <div class="nav-item dropdown d-block d-sm-none">
+      <a class="dropdown-toggle btn btn-secondary" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="#"><i class="ic-community"></i> Communautés</a>
+        <a class="dropdown-item" href="#"><i class="ic-search"></i> Recherche transverse</a>
+        <a class="dropdown-item" href="#"><i class="ic-user"></i> Mon compte</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#"><i class="ic-disconnect"></i> Déconnexion</a>
+      </div>
+    </div>
+  </header>
   <div class="container d-flex">
     <!-- SIDEBAR -->
     <aside class="sidebar sidebar--left">
@@ -90,8 +73,8 @@
         </li>
         <li><a href="">Ma corbeille</a></li>
       </ul>
-      <a class="btn btn-outline-secondary btn-block">Créer un dossier</a>
-      <a class="btn btn-outline-secondary btn-block">Importer</a>
+      <a class="btn btn-outline-secondary btn-block"><i class="fas fa-folder-plus"></i> Créer un dossier</a>
+      <a class="btn btn-outline-secondary btn-block"><i class="fas fa-file-import"></i> Importer</a>
     </aside>
     <!-- MAIN CONTENT -->
     <main class="main-content">
@@ -105,11 +88,43 @@
               <input type="search" class="form-control" id="" placeholder="Rechercher un blog">
             </div>
             <div class="col-lg-3 d-none d-sm-none d-md-none d-lg-block">
-              <button class="btn btn-block btn-primary" type="submit"><i class="ic-plus"></i> Créer un blog</button>
+              <button class="btn btn-block btn-primary" type="submit"><i class="fas fa-plus-circle"></i> Créer un blog</button>
             </div>
           </form>
           <div class="d-flex justify-content-between align-items-center mb-2">
-            <h2>Mes blogs</h2>
+            <div class="sidebar__mobile">
+              <i class="ic-burger p-2"><input type="checkbox" /></i>
+              <h2 class="d-inline">Mes blogs</h2>
+              <aside class="sidebar">
+                <div class="d-block text-right">
+                  <i class="fa fa-lg fa-times p-2" aria-hidden="true"></i>
+                </div>
+                <ul class="sidebar__tree">
+                  <li><a class="active" href="">Mes blogs</a>
+                    <ul>
+                      <li><a href="">Dossier 1</a></li>
+                      <li><a href="">Dossier 2</a>
+                        <ul>
+                          <li><a href="">Sous-dossier 1</a></li>
+                          <li><a href="">Sous-dossier 2</a></li>
+                          <li><a href="">Sous-dossier 3</a></li>
+                          <li><a href="">Sous-dossier avec un nom très long</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="">Dossier 3</a>
+                        <ul>
+                          <li><a href="">Sous-dossier 1</a></li>
+                          <li><a href="">Sous-dossier 2</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="">Ma corbeille</a></li>
+                </ul>
+                <a class="btn btn-outline-secondary btn-block">Créer un dossier</a>
+                <a class="btn btn-outline-secondary btn-block">Importer</a>
+              </aside>
+            </div>
             <div class="filters d-flex">
               <div class="dropdown">
                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -141,8 +156,8 @@
                   <a class="dropdown-item active" href="#">Dernière modification</a>
                 </div>
               </div>
-              <a class="btn inactive" href="explorer.html"><i class="ic-grid"></i></a>
-              <a class="btn" href="explorer-list.html"><i class="ic-list"></i></a>
+              <a class="btn inactive d-none d-sm-block" href="explorer.html"><i class="ic-grid"></i></a>
+              <a class="btn d-none d-sm-block" href="explorer-list.html"><i class="ic-list"></i></a>
             </div>
           </div>
         </section>
