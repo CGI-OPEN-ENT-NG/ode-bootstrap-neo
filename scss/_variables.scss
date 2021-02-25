@@ -305,7 +305,7 @@ $box-shadow:                  0 .5rem 1rem rgba($black, .15) ;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) ;
 
 $component-active-color:      $white ;
-$component-active-bg:         theme-color("primary") ;
+$component-active-bg:         theme-color("secondary") ;
 
 $caret-width:                 .3em ;
 $caret-vertical-align:        $caret-width * .85 ;
@@ -540,7 +540,7 @@ $input-border-radius-lg:                $border-radius-lg ;
 $input-border-radius-sm:                $border-radius-sm ;
 
 $input-focus-bg:                        $input-bg ;
-$input-focus-border-color:              $primary ;
+$input-focus-border-color:              $secondary ;
 $input-focus-color:                     $input-color ;
 $input-focus-width:                     $input-btn-focus-width ;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow ;
@@ -827,7 +827,7 @@ $dropdown-divider-bg:               $gray-200 ;
 $dropdown-divider-margin-y:         $nav-divider-margin-y ;
 $dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175) ;
 
-$dropdown-link-color:               $gray-900 ;
+$dropdown-link-color:               $gray-700 ;
 $dropdown-link-hover-color:         darken($gray-900, 5%) ;
 $dropdown-link-hover-bg:            $gray-100 ;
 
@@ -1047,9 +1047,9 @@ $alert-border-radius:               $border-radius ;
 $alert-link-font-weight:            $font-weight-bold ;
 $alert-border-width:                $border-width ;
 
-$alert-bg-level:                    -3 ;
-$alert-border-level:                0 ;
-$alert-color-level:                 6 ;
+$alert-bg-level:                    -10 ;
+$alert-border-level:                -5 ;
+$alert-color-level:                 5 ;
 
 
 // Progress bars
