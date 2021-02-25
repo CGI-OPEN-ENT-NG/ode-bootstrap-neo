@@ -53,4 +53,7 @@ $sidebar-width: 250px;
   .sidebar + .main-content {
     border-radius: $border-radius;
   }
+  .sidebar__mobile {
+    display: block;
+  }
 }
