@@ -100,10 +100,12 @@ $overlay-width: $domino-width / 1.5;
       font-size: 0.875rem; //14px
       font-weight: bold;
       margin-bottom: 5px;
+      @extend .text-truncate;
     }
     .domino__info {
       color: $gray-600;
       font-size: .75rem; //12px
+      @extend .text-truncate;
       a {
         font-weight: bold;
         color: $secondary;
