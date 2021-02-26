@@ -4939,7 +4939,7 @@ readers do not read off random characters that represent icons */
     height: auto; }
   .ode-bootstrap-neo .img-thumbnail {
     padding: 0.25rem;
-    background-color: #f0f2f4;
+    background-color: #fff;
     border: 1px solid #d6d9e0;
     border-radius: 5px;
     max-width: 100%;
