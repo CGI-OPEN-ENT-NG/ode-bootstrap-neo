@@ -203,7 +203,7 @@
               </div>
             </div>
             <div class="domino__infos">
-              <h2 class="domino__title">Titre de la ressource</h2>
+              <h2 class="domino__title" title="Titre de la ressource - modale propriétés">Titre de la ressource - modale propriétés</h2>
               <span class="domino__info">Modifié par <a><img class="avatar avatar--20" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" /> Alain Terrieur</a></span>
               <span class="domino__info">Il y a 2 semaines</span>
             </div>
@@ -329,19 +329,21 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-auto">
-                <img src="https://dummyimage.com/200x200/F0F2F4/aaa" alt="..." class="img-thumbnail">
+              <div class="col-auto mx-auto text-center">
+                <img src="https://loremflickr.com/200/200?random=3" alt="..." class="img-thumbnail">
+                <div class="row p-2">
+                  <button class="btn btn-outline-secondary m-1"><i class="fa fa-edit" aria-hidden="true"></i> Changer l'image</button>
+                  <button class="btn btn-outline-secondary m-1"><i class="fa fa-trash" aria-hidden="true"></i> Supprimer l'image</button>
+                </div>
               </div>
-              <form class="col">
+              <form class="col-12">
                 <div class="form-group">
                   <label for="">Titre de mon blog :</label>
                   <input type="text" class="form-control" id="" value="Titre de la ressource">
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                  <label class="form-check-label" for="defaultCheck1">
-                    Le blog est accessible publiquement via cette adresse personnalisable :
-                  </label>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">Le blog est accessible publiquement via cette adresse personnalisable :</label>
                 </div>
                 <div class="mt-2 alert alert-warning" role="alert">
                   Attention, ce blog va devenir public, les documents appartenant à d'autres utilisateurs et présents sur le blog seront rendus publics également. Les liens pointant vers des ressources internes au réseau ne seront pas accessibles pour les visiteurs sans compte. 
