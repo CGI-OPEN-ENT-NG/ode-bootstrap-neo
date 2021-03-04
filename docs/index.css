@@ -13290,7 +13290,7 @@ END DOCUMENTATION */
     background-color: rgba(255, 255, 255, 0.7);
     color: #8c939e;
     width: 250px;
-    padding: 15px;
+    padding: 20px;
     font-size: 0.875rem;
     font-weight: bold;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.05); }
@@ -13352,6 +13352,7 @@ END DOCUMENTATION */
     border-radius: 0 5px 5px 0;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05); }
   .ode-bootstrap-neo .sidebar__mobile {
+    color: #fff;
     margin-right: auto;
     display: none; }
     .ode-bootstrap-neo .sidebar__mobile .sidebar {
