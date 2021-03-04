@@ -7,7 +7,7 @@ header.navbar.navbar-dark {
     right: 0;
     z-index: $zindex-sticky;
     box-shadow: 0 2px 5px $shadow-light;
-    .btn {
+    > .btn {
         font-size: 1.5rem;
         &:first-child {
             margin-right: auto;
@@ -63,7 +63,7 @@ header.navbar.navbar-dark {
 }
 @include media-breakpoint-down(md) {
     header.navbar.navbar-dark {
-        .btn {
+        > .btn {
             font-size: 1.25rem;
             &:first-child {
                 margin-right: auto;
