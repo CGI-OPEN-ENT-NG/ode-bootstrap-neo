@@ -10,13 +10,15 @@
 
 .main-content {
     background-color: $white;
-    padding: 25px;
+    padding: 20px;
 }
 
 @include media-breakpoint-down(md) {
-    .container,
-    .main-content {
+    .container {
         padding: 15px;
+    }
+    .main-content {
+        padding: 10px;
     }
 }
 

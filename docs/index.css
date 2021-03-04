@@ -10989,7 +10989,7 @@ readers do not read off random characters that represent icons */
   .ode-bootstrap-neo .mr-2,
   .ode-bootstrap-neo .mx-2 {
     margin-right: 0.5rem !important; }
-  .ode-bootstrap-neo .mb-2,
+  .ode-bootstrap-neo .mb-2, .ode-bootstrap-neo .sidebar__mobile .input-searchbar,
   .ode-bootstrap-neo .my-2 {
     margin-bottom: 0.5rem !important; }
   .ode-bootstrap-neo .ml-2,
@@ -11037,7 +11037,7 @@ readers do not read off random characters that represent icons */
   .ode-bootstrap-neo .ml-5,
   .ode-bootstrap-neo .mx-5 {
     margin-left: 3rem !important; }
-  .ode-bootstrap-neo .p-0 {
+  .ode-bootstrap-neo .p-0, .ode-bootstrap-neo .sidebar__mobile .input-searchbar {
     padding: 0 !important; }
   .ode-bootstrap-neo .pt-0,
   .ode-bootstrap-neo .py-0 {
@@ -12641,11 +12641,12 @@ END DOCUMENTATION */
     padding: 25px; }
   .ode-bootstrap-neo .main-content {
     background-color: #fff;
-    padding: 25px; }
+    padding: 20px; }
   @media (max-width: 991.98px) {
-    .ode-bootstrap-neo .container,
+    .ode-bootstrap-neo .container {
+      padding: 15px; }
     .ode-bootstrap-neo .main-content {
-      padding: 15px; } }
+      padding: 10px; } }
   .ode-bootstrap-neo popover {
     position: relative;
     display: inline-block;
@@ -12750,6 +12751,8 @@ END DOCUMENTATION */
     content: '\e95b'; }
   .ode-bootstrap-neo .ic-user::before {
     content: '\e905'; }
+  .ode-bootstrap-neo .ic-users::before {
+    content: '\e822'; }
   .ode-bootstrap-neo .ic-public::before {
     content: '\e8d1'; }
   .ode-bootstrap-neo .ic-share::before {
@@ -12878,7 +12881,7 @@ END DOCUMENTATION */
     transition-property: all;
     transition-duration: 0.25s;
     transition-timing-function: ease; }
-  .ode-bootstrap-neo .transition-hover, .ode-bootstrap-neo .domino, .ode-bootstrap-neo .domino:hover .domino__overlay--left, .ode-bootstrap-neo .domino:hover .domino__overlay--right, .ode-bootstrap-neo .list__item, .ode-bootstrap-neo .sidebar__mobile .sidebar, .ode-bootstrap-neo .sidebar__mobile input:checked ~ .sidebar {
+  .ode-bootstrap-neo .transition-hover, .ode-bootstrap-neo .domino, .ode-bootstrap-neo .domino:hover .domino__overlay--left, .ode-bootstrap-neo .domino:hover .domino__overlay--right, .ode-bootstrap-neo .list__item, .ode-bootstrap-neo .sidebar__mobile .sidebar, .ode-bootstrap-neo .sidebar__mobile input[type=checkbox]:checked ~ .sidebar {
     transition-property: all;
     transition-duration: 0.5s;
     transition-timing-function: ease; }
@@ -13028,7 +13031,7 @@ END DOCUMENTATION */
     font-size: 1.375rem;
     margin-bottom: 0; }
   .ode-bootstrap-neo .explorer__view {
-    height: calc(100vh - 260px);
+    height: calc(100vh - 240px);
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: #b1b6bf #e9ebef;
@@ -13037,7 +13040,7 @@ END DOCUMENTATION */
     padding: 10px; }
   @media (max-width: 991.98px) {
     .ode-bootstrap-neo .explorer__view {
-      height: calc(100vh - 200px); } }
+      height: calc(100vh - 145px); } }
   .ode-bootstrap-neo .filters .btn {
     color: #8c939e;
     box-shadow: none; }
@@ -13147,9 +13150,9 @@ END DOCUMENTATION */
     right: 0;
     z-index: 1020;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); }
-    .ode-bootstrap-neo header.navbar.navbar-dark .btn {
+    .ode-bootstrap-neo header.navbar.navbar-dark > .btn {
       font-size: 1.5rem; }
-      .ode-bootstrap-neo header.navbar.navbar-dark .btn:first-child {
+      .ode-bootstrap-neo header.navbar.navbar-dark > .btn:first-child {
         margin-right: auto; }
     .ode-bootstrap-neo header.navbar.navbar-dark .logo {
       display: inline-block;
@@ -13190,9 +13193,9 @@ END DOCUMENTATION */
         line-height: 20px;
         margin-right: -20px; }
   @media (max-width: 991.98px) {
-    .ode-bootstrap-neo header.navbar.navbar-dark .btn {
+    .ode-bootstrap-neo header.navbar.navbar-dark > .btn {
       font-size: 1.25rem; }
-      .ode-bootstrap-neo header.navbar.navbar-dark .btn:first-child {
+      .ode-bootstrap-neo header.navbar.navbar-dark > .btn:first-child {
         margin-right: auto; }
     .ode-bootstrap-neo header.navbar.navbar-dark a.application__title {
       display: block;
@@ -13204,10 +13207,10 @@ END DOCUMENTATION */
       vertical-align: middle;
       margin-right: 10px; } }
   .ode-bootstrap-neo .sidebar {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.7);
     color: #8c939e;
     width: 250px;
-    padding: 25px;
+    padding: 20px;
     font-size: 0.875rem;
     font-weight: bold;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.05); }
@@ -13250,6 +13253,8 @@ END DOCUMENTATION */
     border-radius: 0 5px 5px 0;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05); }
   .ode-bootstrap-neo .sidebar__mobile {
+    color: #fff;
+    margin-right: auto;
     display: none; }
     .ode-bootstrap-neo .sidebar__mobile .sidebar {
       display: block;
@@ -13257,7 +13262,7 @@ END DOCUMENTATION */
       width: 100%;
       left: 0;
       right: 0;
-      top: 41px;
+      top: 46px;
       bottom: 0;
       background-color: rgba(255, 255, 255, 0.95);
       visibility: hidden;
@@ -13265,22 +13270,31 @@ END DOCUMENTATION */
       z-index: -1; }
       .ode-bootstrap-neo .sidebar__mobile .sidebar__tree {
         max-height: calc(100vh - 200px); }
-    .ode-bootstrap-neo .sidebar__mobile input {
+    .ode-bootstrap-neo .sidebar__mobile input[type=checkbox] {
       display: block;
-      width: 32px;
-      height: 32px;
+      width: 40px;
+      height: 46px;
       position: absolute;
-      margin-top: -30px;
+      top: 0;
+      left: 0;
       cursor: pointer;
       opacity: 0;
       /* hide this */
       z-index: 2;
       /* and place it over the hamburger */
       -webkit-touch-callout: none; }
-    .ode-bootstrap-neo .sidebar__mobile input:checked ~ .sidebar {
+    .ode-bootstrap-neo .sidebar__mobile input[type=checkbox]:checked ~ .sidebar {
       visibility: visible;
       opacity: 1;
       z-index: 1000; }
+    .ode-bootstrap-neo .sidebar__mobile .ic-burger {
+      color: #fff;
+      opacity: 0.5; }
+    .ode-bootstrap-neo .sidebar__mobile input[type=checkbox]:checked ~ .ic-burger {
+      opacity: 1; }
+    .ode-bootstrap-neo .sidebar__mobile .input-searchbar .ic-search {
+      left: 15px;
+      top: 9px; }
   @media (max-width: 991.98px) {
     .ode-bootstrap-neo .sidebar {
       display: none; }
