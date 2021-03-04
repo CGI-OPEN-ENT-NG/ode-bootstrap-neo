@@ -27,10 +27,10 @@ $sidebar-width: 250px;
 
 /* COMPONENT */
 /*aside*/.sidebar {
-  background-color: rgba($white, 0.8);
+  background-color: rgba($white, 0.7);
   color: $gray-600;
   width: $sidebar-width;
-  padding: 25px;
+  padding: 20px;
   font-size: 0.875rem;
   font-weight: bold;
   box-shadow: -5px 5px 10px rgba(0,0,0,0.05);
@@ -90,6 +90,8 @@ $sidebar-width: 250px;
 }
 
 .sidebar__mobile {
+  color: $white;
+  margin-right: auto;
   display: none;
   .sidebar {
     display: block;
@@ -97,7 +99,7 @@ $sidebar-width: 250px;
     width: 100%;
     left: 0;
     right: 0;
-    top: 41px;
+    top: 46px;
     bottom: 0;
     background-color: rgba($white, 0.95);
     visibility: hidden;
@@ -108,22 +110,38 @@ $sidebar-width: 250px;
       max-height: calc(100vh - 200px);
     } 
   }
-  input {
+  input[type=checkbox] {
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 46px;
     position: absolute;
-    margin-top: -30px;
+    top: 0;
+    left: 0;
     cursor: pointer;
     opacity: 0; /* hide this */
     z-index: 2; /* and place it over the hamburger */
     -webkit-touch-callout: none;
   }
-  input:checked ~ .sidebar {
+  input[type=checkbox]:checked ~ .sidebar {
     visibility: visible;
     opacity: 1;
     z-index: 1000;
     @extend .transition-hover;
+  }
+  .ic-burger {
+    color: $white;
+    opacity: 0.5;
+  }
+  input[type=checkbox]:checked ~ .ic-burger {
+    opacity: 1;
+  }
+  .input-searchbar {
+    @extend .p-0;
+    @extend .mb-2;
+    .ic-search {
+      left: 15px;
+      top: 9px;
+    }
   }
 }
 
