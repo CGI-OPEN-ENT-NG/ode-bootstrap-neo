@@ -5,7 +5,7 @@
 .container {
     max-width: 1700px;
     margin: 0 auto;
-    padding: 25px;
+    padding: 20px;
 }
 @include media-breakpoint-down(sm) {
     main.main {
@@ -244,12 +244,12 @@ help {
 
 .main-content {
     background-color: $white;
-    padding: 20px;
+    padding: 15px;
 }
 
 @include media-breakpoint-down(md) {
     .container {
-        padding: 15px;
+        padding: 10px;
     }
     .main-content {
         padding: 10px;
