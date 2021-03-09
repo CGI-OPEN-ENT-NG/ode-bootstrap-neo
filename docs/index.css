@@ -12702,9 +12702,26 @@ END DOCUMENTATION */
     opacity: 0; }
   .ode-bootstrap-neo .lightbox-opened .image-contextual-menu {
     display: none; }
-  .ode-bootstrap-neo .image-contextual-menu {
-    display: flex;
-    align-items: center;
+  .ode-bootstrap-neo .container {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 20px; }
+  .ode-bootstrap-neo .main-content {
+    background-color: #fff;
+    padding: 15px; }
+  @media (max-width: 991.98px) {
+    .ode-bootstrap-neo .container {
+      padding: 10px; }
+    .ode-bootstrap-neo .main-content {
+      padding: 10px; } }
+  .ode-bootstrap-neo popover {
+    position: relative;
+    display: inline-block;
+    z-index: 10000; }
+  .ode-bootstrap-neo popover popover-content.hidden {
+    opacity: 0;
+    pointer-events: none; }
+  .ode-bootstrap-neo popover popover-content {
     position: absolute;
     padding: 5px;
     border-radius: 5px;
@@ -12976,9 +12993,8 @@ END DOCUMENTATION */
     background-color: #fff;
     border-radius: 10px;
     border: 1px solid #d6d9e0;
-    margin: 10px;
-    cursor: pointer;
-    position: relative; }
+    margin: 5px;
+    cursor: pointer; }
     .ode-bootstrap-neo .domino__image {
       display: flex;
       justify-content: space-between;
@@ -13110,20 +13126,20 @@ END DOCUMENTATION */
         font-size: 70%;
         color: #8c939e; }
   .ode-bootstrap-neo .explorer__view {
-    padding: 10px;
     height: calc(100vh - 220px);
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: #b1b6bf #e9ebef;
-    border-top: 1px solid #e9ebef; }
+    border-top: 1px solid #e9ebef;
+    padding: 10px; }
   @media (max-width: 991.98px) {
     .ode-bootstrap-neo .explorer__header {
       padding: 15px 15px 0; }
       .ode-bootstrap-neo .explorer__header h2 {
         font-size: 1.125rem; }
     .ode-bootstrap-neo .explorer__view {
-      height: calc(100vh - 110px); } }
-  .ode-bootstrap-neo .filters .btn, .ode-bootstrap-neo .filters .toaster__open {
+      height: calc(100vh - 135px); } }
+  .ode-bootstrap-neo .filters .btn {
     color: #8c939e;
     box-shadow: none; }
     .ode-bootstrap-neo .filters .btn.inactive, .ode-bootstrap-neo .filters .inactive.toaster__open {
@@ -13290,7 +13306,7 @@ END DOCUMENTATION */
     background-color: rgba(255, 255, 255, 0.7);
     color: #8c939e;
     width: 250px;
-    padding: 20px;
+    padding: 15px;
     font-size: 0.875rem;
     font-weight: bold;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.05); }
@@ -13312,37 +13328,24 @@ END DOCUMENTATION */
         padding-left: 10px; }
       .ode-bootstrap-neo .sidebar__tree li {
         list-style-type: none; }
-        .ode-bootstrap-neo .sidebar__tree li input[type=checkbox] {
-          cursor: pointer;
-          position: absolute;
-          opacity: 0;
-          margin: 6px 10px; }
-        .ode-bootstrap-neo .sidebar__tree li label {
-          display: block; }
-          .ode-bootstrap-neo .sidebar__tree li label a::before {
-            font-family: "FontAwesome";
-            content: "\f105";
-            margin-right: 5px; }
-        .ode-bootstrap-neo .sidebar__tree li input ~ ul {
-          display: none; }
-        .ode-bootstrap-neo .sidebar__tree li input:checked ~ ul {
-          display: block; }
-        .ode-bootstrap-neo .sidebar__tree li input:checked ~ label a::before {
-          content: "\f107"; }
-        .ode-bootstrap-neo .sidebar__tree li a {
-          display: block;
-          padding: 7px 15px;
-          margin: 5px 0;
-          color: #8c939e;
-          border-radius: 5px;
-          line-height: 1.2; }
-          .ode-bootstrap-neo .sidebar__tree li a:hover {
-            background-color: rgba(75, 175, 213, 0.075);
-            color: #4bafd5;
-            text-decoration: none; }
-          .ode-bootstrap-neo .sidebar__tree li a.active, .ode-bootstrap-neo .sidebar__tree li a:active {
-            background-color: rgba(75, 175, 213, 0.2);
-            color: #4bafd5; }
+      .ode-bootstrap-neo .sidebar__tree a {
+        display: block;
+        padding: 7px 15px;
+        margin: 5px 0;
+        color: #8c939e;
+        border-radius: 5px;
+        line-height: 1.2; }
+        .ode-bootstrap-neo .sidebar__tree a::before {
+          font-family: "FontAwesome";
+          content: "\f105";
+          margin-right: 5px; }
+        .ode-bootstrap-neo .sidebar__tree a:hover {
+          background-color: rgba(75, 175, 213, 0.075);
+          color: #4bafd5;
+          text-decoration: none; }
+        .ode-bootstrap-neo .sidebar__tree a.active, .ode-bootstrap-neo .sidebar__tree a:active {
+          background-color: rgba(75, 175, 213, 0.2);
+          color: #4bafd5; }
   .ode-bootstrap-neo .sidebar--left {
     border-radius: 5px 0 0 5px; }
   .ode-bootstrap-neo .sidebar--right {
