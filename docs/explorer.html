@@ -146,9 +146,21 @@
               </div>
             </h2>
             <div class="filters d-flex">
-              <button class="btn d-block d-sm-block d-md-none" type="button">
-                <i class="ic-search"></i>
-              </button>
+              <div class="dropdown">
+                <button class="btn d-none d-sm-block d-md-block d-lg-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="ic-search"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <form class="px-3 py-2" style="width: 300px">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Rechercher un blog" aria-label="Rechercher un blog" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-gray" type="button" id="button-addon2"><i class="ic-search"></i></button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
               <div class="dropdown">
                 <button class="btn d-block d-lg-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="ic-search"></i>

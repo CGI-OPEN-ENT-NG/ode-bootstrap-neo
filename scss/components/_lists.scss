@@ -29,18 +29,20 @@
      margin: 10px 0;
      border-color: $gray-300;
      .list__title {
-       width: calc(100% - 100px); // 100% - .list__item--preview - .list__status
+       width: calc(100% - 40px); // 100% - .list__item--preview
      }
      .list__status {
-       width: 60px;
-       padding: 0;
+       display: none;
      }
      .list__owner {
-       width: 50%;
+       width: 55%;
      }
      .list__modification {
-       width: 50%;
+       width: 45%;
        text-align: right;
+     }
+     .list__modifiedBy {
+       display: none;
      }
    }
   }
