@@ -12707,13 +12707,10 @@ END DOCUMENTATION */
     margin: 0 auto;
     padding: 20px; }
   .ode-bootstrap-neo .main-content {
-    background-color: #fff;
-    padding: 15px; }
+    background-color: #fff; }
   @media (max-width: 991.98px) {
     .ode-bootstrap-neo .container {
-      padding: 10px; }
-    .ode-bootstrap-neo .main-content {
-      padding: 10px; } }
+      padding: 0; } }
   .ode-bootstrap-neo popover {
     position: relative;
     display: inline-block;
@@ -12993,8 +12990,9 @@ END DOCUMENTATION */
     background-color: #fff;
     border-radius: 10px;
     border: 1px solid #d6d9e0;
-    margin: 5px;
-    cursor: pointer; }
+    margin: 10px;
+    cursor: pointer;
+    position: relative; }
     .ode-bootstrap-neo .domino__image {
       display: flex;
       justify-content: space-between;
@@ -13126,25 +13124,28 @@ END DOCUMENTATION */
         font-size: 70%;
         color: #8c939e; }
   .ode-bootstrap-neo .explorer__view {
+    padding: 10px;
     height: calc(100vh - 220px);
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: #b1b6bf #e9ebef;
-    border-top: 1px solid #e9ebef;
-    padding: 10px; }
+    border-top: 1px solid #e9ebef; }
   @media (max-width: 991.98px) {
     .ode-bootstrap-neo .explorer__header {
       padding: 15px 15px 0; }
       .ode-bootstrap-neo .explorer__header h2 {
         font-size: 1.125rem; }
     .ode-bootstrap-neo .explorer__view {
-      height: calc(100vh - 135px); } }
+      height: calc(100vh - 110px); } }
   .ode-bootstrap-neo .filters .btn {
     color: #8c939e;
     box-shadow: none; }
     .ode-bootstrap-neo .filters .btn.inactive, .ode-bootstrap-neo .filters .inactive.toaster__open {
       color: #c9ced5; }
-  .ode-bootstrap-neo .input-group .btn, .ode-bootstrap-neo .input-group .toaster__open {
+    .ode-bootstrap-neo .filters .btn:hover {
+      color: #4bafd5;
+      background-color: rgba(75, 175, 213, 0.1); }
+  .ode-bootstrap-neo .input-group .btn {
     box-shadow: none !important; }
   .ode-bootstrap-neo .form-control::placeholder {
     font-style: italic; }
@@ -13355,7 +13356,6 @@ END DOCUMENTATION */
     border-radius: 0 5px 5px 0;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05); }
   .ode-bootstrap-neo .sidebar__mobile {
-    color: #fff;
     margin-right: auto;
     display: none; }
     .ode-bootstrap-neo .sidebar__mobile .sidebar {
@@ -13403,8 +13403,7 @@ END DOCUMENTATION */
       opacity: 1;
       z-index: 1000; }
     .ode-bootstrap-neo .sidebar__mobile .ic-burger {
-      color: #8c939e;
-      font-size: 1rem; }
+      color: #8c939e; }
     .ode-bootstrap-neo .sidebar__mobile .input-searchbar .ic-search {
       left: 15px;
       top: 9px; }
