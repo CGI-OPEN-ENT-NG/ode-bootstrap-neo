@@ -41,6 +41,37 @@ $overlay-width: $domino-width / 1.5;
   }
 }
 
+.domino.blog {
+  .domino__image {
+    background-color: rgba($indigo, 0.1);
+    color: $indigo;
+  }
+}
+.domino.exercizer {
+  .domino__image {
+    background-color: rgba($purple, 0.1);
+    color: $purple;
+  }
+}
+.domino.timelinegenerator {
+  .domino__image {
+    background-color: rgba($yellow, 0.1);
+    color: $yellow;
+  }
+}
+.domino.rack {
+  .domino__image {
+    background-color: rgba($red, 0.1);
+    color: $red;
+  }
+}
+.domino.homeworks {
+  .domino__image {
+    background-color: rgba($teal, 0.1);
+    color: $teal;
+  }
+}
+
 .dominos--square .domino {
   width: calc(16.667% - 20px);
 }

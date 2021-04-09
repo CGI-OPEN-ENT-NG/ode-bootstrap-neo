@@ -18,3 +18,23 @@
     }
   }
 }
+
+.toaster2 {
+  display: none;
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  z-index: 500;
+  a.btn {
+    background-color: $secondary;
+    color: $white;
+    display: inline-block;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    padding: 0;
+  }
+}
