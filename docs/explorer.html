@@ -106,7 +106,10 @@
                 <i class="ic-burger"></i> Mes blogs
                 <aside class="sidebar">
                   <ul class="sidebar__tree">
-                    <i class="ic-close"></i>
+                    <a href="" class="sidebar__close">
+                      <!-- <i class="ic-close"></i> -->
+                      <i class="fas fa-times"></i>
+                    </a>
                     <li><a class="active" href="">Mes blogs</a>
                       <ul>
                         <li><a href="">Dossier 1</a></li>
@@ -128,6 +131,7 @@
                     </li>
                     <li><a href="">Ma corbeille</a></li>
                   </ul>
+                  <a class="btn btn-secondary btn-block">Créer un blog</a>
                   <a class="btn btn-outline-secondary btn-block">Créer un dossier</a>
                   <a class="btn btn-outline-secondary btn-block">Importer</a>
                 </aside>
@@ -229,6 +233,7 @@
         <section class="explorer__view dominos dominos--square">
           <!-- Folder -->
           <article class="domino folder">
+            <a class="toaster__open"></a> <!-- Open the toaster on click -->
             <div class="domino__image">
               <i class="fas ic-folder text-secondary"></i>
             </div>
@@ -238,6 +243,7 @@
             </div>
           </article>
           <article class="domino folder">
+            <a class="toaster__open"></a> <!-- Open the toaster on click -->
             <div class="domino__image">
               <i class="fas ic-folder text-secondary"></i>
             </div>
@@ -247,6 +253,7 @@
             </div>
           </article>
           <article class="domino folder">
+            <a class="toaster__open"></a> <!-- Open the toaster on click -->
             <div class="domino__image">
               <i class="fas ic-folder text-secondary"></i>
             </div>
@@ -257,6 +264,7 @@
           </article>
           <!-- Ressource - image par défaut -->
           <article class="domino item blog">
+            <a class="toaster__open"></a> <!-- Open the toaster on click -->
             <div class="domino__image">
               <i class="fas ic-app blog"></i>
               <div class="domino__overlay transition-hover">
@@ -319,6 +327,7 @@
 
           <!-- Ressource - image personnelle -->
           <article class="domino item thumbnail active">
+            <a class="toaster__open checked" title="Sélectionner la ressource"></a> <!-- Open the toaster on click -->
             <div class="domino__image">
               <img src="https://loremflickr.com/240/160/" alt="Image de couverture" />
               <div class="domino__overlay transition-hover">
@@ -338,6 +347,7 @@
             </div>
           </article>
           <article class="domino item thumbnail" data-toggle="modal" data-target="#editProperty">
+            <a class="toaster__open"></a> <!-- Open the toaster on click -->
             <div class="domino__image">
               <img src="https://loremflickr.com/240/160/" alt="Image de couverture" />
               <div class="domino__overlay transition-hover">
@@ -358,21 +368,7 @@
             </div>
           </article>
           <article class="domino item thumbnail">
-            <div class="toaster2">
-              <div class="dropdown">
-                <a class="btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Actions supplémentaires">
-                  <i class="fas fa-ellipsis-h"></i></a>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="#">Propriétés</a>
-                  <a class="dropdown-item" href="#">Partager</a>
-                  <a class="dropdown-item" href="#">Déplacer</a>
-                  <a class="dropdown-item" href="#">Partager dans la bibliothèque</a>
-                  <a class="dropdown-item" href="#">Imprimer</a>
-                  <a class="dropdown-item" href="#">Supprimer</a>
-                </div>
-              </div>
-            </div>
+            <a class="toaster__open"></a> <!-- Open the toaster on click -->
             <div class="domino__image">
               <img src="https://loremflickr.com/240/160/" alt="Image de couverture" />
               <div class="domino__overlay transition-hover">

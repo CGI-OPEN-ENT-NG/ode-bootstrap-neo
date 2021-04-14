@@ -6340,7 +6340,7 @@ readers do not read off random characters that represent icons */
         justify-content: center; }
       .ode-bootstrap-neo .form-inline .custom-control-label {
         margin-bottom: 0; } }
-  .ode-bootstrap-neo .btn {
+  .ode-bootstrap-neo .btn, .ode-bootstrap-neo .toaster__open {
     display: inline-block;
     font-family: "Roboto";
     font-weight: 400;
@@ -6356,20 +6356,21 @@ readers do not read off random characters that represent icons */
     border-radius: 5px;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
     @media (prefers-reduced-motion: reduce) {
-      .ode-bootstrap-neo .btn {
+      .ode-bootstrap-neo .btn, .ode-bootstrap-neo .toaster__open {
         transition: none; } }
-    .ode-bootstrap-neo .btn:hover {
+    .ode-bootstrap-neo .btn:hover, .ode-bootstrap-neo .toaster__open:hover {
       color: #5b6472;
       text-decoration: none; }
-    .ode-bootstrap-neo .btn:focus, .ode-bootstrap-neo .btn.focus {
+    .ode-bootstrap-neo .btn:focus, .ode-bootstrap-neo .toaster__open:focus, .ode-bootstrap-neo .btn.focus, .ode-bootstrap-neo .focus.toaster__open {
       outline: 0;
       box-shadow: 0 0 0 0.2rem rgba(75, 175, 213, 0.25); }
-    .ode-bootstrap-neo .btn.disabled, .ode-bootstrap-neo .btn:disabled {
+    .ode-bootstrap-neo .btn.disabled, .ode-bootstrap-neo .disabled.toaster__open, .ode-bootstrap-neo .btn:disabled, .ode-bootstrap-neo .toaster__open:disabled {
       opacity: 0.65; }
-    .ode-bootstrap-neo .btn:not(:disabled):not(.disabled) {
+    .ode-bootstrap-neo .btn:not(:disabled):not(.disabled), .ode-bootstrap-neo .toaster__open:not(:disabled):not(.disabled) {
       cursor: pointer; }
-  .ode-bootstrap-neo a.btn.disabled,
-  .ode-bootstrap-neo fieldset:disabled a.btn {
+  .ode-bootstrap-neo a.btn.disabled, .ode-bootstrap-neo a.disabled.toaster__open,
+  .ode-bootstrap-neo fieldset:disabled a.btn,
+  .ode-bootstrap-neo fieldset:disabled a.toaster__open {
     pointer-events: none; }
   .ode-bootstrap-neo .btn-primary, .ode-bootstrap-neo popover popover-content .search-text .searchButton {
     color: #212529;
@@ -6398,30 +6399,32 @@ readers do not read off random characters that represent icons */
       .show > .ode-bootstrap-neo .btn-primary.dropdown-toggle:focus,
       .show > .ode-bootstrap-neo popover popover-content .search-text .dropdown-toggle.searchButton:focus {
         box-shadow: 0 0 0 0.2rem rgba(222, 119, 6, 0.5); }
-  .ode-bootstrap-neo .btn-secondary {
+  .ode-bootstrap-neo .btn-secondary, .ode-bootstrap-neo .toaster__open.checked {
     color: #fff;
     background-color: #4bafd5;
     border-color: #4bafd5; }
-    .ode-bootstrap-neo .btn-secondary:hover {
+    .ode-bootstrap-neo .btn-secondary:hover, .ode-bootstrap-neo .toaster__open.checked:hover {
       color: #fff;
       background-color: #2fa0cb;
       border-color: #2d98c0; }
-    .ode-bootstrap-neo .btn-secondary:focus, .ode-bootstrap-neo .btn-secondary.focus {
+    .ode-bootstrap-neo .btn-secondary:focus, .ode-bootstrap-neo .toaster__open.checked:focus, .ode-bootstrap-neo .btn-secondary.focus, .ode-bootstrap-neo .focus.toaster__open.checked {
       color: #fff;
       background-color: #2fa0cb;
       border-color: #2d98c0;
       box-shadow: 0 0 0 0.2rem rgba(102, 187, 219, 0.5); }
-    .ode-bootstrap-neo .btn-secondary.disabled, .ode-bootstrap-neo .btn-secondary:disabled {
+    .ode-bootstrap-neo .btn-secondary.disabled, .ode-bootstrap-neo .disabled.toaster__open.checked, .ode-bootstrap-neo .btn-secondary:disabled, .ode-bootstrap-neo .toaster__open.checked:disabled {
       color: #fff;
       background-color: #4bafd5;
       border-color: #4bafd5; }
-    .ode-bootstrap-neo .btn-secondary:not(:disabled):not(.disabled):active, .ode-bootstrap-neo .btn-secondary:not(:disabled):not(.disabled).active,
-    .show > .ode-bootstrap-neo .btn-secondary.dropdown-toggle {
+    .ode-bootstrap-neo .btn-secondary:not(:disabled):not(.disabled):active, .ode-bootstrap-neo .toaster__open.checked:not(:disabled):not(.disabled):active, .ode-bootstrap-neo .btn-secondary:not(:disabled):not(.disabled).active, .ode-bootstrap-neo .toaster__open.checked:not(:disabled):not(.disabled).active,
+    .show > .ode-bootstrap-neo .btn-secondary.dropdown-toggle,
+    .show > .ode-bootstrap-neo .dropdown-toggle.toaster__open.checked {
       color: #fff;
       background-color: #2d98c0;
       border-color: #2a8fb6; }
-      .ode-bootstrap-neo .btn-secondary:not(:disabled):not(.disabled):active:focus, .ode-bootstrap-neo .btn-secondary:not(:disabled):not(.disabled).active:focus,
-      .show > .ode-bootstrap-neo .btn-secondary.dropdown-toggle:focus {
+      .ode-bootstrap-neo .btn-secondary:not(:disabled):not(.disabled):active:focus, .ode-bootstrap-neo .toaster__open.checked:not(:disabled):not(.disabled):active:focus, .ode-bootstrap-neo .btn-secondary:not(:disabled):not(.disabled).active:focus, .ode-bootstrap-neo .toaster__open.checked:not(:disabled):not(.disabled).active:focus,
+      .show > .ode-bootstrap-neo .btn-secondary.dropdown-toggle:focus,
+      .show > .ode-bootstrap-neo .dropdown-toggle.toaster__open.checked:focus {
         box-shadow: 0 0 0 0.2rem rgba(102, 187, 219, 0.5); }
   .ode-bootstrap-neo .btn-success {
     color: #212529;
@@ -7420,12 +7423,12 @@ readers do not read off random characters that represent icons */
     .ode-bootstrap-neo .btn-link:disabled, .ode-bootstrap-neo .btn-link.disabled {
       color: #8c939e;
       pointer-events: none; }
-  .ode-bootstrap-neo .btn-lg, .ode-bootstrap-neo .btn-group-lg > .btn {
+  .ode-bootstrap-neo .btn-lg, .ode-bootstrap-neo .btn-group-lg > .btn, .ode-bootstrap-neo .btn-group-lg > .toaster__open {
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
     line-height: 1.5;
     border-radius: 10px; }
-  .ode-bootstrap-neo .btn-sm, .ode-bootstrap-neo .btn-group-sm > .btn {
+  .ode-bootstrap-neo .btn-sm, .ode-bootstrap-neo .btn-group-sm > .btn, .ode-bootstrap-neo .btn-group-sm > .toaster__open {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
     line-height: 1.5;
@@ -7635,17 +7638,22 @@ readers do not read off random characters that represent icons */
     position: relative;
     display: inline-flex;
     vertical-align: middle; }
-    .ode-bootstrap-neo .btn-group > .btn,
-    .ode-bootstrap-neo .btn-group-vertical > .btn {
+    .ode-bootstrap-neo .btn-group > .btn, .ode-bootstrap-neo .btn-group > .toaster__open,
+    .ode-bootstrap-neo .btn-group-vertical > .btn,
+    .ode-bootstrap-neo .btn-group-vertical > .toaster__open {
       position: relative;
       flex: 1 1 auto; }
-      .ode-bootstrap-neo .btn-group > .btn:hover,
-      .ode-bootstrap-neo .btn-group-vertical > .btn:hover {
+      .ode-bootstrap-neo .btn-group > .btn:hover, .ode-bootstrap-neo .btn-group > .toaster__open:hover,
+      .ode-bootstrap-neo .btn-group-vertical > .btn:hover,
+      .ode-bootstrap-neo .btn-group-vertical > .toaster__open:hover {
         z-index: 1; }
-      .ode-bootstrap-neo .btn-group > .btn:focus, .ode-bootstrap-neo .btn-group > .btn:active, .ode-bootstrap-neo .btn-group > .btn.active,
+      .ode-bootstrap-neo .btn-group > .btn:focus, .ode-bootstrap-neo .btn-group > .toaster__open:focus, .ode-bootstrap-neo .btn-group > .btn:active, .ode-bootstrap-neo .btn-group > .toaster__open:active, .ode-bootstrap-neo .btn-group > .btn.active, .ode-bootstrap-neo .btn-group > .active.toaster__open,
       .ode-bootstrap-neo .btn-group-vertical > .btn:focus,
+      .ode-bootstrap-neo .btn-group-vertical > .toaster__open:focus,
       .ode-bootstrap-neo .btn-group-vertical > .btn:active,
-      .ode-bootstrap-neo .btn-group-vertical > .btn.active {
+      .ode-bootstrap-neo .btn-group-vertical > .toaster__open:active,
+      .ode-bootstrap-neo .btn-group-vertical > .btn.active,
+      .ode-bootstrap-neo .btn-group-vertical > .active.toaster__open {
         z-index: 1; }
   .ode-bootstrap-neo .btn-toolbar {
     display: flex;
@@ -7653,15 +7661,17 @@ readers do not read off random characters that represent icons */
     justify-content: flex-start; }
     .ode-bootstrap-neo .btn-toolbar .input-group {
       width: auto; }
-  .ode-bootstrap-neo .btn-group > .btn:not(:first-child),
+  .ode-bootstrap-neo .btn-group > .btn:not(:first-child), .ode-bootstrap-neo .btn-group > .toaster__open:not(:first-child),
   .ode-bootstrap-neo .btn-group > .btn-group:not(:first-child) {
     margin-left: -1px; }
-  .ode-bootstrap-neo .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-  .ode-bootstrap-neo .btn-group > .btn-group:not(:last-child) > .btn {
+  .ode-bootstrap-neo .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .ode-bootstrap-neo .btn-group > .toaster__open:not(:last-child):not(.dropdown-toggle),
+  .ode-bootstrap-neo .btn-group > .btn-group:not(:last-child) > .btn,
+  .ode-bootstrap-neo .btn-group > .btn-group:not(:last-child) > .toaster__open {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
-  .ode-bootstrap-neo .btn-group > .btn:not(:first-child),
-  .ode-bootstrap-neo .btn-group > .btn-group:not(:first-child) > .btn {
+  .ode-bootstrap-neo .btn-group > .btn:not(:first-child), .ode-bootstrap-neo .btn-group > .toaster__open:not(:first-child),
+  .ode-bootstrap-neo .btn-group > .btn-group:not(:first-child) > .btn,
+  .ode-bootstrap-neo .btn-group > .btn-group:not(:first-child) > .toaster__open {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
   .ode-bootstrap-neo .dropdown-toggle-split {
@@ -7673,37 +7683,45 @@ readers do not read off random characters that represent icons */
       margin-left: 0; }
     .dropleft .ode-bootstrap-neo .dropdown-toggle-split::before {
       margin-right: 0; }
-  .ode-bootstrap-neo .btn-sm + .dropdown-toggle-split, .ode-bootstrap-neo .btn-group-sm > .btn + .dropdown-toggle-split {
+  .ode-bootstrap-neo .btn-sm + .dropdown-toggle-split, .ode-bootstrap-neo .btn-group-sm > .btn + .dropdown-toggle-split, .ode-bootstrap-neo .btn-group-sm > .toaster__open + .dropdown-toggle-split {
     padding-right: 0.375rem;
     padding-left: 0.375rem; }
-  .ode-bootstrap-neo .btn-lg + .dropdown-toggle-split, .ode-bootstrap-neo .btn-group-lg > .btn + .dropdown-toggle-split {
+  .ode-bootstrap-neo .btn-lg + .dropdown-toggle-split, .ode-bootstrap-neo .btn-group-lg > .btn + .dropdown-toggle-split, .ode-bootstrap-neo .btn-group-lg > .toaster__open + .dropdown-toggle-split {
     padding-right: 0.75rem;
     padding-left: 0.75rem; }
   .ode-bootstrap-neo .btn-group-vertical {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center; }
+    
     .ode-bootstrap-neo .btn-group-vertical > .btn,
+    .ode-bootstrap-neo .btn-group-vertical > .toaster__open,
     .ode-bootstrap-neo .btn-group-vertical > .btn-group {
       width: 100%; }
-    .ode-bootstrap-neo .btn-group-vertical > .btn:not(:first-child),
+    .ode-bootstrap-neo .btn-group-vertical > .btn:not(:first-child), .ode-bootstrap-neo .btn-group-vertical > .toaster__open:not(:first-child),
     .ode-bootstrap-neo .btn-group-vertical > .btn-group:not(:first-child) {
       margin-top: -1px; }
-    .ode-bootstrap-neo .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-    .ode-bootstrap-neo .btn-group-vertical > .btn-group:not(:last-child) > .btn {
+    .ode-bootstrap-neo .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .ode-bootstrap-neo .btn-group-vertical > .toaster__open:not(:last-child):not(.dropdown-toggle),
+    .ode-bootstrap-neo .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+    .ode-bootstrap-neo .btn-group-vertical > .btn-group:not(:last-child) > .toaster__open {
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0; }
-    .ode-bootstrap-neo .btn-group-vertical > .btn:not(:first-child),
-    .ode-bootstrap-neo .btn-group-vertical > .btn-group:not(:first-child) > .btn {
+    .ode-bootstrap-neo .btn-group-vertical > .btn:not(:first-child), .ode-bootstrap-neo .btn-group-vertical > .toaster__open:not(:first-child),
+    .ode-bootstrap-neo .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+    .ode-bootstrap-neo .btn-group-vertical > .btn-group:not(:first-child) > .toaster__open {
       border-top-left-radius: 0;
       border-top-right-radius: 0; }
-  .ode-bootstrap-neo .btn-group-toggle > .btn,
-  .ode-bootstrap-neo .btn-group-toggle > .btn-group > .btn {
+  .ode-bootstrap-neo .btn-group-toggle > .btn, .ode-bootstrap-neo .btn-group-toggle > .toaster__open,
+  .ode-bootstrap-neo .btn-group-toggle > .btn-group > .btn,
+  .ode-bootstrap-neo .btn-group-toggle > .btn-group > .toaster__open {
     margin-bottom: 0; }
-    .ode-bootstrap-neo .btn-group-toggle > .btn input[type="radio"],
+    .ode-bootstrap-neo .btn-group-toggle > .btn input[type="radio"], .ode-bootstrap-neo .btn-group-toggle > .toaster__open input[type="radio"],
     .ode-bootstrap-neo .btn-group-toggle > .btn input[type="checkbox"],
+    .ode-bootstrap-neo .btn-group-toggle > .toaster__open input[type="checkbox"],
     .ode-bootstrap-neo .btn-group-toggle > .btn-group > .btn input[type="radio"],
-    .ode-bootstrap-neo .btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
+    .ode-bootstrap-neo .btn-group-toggle > .btn-group > .toaster__open input[type="radio"],
+    .ode-bootstrap-neo .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
+    .ode-bootstrap-neo .btn-group-toggle > .btn-group > .toaster__open input[type="checkbox"] {
       position: absolute;
       clip: rect(0, 0, 0, 0);
       pointer-events: none; }
@@ -7762,21 +7780,30 @@ readers do not read off random characters that represent icons */
   .ode-bootstrap-neo .input-group-prepend,
   .ode-bootstrap-neo .input-group-append {
     display: flex; }
-    .ode-bootstrap-neo .input-group-prepend .btn,
-    .ode-bootstrap-neo .input-group-append .btn {
+    .ode-bootstrap-neo .input-group-prepend .btn, .ode-bootstrap-neo .input-group-prepend .toaster__open,
+    .ode-bootstrap-neo .input-group-append .btn,
+    .ode-bootstrap-neo .input-group-append .toaster__open {
       position: relative;
       z-index: 2; }
-      .ode-bootstrap-neo .input-group-prepend .btn:focus,
-      .ode-bootstrap-neo .input-group-append .btn:focus {
+      .ode-bootstrap-neo .input-group-prepend .btn:focus, .ode-bootstrap-neo .input-group-prepend .toaster__open:focus,
+      .ode-bootstrap-neo .input-group-append .btn:focus,
+      .ode-bootstrap-neo .input-group-append .toaster__open:focus {
         z-index: 3; }
-    .ode-bootstrap-neo .input-group-prepend .btn + .btn,
+    .ode-bootstrap-neo .input-group-prepend .btn + .btn, .ode-bootstrap-neo .input-group-prepend .toaster__open + .btn, .ode-bootstrap-neo .input-group-prepend .btn + .toaster__open, .ode-bootstrap-neo .input-group-prepend .toaster__open + .toaster__open,
     .ode-bootstrap-neo .input-group-prepend .btn + .input-group-text,
+    .ode-bootstrap-neo .input-group-prepend .toaster__open + .input-group-text,
     .ode-bootstrap-neo .input-group-prepend .input-group-text + .input-group-text,
     .ode-bootstrap-neo .input-group-prepend .input-group-text + .btn,
+    .ode-bootstrap-neo .input-group-prepend .input-group-text + .toaster__open,
     .ode-bootstrap-neo .input-group-append .btn + .btn,
+    .ode-bootstrap-neo .input-group-append .toaster__open + .btn,
+    .ode-bootstrap-neo .input-group-append .btn + .toaster__open,
+    .ode-bootstrap-neo .input-group-append .toaster__open + .toaster__open,
     .ode-bootstrap-neo .input-group-append .btn + .input-group-text,
+    .ode-bootstrap-neo .input-group-append .toaster__open + .input-group-text,
     .ode-bootstrap-neo .input-group-append .input-group-text + .input-group-text,
-    .ode-bootstrap-neo .input-group-append .input-group-text + .btn {
+    .ode-bootstrap-neo .input-group-append .input-group-text + .btn,
+    .ode-bootstrap-neo .input-group-append .input-group-text + .toaster__open {
       margin-left: -1px; }
   .ode-bootstrap-neo .input-group-prepend {
     margin-right: -1px; }
@@ -7807,7 +7834,9 @@ readers do not read off random characters that represent icons */
   .ode-bootstrap-neo .input-group-lg > .input-group-prepend > .input-group-text,
   .ode-bootstrap-neo .input-group-lg > .input-group-append > .input-group-text,
   .ode-bootstrap-neo .input-group-lg > .input-group-prepend > .btn,
-  .ode-bootstrap-neo .input-group-lg > .input-group-append > .btn {
+  .ode-bootstrap-neo .input-group-lg > .input-group-prepend > .toaster__open,
+  .ode-bootstrap-neo .input-group-lg > .input-group-append > .btn,
+  .ode-bootstrap-neo .input-group-lg > .input-group-append > .toaster__open {
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
     line-height: 1.5;
@@ -7820,7 +7849,9 @@ readers do not read off random characters that represent icons */
   .ode-bootstrap-neo .input-group-sm > .input-group-prepend > .input-group-text,
   .ode-bootstrap-neo .input-group-sm > .input-group-append > .input-group-text,
   .ode-bootstrap-neo .input-group-sm > .input-group-prepend > .btn,
-  .ode-bootstrap-neo .input-group-sm > .input-group-append > .btn {
+  .ode-bootstrap-neo .input-group-sm > .input-group-prepend > .toaster__open,
+  .ode-bootstrap-neo .input-group-sm > .input-group-append > .btn,
+  .ode-bootstrap-neo .input-group-sm > .input-group-append > .toaster__open {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
     line-height: 1.5;
@@ -7828,19 +7859,23 @@ readers do not read off random characters that represent icons */
   .ode-bootstrap-neo .input-group-lg > .custom-select,
   .ode-bootstrap-neo .input-group-sm > .custom-select {
     padding-right: 1.75rem; }
-  .ode-bootstrap-neo .input-group > .input-group-prepend > .btn,
+  .ode-bootstrap-neo .input-group > .input-group-prepend > .btn, .ode-bootstrap-neo .input-group > .input-group-prepend > .toaster__open,
   .ode-bootstrap-neo .input-group > .input-group-prepend > .input-group-text,
   .ode-bootstrap-neo .input-group > .input-group-append:not(:last-child) > .btn,
+  .ode-bootstrap-neo .input-group > .input-group-append:not(:last-child) > .toaster__open,
   .ode-bootstrap-neo .input-group > .input-group-append:not(:last-child) > .input-group-text,
   .ode-bootstrap-neo .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+  .ode-bootstrap-neo .input-group > .input-group-append:last-child > .toaster__open:not(:last-child):not(.dropdown-toggle),
   .ode-bootstrap-neo .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
-  .ode-bootstrap-neo .input-group > .input-group-append > .btn,
+  .ode-bootstrap-neo .input-group > .input-group-append > .btn, .ode-bootstrap-neo .input-group > .input-group-append > .toaster__open,
   .ode-bootstrap-neo .input-group > .input-group-append > .input-group-text,
   .ode-bootstrap-neo .input-group > .input-group-prepend:not(:first-child) > .btn,
+  .ode-bootstrap-neo .input-group > .input-group-prepend:not(:first-child) > .toaster__open,
   .ode-bootstrap-neo .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
   .ode-bootstrap-neo .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+  .ode-bootstrap-neo .input-group > .input-group-prepend:first-child > .toaster__open:not(:first-child),
   .ode-bootstrap-neo .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
@@ -8693,7 +8728,7 @@ readers do not read off random characters that represent icons */
       text-decoration: none; }
     .ode-bootstrap-neo .badge:empty {
       display: none; }
-  .ode-bootstrap-neo .btn .badge {
+  .ode-bootstrap-neo .btn .badge, .ode-bootstrap-neo .toaster__open .badge {
     position: relative;
     top: -1px; }
   .ode-bootstrap-neo .badge-pill {
@@ -12875,7 +12910,7 @@ END DOCUMENTATION */
     content: '\e81f'; }
   .ode-bootstrap-neo .ic-app.sacoche::before, .ode-bootstrap-neo .ic-app.sacoche-large::before {
     content: '\e899'; }
-  .ode-bootstrap-neo .transition-hover-fast, .ode-bootstrap-neo a, .ode-bootstrap-neo .list__item:hover, .ode-bootstrap-neo .sidebar__tree a:hover {
+  .ode-bootstrap-neo .transition-hover-fast, .ode-bootstrap-neo a, .ode-bootstrap-neo .list__item:hover, .ode-bootstrap-neo .sidebar__tree li a:hover {
     transition-property: all;
     transition-duration: 0.25s;
     transition-timing-function: ease; }
@@ -12883,7 +12918,7 @@ END DOCUMENTATION */
     transition-property: all;
     transition-duration: 0.5s;
     transition-timing-function: ease; }
-  .ode-bootstrap-neo .transition-hover-slow, .ode-bootstrap-neo .domino:hover, .ode-bootstrap-neo .sidebar__tree a {
+  .ode-bootstrap-neo .transition-hover-slow, .ode-bootstrap-neo .domino:hover, .ode-bootstrap-neo .sidebar__tree li a {
     transition-property: all;
     transition-duration: 0.75s;
     transition-timing-function: ease; }
@@ -12908,7 +12943,8 @@ END DOCUMENTATION */
       width: 100px;
       height: 100px; }
   .ode-bootstrap-neo .btn-link,
-  .ode-bootstrap-neo .btn[class*=btn-outline-] {
+  .ode-bootstrap-neo .btn[class*=btn-outline-],
+  .ode-bootstrap-neo .toaster__open[class*=btn-outline-] {
     box-shadow: none; }
   .ode-bootstrap-neo .btn-outline-orange:hover,
   .ode-bootstrap-neo .btn-outline-orange.active {
@@ -13077,15 +13113,15 @@ END DOCUMENTATION */
         font-size: 1.125rem; }
     .ode-bootstrap-neo .explorer__view {
       height: calc(100vh - 110px); } }
-  .ode-bootstrap-neo .filters .btn {
+  .ode-bootstrap-neo .filters .btn, .ode-bootstrap-neo .filters .toaster__open {
     color: #8c939e;
     box-shadow: none; }
-    .ode-bootstrap-neo .filters .btn.inactive {
+    .ode-bootstrap-neo .filters .btn.inactive, .ode-bootstrap-neo .filters .inactive.toaster__open {
       color: #c9ced5; }
-    .ode-bootstrap-neo .filters .btn:hover {
+    .ode-bootstrap-neo .filters .btn:hover, .ode-bootstrap-neo .filters .toaster__open:hover {
       color: #4bafd5;
-      background-color: rgba(75, 175, 213, 0.1); }
-  .ode-bootstrap-neo .input-group .btn {
+      background-color: #dceff7; }
+  .ode-bootstrap-neo .input-group .btn, .ode-bootstrap-neo .input-group .toaster__open {
     box-shadow: none !important; }
   .ode-bootstrap-neo .form-control::placeholder {
     font-style: italic; }
@@ -13187,9 +13223,9 @@ END DOCUMENTATION */
     right: 0;
     z-index: 1020;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); }
-    .ode-bootstrap-neo header.navbar.navbar-dark > .btn {
+    .ode-bootstrap-neo header.navbar.navbar-dark > .btn, .ode-bootstrap-neo header.navbar.navbar-dark > .toaster__open {
       font-size: 1.5rem; }
-      .ode-bootstrap-neo header.navbar.navbar-dark > .btn:first-child {
+      .ode-bootstrap-neo header.navbar.navbar-dark > .btn:first-child, .ode-bootstrap-neo header.navbar.navbar-dark > .toaster__open:first-child {
         margin-right: auto; }
     .ode-bootstrap-neo header.navbar.navbar-dark .logo {
       display: inline-block;
@@ -13230,9 +13266,9 @@ END DOCUMENTATION */
         line-height: 20px;
         margin-right: -20px; }
   @media (max-width: 991.98px) {
-    .ode-bootstrap-neo header.navbar.navbar-dark > .btn {
+    .ode-bootstrap-neo header.navbar.navbar-dark > .btn, .ode-bootstrap-neo header.navbar.navbar-dark > .toaster__open {
       font-size: 1.25rem; }
-      .ode-bootstrap-neo header.navbar.navbar-dark > .btn:first-child {
+      .ode-bootstrap-neo header.navbar.navbar-dark > .btn:first-child, .ode-bootstrap-neo header.navbar.navbar-dark > .toaster__open:first-child {
         margin-right: auto; }
     .ode-bootstrap-neo header.navbar.navbar-dark a.application__title {
       display: block;
@@ -13269,24 +13305,24 @@ END DOCUMENTATION */
         padding-left: 10px; }
       .ode-bootstrap-neo .sidebar__tree li {
         list-style-type: none; }
-      .ode-bootstrap-neo .sidebar__tree a {
-        display: block;
-        padding: 7px 15px;
-        margin: 5px 0;
-        color: #8c939e;
-        border-radius: 5px;
-        line-height: 1.2; }
-        .ode-bootstrap-neo .sidebar__tree a::before {
-          font-family: "FontAwesome";
-          content: "\f105";
-          margin-right: 5px; }
-        .ode-bootstrap-neo .sidebar__tree a:hover {
-          background-color: rgba(75, 175, 213, 0.075);
-          color: #4bafd5;
-          text-decoration: none; }
-        .ode-bootstrap-neo .sidebar__tree a.active, .ode-bootstrap-neo .sidebar__tree a:active {
-          background-color: rgba(75, 175, 213, 0.2);
-          color: #4bafd5; }
+        .ode-bootstrap-neo .sidebar__tree li a {
+          display: block;
+          padding: 7px 15px;
+          margin: 5px 0;
+          color: #8c939e;
+          border-radius: 5px;
+          line-height: 1.2; }
+          .ode-bootstrap-neo .sidebar__tree li a::before {
+            font-family: "FontAwesome";
+            content: "\f105";
+            margin-right: 5px; }
+          .ode-bootstrap-neo .sidebar__tree li a:hover {
+            background-color: rgba(75, 175, 213, 0.075);
+            color: #4bafd5;
+            text-decoration: none; }
+          .ode-bootstrap-neo .sidebar__tree li a.active, .ode-bootstrap-neo .sidebar__tree li a:active {
+            background-color: rgba(75, 175, 213, 0.2);
+            color: #4bafd5; }
   .ode-bootstrap-neo .sidebar--left {
     border-radius: 5px 0 0 5px; }
   .ode-bootstrap-neo .sidebar--right {
@@ -13312,6 +13348,19 @@ END DOCUMENTATION */
       z-index: -1; }
       .ode-bootstrap-neo .sidebar__mobile .sidebar__tree {
         max-height: calc(100vh - 200px); }
+      .ode-bootstrap-neo .sidebar__mobile .sidebar__close {
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 5px; }
+        .ode-bootstrap-neo .sidebar__mobile .sidebar__close i {
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+          text-align: center;
+          border-radius: 50%;
+          background-color: #8c939e;
+          color: white; }
     .ode-bootstrap-neo .sidebar__mobile input[type=checkbox] {
       display: block;
       width: 100px;
@@ -13330,7 +13379,8 @@ END DOCUMENTATION */
       opacity: 1;
       z-index: 1000; }
     .ode-bootstrap-neo .sidebar__mobile .ic-burger {
-      color: #8c939e; }
+      color: #8c939e;
+      font-size: 1rem; }
     .ode-bootstrap-neo .sidebar__mobile .input-searchbar .ic-search {
       left: 15px;
       top: 9px; }
@@ -13359,23 +13409,30 @@ END DOCUMENTATION */
       .ode-bootstrap-neo .toaster > a:hover {
         background-color: rgba(0, 0, 0, 0.1);
         text-decoration: none; }
-  .ode-bootstrap-neo .toaster2 {
-    display: none;
-    position: absolute;
-    right: -5px;
-    bottom: -5px;
-    z-index: 500; }
-    .ode-bootstrap-neo .toaster2 a.btn {
-      background-color: #4bafd5;
-      color: #fff;
-      display: inline-block;
-      text-align: center;
+    .ode-bootstrap-neo .toaster__open {
+      position: absolute;
+      right: -5px;
+      bottom: -5px;
       width: 25px;
       height: 25px;
       line-height: 25px;
       border-radius: 50%;
       font-size: 0.75rem;
-      padding: 0; }
+      padding: 0;
+      border: 1px solid #d6d9e0;
+      background-color: #f0f2f4; }
+      .ode-bootstrap-neo .toaster__open::before {
+        opacity: 0;
+        font-family: "Font Awesome 5 Free";
+        content: "\f00c"; }
+      .ode-bootstrap-neo .toaster__open:hover {
+        background-color: #dceff7;
+        border-color: #9ed4e8; }
+        .ode-bootstrap-neo .toaster__open:hover::before {
+          color: #1a566d;
+          opacity: 0.5; }
+      .ode-bootstrap-neo .toaster__open.checked::before {
+        opacity: 1; }
 
 .ode-theme-v1 {
   background: none; }
