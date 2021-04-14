@@ -7,7 +7,7 @@
     }
     &:hover {
       color: $secondary;
-      background-color: rgba($secondary, 0.1);
+      background-color: $secondary-lightest;
     }
   }
 }

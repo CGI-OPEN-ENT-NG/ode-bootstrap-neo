@@ -13137,15 +13137,15 @@ END DOCUMENTATION */
         font-size: 1.125rem; }
     .ode-bootstrap-neo .explorer__view {
       height: calc(100vh - 110px); } }
-  .ode-bootstrap-neo .filters .btn {
+  .ode-bootstrap-neo .filters .btn, .ode-bootstrap-neo .filters .toaster__open {
     color: #8c939e;
     box-shadow: none; }
     .ode-bootstrap-neo .filters .btn.inactive, .ode-bootstrap-neo .filters .inactive.toaster__open {
       color: #c9ced5; }
-    .ode-bootstrap-neo .filters .btn:hover {
+    .ode-bootstrap-neo .filters .btn:hover, .ode-bootstrap-neo .filters .toaster__open:hover {
       color: #4bafd5;
-      background-color: rgba(75, 175, 213, 0.1); }
-  .ode-bootstrap-neo .input-group .btn {
+      background-color: #dceff7; }
+  .ode-bootstrap-neo .input-group .btn, .ode-bootstrap-neo .input-group .toaster__open {
     box-shadow: none !important; }
   .ode-bootstrap-neo .form-control::placeholder {
     font-style: italic; }
@@ -13329,24 +13329,24 @@ END DOCUMENTATION */
         padding-left: 10px; }
       .ode-bootstrap-neo .sidebar__tree li {
         list-style-type: none; }
-      .ode-bootstrap-neo .sidebar__tree a {
-        display: block;
-        padding: 7px 15px;
-        margin: 5px 0;
-        color: #8c939e;
-        border-radius: 5px;
-        line-height: 1.2; }
-        .ode-bootstrap-neo .sidebar__tree a::before {
-          font-family: "FontAwesome";
-          content: "\f105";
-          margin-right: 5px; }
-        .ode-bootstrap-neo .sidebar__tree a:hover {
-          background-color: rgba(75, 175, 213, 0.075);
-          color: #4bafd5;
-          text-decoration: none; }
-        .ode-bootstrap-neo .sidebar__tree a.active, .ode-bootstrap-neo .sidebar__tree a:active {
-          background-color: rgba(75, 175, 213, 0.2);
-          color: #4bafd5; }
+        .ode-bootstrap-neo .sidebar__tree li a {
+          display: block;
+          padding: 7px 15px;
+          margin: 5px 0;
+          color: #8c939e;
+          border-radius: 5px;
+          line-height: 1.2; }
+          .ode-bootstrap-neo .sidebar__tree li a::before {
+            font-family: "FontAwesome";
+            content: "\f105";
+            margin-right: 5px; }
+          .ode-bootstrap-neo .sidebar__tree li a:hover {
+            background-color: rgba(75, 175, 213, 0.075);
+            color: #4bafd5;
+            text-decoration: none; }
+          .ode-bootstrap-neo .sidebar__tree li a.active, .ode-bootstrap-neo .sidebar__tree li a:active {
+            background-color: rgba(75, 175, 213, 0.2);
+            color: #4bafd5; }
   .ode-bootstrap-neo .sidebar--left {
     border-radius: 5px 0 0 5px; }
   .ode-bootstrap-neo .sidebar--right {
@@ -13403,7 +13403,8 @@ END DOCUMENTATION */
       opacity: 1;
       z-index: 1000; }
     .ode-bootstrap-neo .sidebar__mobile .ic-burger {
-      color: #8c939e; }
+      color: #8c939e;
+      font-size: 1rem; }
     .ode-bootstrap-neo .sidebar__mobile .input-searchbar .ic-search {
       left: 15px;
       top: 9px; }
