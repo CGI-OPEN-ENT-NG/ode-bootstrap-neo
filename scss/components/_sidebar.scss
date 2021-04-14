@@ -54,30 +54,30 @@ $sidebar-width: 250px;
     }
     li {
       list-style-type: none;
-    }
-    a {
-      display: block;
-      padding: 7px 15px;
-      margin: 5px 0;
-      color: $gray-600;
-      border-radius: $border-radius;
-      line-height: 1.2;
-      @extend .transition-hover-slow;
-      &::before {
-        font-family: "FontAwesome";
-        content: "\f105";
-        margin-right: 5px;
-      }
-      &:hover {
-        background-color: rgba($secondary, 0.075);
-        color: $secondary;
-        text-decoration: none;
-        @extend .transition-hover-fast;
-      }
-      &.active,
-      &:active {
-        background-color: rgba($secondary, 0.2);
-        color: $secondary;
+      a {
+        display: block;
+        padding: 7px 15px;
+        margin: 5px 0;
+        color: $gray-600;
+        border-radius: $border-radius;
+        line-height: 1.2;
+        @extend .transition-hover-slow;
+        &::before {
+          font-family: "FontAwesome";
+          content: "\f105";
+          margin-right: 5px;
+        }
+        &:hover {
+          background-color: rgba($secondary, 0.075);
+          color: $secondary;
+          text-decoration: none;
+          @extend .transition-hover-fast;
+        }
+        &.active,
+        &:active {
+          background-color: rgba($secondary, 0.2);
+          color: $secondary;
+        }
       }
     }
   }
@@ -114,7 +114,22 @@ $sidebar-width: 250px;
     @extend .transition-hover;
     &__tree {
       max-height: calc(100vh - 200px);
-    } 
+    }
+    &__close {
+      display: flex;
+      justify-content: flex-end;
+      padding-bottom: 5px;
+      i {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: $gray-600;
+        color: white;
+      }
+    }
   }
   input[type=checkbox] {
     display: block;
@@ -136,8 +151,8 @@ $sidebar-width: 250px;
   }
   .ic-burger {
     color: $gray-600;
+    font-size: 1rem;
   }
-
   .input-searchbar {
     @extend .p-0;
     @extend .mb-2;
