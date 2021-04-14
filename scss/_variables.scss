@@ -78,6 +78,10 @@ $primary-gradient:      linear-gradient($primary, $primary-light);
 
 $secondary:             $cyan ;
 $secondary-gradient:    linear-gradient($secondary, lighten($secondary, 10%));
+$secondary-lightest:    lighten($secondary, 35%);
+$secondary-light:       lighten($secondary, 20%);
+$secondary-dark:        darken($secondary, 10%) ;
+$secondary-darkest:     darken($secondary, 30%) ;
 
 $accent:                $orange ;
 $accent-dark:           darken($orange, 10%) ;
