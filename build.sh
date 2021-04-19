@@ -64,6 +64,17 @@ initDev () {
   docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm rebuild node-sass --no-bin-links && npm install"
 }
 
+initDev () {
+  echo "[init] Get branch name from jenkins env..."
+  BRANCH_NAME=`echo $GIT_BRANCH | sed -e "s|origin/||g"`
+  if [ "$BRANCH_NAME" = "" ]; then
+    echo "[init] Get branch name from git..."
+    BRANCH_NAME=`git branch | sed -n -e "s/^\* \(.*\)/\1/p"`
+  fi
+  docker-compose run -e BRANCH_NAME=$BRANCH_NAME -e FRONT_TAG=$FRONT_TAG -e NEXUS_ODE_USERNAME=$NEXUS_ODE_USERNAME -e NEXUS_ODE_PASSWORD=$NEXUS_ODE_PASSWORD --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle generateTemplateDev"
+  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm rebuild node-sass --no-bin-links && npm install"
+}
+
 build () {
   local extras=$1
   #get skins
