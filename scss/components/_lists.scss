@@ -2,7 +2,6 @@
   &__item {
     &:hover {
       border-color: $secondary;
-      @extend .transition-hover-fast;
     }
     &:active,
     &.active {
