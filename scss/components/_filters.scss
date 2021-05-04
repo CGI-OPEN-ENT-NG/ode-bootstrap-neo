@@ -1,13 +1,6 @@
 .filters {
-  .btn {
-    color: $gray-600;
-    box-shadow: none;
-    &.inactive {
-      color: $gray-400;
-    }
-    &:hover {
-      color: $secondary;
-      background-color: $secondary-lightest;
-    }
+  &:hover {
+    color: $secondary;
+    background-color: $secondary-lightest;
   }
 }
