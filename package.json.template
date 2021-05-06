@@ -28,6 +28,8 @@
   "author": "Open Digitale Education",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "bootstrap": "^4.4.1",
     "ode-bootstrap": "${odeBtVersion}"
   },
   "devDependencies": {
