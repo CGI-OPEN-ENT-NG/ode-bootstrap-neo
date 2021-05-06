@@ -8797,21 +8797,21 @@ END DOCUMENTATION */
     font-size: 1.25rem;
     line-height: 1.5; }
   .ode-bootstrap-neo .pagination-lg .page-item:first-child .page-link {
-    border-top-left-radius: 0.3rem;
-    border-bottom-left-radius: 0.3rem; }
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; }
   .ode-bootstrap-neo .pagination-lg .page-item:last-child .page-link {
-    border-top-right-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem; }
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; }
   .ode-bootstrap-neo .pagination-sm .page-link {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
     line-height: 1.5; }
   .ode-bootstrap-neo .pagination-sm .page-item:first-child .page-link {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem; }
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px; }
   .ode-bootstrap-neo .pagination-sm .page-item:last-child .page-link {
-    border-top-right-radius: 0.2rem;
-    border-bottom-right-radius: 0.2rem; }
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; }
   .ode-bootstrap-neo .badge {
     display: inline-block;
     padding: 5px 20px;
@@ -11123,7 +11123,7 @@ END DOCUMENTATION */
   .ode-bootstrap-neo .mr-2,
   .ode-bootstrap-neo .mx-2 {
     margin-right: 0.5rem !important; }
-  .ode-bootstrap-neo .mb-2,
+  .ode-bootstrap-neo .mb-2, .ode-bootstrap-neo .sidebar__mobile .input-searchbar,
   .ode-bootstrap-neo .my-2 {
     margin-bottom: 0.5rem !important; }
   .ode-bootstrap-neo .ml-2,
@@ -11171,7 +11171,7 @@ END DOCUMENTATION */
   .ode-bootstrap-neo .ml-5,
   .ode-bootstrap-neo .mx-5 {
     margin-left: 3rem !important; }
-  .ode-bootstrap-neo .p-0 {
+  .ode-bootstrap-neo .p-0, .ode-bootstrap-neo .sidebar__mobile .input-searchbar {
     padding: 0 !important; }
   .ode-bootstrap-neo .pt-0,
   .ode-bootstrap-neo .py-0 {
@@ -12369,7 +12369,7 @@ END DOCUMENTATION */
     white-space: normal !important; }
   .ode-bootstrap-neo .text-nowrap {
     white-space: nowrap !important; }
-  .ode-bootstrap-neo .text-truncate {
+  .ode-bootstrap-neo .text-truncate, .ode-bootstrap-neo .domino__infos .domino__title, .ode-bootstrap-neo .domino__infos .domino__info {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
@@ -12963,11 +12963,11 @@ END DOCUMENTATION */
     transition-property: all;
     transition-duration: 0.25s;
     transition-timing-function: ease; }
-  .ode-bootstrap-neo .transition-hover {
+  .ode-bootstrap-neo .transition-hover, .ode-bootstrap-neo .domino, .ode-bootstrap-neo .domino:hover .domino__overlay--left, .ode-bootstrap-neo .domino:hover .domino__overlay--right, .ode-bootstrap-neo .list__item, .ode-bootstrap-neo .sidebar__mobile .sidebar, .ode-bootstrap-neo .sidebar__mobile input[type=checkbox]:checked ~ .sidebar {
     transition-property: all;
     transition-duration: 0.5s;
     transition-timing-function: ease; }
-  .ode-bootstrap-neo .transition-hover-slow {
+  .ode-bootstrap-neo .transition-hover-slow, .ode-bootstrap-neo .domino:hover, .ode-bootstrap-neo .sidebar__tree li a {
     transition-property: all;
     transition-duration: 0.75s;
     transition-timing-function: ease; }
