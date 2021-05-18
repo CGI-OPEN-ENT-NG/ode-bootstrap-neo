@@ -22,7 +22,7 @@
 
 
     // A déplacer dans explorer.scss quand on aura résolu le souci de build
-    @import "components/avatar";
+    //@import "components/avatar";
     @import "components/breadcrumbs";
     @import "components/buttons";
     @import "components/dominos";
@@ -35,6 +35,8 @@
     @import "components/search";
     @import "components/sidebar";
     @import "components/toaster";
+
+    
 }
 
 @import "retrocompat";

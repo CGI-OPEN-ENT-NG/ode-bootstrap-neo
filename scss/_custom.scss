@@ -14,12 +14,15 @@
 
 @include media-breakpoint-down(md) {
     .container {
-        padding: 0;
+       // padding: 0;
     }
 }
 
+//Note Julien => Cette propriété générique provoque des effet de bord
+//Je suggère de l'appliquer sur la couleur uniquement
 a {
-    @extend .transition-hover-fast;
+    //@extend .transition-hover-fast;
+    //@include add-transitions(color);
 }
 
 // DEBUG CSS
