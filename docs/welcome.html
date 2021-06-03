@@ -7,14 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./index.css" />
+    <script src="js/zepto.js" type="text/javascript"></script>
+
+    <script>
+
+        Zepto(function ($) {
+            $('.trigger').on("click", function (e) {
+                $(this).siblings('.trigger').removeClass('on');
+                $(this).addClass('on');
+                var classFocus = 'focus-' + $(this).data('target-focus');
+
+                $('.container-advanced').attr('class', 'container-advanced ' + classFocus);
+            });
+        });
+
+
+
+    </script>
 </head>
 
 <body>
     <header class="no-1d navbar navbar-dark bg-secondary">
-        <a class="btn btn-secondary d-none d-md-none d-lg-block" href="/timeline/timeline" title="Accueil">
+        <a class="btn btn-secondary" href="#e" title="Accueil">
             <img class="logo" src="/assets/images/logo.png" alt="Logo de l'ENT">
         </a>
-        <span class="d-block d-lg-none text-truncate mr-auto text-white">Blog</span>
 
         <button class="btn btn-secondary" title="Accueil">
             <i class="ic-home"></i>
@@ -52,23 +68,255 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="container-advanced-nav d-lg-none">
+        <div class="list-trigger">
+            <div class="trigger" data-target-focus="left">
+                Etablissement
+            </div>
+            <div class="trigger on" data-target-focus="center">
+                Fil de nouveautés
+            </div>
+            <div class="trigger" data-target-focus="right">
+                Mes widgets
+            </div>
+        </div>
 
-        <div class="row">
+    </div>
 
-            <div class="col-md-4 col-xl-3">
+    <div class="container-advanced focus-center">
+        <div class="container-advanced-wrapper">
 
-                <!--Emmet widget shortcode-->
+            <div class="container-advanced-center">
+
                 <!--
-                    div.widget>(div.widget-header>div.subtitle)+div.widget-body
-                -->
+                Emmet widget shortcode
+                div.widget>(div.widget-header>div.subtitle)+div.widget-body
+            -->
+
+                <!--Widget Actualités à la une-->
+                <div class="widget widget-featured-news">
+                    <div class="widget-body">
+                        <div class="featured-news">
+                            <div class="zone-text">
+                                <h3 class="title">Salon de l’étudiant du 12 au 14 Juin 2018</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores fugit recusandae nobis amet mollitia illum temporibus. Aut, molestiae repudiandae non pariatur error iste distinctio quisquam a. Natus atque at maiores.</p>
+
+                            </div>
+                            <div class="zone-image">
+                                <img class="image" src="https://picsum.photos/100/100" alt="">
+                                <a href="#" class="btn btn-secondary btn-alt">En savoir plus</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!--End Widget Actualités à la une-->
+
+                <div class="feed">
+                    <h2 class="subtitle">Fil de nouveautés</h2>
+
+                    <a class="filter-button" href="#">Filtrez vos nouveautés</a>
+
+                    <div class="feed-list">
+
+                        <div class="feed-item color-app-pages new">
+                            <div class="zone-avatar">
+
+                                <div class="avatar-social">
+                                    <div class="photo">
+                                        <img src="https://picsum.photos/100/100" alt="">
+                                    </div>
+
+                                    <div class="circle bg-app-pages">
+                                        <i class="ic-app pages-large"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="zone-text">
+
+                                <div class="meta">
+                                    <div class="username">
+                                        <a class="link-discret" href="#">ATOUSA Pauline</a> - enseignant, Mathématiques
+                                    </div>
+                                    <div class="date">
+                                        Il y a 2 jours
+                                    </div>
+                                </div>
+
+                                <div class="report">
+                                    a partagé avec vous le Pages <a class="link" href="#">Quoi de neuf au Lycée ? | Nouvelle assistante d'éducation pour l'école primaire</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="feed-item color-app-wiki new">
+                            <div class="zone-avatar">
+
+                                <div class="avatar-social">
+                                    <div class="photo">
+                                        <img src="https://picsum.photos/101/101" alt="">
+                                    </div>
+
+                                    <div class="circle bg-app-wiki">
+                                        <i class="ic-app wiki"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="zone-text">
+
+                                <div class="meta">
+                                    <div class="app-name">Wiki</div>
+                                    <div class="date">
+                                        Il y a 2 jours
+                                    </div>
+                                </div>
+
+                                <div class="username">
+                                    <a class="link-discret" href="#">ATOUSA Pauline</a> - enseignant, Mathématiques
+                                </div>
+
+                                <div class="report">
+                                    a partagé avec vous le Pages <a class="link" href="#">Quoi de neuf au Lycée ? | Nouvelle assistante d'éducation pour l'école primaire</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="feed-item color-app-timelinegenerator new">
+                            <div class="zone-avatar">
+
+                                <div class="avatar-social">
+                                    <div class="photo">
+                                        <img src="https://picsum.photos/101/101" alt="">
+                                    </div>
+
+                                    <div class="circle bg-app-timelinegenerator">
+                                        <i class="ic-app timelinegenerator"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="zone-text">
+
+                                <div class="meta">
+                                    <div class="app-name">Timeline</div>
+                                    <div class="date">
+                                        Il y a 2 jours
+                                    </div>
+                                </div>
+
+                                <div class="username">
+                                    <a class="link-discret" href="#">ATOUSA Pauline</a> - enseignant, Mathématiques
+                                </div>
+
+                                <div class="report">
+                                    a partagé avec vous le Pages <a class="link" href="#">Quoi de neuf au Lycée ? | Nouvelle assistante d'éducation pour l'école primaire</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="feed-divider-message d-none">
+                            <span class="message">Notifications déja vues</span>
+                        </div>
+
+                        <div class="feed-item color-app-timelinegenerator ">
+                            <div class="zone-avatar">
+
+                                <div class="avatar-social">
+                                    <div class="photo">
+                                        <img src="https://picsum.photos/101/101" alt="">
+                                    </div>
+
+                                    <div class="circle bg-app-timelinegenerator">
+                                        <i class="ic-app timelinegenerator"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="zone-text">
+
+                                <div class="meta">
+                                    <div class="app-name">Timeline</div>
+                                    <div class="date">
+                                        Il y a 2 jours
+                                    </div>
+                                </div>
+
+                                <div class="username">
+                                    <a class="link-discret" href="#">ATOUSA Pauline</a> - enseignant, Mathématiques
+                                </div>
+
+                                <div class="report">
+                                    a partagé avec vous le Pages <a class="link" href="#">Quoi de neuf au Lycée ? | Nouvelle assistante d'éducation pour l'école primaire</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container-advanced-left">
+
+                <!--Widget Etablissement-->
+
+                <div class="widget widget-school">
+                    <div class="widget-body">
+                        <div class="header" style="background-image:url(../../assets/images/wallpaper3.png)">
+
+                            <div class="name">
+                                Charlotte Rose
+                            </div>
+                            <div class="school">
+                                Lycée Henry IV
+                            </div>
+                            <div class="avatar-list">
+                                <a href="" class="avatar-link">
+                                    <img src="https://picsum.photos/100/100" alt="">
+                                </a>
+                                <a href="" class="avatar-link">
+                                    <img src="https://picsum.photos/100/100" alt="">
+                                </a>
+                                <a href="" class="avatar-link">
+                                    <img src="https://picsum.photos/100/100" alt="">
+                                </a>
+                                <a href="" class="avatar-link">
+                                    <img src="https://picsum.photos/100/100" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="button-list">
+                            <a href="#" class="btn btn-alt">Ma classe</a>
+                            <a href="#" class="btn btn-alt-outline">Equipe pédagogique</a>
+                        </div>
+                    </div>
+
+                </div>
 
                 <!--Widget Actualités-->
-                <div class="widget">
+                <div class="widget widget-news">
                     <div class="widget-header">
                         <div class="subtitle">
-                            Actualité
-                            <a href="#" class="seemore">voir plus</a>
+                            <a class="seemore" href="#" title="Voir toutes les actualités">Actualités</a>
+                        </div>
+                        <div class="tools">
+                            <a href="" class="tool" title="Voir toutes les actualités">
+                                <i class="fas fa-plus"></i>
+                            </a>
+                            <a href="" class="tool" title="Options du widget">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                            <a href="" class="tool" title="Position du widget">
+                                <i class="fas fa-arrows-alt"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="widget-body">
@@ -99,15 +347,35 @@
                                 <span class="meta">Il y a 9 mois - Moreau Michèle</span>
                             </div>
                         </a>
+                        <a class="news-row" href="#">
+                            <div class="news-row-image">
+                                <img src="/assets/images/news-icon3.png" alt="">
+                            </div>
+                            <div class="news-row-text">
+                                <span class="link d-block">Inscription au projet Chipster</span>
+                                <span class="meta">Il y a 9 mois - Moreau Michèle</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <!--End Widget Actualités-->
 
                 <!--Widget Calendrier-->
-                <div class="widget">
+                <div class="widget widget-calendar">
                     <div class="widget-header">
                         <div class="subtitle">
-                            Calendrier
+                            <a class="seemore" href="#" title="Voir tout l'agenda">Agenda</a>
+                        </div>
+                        <div class="tools">
+                            <a href="" class="tool" title="Voir tout l'agenda">
+                                <i class="fas fa-plus"></i>
+                            </a>
+                            <a href="" class="tool" title="Options du widget">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                            <a href="" class="tool" title="Position du widget">
+                                <i class="fas fa-arrows-alt"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -164,96 +432,189 @@
                 </div>
                 <!--End Widget Actualités-->
 
-            </div>
-            <div class="col-md-4 col-xl-6">
-
-                <div class="feed">
-                    <h2 class="subtitle">Fil de nouveautés</h2>
-
-                    <a class="filter-button" href="#">Filtrez vos nouveautés</a>
-
-                    <div class="feed-list">
-
-                        <div class="feed-item color-app-pages">
-                            <div class="zone-avatar">
-
-                                <div class="avatar-social">
-                                    <div class="photo">
-                                        <img src="https://picsum.photos/100/100" alt="">
-                                    </div>
-
-                                    <div class="circle bg-app-pages">
-                                        <i class="ic-app pages-large"></i>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="zone-text">
-
-                                <div class="meta">
-                                    <div class="app-name">Blog</div>
-                                    <div class="date">
-                                        Il y a 2 jours
-                                    </div>
-                                </div>
-
-                                <div class="username">
-                                    <a class="link-discret" href="#">ATOUSA Pauline</a> - enseignant, Mathématiques
-                                </div>
-
-                                <div class="report">
-                                    a partagé avec vous le Pages <a class="link" href="#">Quoi de neuf au Lycée ? | Nouvelle assistante d'éducation pour l'école primaire</a>
-                                </div>
-                            </div>
-
+                <!--Widget Flux RSS-->
+                <div class="widget widget-rss">
+                    <div class="widget-header">
+                        <div class="subtitle">
+                            Flux RSS
                         </div>
-
-                        <div class="feed-item color-app-wiki">
-                            <div class="zone-avatar">
-
-                                <div class="avatar-social">
-                                    <div class="photo">
-                                        <img src="https://picsum.photos/101/101" alt="">
-                                    </div>
-
-                                    <div class="circle bg-app-wiki">
-                                        <i class="ic-app wiki"></i>
-                                    </div>
-                                </div>
-
+                        <div class="tools">
+                            <a href="" class="tool" title="Options du widget">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                            <a href="" class="tool" title="Position du widget">
+                                <i class="fas fa-arrows-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="widget-body">
+                        <div class="rss-feed">
+                            <div class="feed-title">
+                                DSDEN 77 - Académie de Créteil
                             </div>
-                            <div class="zone-text">
-
-                                <div class="meta">
-                                    <div class="app-name">Wiki</div>
-                                    <div class="date">
-                                        Il y a 2 jours
-                                    </div>
-                                </div>
-
-                                <div class="username">
-                                    <a class="link-discret" href="#">ATOUSA Pauline</a> - enseignant, Mathématiques
-                                </div>
-
-                                <div class="report">
-                                    a partagé avec vous le Pages <a class="link" href="#">Quoi de neuf au Lycée ? | Nouvelle assistante d'éducation pour l'école primaire</a>
-                                </div>
-                            </div>
-
+                            <ul class="list">
+                                <li class="item link">
+                                    <a href="">
+                                        <div class="title">Lorem, ipsum dolor.</div>
+                                        <div class="meta">Lorem, ipsum dolor.</div>
+                                    </a>
+                                </li>
+                                <li class="item link">
+                                    <a href="">
+                                        <div class="title">Lorem, ipsum dolor.</div>
+                                        <div class="meta">Lorem, ipsum dolor.</div>
+                                    </a>
+                                </li>
+                                <li class="item link">
+                                    <a href="">
+                                        <div class="title">Lorem, ipsum dolor.</div>
+                                        <div class="meta">Lorem, ipsum dolor.</div>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
 
                     </div>
-
                 </div>
+                <!--End Widget Flux RSS-->
+
+                <!--Widget Flux RSS-->
+                <div class="widget widget-rss">
+                    <div class="widget-header">
+                        <div class="subtitle">
+                            Flux RSS
+                        </div>
+                        <div class="tools">
+                            <a href="" class="tool" title="Options du widget">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                            <a href="" class="tool" title="Position du widget">
+                                <i class="fas fa-arrows-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="widget-body">
+                        <div class="widget-empty-message link">
+                            Ajoutez un flux RSS pour voir vos derniers articles
+                        </div>
+
+                    </div>
+                </div>
+                <!--End Widget Flux RSS-->
+
+                <!--Widget Dashboard-->
+                <div class="widget widget-dashboard">
+                    <div class="widget-header">
+                        <div class="subtitle">Carnet de bord</div>
+                        <div class="tools">
+                            <a href="" class="tool" title="Options du widget">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                            <a href="" class="tool" title="Position du widget">
+                                <i class="fas fa-arrows-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="widget-body">
+                        <div class="dashboard-choice">
+                            <a href="" class="avatar-link">
+                                <img src="https://picsum.photos/100/100" alt="">
+                                <span>Chloé</span>
+                            </a>
+                            <a href="" class="avatar-link">
+                                <img src="https://picsum.photos/100/100" alt="">
+                                <span>Pierre-Alexandre</span>
+                            </a>
+                        </div>
+                        <ul class="dashboard-list">
+                            <li class="item link-discret delay">
+                                <a href="" class="item-inner">
+                                    <div class="left">
+                                        <div class="icon">
+                                            <i class="ic-timer-off"></i>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="label">Retards non justifiés</div>
+                                        <div class="info meta">le 08/02/2021 - 8h30</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item link-discret absence">
+                                <a href="" class="item-inner">
+                                    <div class="left">
+                                        <div class="icon">
+                                            <i class="ic-nobody"></i>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="label">Retards non justifiés</div>
+                                        <div class="info meta">le 08/02/2021 - 8h30</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item link-discret note">
+                                <a href="" class="item-inner">
+                                    <div class="left">
+                                        <div class="icon">
+                                            <i class="ic-grades"></i>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="label">Retards non justifiés</div>
+                                        <div class="info meta">le 08/02/2021 - 8h30</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item link-discret unjustified-delay">
+                                <a href="" class="item-inner">
+                                    <div class="left">
+                                        <div class="icon">
+                                            <i class="ic-homeworks"></i>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="label">Retards non justifiés</div>
+                                        <div class="info meta">le 08/02/2021 - 8h30</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item link-discret skills">
+                                <a href="" class="item-inner">
+                                    <div class="left">
+                                        <div class="icon">
+                                            <i class="ic-trending-up"></i>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="label">Retards non justifiés</div>
+                                        <div class="info meta">le 08/02/2021 - 8h30</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!--End Widget Dashboard-->
 
             </div>
-            <div class="col-md-4 col-xl-3">
+
+            <div class="container-advanced-right">
 
                 <!--Widget Applications-->
-                <div class="widget">
+                <div class="widget widget-applications">
                     <div class="widget-header">
                         <div class="subtitle">
                             Mes applis
+                        </div>
+                        <div class="tools">
+                            <a href="" class="tool" title="Options du widget">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                            <a href="" class="tool" title="Position du widget">
+                                <i class="fas fa-arrows-alt"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="widget-body">
@@ -262,72 +623,90 @@
                                 <a href="#">
                                     <i class="ic-app wiki color-app-wiki"></i>
                                 </a>
-
                             </li>
                             <li class="application-item">
                                 <a href="#">
                                     <i class="ic-app pages color-app-pages"></i>
                                 </a>
-
                             </li>
                             <li class="application-item">
                                 <a href="#">
                                     <i class="ic-app blog color-app-blog"></i>
                                 </a>
-
                             </li>
                             <li class="application-item">
                                 <a href="#">
                                     <i class="ic-app scrap-book color-app-scrap-book"></i>
                                 </a>
-
                             </li>
                             <li class="application-item">
                                 <a href="#">
                                     <i class="ic-app mindmap color-app-mindmap"></i>
                                 </a>
-
-                            </li>
-                            <li class="application-item">
-                                <a href="#">
-                                    <i class="ic-app exercizer color-app-exercizer"></i>
-                                </a>
-
                             </li>
                             <li class="application-item">
                                 <a href="#">
                                     <i class="ic-app timelinegenerator color-app-timelinegenerator"></i>
                                 </a>
-
                             </li>
                             <li class="application-item">
                                 <a href="#">
                                     <i class="ic-app visioconf color-app-visioconf"></i>
                                 </a>
-
                             </li>
                         </ul>
                     </div>
                 </div>
                 <!--End Widget Applications-->
 
-                <!--Widget Liens utiles-->
-                <div class="widget">
+                <!--Widget Applications-->
+                <div class="widget widget-applications">
                     <div class="widget-header">
-                        <div class="subtitle">Liens utiles</div>
+                        <div class="subtitle">
+                            Mes applis
+                        </div>
+                        <div class="tools">
+                            <a href="" class="tool" title="Options du widget">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                            <a href="" class="tool" title="Position du widget">
+                                <i class="fas fa-arrows-alt"></i>
+                            </a>
+                        </div>
                     </div>
                     <div class="widget-body">
-                        <ul class="usefull-link-list">
-                            <li class="usefull-link-item">
+                        <div class="widget-empty-message link">
+                            Sélectionner vos applications favorites
+                        </div>
+                    </div>
+                </div>
+                <!--End Widget Applications-->
+
+                <!--Widget Liens utiles-->
+                <div class="widget widget-bookmarks">
+                    <div class="widget-header">
+                        <div class="subtitle">Liens utiles</div>
+                        <div class="tools">
+                            <a href="" class="tool" title="Options du widget">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                            <a href="" class="tool" title="Position du widget">
+                                <i class="fas fa-arrows-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="widget-body">
+                        <ul class="bookmark-list">
+                            <li class="bookmark-item">
                                 <a class="link" href="#" title="Paiement de la cantine">Paiement de la cantine</a>
                             </li>
-                            <li class="usefull-link-item">
+                            <li class="bookmark-item">
                                 <a class="link" href="#" title="Demande de bourse">Demande de bourse</a>
                             </li>
-                            <li class="usefull-link-item">
+                            <li class="bookmark-item">
                                 <a class="link" href="#" title="Offre de stage">Offre de stage</a>
                             </li>
-                            <li class="usefull-link-item">
+                            <li class="bookmark-item">
                                 <a class="link" href="#" title="Fiche métier">Fiche métier</a>
 
                             </li>
@@ -337,10 +716,40 @@
                 </div>
                 <!--End Widget Liens utiles-->
 
+                <!--Widget Liens utiles-->
+                <div class="widget widget-bookmarks">
+                    <div class="widget-header">
+                        <div class="subtitle">Liens utiles</div>
+                        <div class="tools">
+                            <a href="" class="tool" title="Options du widget">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                            <a href="" class="tool" title="Position du widget">
+                                <i class="fas fa-arrows-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="widget-body">
+                        
+                        <div class="widget-empty-message link">
+                            Gardez à portée de main les sites web que vous utilisez souvent.
+                        </div>
+                    </div>
+                </div>
+                <!--End Widget Liens utiles-->
+
                 <!--Widget Activité récente-->
-                <div class="widget">
+                <div class="widget widget-recently-viewed">
                     <div class="widget-header">
                         <div class="subtitle">Consultés récemment</div>
+                        <div class="tools">
+                            <a href="" class="tool" title="Options du widget">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                            <a href="" class="tool" title="Position du widget">
+                                <i class="fas fa-arrows-alt"></i>
+                            </a>
+                        </div>
                     </div>
                     <div class="widget-body">
                         <ul class="recently-viewed-list">
@@ -408,11 +817,71 @@
                 </div>
                 <!--End Widget Activité récente-->
 
+                <!--Widget enregistrement-->
+                <div class="widget widget-record">
+                    <div class="widget-header">
+                        <div class="subtitle">Enregistrement</div>
+                        <div class="tools">
+                            <a href="" class="tool" title="Options du widget">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                            <a href="" class="tool" title="Position du widget">
+                                <i class="fas fa-arrows-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="widget-body">
+                        <div>
+                            <img class="img-fluid" src="/assets/images/record.png" alt="">
+                        </div>
+
+                        <div>
+                            <a class="btn-circle" href="#">
+                                <i class="fas fa-microphone"></i>
+                            </a>
+                        </div>
+
+                        <div class="d-none">
+                            <a class="btn-circle" href="#">
+                                <i class="fas fa-video"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <!--End Widget enregistrement-->
+
             </div>
 
         </div>
-
     </div>
+
+    <div class="sticky-toolbox">
+        <div class="link-tool toolbox" title="Personnaliser l'accueil">
+            <i class="ic-tools"></i>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
 
 </html>

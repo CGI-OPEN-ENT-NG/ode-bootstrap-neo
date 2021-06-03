@@ -27,10 +27,17 @@ i[class*="ic-"] {
 
 .ic-grid::before {content: '\e940'}
 .ic-list::before {content: '\e84f'}
-
 .ic-folder::before {content: '\e846'}
-
 .ic-burger::before {content: '\e956'}
+
+
+.ic-timer-off::before {content: '\e426'}
+.ic-nobody::before {content: '\e901'}
+.ic-grades::before {content: '\e614'}
+.ic-homeworks::before {content: '\e86f'}
+.ic-trending-up::before {content: '\e8e5'}
+
+.ic-tools::before {content: '\e855'}
 
 // Icons editor
 
