@@ -6,6 +6,9 @@
 @import "variables/var-bootstrap";
 @import "variables/var-ode-bootstrap";
 
+// --- OVERRIDE VARIABLES ---
+@import "variables";
+
 // --- IMPORT ODE BOOTSTRAP Framework ---
 @import "node_modules/ode-bootstrap/scss/index";
 

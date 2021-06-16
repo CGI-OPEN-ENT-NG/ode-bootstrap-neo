@@ -26,6 +26,34 @@ then
   echo "sonatypePassword=$NEXUS_SONATYPE_PASSWORD" >> "?/.gradle/gradle.properties"
 fi
 
+
+# OVERRIDES VARS
+OVERRIDE_NAME="default"
+for i in "$@"
+do
+case $i in
+  -o=*|--override=*)
+  OVERRIDE_NAME="${i#*=}"
+  shift
+  ;;
+  *)
+  ;;
+esac
+done
+
+MOD_NAME=`grep "modname=" gradle.properties | sed 's/modname=//g'`
+if [ "$OVERRIDE_NAME" = "default" ];
+then
+  export OVERRIDE_MODNAME="$MOD_NAME"
+else
+  export OVERRIDE_MODNAME="$MOD_NAME-$OVERRIDE_NAME"
+fi
+
+export OVERRIDE_BUILD="build-css"
+export OVERRIDE_DIST="dist"
+export OVERRIDE_SRC="overrides/$OVERRIDE_NAME"
+# end of OVERRIDES VARS
+
 clean () {
   rm -rf node_modules
   rm -rf dist
@@ -41,7 +69,7 @@ init () {
     echo "[init] Get branch name from git..."
     BRANCH_NAME=`git branch | sed -n -e "s/^\* \(.*\)/\1/p"`
   fi
-  docker-compose run -e BRANCH_NAME=$BRANCH_NAME -e FRONT_TAG=$FRONT_TAG -e NEXUS_ODE_USERNAME=$NEXUS_ODE_USERNAME -e NEXUS_ODE_PASSWORD=$NEXUS_ODE_PASSWORD --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle generateTemplate"
+  docker-compose run -e OVERRIDE_NAME=$OVERRIDE_NAME -e OVERRIDE_MODNAME=$OVERRIDE_MODNAME -e BRANCH_NAME=$BRANCH_NAME -e FRONT_TAG=$FRONT_TAG -e NEXUS_ODE_USERNAME=$NEXUS_ODE_USERNAME -e NEXUS_ODE_PASSWORD=$NEXUS_ODE_PASSWORD --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle generateTemplate"
   docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm rebuild node-sass --no-bin-links && npm install"
 }
 
@@ -52,21 +80,30 @@ initDev () {
     echo "[init] Get branch name from git..."
     BRANCH_NAME=`git branch | sed -n -e "s/^\* \(.*\)/\1/p"`
   fi
-  docker-compose run -e BRANCH_NAME=$BRANCH_NAME -e FRONT_TAG=$FRONT_TAG -e NEXUS_ODE_USERNAME=$NEXUS_ODE_USERNAME -e NEXUS_ODE_PASSWORD=$NEXUS_ODE_PASSWORD --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle generateTemplateDev"
+  docker-compose run -e OVERRIDE_NAME=$OVERRIDE_NAME -e OVERRIDE_MODNAME=$OVERRIDE_MODNAME -e BRANCH_NAME=$BRANCH_NAME -e FRONT_TAG=$FRONT_TAG -e NEXUS_ODE_USERNAME=$NEXUS_ODE_USERNAME -e NEXUS_ODE_PASSWORD=$NEXUS_ODE_PASSWORD --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle generateTemplateDev"
   docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm rebuild node-sass --no-bin-links && npm install"
 }
 
 build () {
   local extras=$1
+  #get skins
   dirs=($(ls -d ./skins/*))
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm run release:prepare"
+  #create build dir var
+  SCSS_DIR=$OVERRIDE_BUILD/scss
+  SKIN_DIR=$OVERRIDE_BUILD/skins
+  #create build dir and copy source
+  mkdir -p $OVERRIDE_BUILD
+  cp -R skins $SKIN_DIR
+  cp -R scss $SCSS_DIR
+  cp -R scss/$OVERRIDE_SRC/* $OVERRIDE_BUILD/scss/
+  docker-compose run -e SKIN_DIR=$SKIN_DIR -e SCSS_DIR=$SCSS_DIR -e DIST_DIR=$OVERRIDE_DIST --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm run release:prepare"
   for dir in "${dirs[@]}"; do
     tmp=`echo $dir | sed 's/.\/skins\///'`
-    docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "SKIN=$tmp npm run sass:build:release"
+    docker-compose run -e SKIN_DIR=$SKIN_DIR -e SCSS_DIR=$SCSS_DIR -e DIST_DIR=$OVERRIDE_DIST -e SKIN=$tmp  --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm run sass:build:release"
   done
-  cp node_modules/ode-bootstrap/dist/version.txt dist/version.txt
+  cp node_modules/ode-bootstrap/dist/version.txt $OVERRIDE_DIST/version.txt
   VERSION=`grep "version="  gradle.properties| sed 's/version=//g'`
-  echo "ode-bootstrap-neo=$VERSION `date +'%d/%m/%Y %H:%M:%S'`" >> dist/version.txt
+  echo "$OVERRIDE_MODNAME=$VERSION `date +'%d/%m/%Y %H:%M:%S'`" >> $OVERRIDE_DIST/version.txt
 }
 
 watch () {
@@ -94,15 +131,16 @@ publishNexus () {
     echo "sonatypeUsername=$NEXUS_SONATYPE_USERNAME" >> "?/.gradle/gradle.properties"
     echo "sonatypePassword=$NEXUS_SONATYPE_PASSWORD" >> "?/.gradle/gradle.properties"
   fi
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle deploymentJar fatJar publish"
+  docker-compose run -e OVERRIDE_NAME=$OVERRIDE_NAME -e OVERRIDE_MODNAME=$OVERRIDE_MODNAME --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle deploymentJar fatJar publish"
 }
 
 publishMavenLocal(){
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle deploymentJar fatJar publishToMavenLocal"
+  docker-compose run -e OVERRIDE_NAME=$OVERRIDE_NAME -e OVERRIDE_MODNAME=$OVERRIDE_MODNAME --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle deploymentJar fatJar publishToMavenLocal"
 }
 
 for param in "$@"
 do
+  echo "[$param][$OVERRIDE_NAME] Starting..."
   case $param in
     clean)
       clean
