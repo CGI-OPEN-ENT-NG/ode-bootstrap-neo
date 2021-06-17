@@ -123,6 +123,7 @@
 		"../node_modules/ode-bootstrap/scss/tokens/_layout.scss",
 		"../node_modules/ode-bootstrap/scss/components/_avatar.scss",
 		"../node_modules/ode-bootstrap/scss/components/_buttons.scss",
+		"../node_modules/ode-bootstrap/scss/components/_modal.scss",
 		"../node_modules/ode-bootstrap/scss/components/_dominos.scss",
 		"../node_modules/ode-bootstrap/scss/components/_dropdowns.scss",
 		"../node_modules/ode-bootstrap/scss/components/_explorer.scss",
