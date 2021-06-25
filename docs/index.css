@@ -12611,6 +12611,11 @@ END DOCUMENTATION */
     .ode-bootstrap-neo .table .thead-dark th {
       color: inherit;
       border-color: #d6d9e0; } }
+  .ode-bootstrap-neo .flag {
+    height: 200px;
+    width: 200px;
+    background: black;
+    background-image: url("./docs/flags/4x3/fr.svg"); }
   .ode-bootstrap-neo .emptyscreen {
     display: flex;
     flex-direction: column;
@@ -12862,6 +12867,14 @@ END DOCUMENTATION */
     content: "\e846"; }
   .ode-bootstrap-neo .ic-burger::before {
     content: "\e956"; }
+  .ode-bootstrap-neo .ic-rss::before {
+    content: "\e861"; }
+  .ode-bootstrap-neo .ic-signets::before {
+    content: "\e80c"; }
+  .ode-bootstrap-neo .ic-microphone::before {
+    content: "\e864"; }
+  .ode-bootstrap-neo .ic-carnet-de-bord::before {
+    content: "\e902"; }
   .ode-bootstrap-neo .color-app-competences {
     color: #e13a3a; }
   .ode-bootstrap-neo .color-app-cahier-textes {
@@ -13950,13 +13963,13 @@ END DOCUMENTATION */
       .ode-bootstrap-neo .widget-applications .application-item a:hover {
         background-color: white; }
       .ode-bootstrap-neo .widget-applications .application-item a > i {
-        position: absolute;
-        top: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
-        width: 100%; }
+        width: 100%;
+        position: absolute;
+        top: 0; }
     @media (min-width: 576px) and (max-width: 991.98px) {
       .ode-bootstrap-neo .widget-applications .application-item {
         width: 16.66667%; } }
@@ -14527,19 +14540,73 @@ END DOCUMENTATION */
         .ode-bootstrap-neo .feed-item.new .date:before {
           top: 1em; }
   .ode-bootstrap-neo .sticky-toolbox {
+    transition-property: transform;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: fixed;
     top: 100px;
     right: 0px;
-    background: #FF8500;
     color: white;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    z-index: 10; }
+    z-index: 10;
+    transform: translateX(100%); }
+    .ode-bootstrap-neo .sticky-toolbox.open {
+      transform: translateX(0); }
     .ode-bootstrap-neo .sticky-toolbox .link-tool {
+      position: absolute;
       color: white;
       font-size: 1.5em;
       padding: 5px 10px;
-      cursor: pointer; }
+      cursor: pointer;
+      background: #FF8500;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      width: 50px;
+      transform: translate(-100%, 0); }
+    .ode-bootstrap-neo .sticky-toolbox .content {
+      background: #0984b3;
+      width: 400px;
+      height: 100%;
+      padding: 20px 30px; }
+    .ode-bootstrap-neo .sticky-toolbox .title {
+      margin: 0 0 10px 0;
+      font-weight: bold; }
+      .ode-bootstrap-neo .sticky-toolbox .title:not(:first-child) {
+        margin-top: 10px; }
+    .ode-bootstrap-neo .sticky-toolbox .bt {
+      transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      text-align: center;
+      background: #4bafd5;
+      color: white;
+      display: block;
+      text-decoration: none;
+      border-radius: 0px; }
+      .ode-bootstrap-neo .sticky-toolbox .bt:hover {
+        background-color: rgba(75, 175, 213, 0.6); }
+      .ode-bootstrap-neo .sticky-toolbox .bt.selected {
+        background: #FF8500; }
+    .ode-bootstrap-neo .sticky-toolbox [class*="buttons-"] {
+      margin-right: -5px;
+      margin-left: -5px; }
+      .ode-bootstrap-neo .sticky-toolbox [class*="buttons-"] > .col,
+      .ode-bootstrap-neo .sticky-toolbox [class*="buttons-"] > [class*="col-"] {
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-bottom: 10px; }
+    .ode-bootstrap-neo .sticky-toolbox .buttons-theme .bt {
+      padding: 20px 10px; }
+    .ode-bootstrap-neo .sticky-toolbox .buttons-widget .bt .inner {
+      display: block;
+      position: relative;
+      padding-top: 100%; }
+    .ode-bootstrap-neo .sticky-toolbox .buttons-widget .bt i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      font-size: 2em; }
 
 @font-face {
   font-family: "Roboto";

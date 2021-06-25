@@ -40,7 +40,18 @@
 
             $('.filter').on('click', function (e) {
                 $(this).toggleClass('active');
-            })
+            });
+
+            $('.sticky-toolbox .bt').on('click', function (e) {
+                e.preventDefault();
+                $(this).toggleClass('selected');
+            });
+
+            $('.sticky-toolbox .link-tool').on('click', function (e) {
+                e.preventDefault();
+                $(this).parents('.sticky-toolbox').toggleClass('open');
+            });
+
             $('.zone-tools .control').on('click', function (e) {
                 $(this).parents('.zone-tools').toggleClass('open');
             })
@@ -973,6 +984,69 @@
     <div class="sticky-toolbox">
         <div class="link-tool toolbox" title="Personnaliser l'accueil">
             <i class="ic-tools"></i>
+        </div>
+        <div class="content">
+            <p class="title">Mes thèmes</p>
+
+            <div class="buttons-theme row">
+                <div class="col-6"><a href="" class="bt">Dyslexique</a></div>
+                <div class="col-6"><a href="" class="bt selected">Défaut</a></div>
+            </div>
+
+            <p class="title">Mes widgets</p>
+            <div class="row buttons-widget">
+                <div class="col-3">
+                    <a href="" class="bt selected">
+                        <span class="inner">
+                            <i class="ic-app notes"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="" class="bt selected">
+                        <span class="inner">
+                            <i class="ic-rss"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="" class="bt selected">
+                        <span class="inner">
+                            <i class="ic-app actualites"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="" class="bt selected">
+                        <span class="inner">
+                            <i class="ic-signets"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="" class="bt selected">
+                        <span class="inner">
+                            <i class="ic-microphone"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="" class="bt selected">
+                        <span class="inner">
+                            <i class="ic-carnet-de-bord"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="" class="bt selected">
+                        <span class="inner">
+                            <i class="ic-apps"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <p class="title">Mon choix de langue</p>
+
         </div>
     </div>
 
