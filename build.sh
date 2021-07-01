@@ -147,6 +147,22 @@ do
       publishNexus)
         publishNexus
         ;;
+      help)
+        # don't need to exec twice
+        if [ "$FIRST_TIME" = "false" ]; then
+          exit 1
+        fi
+        echo "
+                      clean : Remove directories 'node_modules', 'dist', 'build', 'build-css', 'deployment'
+                       init : 
+                      build : 
+                    install : 
+          publishMavenLocal :
+                 publishNPM :
+               publishNexus :
+                      watch :
+        "
+        ;;
       *)
         echo "Invalid argument : $param"
     esac
