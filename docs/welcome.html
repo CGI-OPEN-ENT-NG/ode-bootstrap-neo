@@ -32,11 +32,11 @@
             $('.widget-flash').each(function (i) {
                 var target = this;
                 var flashTween = gsap.timeline().pause();
-                flashTween.to(target, { duration: 0.5, height: 0, autoAlpha: 0, paddingTop:0, paddingBottom:0, marginBottom:0, display: 'none' });
+                flashTween.to(target, { duration: 0.5, height: 0, autoAlpha: 0, paddingTop: 0, paddingBottom: 0, marginBottom: 0, display: 'none' });
                 $(target).data('tween', flashTween);
 
 
-                $(this).find('.close').on('click', function(){
+                $(this).find('.close').on('click', function () {
                     $(this).parents('.widget-flash').data("tween").play();
                 });
 
@@ -56,6 +56,17 @@
 
             $('.filter').on('click', function (e) {
                 $(this).toggleClass('active');
+            });
+
+            $('.sticky-toolbox .bt').on('click', function (e) {
+                e.preventDefault();
+                $(this).toggleClass('selected');
+            });
+
+            $('.sticky-toolbox .bt-lang').on('click', function (e) {
+                e.preventDefault();
+                $('.sticky-toolbox .bt-lang').removeClass('selected');
+                $(this).addClass('selected');
             });
 
             $('.sticky-toolbox .bt').on('click', function (e) {
@@ -1070,6 +1081,52 @@
                 </div>
             </div>
             <p class="title">Mon choix de langue</p>
+
+            <div class="row buttons-lang">
+
+                <div class="col-3">
+                    <a href="javascript:" class="bt-lang selected">
+                        <img class="flag" src="/assets/themes/neo/img/icons/flags/fr.svg" alt="">
+                        <div>Français</div>
+                    </a>
+                </div>
+
+                <div class="col-3">
+                    <a href="javascript:" class="bt-lang">
+                        <img class="flag" src="/assets/themes/neo/img/icons/flags/es.svg" alt="">
+                        <div>Español</div>
+                    </a>
+                </div>
+
+                <div class="col-3">
+                    <a href="javascript:" class="bt-lang">
+                        <img class="flag" src="/assets/themes/neo/img/icons/flags/de.svg" alt="">
+                        <div>Deutsch</div>
+                    </a>
+                </div>
+
+                <div class="col-3">
+                    <a href="javascript:" class="bt-lang">
+                        <img class="flag" src="/assets/themes/neo/img/icons/flags/pt.svg" alt="">
+                        <div>Português</div>
+                    </a>
+                </div>
+
+                <div class="col-3">
+                    <a href="javascript:" class="bt-lang">
+                        <img class="flag" src="/assets/themes/neo/img/icons/flags/gb.svg" alt="">
+                        <div>English</div>
+                    </a>
+                </div>
+
+                <div class="col-3">
+                    <a href="javascript:" class="bt-lang">
+                        <img class="flag" src="/assets/themes/neo/img/icons/flags/it.svg" alt="">
+                        <div>Italiano</div>
+                    </a>
+                </div>
+
+            </div>
 
         </div>
     </div>
