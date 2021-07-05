@@ -12611,11 +12611,6 @@ END DOCUMENTATION */
     .ode-bootstrap-neo .table .thead-dark th {
       color: inherit;
       border-color: #d6d9e0; } }
-  .ode-bootstrap-neo .flag {
-    height: 200px;
-    width: 200px;
-    background: black;
-    background-image: url("./docs/flags/4x3/fr.svg"); }
   .ode-bootstrap-neo .emptyscreen {
     display: flex;
     flex-direction: column;
@@ -14618,6 +14613,23 @@ END DOCUMENTATION */
       position: absolute;
       top: 0;
       font-size: 2em; }
+    .ode-bootstrap-neo .sticky-toolbox .bt-lang {
+      text-align: center;
+      margin-bottom: 15px;
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none; }
+      .ode-bootstrap-neo .sticky-toolbox .bt-lang .flag {
+        transition-property: filter;
+        transition-duration: 0.4s;
+        transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        height: auto;
+        margin: 0 auto;
+        filter: saturate(0); }
+      .ode-bootstrap-neo .sticky-toolbox .bt-lang.selected .flag {
+        filter: saturate(1); }
+      .ode-bootstrap-neo .sticky-toolbox .bt-lang:hover:not(.selected) .flag {
+        filter: saturate(0.3); }
 
 @font-face {
   font-family: "Roboto";
