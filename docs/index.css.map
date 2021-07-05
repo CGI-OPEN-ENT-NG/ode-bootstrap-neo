@@ -146,6 +146,7 @@
 		"../node_modules/ode-bootstrap/scss/components/widget/_rss.scss",
 		"../node_modules/ode-bootstrap/scss/components/widget/_school.scss",
 		"../node_modules/ode-bootstrap/scss/components/widget/_dashboard.scss",
+		"../node_modules/ode-bootstrap/scss/components/widget/_flash.scss",
 		"../node_modules/ode-bootstrap/scss/components/_feed.scss",
 		"../node_modules/ode-bootstrap/scss/components/_sticky-toolbox.scss",
 		"../scss/_custom.scss",

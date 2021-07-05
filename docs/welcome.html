@@ -29,6 +29,22 @@
             });
 
 
+            $('.widget-flash').each(function (i) {
+                var target = this;
+                var flashTween = gsap.timeline().pause();
+                flashTween.to(target, { duration: 0.5, height: 0, autoAlpha: 0, paddingTop:0, paddingBottom:0, marginBottom:0, display: 'none' });
+                $(target).data('tween', flashTween);
+
+
+                $(this).find('.close').on('click', function(){
+                    $(this).parents('.widget-flash').data("tween").play();
+                });
+
+            });
+
+
+
+
 
             $('.trigger').on("click", function (e) {
                 $(this).siblings('.trigger').removeClass('on');
@@ -144,10 +160,18 @@
 
             <div class="container-advanced-center">
 
-                <!--
-                Emmet widget shortcode
-                div.widget>(div.widget-header>div.subtitle)+div.widget-body
-            -->
+                <!--Emmet widget shortcode
+                div.widget>(div.widget-header>div.subtitle)+div.widget-body-->
+
+                <div class="widget widget-flash">
+                    <div class="widget-body ">
+                        <strong>Holy guacamole!</strong> Accusantium sit vulputate ultrices! Mi anim amet. Wisi! Iaculis aliquam est laborum nec mi, alias, aut, enim aliqua dignissim vehicula, dolorem pharetra officiis scelerisque, suspendisse nonummy dictumst numquam sit incididunt excepteur
+                        maiores similique aptent. Cursus, ullamco eleifend soluta curabitur felis.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
 
                 <!--Widget Actualités à la une-->
                 <div class="widget widget-featured-news">

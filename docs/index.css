@@ -14322,6 +14322,17 @@ END DOCUMENTATION */
     background: #2e99c4; }
   .ode-bootstrap-neo .widget-dashboard .dashboard-list .item:nth-child(5) .icon {
     background: #29a3d3; }
+  .ode-bootstrap-neo .widget-flash {
+    padding: 25px;
+    background: #FF8500;
+    color: #fff;
+    position: relative; }
+    .ode-bootstrap-neo .widget-flash .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: #000;
+      text-shadow: none; }
   .ode-bootstrap-neo .feed {
     font-size: 14px; }
     .ode-bootstrap-neo .feed .filter-button {
