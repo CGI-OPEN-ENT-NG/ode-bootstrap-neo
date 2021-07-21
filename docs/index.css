@@ -13336,6 +13336,23 @@ END DOCUMENTATION */
         padding-left: 10px; }
       .ode-bootstrap-neo .sidebar__tree li {
         list-style-type: none; }
+        .ode-bootstrap-neo .sidebar__tree li input[type=checkbox] {
+          cursor: pointer;
+          position: absolute;
+          opacity: 0;
+          margin: 6px 10px; }
+        .ode-bootstrap-neo .sidebar__tree li label {
+          display: block; }
+          .ode-bootstrap-neo .sidebar__tree li label a::before {
+            font-family: "FontAwesome";
+            content: "\f105";
+            margin-right: 5px; }
+        .ode-bootstrap-neo .sidebar__tree li input ~ ul {
+          display: none; }
+        .ode-bootstrap-neo .sidebar__tree li input:checked ~ ul {
+          display: block; }
+        .ode-bootstrap-neo .sidebar__tree li input:checked ~ label a::before {
+          content: "\f107"; }
         .ode-bootstrap-neo .sidebar__tree li a {
           display: block;
           padding: 7px 15px;
@@ -13343,10 +13360,6 @@ END DOCUMENTATION */
           color: #8c939e;
           border-radius: 5px;
           line-height: 1.2; }
-          .ode-bootstrap-neo .sidebar__tree li a::before {
-            font-family: "FontAwesome";
-            content: "\f105";
-            margin-right: 5px; }
           .ode-bootstrap-neo .sidebar__tree li a:hover {
             background-color: rgba(75, 175, 213, 0.075);
             color: #4bafd5;
@@ -13937,30 +13950,6 @@ END DOCUMENTATION */
       .ode-bootstrap-neo .toaster > a:hover {
         background-color: rgba(0, 0, 0, 0.1);
         text-decoration: none; }
-    .ode-bootstrap-neo .toaster__open {
-      position: absolute;
-      right: -5px;
-      bottom: -5px;
-      width: 25px;
-      height: 25px;
-      line-height: 25px;
-      border-radius: 50%;
-      font-size: 0.75rem;
-      padding: 0;
-      border: 1px solid #d6d9e0;
-      background-color: #f0f2f4; }
-      .ode-bootstrap-neo .toaster__open::before {
-        opacity: 0;
-        font-family: "Font Awesome 5 Free";
-        content: "\f00c"; }
-      .ode-bootstrap-neo .toaster__open:hover {
-        background-color: #dceff7;
-        border-color: #9ed4e8; }
-        .ode-bootstrap-neo .toaster__open:hover::before {
-          color: #1a566d;
-          opacity: 0.5; }
-      .ode-bootstrap-neo .toaster__open.checked::before {
-        opacity: 1; }
 
 @font-face {
   font-family: "Roboto";
