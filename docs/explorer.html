@@ -57,10 +57,16 @@
     <aside class="sidebar sidebar--left">
       <h1 class="sidebar__title">Blog</h1>
       <ul class="sidebar__tree">
-        <li><a class="active" href=""><i class="ic-app blog"></i> Mes blogs</a>
+        <!-- <li><a class="active" href=""><i class="ic-app blog"></i> Mes blogs</a> -->
+        <li>
+          <input type="checkbox" id="dossier_1" />
+          <label for="dossier_1"><a class="active" href=""><i class="ic-app blog"></i> Mes blogs</a></label>
           <ul>
             <li><a href="">Dossier 1</a></li>
             <li><a href="">Dossier 2</a>
+            <li>
+              <input type="checkbox" id="dossier_2" />
+              <label for="dossier_2"><a href="">Dossier 2</a></label>
               <ul>
                 <li><a href="">Sous-dossier 1</a></li>
                 <li><a href="">Sous-dossier 2</a></li>
@@ -68,7 +74,9 @@
                 <li><a href="">Sous-dossier avec un nom très long</a></li>
               </ul>
             </li>
-            <li><a href="">Dossier 3</a>
+            <li>
+              <input type="checkbox" id="dossier_3" />
+              <label for="dossier_3"><a href="">Dossier 3</a></label>
               <ul>
                 <li><a href="">Sous-dossier 1</a></li>
                 <li><a href="">Sous-dossier 2</a></li>
@@ -233,7 +241,6 @@
         <section class="explorer__view dominos dominos--square">
           <!-- Folder -->
           <article class="domino folder">
-            <a class="toaster__open"></a> <!-- Open the toaster on click -->
             <div class="domino__image">
               <i class="fas ic-folder text-secondary"></i>
             </div>
@@ -243,7 +250,6 @@
             </div>
           </article>
           <article class="domino folder">
-            <a class="toaster__open"></a> <!-- Open the toaster on click -->
             <div class="domino__image">
               <i class="fas ic-folder text-secondary"></i>
             </div>
@@ -253,7 +259,6 @@
             </div>
           </article>
           <article class="domino folder">
-            <a class="toaster__open"></a> <!-- Open the toaster on click -->
             <div class="domino__image">
               <i class="fas ic-folder text-secondary"></i>
             </div>
@@ -264,7 +269,6 @@
           </article>
           <!-- Ressource - image par défaut -->
           <article class="domino item blog">
-            <a class="toaster__open"></a> <!-- Open the toaster on click -->
             <div class="domino__image">
               <i class="fas ic-app blog"></i>
               <div class="domino__overlay transition-hover">
@@ -327,7 +331,6 @@
 
           <!-- Ressource - image personnelle -->
           <article class="domino item thumbnail active">
-            <a class="toaster__open checked" title="Sélectionner la ressource"></a> <!-- Open the toaster on click -->
             <div class="domino__image">
               <img src="https://loremflickr.com/240/160/" alt="Image de couverture" />
               <div class="domino__overlay transition-hover">
@@ -347,7 +350,6 @@
             </div>
           </article>
           <article class="domino item thumbnail" data-toggle="modal" data-target="#editProperty">
-            <a class="toaster__open"></a> <!-- Open the toaster on click -->
             <div class="domino__image">
               <img src="https://loremflickr.com/240/160/" alt="Image de couverture" />
               <div class="domino__overlay transition-hover">
@@ -368,7 +370,6 @@
             </div>
           </article>
           <article class="domino item thumbnail">
-            <a class="toaster__open"></a> <!-- Open the toaster on click -->
             <div class="domino__image">
               <img src="https://loremflickr.com/240/160/" alt="Image de couverture" />
               <div class="domino__overlay transition-hover">
