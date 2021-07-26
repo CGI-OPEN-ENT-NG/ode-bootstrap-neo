@@ -64,15 +64,23 @@ initDev () {
   docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm rebuild node-sass --no-bin-links && npm install"
 }
 
-initDev () {
-  echo "[init] Get branch name from jenkins env..."
-  BRANCH_NAME=`echo $GIT_BRANCH | sed -e "s|origin/||g"`
-  if [ "$BRANCH_NAME" = "" ]; then
-    echo "[init] Get branch name from git..."
-    BRANCH_NAME=`git branch | sed -n -e "s/^\* \(.*\)/\1/p"`
+# Install local dependencies as tarball (installing as folder creates symlinks which won't resolve in the docker container)
+localDep () {
+  if [ -e $PWD/../ode-bootstrap ]; then
+    # clean any previously failed steps
+    rm -rf ode-bootstrap.tar ode-bootstrap.tar.gz
+    # prepare new bundle
+    mkdir ode-bootstrap.tar && cd ode-bootstrap.tar && mkdir dist assets scss && cd ..
+    for resource in dist assets scss package.json; do
+      cp -R $PWD/../ode-bootstrap/$resource ode-bootstrap.tar
+    done
+    # tar.gz the bundle
+    tar cfzh ode-bootstrap.tar.gz ode-bootstrap.tar
+    # locally install the tar.gz bundle
+    docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm install --no-save ode-bootstrap.tar.gz"
+    # clean the successful steps
+    rm -rf ode-bootstrap.tar ode-bootstrap.tar.gz
   fi
-  docker-compose run -e BRANCH_NAME=$BRANCH_NAME -e FRONT_TAG=$FRONT_TAG -e NEXUS_ODE_USERNAME=$NEXUS_ODE_USERNAME -e NEXUS_ODE_PASSWORD=$NEXUS_ODE_PASSWORD --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle generateTemplateDev"
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm rebuild node-sass --no-bin-links && npm install"
 }
 
 build () {
@@ -92,7 +100,7 @@ build () {
     tmp=`echo $dir | sed 's/.\/skins\///'`
     docker-compose run -e SKIN_DIR=$SKIN_DIR -e SCSS_DIR=$SCSS_DIR -e DIST_DIR=$OVERRIDE_DIST -e SKIN=$tmp  --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm run sass:build:release"
   done
-  cp node_modules/ode-bootstrap/version.txt $OVERRIDE_DIST/version.txt
+  cp node_modules/ode-bootstrap/dist/version.txt $OVERRIDE_DIST/version.txt
   VERSION=`grep "version="  gradle.properties| sed 's/version=//g'`
   echo "ode-bootstrap-neo=$VERSION `date +'%d/%m/%Y %H:%M:%S'`" >> $OVERRIDE_DIST/version.txt
 }
@@ -157,6 +165,9 @@ do
       init)
         init
         ;;
+      localDep)
+        localDep
+        ;;
       build)
         build
         ;;
@@ -183,6 +194,7 @@ do
         echo "
                       clean : Remove directories 'node_modules', 'dist', 'build', 'build-css', 'deployment'
                        init : 
+                   localDep : Install a locally built ode-bootstrap (useful for dev testing)
                       build : 
                     install : 
           publishMavenLocal :

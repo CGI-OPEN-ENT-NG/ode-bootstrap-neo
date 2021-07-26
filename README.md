@@ -28,7 +28,21 @@ Toutes les modifications sur le code source sont détectées et entrainent un ra
 
 Lancer la commande suivante:
 ```
-./build.sh install build
+./build.sh build
+```
+
+Le css minifié est généré dans le dossier "dist".
+
+### Lancer un build incorporant la version locale de ode-bootstrap
+
+Lancer la commande suivante:
+```
+./build.sh clean init localDep build
+```
+
+Après chaque modification locale de ode-bootstrap, il faudra lancer la commande suivante:
+```
+./build.sh localDep build
 ```
 
 Le css minifié est généré dans le dossier "dist".

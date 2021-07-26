@@ -1,7 +1,7 @@
 {
   "name": "${modname}",
   "version": "${npmVersion}",
-  "description": "Neo theme by Open Digitale Education\"",
+  "description": "Neo theme by Open Digital Education",
   "scripts": {
     "sass:watch": "node-sass --source-map true -w scss/index.scss docs/index.css",
     "sass:build:debug": "node-sass --source-map true scss/index.scss docs/index.css",
