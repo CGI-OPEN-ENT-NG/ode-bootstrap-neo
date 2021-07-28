@@ -132,6 +132,12 @@ do
   names=($(ls -d ./scss/overrides/*))
   for dirtyName in "${names[@]}"; do
     name=`echo $dirtyName | sed 's/.\/scss\/overrides\///'`
+    
+    # temporary skip NA override
+    if [ "$name" = "na" ]; then
+      continue
+    fi
+    
     MOD_NAME=`grep "modname="  gradle.properties| sed 's/modname=//g'`
     export OVERRIDE_NAME="$name"
     export OVERRIDE_SRC="overrides/$name"
