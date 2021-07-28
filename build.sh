@@ -68,7 +68,7 @@ initDev () {
 localDep () {
   if [ -e $PWD/../ode-bootstrap ]; then
     # clean any previously failed steps
-    rm -rf ode-bootstrap.tar ode-bootstrap.tar.gz
+    rm -rf ode-bootstrap.tar ode-bootstrap.tar.gz build-css
     # prepare new bundle
     mkdir ode-bootstrap.tar && cd ode-bootstrap.tar && mkdir dist assets scss && cd ..
     for resource in dist assets scss package.json; do
