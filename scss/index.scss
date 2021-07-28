@@ -1,35 +1,22 @@
-@import "variables-ode";
-@import "variables";
-@import "fonts";
+// --- IMPORT BOOTSTRAP NATIVE ---
+// Contient nos fichiers bootstrap
+    @import "variables"; // A supprimer une fois que celui de tokens sera prit en compte
 
-// A supprimer, l'appel se fait depuis ode-bt
-// @import "node_modules/bootstrap/scss/functions";
-// @import "node_modules/bootstrap/scss/mixins";
-// @import "node_modules/bootstrap/scss/variables";
+    @import "node_modules/ode-bootstrap/scss/index";
 
-@import "node_modules/ode-bootstrap/scss/index";
-@import "fonts";
-
-// A supprimer ?
-@import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/mixins";
-@import "node_modules/bootstrap/scss/variables";
-
-@import "node_modules/ode-bootstrap/scss/index";
-
-/*TODO define skins here if there is not variable changes. Else define in specific files (and release build should take all of them)*/
-
-#{$root-selector}{
-    @import "custom";
+    @import "custom"; // A supprimer / déplacer ?
     
+// --- IMPORT TOKENS ---
+// Contient tous nos éléments de style les plus petits et les plus insécables
     @import "tokens/display";
-    // @import "tokens/fonts";
+    @import "tokens/fonts";
     @import "tokens/icons";
     @import "tokens/mixins";
     @import "tokens/transitions";
 
-    // A déplacer dans explorer.scss quand on aura résolu le souci de build
-    @import "components/avatar";
+// --- IMPORT COMPONENTS ---
+// Contient tous nos composants visuels, simple ou complexe
+// A déplacer dans explorer.scss ? ça dépend si on veut faire une page css par application, pour éviter d'alourdir le CSS de manière inutile    @import "components/avatar";
     @import "components/buttons";
     @import "components/dominos";
     @import "components/dropdowns";
@@ -42,7 +29,3 @@
     @import "components/sidebar";
     @import "components/toaster";
 
-    
-}
-
-@import "retrocompat";

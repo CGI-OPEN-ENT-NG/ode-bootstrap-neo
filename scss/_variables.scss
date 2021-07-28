@@ -1,222 +1,123 @@
-// Variables
+// COLORS // grays palette
+$white:                     #ffffff ;
+$gray-100:                  #f0f2f4 ;
+$gray-200:                  #e9ebef ;
+$gray-300:                  #d6d9e0 ;
+$gray-400:                  #c9ced5 ;
+$gray-500:                  #b1b6bf ;
+$gray-600:                  #8c939e ;
+$gray-700:                  #5b6472 ;
+$gray-800:                  #3f454f ;
+$gray-900:                  #212529 ;
+$black:                     #000000 ;
 
-// COLOR // black & white
-$white:    #fff ;
-$gray-100: #f0f2f4 ;
-$gray-200: #e9ebef ;
-$gray-300: #d6d9e0 ;
-$gray-400: #c9ced5 ;
-$gray-500: #b1b6bf ;
-$gray-600: #8c939e ;
-$gray-700: #5b6472 ;
-$gray-800: #3f454f ;
-$gray-900: #212529 ;
-$black:    #000 ;
-
-$grays: () ;
-// stylelint-disable-next-line scss/dollar-variable-default
-$grays: map-merge(
-  (
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900
-  ),
-  $grays
-);
-
-// COLOR // shadow // A Garder ou unifier avec les var $box-shadow ?
-$shadow-lightest:       rgba($black, 0.1) ;
-$shadow-light:          rgba($black, 0.3) ;
-$shadow:                rgba($black, 0.6) ;
-$shadow-dark:           rgba($black, 0.8) ;
-
-// COLOR // COLORS
-$blue:    #4b90d5 ;
-$indigo:  #1a22a2 ;
-$purple:  #763294 ;
-$pink:    #b930a2 ;
-$red:     #e13a3a ;
-$orange:  #FF8500 ;
-$yellow:  #ecbe30 ;
-$green:   #7DBF85 ;
-$teal:    #46bfaf ;
-$cyan:    #4bafd5 ;
+// COLORS // colors palette
+$blue:                      #4b90d5 ;
+$indigo:                    #1a22a2 ;
+$purple:                    #763294 ;
+$pink:                      #b930a2 ;
+$red:                       #e13a3a ;
+$orange:                    #FF8500 ;
+$yellow:                    #ecbe30 ;
+$green:                     #7DBF85 ;
+$teal:                      #46bfaf ;
+$cyan:                      #4bafd5 ;
 
 $colors: () ;
-// stylelint-disable-next-line scss/dollar-variable-default
+
 $colors: map-merge(
   (
-    "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-    "pink":       $pink,
-    "red":        $red,
-    "orange":     $orange,
-    "yellow":     $yellow,
-    "green":      $green,
-    "teal":       $teal,
-    "cyan":       $cyan,
-    "white":      $white,
-    "gray":       $gray-400,
-    "gray-dark":  $gray-800
+    "gray":                 $gray-400,
+    "gray-dark":            $gray-800
   ),
   $colors
 );
 
-$primary:               $orange ;
-$primary-lightest:      lighten($primary, 30%) ;
-$primary-light:         lighten($primary, 10%) ;
-$primary-dark:          darken($primary, 10%) ;
-$primary-darkest:       darken($primary, 30%) ;
-$primary-gradient:      linear-gradient($primary, $primary-light);
+$primary:                   $orange ;
+$primary--lightest:         lighten($primary, 30%) ;
+$primary--light:            lighten($primary, 15%) ;
+$primary--dark:             darken($primary, 15%) ;
+$primary--darkest:          darken($primary, 30%) ;
+$primary-gradient:          linear-gradient($primary, $primary--light);
 
-$secondary:             $cyan ;
-$secondary-gradient:    linear-gradient($secondary, lighten($secondary, 10%));
-$secondary-lightest:    lighten($secondary, 35%);
-$secondary-light:       lighten($secondary, 20%);
-$secondary-dark:        darken($secondary, 10%) ;
-$secondary-darkest:     darken($secondary, 30%) ;
+$secondary:                 $cyan ;
+$secondary--lightest:       lighten($secondary, 30%);
+$secondary--light:          lighten($secondary, 15%);
+$secondary--dark:           darken($secondary, 15%) ;
+$secondary--darkest:        darken($secondary, 30%) ;
+$secondary-gradient:        linear-gradient($secondary, $secondary--light);
 
-$accent:                $orange ;
-$accent-dark:           darken($orange, 10%) ;
-$hover:                 $accent ; // A supprimer ?
+$success:                   $green ;
+$success--light:            lighten($green, 10%) ;
+$success--dark:             darken($green, 10%) ;
 
-$success:               $green ;
-$success-dark:          darken($green, 10%) ;
-$success-gradient:      linear-gradient($success, lighten($success, 10%));
+$info:                      $cyan ;
+$info--light:               lighten($cyan, 10%) ;
+$info--dark:                darken($cyan, 10%) ;
 
-$info:                  $cyan ;
-$info-dark:             darken($cyan, 10%) ;
-$info-gradient:         linear-gradient($info, lighten($info, 10%));
+$warning:                   $yellow ;
+$warning--light:            lighten($yellow, 10%) ;
+$warning--dark:             darken($yellow, 10%) ;
 
-$warning:               $yellow ;
-$warning-dark:          darken($yellow, 10%) ;
-$warning-gradient:      linear-gradient($warning, lighten($warning, 10%));
+$danger:                    $red ;
+$danger--light:             lighten($red, 10%) ;
+$danger--dark:              darken($red, 10%) ;
 
-$danger:                $red ;
-$danger-dark:           darken($red, 20%) ;
-$danger-gradient:      linear-gradient($danger, lighten($danger, 10%));
 
-$light:                 $gray-200 ;
-$dark:                  $gray-700 ;
-
-$theme-colors: () ;
-// stylelint-disable-next-line scss/dollar-variable-default
-$theme-colors: map-merge(
-  (
-    "primary":    $primary,
-    "secondary":  $secondary,
-    "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
-    "light":      $light,
-    "dark":       $dark,
-    "accent":     $accent,
-    "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-    "pink":       $pink,
-    "red":        $red,
-    "orange":     $orange,
-    "yellow":     $yellow,
-    "green":      $green,
-    "teal":       $teal,
-    "cyan":       $cyan,
-    "white":      $white,
-    "gray":       $gray-400,
-    "gray-dark":  $gray-800,
-    "black":      $black
-  ),
-  $theme-colors
-);
-
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
-
-// $enable-caret:                                true ;
-// $enable-rounded:                              true ;
-// $enable-shadows:                              false ;
-// $enable-gradients:                            false ;
-// $enable-transitions:                          true ;
-// $enable-prefers-reduced-motion-media-query:   true ;
-// $enable-hover-media-query:                    false ; // Deprecated, no longer affects any compiled CSS
-// $enable-grid-classes:                         true ;
-// $enable-pointer-cursor-for-buttons:           true ;
-// $enable-print-styles:                         true ;
-// $enable-responsive-font-sizes:                false ;
-// $enable-validation-icons:                     true ;
-// $enable-deprecation-messages:                 true ;
+$light:                     $gray-200 ;
+$dark:                      $gray-700 ;
 
 // Body
 $body-bg:                   $gray-100 ;
-$text-color:            $gray-800 ;
+$text-color:                $gray-800 ;
 
 // Links
-$link-color:                              $cyan ;
-$link-hover-color:                        $orange ;
+$link-color:                $cyan ;
+$link-hover-color:          $orange ;
 
 // Grid breakpoints
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
+  xxs:   0,
+  xs:   360px,
+  sm:   576px,
+  md:   768px,
+  lg:   992px,
+  xl:   1200px,
+  xxl:  1400px
 ) ;
 
-// // Grid containers
-// //
-// // Define the maximum width of `.container` for different screen sizes.
-
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1140px
-// ) ;
-
-// @include _assert-ascending($container-max-widths, "$container-max-widths");
-
 // Components
-$line-height-lg:              2 ;
-$line-height:                 1.6;
-$line-height-sm:              1.2 ;
+$line-height-lg:            2 ;
+$line-height:               1.6;
+$line-height-sm:            1.2 ;
 
-$border-radius-sm:            2px ;
-$border-radius:               5px ;
-$border-radius-lg:            10px ;
+$border-radius-sm:          2px ;
+$border-radius:             5px ;
+$border-radius-lg:          10px ;
 
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) ;
-// $box-shadow:                  0 .5rem 1rem rgba($black, .15) ;
-$box-shadow-lg:               0 1rem 3rem rgba($black, .175) ;
+$box-shadow-sm:             0 .125rem .25rem rgba($gray-900, .075) ;
+$box-shadow:                0 .5rem 1rem rgba($gray-900, .15) ;
+$box-shadow-lg:             0 1rem 3rem rgba($gray-900, .175) ;
 
-$component-active-bg:         $secondary ;
+$component-active-bg:       $secondary ;
 
 // Typography
-$font-family-sans-serif:      "Roboto", sans-serif ;
+$font-family-sans-serif:    "Roboto", sans-serif ;
 
 // Buttons + Forms
-$input-btn-font-family:       "Roboto" ;
-$input-btn-font-size:         1rem ;
+$input-btn-font-family:     "Roboto" ;
+$input-btn-font-size:       1rem ;
 
 // Buttons
-$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .3) ;
+$btn-box-shadow:            inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($gray-900, .3) ;
 
 // Forms
-$input-font-family:                     "Roboto" ;
-$input-focus-border-color:              $secondary ;
+$input-font-family:         "Roboto" ;
+$input-focus-border-color:  $secondary ;
 
 // Dropdowns
-$dropdown-link-color:               $gray-700 ;
-$dropdown-link-hover-bg:            rgba($secondary, 0.1) ;
+$dropdown-link-color:       $gray-700 ;
+$dropdown-link-hover-bg:    rgba($secondary, 0.1) ;
 
 // Image thumbnails
-$thumbnail-bg:                      $white ;
+$thumbnail-bg:              $white ;
