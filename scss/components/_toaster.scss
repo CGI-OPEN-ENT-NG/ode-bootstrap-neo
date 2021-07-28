@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  box-shadow: 0 0 25px rgba($black, 0.25);
+  box-shadow: $box-shadow-lg;
   > a {
     display: inline-block;
     color: $white;
@@ -36,10 +36,10 @@
       content: "\f00c";
     }
     &:hover {
-      background-color: $secondary-lightest;
-      border-color: $secondary-light;
+      background-color: $secondary--lightest;
+      border-color: $secondary--light;
       &::before {
-        color: $secondary-darkest;
+        color: $secondary--darkest;
         opacity: 0.5;
       }
     }
