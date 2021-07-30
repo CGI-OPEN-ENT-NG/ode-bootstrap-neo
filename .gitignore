@@ -9,5 +9,3 @@ package.json
 .gradle
 deployment/
 skins/*/*.css
-build-css/
-?/
