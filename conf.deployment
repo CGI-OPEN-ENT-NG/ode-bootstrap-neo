@@ -1,7 +1,5 @@
 {
-  "name":"com.opendigitaleducation~%MODNAME%~%VERSION%",
+  "name":"com.opendigitaleducation~ode-bootstrap-neo~%VERSION%",
   "type": "theme",
-  "waitDeploy": true,
-  "extension":"-fat.jar",
-  "dist-dir": "%DIST_DIR%"
+  "waitDeploy": true
 }
