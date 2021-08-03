@@ -13,6 +13,8 @@
 
     <script>
 
+        
+
         jQuery(function ($) {
 
             $('.filter-button').each(function (i) {
@@ -36,7 +38,7 @@
                 $(target).data('tween', flashTween);
 
 
-                $(this).find('.close').on('click', function () {
+                $(this).find('.btn-close').on('click', function () {
                     $(this).parents('.widget-flash').data("tween").play();
                 });
 
@@ -93,16 +95,23 @@
             })
 
 
+            var myModal = new bootstrap.Modal(document.getElementById('theModal'));
+
             $('.tool-option').on("click", function (e) {
                 e.preventDefault();
-                $('#theModal').modal('toggle');
+                myModal.toggle();
+            });
+
+            $(".modal").find('.btn-close').on('click', function (e) {
+                e.preventDefault();
+                myModal.hide();
             });
 
 
-            $('#theModal').on('shown.bs.modal', function () {
-                $('#myInput').trigger('focus')
-            })
         });
+
+
+
 
 
 
@@ -175,12 +184,16 @@
                 div.widget>(div.widget-header>div.subtitle)+div.widget-body-->
 
                 <div class="widget widget-flash">
-                    <div class="widget-body ">
-                        <strong>Holy guacamole!</strong> Accusantium sit vulputate ultrices! Mi anim amet. Wisi! Iaculis aliquam est laborum nec mi, alias, aut, enim aliqua dignissim vehicula, dolorem pharetra officiis scelerisque, suspendisse nonummy dictumst numquam sit incididunt excepteur
-                        maiores similique aptent. Cursus, ullamco eleifend soluta curabitur felis.
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                    <div class="widget-body">
+                        <div class="flash-content">
+                            <p>
+                                <strong>Holy guacamole!</strong> Accusantium sit vulputate ultrices! Mi anim amet. Wisi! Iaculis aliquam est laborum nec mi, alias, aut, enim aliqua dignissim vehicula, dolorem pharetra officiis scelerisque, suspendisse nonummy dictumst numquam sit incididunt
+                                excepteur
+                                maiores similique aptent. Cursus, ullamco eleifend soluta curabitur felis.
+                            </p>
+                        </div>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 </div>
 
@@ -928,7 +941,7 @@
                                         <img src="https://picsum.photos/200" alt="">
                                     </div>
                                     <div class="icon-app">
-                                        <i class="ic-app timelinegenerator-large text-yellow"></i>
+                                        <i class="ic-app timelinegenerator-large color-app-timelinegenerator"></i>
                                     </div>
                                 </a>
                             </li>
@@ -947,7 +960,7 @@
                                         <img src="https://picsum.photos/201" alt="">
                                     </div>
                                     <div class="icon-app">
-                                        <i class="ic-app exercizer-large text-purple"></i>
+                                        <i class="ic-app exercizer-large  color-app-exercizer"></i>
                                     </div>
                                 </a>
                             </li>
@@ -966,7 +979,7 @@
                                         <img src="https://picsum.photos/202" alt="">
                                     </div>
                                     <div class="icon-app">
-                                        <i class="ic-app mindmap-large text-cyan"></i>
+                                        <i class="ic-app mindmap-large  color-app-mindmap"></i>
                                     </div>
                                 </a>
                             </li>
@@ -1137,15 +1150,13 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p>Modal body text goes here.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-light text-primary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-light text-primary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
