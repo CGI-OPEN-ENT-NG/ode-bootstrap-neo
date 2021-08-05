@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../index.css" />
+</head>
+<body>
+  <aside class="sidebar sidebar--left">
+    <h1 class="sidebar__title">Sidebar</h1>
+    <ul class="sidebar__tree">
+      <li>
+        <input type="checkbox" id="dossier_1" />
+        <label for="dossier_1"><a class="active" href=""><i class="ic-app blog"></i> Mes blogs</a></label>
+        <ul>
+          <li><a href="">Dossier 1</a></li>
+          <li><a href="">Dossier 2</a>
+          <li>
+            <input type="checkbox" id="dossier_2" />
+            <label for="dossier_2"><a href="">Dossier 2</a></label>
+            <ul>
+              <li><a href="">Sous-dossier 1</a></li>
+              <li><a href="">Sous-dossier 2</a></li>
+              <li><a href="">Sous-dossier 3</a></li>
+              <li><a href="">Sous-dossier avec un nom très long</a></li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox" id="dossier_3" />
+            <label for="dossier_3"><a href="">Dossier 3</a></label>
+            <ul>
+              <li><a href="">Sous-dossier 1</a></li>
+              <li><a href="">Sous-dossier 2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href=""><i class="fas fa-trash-alt"></i> Ma corbeille</a></li>
+    </ul>
+    <a class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#createFolder">Créer un dossier</a>
+    <a class="btn btn-outline-secondary btn-block">Importer</a>
+  </aside>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })
+  </script>
+</body>
+</html>

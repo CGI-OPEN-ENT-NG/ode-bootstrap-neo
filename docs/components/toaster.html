@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../index.css" />
+</head>
+<body style="background-color: white">
+  <div class="toaster">
+    <a href="">Propriétés</a>
+    <a href="">Déplacer</a>
+    <a class="d-mobile-none" href="">Dupliquer</a>
+    <a class="d-mobile-none" href="">Exporter</a>
+    <a href="">Partager</a>
+    <a class="d-mobile-none" href="">Commenter</a>
+    <a class="d-mobile-none" href="">Imprimer</a>
+    <a class="d-mobile-none" href="">Publier dans la bibliothèque</a>
+    <a class="d-mobile-none" href="">Supprimer</a>
+
+    <div class="dropdown d-inline-block d-desktop-none">
+      <a class="btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Actions supplémentaires">
+        <i class="fas fa-ellipsis-v text-white"></i></a>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Dupliquer</a>
+        <a class="dropdown-item" href="#">Exporter</a>
+        <a class="dropdown-item" href="#">Commenter</a>
+        <a class="dropdown-item" href="#">Partager dans la bibliothèque</a>
+        <a class="dropdown-item" href="#">Supprimer</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })
+  </script>
+</body>
+</html>
