@@ -44,9 +44,39 @@
         - Exemple de composants UI
     </a>
   </header>
+  <!-- SIDEBAR RESPONSIVE -->
+  <a class="btn btn-primary m-5 d-block d-sm-none" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+    Ouvrir le menu
+  </a>
+  <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Composants UI</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="sidebar-tree">
+        <li><a href="#alerts">Alerts</a></li>
+        <!-- <li><a href="#avatar">Avatar</a></li> -->
+        <li><a href="#badges">Badges</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#dominos">Dominos <span class="badge bg-primary">Nouveau</span></a></li>
+        <li><a href="#dropdowns">Dropdowns</a></li>
+        <!-- <li><a href="#explorer">Explorer</a></li> -->
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#lists">Lists <span class="badge bg-primary">Nouveau</span></a></li>
+        <li><a href="#modals">Modals</a></li>
+        <li><a href="#navbar">Navbar</a></li>
+        <!-- <li><a href="#search">Search</a></li> -->
+        <li><a href="#sidebar">Sidebar</a></li>
+        <li><a href="#tables">Tables</a></li>
+        <li><a href="#toaster">Toaster</a></li>
+      </ul>          
+    </div>
+  </div>
+  
   <div class="container d-flex">
     <!-- SIDEBAR -->
-    <aside class="sidebar sidebar-left">
+    <aside class="sidebar sidebar-left d-none d-sm-block">
       <h1 class="sidebar-title">Composants UI</h1>
       <ul class="sidebar-tree">
         <li><a href="#alerts">Alerts</a></li>
