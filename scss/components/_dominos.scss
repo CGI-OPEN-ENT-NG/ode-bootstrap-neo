@@ -27,8 +27,8 @@ $overlay-width: $domino-width / 1.5;
 
 /* COMPONENT */
 .domino {
-  &.folder .domino__image,
-  &.item .domino__image {
+  &.folder .domino-image,
+  &.item .domino-image {
     background-color: rgba($secondary, 0.1);
   }
   &:hover {
@@ -42,52 +42,52 @@ $overlay-width: $domino-width / 1.5;
 }
 
 .domino.blog {
-  .domino__image {
+  .domino-image {
     background-color: rgba($indigo, 0.1);
     color: $indigo;
   }
 }
 .domino.exercizer {
-  .domino__image {
+  .domino-image {
     background-color: rgba($purple, 0.1);
     color: $purple;
   }
 }
 .domino.timelinegenerator {
-  .domino__image {
+  .domino-image {
     background-color: rgba($yellow, 0.1);
     color: $yellow;
   }
 }
 .domino.rack {
-  .domino__image {
+  .domino-image {
     background-color: rgba($red, 0.1);
     color: $red;
   }
 }
 .domino.homeworks {
-  .domino__image {
+  .domino-image {
     background-color: rgba($teal, 0.1);
     color: $teal;
   }
 }
 
-.dominos--square .domino {
+.dominos .domino {
   width: calc(16.667% - 20px);
 }
 
 @media (max-width: 1590px) {
-  .dominos--square .domino {
+  .dominos .domino {
     width: calc(20% - 20px);
   }
 }
 @media (max-width: 1360px) {
-  .dominos--square .domino {
+  .dominos .domino {
     width: calc(25% - 20px);
   }
 }
 @media (max-width: 1100px) {
-  .dominos--square .domino {
+  .dominos .domino {
     width: calc(33% - 20px);
   }
 }
