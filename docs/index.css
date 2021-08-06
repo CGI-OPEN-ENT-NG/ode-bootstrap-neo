@@ -4299,7 +4299,7 @@ textarea.form-control-lg {
   z-index: 1040;
   width: 100vw;
   height: 100vh;
-  background-color: #000000; }
+  background-color: #3f454f; }
   .modal-backdrop.fade {
     opacity: 0; }
   .modal-backdrop.show {
@@ -4310,13 +4310,13 @@ textarea.form-control-lg {
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem;
+  padding: 1.5rem 1.5rem;
   border-bottom: 0 solid #d6d9e0;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px; }
   .modal-header .btn-close {
-    padding: 0.5rem 0.5rem;
-    margin: -0.5rem -0.5rem -0.5rem auto; }
+    padding: 0.75rem 0.75rem;
+    margin: -0.75rem -0.75rem -0.75rem auto; }
 
 .modal-title {
   margin-bottom: 0;
@@ -4325,7 +4325,7 @@ textarea.form-control-lg {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 1rem; }
+  padding: 1.5rem; }
 
 .modal-footer {
   display: flex;
@@ -4333,7 +4333,7 @@ textarea.form-control-lg {
   flex-shrink: 0;
   align-items: center;
   justify-content: flex-end;
-  padding: 0.75rem;
+  padding: 1.25rem;
   border-top: 0 solid #d6d9e0;
   border-bottom-right-radius: 9px;
   border-bottom-left-radius: 9px; }
@@ -4924,12 +4924,12 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem; }
+  padding: 1.5rem 1.5rem; }
   .offcanvas-header .btn-close {
-    padding: 0.5rem 0.5rem;
-    margin-top: -0.5rem;
-    margin-right: -0.5rem;
-    margin-bottom: -0.5rem; }
+    padding: 0.75rem 0.75rem;
+    margin-top: -0.75rem;
+    margin-right: -0.75rem;
+    margin-bottom: -0.75rem; }
 
 .offcanvas-title {
   margin-bottom: 0;
@@ -4937,7 +4937,7 @@ textarea.form-control-lg {
 
 .offcanvas-body {
   flex-grow: 1;
-  padding: 1rem 1rem;
+  padding: 1.5rem 1.5rem;
   overflow-y: auto; }
 
 .offcanvas-start {
@@ -5659,7 +5659,7 @@ textarea.form-control-lg {
 .mb-1 {
   margin-bottom: 0.25rem !important; }
 
-.mb-2, .sidebar__mobile .input-searchbar {
+.mb-2 {
   margin-bottom: 0.5rem !important; }
 
 .mb-3 {
@@ -5695,7 +5695,7 @@ textarea.form-control-lg {
 .ms-auto {
   margin-left: auto !important; }
 
-.p-0, .sidebar__mobile .input-searchbar {
+.p-0 {
   padding: 0 !important; }
 
 .p-1 {
@@ -8138,18 +8138,18 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
-.transition-hover-fast, .list__item:hover, .sidebar__tree li a:hover, a {
+.transition-hover-fast, .list-item:hover, .sidebar-tree li a:hover, a {
   transition-property: all;
   transition-duration: 0.25s;
   transition-timing-function: ease; }
 
 .transition-hover, .domino, .domino:hover .domino-overlay .left,
-.domino:hover .domino-overlay .right, .list__item, .sidebar__mobile .sidebar, .sidebar__mobile input[type=checkbox]:checked ~ .sidebar {
+.domino:hover .domino-overlay .right, .list-item {
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: ease; }
 
-.transition-hover-slow, .domino:hover, .sidebar__tree li a {
+.transition-hover-slow, .domino:hover, .sidebar-tree li a {
   transition-property: all;
   transition-duration: 0.75s;
   transition-timing-function: ease; }
@@ -14036,17 +14036,17 @@ END DOCUMENTATION */
 .input-searchbar .ic-search + input {
   padding-left: 40px; }
 
-.list__header {
+.list-header {
   display: flex;
   justify-content: space-between;
-  font-size: 0.875rem !important;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #8c939e;
   padding: 5px 15px; }
-  .list__header .list__item--preview {
+  .list-header .list__item--preview {
     width: 40px; }
 
-.list__item {
+.list-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14055,50 +14055,50 @@ END DOCUMENTATION */
   padding: 5px 15px;
   border-radius: 10px;
   color: #8c939e;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   cursor: pointer; }
-  .list__item:hover {
+  .list-item:hover {
     border-color: #4bafd5; }
-  .list__item:active, .list__item.active {
+  .list-item:active, .list-item.active {
     border-color: #4bafd5;
     background-color: rgba(75, 175, 213, 0.1); }
-  .list__item .list__item--preview {
+  .list-item .list-item-preview {
     width: 40px;
     vertical-align: middle;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     text-align: center; }
-  .list__item .list__title {
-    font-size: 1rem;
+  .list-item .list-title {
+    font-size: 1.6rem;
     font-weight: bold;
     color: #5b6472;
     margin: 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis; }
-  .list__item .list__image {
+  .list-item .list-image {
     width: 30px;
     height: 30px;
     border-radius: 5px;
     margin-right: 5px; }
-  .list__item .list__status {
+  .list-item .list-status {
     text-align: right;
-    font-size: 1rem;
+    font-size: 1.6rem;
     padding-right: 10px; }
-    .list__item .list__status > * {
+    .list-item .list-status > * {
       margin: 0 5px; }
-  .list__item .list__modifiedBy {
-    font-size: 0.75rem; }
+  .list-item .list-modifiedBy {
+    font-size: 1.2rem; }
 
-.list__title {
+.list-title {
   width: calc(100% - 450px); }
 
-.list__status {
+.list-status {
   width: 75px; }
 
-.list__owner {
+.list-owner {
   width: 200px; }
 
-.list__modification {
+.list-modification {
   width: 175px; }
 
 @media (max-width: 575.98px) {
@@ -14107,29 +14107,29 @@ END DOCUMENTATION */
     border-left-color: transparent;
     border-right-color: transparent;
     border-bottom-color: transparent; }
-  .list__header {
+  .list-header {
     display: none; }
-  .list__item {
+  .list-item {
     flex-wrap: wrap;
     padding: 10px;
     margin: 10px 0;
     border-color: #d6d9e0; }
-    .list__item .list__title {
+    .list-item .list-title {
       width: calc(100% - 40px); }
-    .list__item .list__status {
+    .list-item .list-status {
       display: none; }
-    .list__item .list__owner {
+    .list-item .list-owner {
       width: 55%; }
-    .list__item .list__modification {
+    .list-item .list-modification {
       width: 45%;
       text-align: right; }
-    .list__item .list__modifiedBy {
+    .list-item .list-modifiedBy {
       display: none; } }
 
 /* DOCUMENTATION
-<aside class="sidebar sidebar--left">
-  <h1 class="sidebar__title">Titre de l'application</h1>
-  <ul class="sidebar__tree">
+<aside class="sidebar sidebar-left">
+  <h1 class="sidebar-title">Titre de l'application</h1>
+  <ul class="sidebar-tree">
     <li>
       <input type="checkbox" id="" />
       <label for=""><a href="">Mes ressources</a></label>
@@ -14164,12 +14164,12 @@ END DOCUMENTATION */
   font-size: 1.4rem;
   font-weight: bold;
   box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.05); }
-  .sidebar__title {
+  .sidebar-title {
     color: #4bafd5;
     font-size: 2.4rem;
     font-weight: bold;
     margin-bottom: 20px; }
-  .sidebar__tree {
+  .sidebar-tree {
     max-height: calc(100vh - 305px);
     overflow-y: auto;
     scrollbar-width: thin;
@@ -14177,47 +14177,47 @@ END DOCUMENTATION */
     margin-left: 0;
     padding-left: 0;
     padding-right: 5px; }
-    .sidebar__tree ul {
+    .sidebar-tree ul {
       margin-left: 0;
       padding-left: 10px; }
-    .sidebar__tree li {
+    .sidebar-tree li {
       list-style-type: none; }
-      .sidebar__tree li input[type=checkbox] {
+      .sidebar-tree li input[type=checkbox] {
         cursor: pointer;
         position: absolute;
         opacity: 0;
         margin: 6px 10px; }
-      .sidebar__tree li label {
+      .sidebar-tree li label {
         display: block; }
-        .sidebar__tree li label a::before {
+        .sidebar-tree li label a::before {
           font-family: "FontAwesome";
           content: "\f105";
           margin-right: 5px; }
-      .sidebar__tree li input ~ ul {
+      .sidebar-tree li input ~ ul {
         display: none; }
-      .sidebar__tree li input:checked ~ ul {
+      .sidebar-tree li input:checked ~ ul {
         display: block; }
-      .sidebar__tree li input:checked ~ label a::before {
+      .sidebar-tree li input:checked ~ label a::before {
         content: "\f107"; }
-      .sidebar__tree li a {
+      .sidebar-tree li a {
         display: block;
         padding: 7px 15px;
         margin: 5px 0;
         color: #8c939e;
         border-radius: 5px;
         line-height: 1.2; }
-        .sidebar__tree li a:hover {
+        .sidebar-tree li a:hover {
           background-color: rgba(75, 175, 213, 0.075);
           color: #4bafd5;
           text-decoration: none; }
-        .sidebar__tree li a.active, .sidebar__tree li a:active {
+        .sidebar-tree li a.active, .sidebar-tree li a:active {
           background-color: rgba(75, 175, 213, 0.2);
           color: #4bafd5; }
 
-.sidebar--left {
+.sidebar-left {
   border-radius: 5px 0 0 5px; }
 
-.sidebar--right {
+.sidebar-right {
   border-radius: 0 5px 5px 0; }
 
 .sidebar + .main-content {
@@ -14225,68 +14225,18 @@ END DOCUMENTATION */
   border-radius: 0 5px 5px 0;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05); }
 
-.sidebar__mobile {
-  margin-right: auto;
-  display: none; }
-  .sidebar__mobile .sidebar {
-    display: block;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    right: 0;
-    top: 46px;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    visibility: hidden;
-    opacity: 0;
-    z-index: -1; }
-    .sidebar__mobile .sidebar__tree {
-      max-height: calc(100vh - 200px); }
-    .sidebar__mobile .sidebar__close {
-      display: flex;
-      justify-content: flex-end;
-      padding-bottom: 5px; }
-      .sidebar__mobile .sidebar__close i {
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
-        text-align: center;
-        border-radius: 50%;
-        background-color: #8c939e;
-        color: white; }
-  .sidebar__mobile input[type=checkbox] {
-    display: block;
-    width: 100px;
-    height: 30px;
-    position: absolute;
-    top: -2px;
-    left: -4px;
-    cursor: pointer;
-    opacity: 0;
-    /* hide this */
-    z-index: 2;
-    /* and place it over the hamburger */
-    -webkit-touch-callout: none; }
-  .sidebar__mobile input[type=checkbox]:checked ~ .sidebar {
-    visibility: visible;
-    opacity: 1;
-    z-index: 1000; }
-  .sidebar__mobile .ic-burger {
-    color: #8c939e;
-    font-size: 1rem; }
-  .sidebar__mobile .input-searchbar .ic-search {
-    left: 15px;
-    top: 9px; }
+.sidebar.offcanvas {
+  background-color: rgba(255, 255, 255, 0.95); }
+  .sidebar.offcanvas .sidebar-tree {
+    max-height: calc(100vh - 205px); }
 
 @media (max-width: 767.98px) {
   .sidebar {
-    display: none; }
+    width: inherit;
+    background-color: #ffffff; }
   .sidebar + .main-content {
     width: 100%;
-    border-radius: 5px; }
-  .sidebar__mobile {
-    display: block; } }
+    border-radius: 5px; } }
 
 .sticky-toolbox {
   transition-property: transform;
@@ -15514,18 +15464,18 @@ i[class*="ic-"] {
 .ic-app.sacoche::before, .ic-app.sacoche-large::before {
   content: '\e899'; }
 
-.transition-hover-fast, .list__item:hover, .sidebar__tree li a:hover, a {
+.transition-hover-fast, .list-item:hover, .sidebar-tree li a:hover, a {
   transition-property: all;
   transition-duration: 0.25s;
   transition-timing-function: ease; }
 
 .transition-hover, .domino, .domino:hover .domino-overlay .left,
-.domino:hover .domino-overlay .right, .list__item, .sidebar__mobile .sidebar, .sidebar__mobile input[type=checkbox]:checked ~ .sidebar {
+.domino:hover .domino-overlay .right, .list-item {
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: ease; }
 
-.transition-hover-slow, .domino:hover, .sidebar__tree li a {
+.transition-hover-slow, .domino:hover, .sidebar-tree li a {
   transition-property: all;
   transition-duration: 0.75s;
   transition-timing-function: ease; }
