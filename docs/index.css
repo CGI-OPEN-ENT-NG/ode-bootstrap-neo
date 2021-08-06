@@ -15571,6 +15571,10 @@ END DOCUMENTATION */
   .dominos .domino {
     width: calc(33% - 20px); } }
 
+@media (max-width: 800px) {
+  .dominos .domino {
+    width: calc(50% - 20px); } }
+
 .explorer__view {
   height: calc(100vh - 220px); }
 
