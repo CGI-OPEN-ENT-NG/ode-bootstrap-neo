@@ -96,6 +96,7 @@
             })
 
 
+
             var myModal = new bootstrap.Modal(document.getElementById('theModal'));
 
             $('.tool-option').on("click", function (e) {
@@ -440,15 +441,33 @@
 
                 <div class="widget widget-school">
                     <div class="widget-body">
-                        <div class="header" style="background-image:url(../../assets/images/wallpaper3.png)">
+                        <div class="widget-school-header" style="background-image:url(../../assets/images/wallpaper3.png)">
 
-                            <div class="name">
-                                Charlotte Rose
+                            <div class="d-flex align-items-center">
+                                <div class="me-4">
+                                    <a href="" class="avatar-link">
+                                        <img src="https://picsum.photos/100/100" alt="">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="name">
+                                        Charlotte Rose
+                                    </div>
+                                    <div>
+                                        <div class="school-multiple" id="dropdownSchool" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Lycée Henry IV
+                                        </div>
+                                        <div class="school-choice dropdown-menu">
+                                            <div>Lycée Henry IV</div>
+                                            <div>Lycée Charlemagne</div>
+                                            <div>Collège des jasmins</div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                            <div class="school">
-                                Lycée Henry IV
-                            </div>
-                            <div class="avatar-list">
+
+                            <div class="avatar-list d-none">
                                 <a href="" class="avatar-link">
                                     <img src="https://picsum.photos/100/100" alt="">
                                 </a>
@@ -1034,34 +1053,33 @@
                     </div>
                     <div class="widget-body">
                         <div class="">
-                            <div class="record-timer ng-binding" > <i class="fas fa-microphone"></i> 00:01 </div> 
-                            <input type="text" i18n-placeholder="title"  class="ng-pristine ng-valid ng-not-empty ng-touched form-control"
-                                placeholder="Titre">
-                            <div class="record-controls"> 
-                                <button type="button" class="start btn btn-circle "> 
+                            <div class="record-timer ng-binding"> <i class="fas fa-microphone"></i> 00:01 </div>
+                            <input type="text" i18n-placeholder="title" class="ng-pristine ng-valid ng-not-empty ng-touched form-control" placeholder="Titre">
+                            <div class="record-controls">
+                                <button type="button" class="start btn btn-circle ">
                                     <i class="fas fa-microphone"></i>
-                                    <span  class="label ng-scope">
+                                    <span class="label ng-scope">
                                         <i18n>Reprendre</i18n>
                                     </span>
-                                </button> 
-                                <button type="button" class=" btn btn-circle"> 
+                                </button>
+                                <button type="button" class=" btn btn-circle">
                                     <i class="fas fa-play"></i>
-                                    <span  class="label ng-scope">
+                                    <span class="label ng-scope">
                                         <i18n>Lire</i18n>
                                     </span>
-                                </button> 
-                                <button type="button" class=" btn btn-circle" > 
+                                </button>
+                                <button type="button" class=" btn btn-circle">
                                     <i class="fas fa-redo-alt"></i>
-                                    <span  class="label ng-scope">
+                                    <span class="label ng-scope">
                                         <i18n>Refaire</i18n>
                                     </span>
                                 </button>
-                                <button type="button" class=" btn btn-circle " disabled> 
+                                <button type="button" class=" btn btn-circle " disabled>
                                     <i class="fas fa-save"></i>
-                                    <span  class="label ng-scope">
+                                    <span class="label ng-scope">
                                         <i18n>Sauvegarder</i18n>
-                                    </span> 
-                                </button> 
+                                    </span>
+                                </button>
                             </div>
                         </div>
 
