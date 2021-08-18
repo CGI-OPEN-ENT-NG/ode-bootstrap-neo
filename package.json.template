@@ -10,6 +10,8 @@
     "dev:prepare": "npm run sass:build:debug && npm run dev:dependencies && cpr assets/ docs/ -o",
     "dev:watch": "npm run dev:prepare && concurrently  \" npm run sass:watch \" \" npm run dev:serve  \" ",
     "dev:serve": "live-server --open=docs/ --ignore=**/node_modules/**,**/dist/**,**/package.json,**/.git/**",
+    "dev:lint": "stylelint scss/**/*.scss || echo \"lint faild for some file(s).\"",
+    "dev:lint-fix": "stylelint scss/**/*.scss --fix || echo \"lint faild for some file(s).\"",
     "release:clean": "rimraf dist",
     "release:dependencies": "cpr node_modules/ode-bootstrap/assets/ dist/ -o",
     "release:prepare": "npm run release:clean && npm run release:dependencies && cpr assets/ dist/ -o",
