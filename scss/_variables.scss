@@ -1,111 +1,108 @@
 // COLORS // grays palette
-$white:                     #ffffff;
-$gray-100:                  #f0f2f4;
-$gray-200:                  #e9ebef;
-$gray-300:                  #d6d9e0;
-$gray-400:                  #c9ced5;
-$gray-500:                  #b1b6bf;
-$gray-600:                  #8c939e;
-$gray-700:                  #5b6472;
-$gray-800:                  #3f454f;
-$gray-900:                  #212529;
-$black:                     #000000;
+$white: #fff;
+$gray-100: #f0f2f4;
+$gray-200: #e9ebef;
+$gray-300: #d6d9e0;
+$gray-400: #c9ced5;
+$gray-500: #b1b6bf;
+$gray-600: #8c939e;
+$gray-700: #5b6472;
+$gray-800: #3f454f;
+$gray-900: #212529;
+$black: #000;
 
 // COLORS // colors palette
-$blue:                      #4b90d5;
-$indigo:                    #1a22a2;
-$purple:                    #763294;
-$pink:                      #b930a2;
-$red:                       #e13a3a;
-$orange:                    #FF8500;
-$yellow:                    #ecbe30;
-$green:                     #7DBF85;
-$teal:                      #46bfaf;
-$cyan:                      #4bafd5;
-$deepBlue:                  #0984b3;
+$blue: #4b90d5;
+$indigo: #1a22a2;
+$purple: #763294;
+$pink: #b930a2;
+$red: #e13a3a;
+$orange: #ff8500;
+$yellow: #ecbe30;
+$green: #7dbf85;
+$teal: #46bfaf;
+$cyan: #4bafd5;
+$deepBlue: #0984b3;
 
 $colors: (
-    "gray":                 $gray-600,
-    "deepBlue":             $deepBlue
+    "gray": $gray-600,
+    "deepBlue": $deepBlue,
 );
 
+$primary: $orange;
+$primary--lightest: lighten($primary, 30%);
+$primary--light: lighten($primary, 15%);
+$primary--dark: darken($primary, 15%);
+$primary--darkest: darken($primary, 30%);
+$primary-gradient: linear-gradient($primary, $primary--light);
 
-$primary:                   $orange;
-$primary--lightest:         lighten($primary, 30%);
-$primary--light:            lighten($primary, 15%);
-$primary--dark:             darken($primary, 15%);
-$primary--darkest:          darken($primary, 30%);
-$primary-gradient:          linear-gradient($primary, $primary--light);
+$secondary: $cyan;
+$secondary--lightest: lighten($secondary, 30%);
+$secondary--light: lighten($secondary, 15%);
+$secondary--dark: darken($secondary, 15%);
+$secondary--darkest: darken($secondary, 30%);
+$secondary-gradient: linear-gradient($secondary, $secondary--light);
 
-$secondary:                 $cyan;
-$secondary--lightest:       lighten($secondary, 30%);
-$secondary--light:          lighten($secondary, 15%);
-$secondary--dark:           darken($secondary, 15%);
-$secondary--darkest:        darken($secondary, 30%);
-$secondary-gradient:        linear-gradient($secondary, $secondary--light);
+$success: $green;
+$success--light: lighten($green, 10%);
+$success--dark: darken($green, 10%);
 
-$success:                   $green;
-$success--light:            lighten($green, 10%);
-$success--dark:             darken($green, 10%);
+$info: $cyan;
+$info--light: lighten($cyan, 10%);
+$info--dark: darken($cyan, 10%);
 
-$info:                      $cyan;
-$info--light:               lighten($cyan, 10%);
-$info--dark:                darken($cyan, 10%);
+$warning: $yellow;
+$warning--light: lighten($yellow, 10%);
+$warning--dark: darken($yellow, 10%);
 
-$warning:                   $yellow;
-$warning--light:            lighten($yellow, 10%);
-$warning--dark:             darken($yellow, 10%);
+$danger: $red;
+$danger--light: lighten($red, 10%);
+$danger--dark: darken($red, 10%);
 
-$danger:                    $red;
-$danger--light:             lighten($red, 10%);
-$danger--dark:              darken($red, 10%);
-
-
-$light:                     $gray-200;
-$dark:                      $gray-700;
+$light: $gray-200;
+$dark: $gray-700;
 
 // Body
-$body-bg:                   $gray-100;
-$text-color:                $gray-800;
+$body-bg: $gray-100;
+$text-color: $gray-800;
 
 // Links
-$link-color:                $cyan;
-$link-hover-color:          $orange;
-
+$link-color: $cyan;
+$link-hover-color: $orange;
 
 // Components
-$line-height-lg:            2;
-$line-height:               1.6;
-$line-height-sm:            1.2;
+$line-height-lg: 2;
+$line-height: 1.6;
+$line-height-sm: 1.2;
 
-$border-radius-sm:          2px;
-$border-radius:             5px;
-$border-radius-lg:          10px;
+$border-radius-sm: 2px;
+$border-radius: 5px;
+$border-radius-lg: 10px;
 
-$box-shadow-sm:             0 .125rem .25rem rgba($gray-900, .075);
-$box-shadow:                0 .5rem 1rem rgba($gray-900, .15);
-$box-shadow-lg:             0 1rem 3rem rgba($gray-900, .175);
+$box-shadow-sm: 0 .125rem .25rem rgba($gray-900, .075);
+$box-shadow: 0 .5rem 1rem rgba($gray-900, .15);
+$box-shadow-lg: 0 1rem 3rem rgba($gray-900, .175);
 
-$component-active-bg:       $secondary;
+$component-active-bg: $secondary;
 
 // Typography
-$font-family-sans-serif:    "Roboto", sans-serif;
+$font-family-sans-serif: "Roboto", sans-serif;
 
 // Buttons + Forms
-$input-btn-font-family:     "Roboto" ;
-$input-bg:                  $white ;
+$input-btn-font-family: "Roboto";
+$input-bg: $white;
 
 // Buttons
-$btn-box-shadow:            inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($gray-900, .3);
+$btn-box-shadow: inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($gray-900, .3);
 // $btn-border-radius: 0;
 
 // Forms
-$input-font-family:         "Roboto";
-$input-focus-border-color:  $secondary;
+$input-font-family: "Roboto";
+$input-focus-border-color: $secondary;
 
 // Dropdowns
-$dropdown-link-color:       $gray-700;
-$dropdown-link-hover-bg:    rgba($secondary, 0.1);
+$dropdown-link-color: $gray-700;
+$dropdown-link-hover-bg: rgba($secondary, .1);
 
 // Image thumbnails
-$thumbnail-bg:              $white;
+$thumbnail-bg: $white;

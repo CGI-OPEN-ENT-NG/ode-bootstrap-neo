@@ -1,25 +1,25 @@
 .btn {
-  //border-radius: $border-radius;
+    //border-radius: $border-radius;
 }
 
 .btn-link,
-.btn[class*=btn-outline-] {
-  box-shadow: none;
+.btn[class*="btn-outline-"] {
+    box-shadow: none;
 }
 
 .btn-outline-orange:hover,
 .btn-outline-orange.active {
-  color: $white!important;
+    color: $white !important;
 }
 
 .btn-primary {
-  color: $white;
-  //box-shadow: $btn-box-shadow;
-  &.disabled,
-  &:disabled {
-    background-color: $gray-600;
-    border-color: $gray-600;
-    color: rgba($white, .8);
-    opacity: .8;
-  }
+    color: $white;
+    //box-shadow: $btn-box-shadow;
+    &.disabled,
+    &:disabled {
+        color: rgba($white, .8);
+        background-color: $gray-600;
+        border-color: $gray-600;
+        opacity: .8;
+    }
 }

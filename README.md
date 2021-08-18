@@ -47,6 +47,15 @@ Après chaque modification locale de ode-bootstrap, il faudra lancer la commande
 
 Le css minifié est généré dans le dossier "dist".
 
+## Linter SCSS
+
+Lancer le linter sur les fichers scss du projet
+```
+./build.sh lint
+```
+Pour un affichage des problèmes en temps réel, installer le plugin VSC stylelint.
+
+
 ## Documentation
 
 Une documentation contenant l'ensemble de nos composants est disponible dans [ici](doc/index.html).
