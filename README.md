@@ -53,8 +53,14 @@ Lancer le linter sur les fichers scss du projet
 ```
 ./build.sh lint
 ```
-Pour un affichage des problèmes en temps réel, installer le plugin VSC stylelint.
 
+Pour un affichage des problèmes en temps réel, installer le plugin VSC stylelint.
+Pour une correction du formattage à l'enregistrement, ajouter au ficher de configuration settings.json:
+```
+"editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+},
+```
 
 ## Documentation
 
