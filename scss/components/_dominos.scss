@@ -27,71 +27,71 @@ $overlay-width: $domino-width / 1.5;
 
 /* COMPONENT */
 .domino {
-  &.folder .domino-image,
-  &.item .domino-image {
-    background-color: rgba($secondary, 0.1);
-  }
-  &:hover {
-    border-color: $secondary;
-  }
-  &:active,
-  &.active {
-    background-color: rgba($secondary, 0.1);
-    border-color: $secondary;
-  }
+    &.folder .domino-image,
+    &.item .domino-image {
+        background-color: rgba($secondary, .1);
+    }
+    &:hover {
+        border-color: $secondary;
+    }
+    &:active,
+    &.active {
+        background-color: rgba($secondary, .1);
+        border-color: $secondary;
+    }
 }
 
 .domino.blog {
-  .domino-image {
-    background-color: rgba($indigo, 0.1);
-    color: $indigo;
-  }
+    .domino-image {
+        color: $indigo;
+        background-color: rgba($indigo, .1);
+    }
 }
 .domino.exercizer {
-  .domino-image {
-    background-color: rgba($purple, 0.1);
-    color: $purple;
-  }
+    .domino-image {
+        color: $purple;
+        background-color: rgba($purple, .1);
+    }
 }
 .domino.timelinegenerator {
-  .domino-image {
-    background-color: rgba($yellow, 0.1);
-    color: $yellow;
-  }
+    .domino-image {
+        color: $yellow;
+        background-color: rgba($yellow, .1);
+    }
 }
 .domino.rack {
-  .domino-image {
-    background-color: rgba($red, 0.1);
-    color: $red;
-  }
+    .domino-image {
+        color: $red;
+        background-color: rgba($red, .1);
+    }
 }
 .domino.homeworks {
-  .domino-image {
-    background-color: rgba($teal, 0.1);
-    color: $teal;
-  }
+    .domino-image {
+        color: $teal;
+        background-color: rgba($teal, .1);
+    }
 }
 
 .dominos .domino {
-  width: calc(16.667% - 20px);
+    width: calc(16.667% - 20px);
 }
 @media (max-width: 1590px) {
-  .dominos .domino {
-    width: calc(20% - 20px);
-  }
+    .dominos .domino {
+        width: calc(20% - 20px);
+    }
 }
 @media (max-width: 1360px) {
-  .dominos .domino {
-    width: calc(25% - 20px);
-  }
+    .dominos .domino {
+        width: calc(25% - 20px);
+    }
 }
 @media (max-width: 1100px) {
-  .dominos .domino {
-    width: calc(33% - 20px);
-  }
+    .dominos .domino {
+        width: calc(33% - 20px);
+    }
 }
 @media (max-width: 800px) {
-  .dominos .domino {
-    width: calc(50% - 20px);
-  }
+    .dominos .domino {
+        width: calc(50% - 20px);
+    }
 }

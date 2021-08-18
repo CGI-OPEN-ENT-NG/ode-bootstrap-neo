@@ -22,35 +22,37 @@
 <main class="main-content"></main>
 END DOCUMENTATION */
 
-/* VARIABLES*/ 
+/* VARIABLES */
 $sidebar-width: 250px;
 
 /* COMPONENT */
-/*aside*/.sidebar {
-  background-color: rgba($white, 0.7);
-  color: $gray-600;
-  &__title {
-    color: $secondary;
-  }
-  &__tree {
-    li {
-      a {
-        &:hover {
-          background-color: rgba($secondary, 0.075);
-          color: $secondary;
-        }
-        &.active,
-        &:active {
-          background-color: rgba($secondary, 0.2);
-          color: $secondary;
-        }
-      }
+
+/* aside */
+.sidebar {
+    color: $gray-600;
+    background-color: rgba($white, .7);
+    &__title {
+        color: $secondary;
     }
-  }
+    &__tree {
+        li {
+            a {
+                &:hover {
+                    color: $secondary;
+                    background-color: rgba($secondary, .075);
+                }
+                &.active,
+                &:active {
+                    color: $secondary;
+                    background-color: rgba($secondary, .2);
+                }
+            }
+        }
+    }
 }
 
 @include media-breakpoint-down(md) {
-  .sidebar + .main-content {
-    border-radius: $border-radius;
-  }
+    .sidebar + .main-content {
+        border-radius: $border-radius;
+    }
 }

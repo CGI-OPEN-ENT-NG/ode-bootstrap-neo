@@ -1,0 +1,7 @@
+{
+    "extends": "stylelint-config-twbs-bootstrap/scss",
+    "rules": {
+        "indentation": 4,
+        "declaration-no-important": null
+      }
+}
