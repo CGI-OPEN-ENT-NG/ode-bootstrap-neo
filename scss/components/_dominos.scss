@@ -27,18 +27,19 @@ $overlay-width: $domino-width / 1.5;
 
 /* COMPONENT */
 .domino {
-    &.folder .domino-image,
-    &.item .domino-image {
-        background-color: rgba($secondary, .1);
-    }
-    &:hover {
-        border-color: $secondary;
-    }
-    &:active,
-    &.active {
-        background-color: rgba($secondary, .1);
-        border-color: $secondary;
-    }
+  &.folder .domino-image,
+  &.item .domino-image {
+    background-color: rgba($gray-600, 0.1);
+    color: $gray-600;
+  }
+  &:hover {
+    border-color: $secondary;
+  }
+  &:active,
+  &.active {
+    background-color: rgba($secondary, 0.1);
+    border-color: $secondary;
+  }
 }
 
 .domino.blog {
