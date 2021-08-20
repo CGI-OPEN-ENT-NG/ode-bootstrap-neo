@@ -4924,12 +4924,12 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 1.5rem; }
+  padding: 1rem 1rem; }
   .offcanvas-header .btn-close {
-    padding: 0.75rem 0.75rem;
-    margin-top: -0.75rem;
-    margin-right: -0.75rem;
-    margin-bottom: -0.75rem; }
+    padding: 0.5rem 0.5rem;
+    margin-top: -0.5rem;
+    margin-right: -0.5rem;
+    margin-bottom: -0.5rem; }
 
 .offcanvas-title {
   margin-bottom: 0;
@@ -4937,7 +4937,7 @@ textarea.form-control-lg {
 
 .offcanvas-body {
   flex-grow: 1;
-  padding: 1.5rem 1.5rem;
+  padding: 1rem 1rem;
   overflow-y: auto; }
 
 .offcanvas-start {
@@ -13723,32 +13723,32 @@ END DOCUMENTATION */
   .emptyscreen-footer {
     font-size: 12px; } }
 
-.explorer__header {
-  padding: 20px 20px 0; }
-  .explorer__header h2, .explorer__header .h2 {
+.explorer-header {
+  padding: 15px 15px 0; }
+  .explorer-header h2, .explorer-header .h2 {
     position: relative;
     color: #5b6472;
-    font-size: 1.375rem;
+    font-size: 2rem;
     margin-bottom: 0; }
-    .explorer__header h2 small, .explorer__header .h2 small, .explorer__header h2 .small, .explorer__header .h2 .small {
-      font-size: 70%;
+    .explorer-header h2 small, .explorer-header .h2 small, .explorer-header h2 .small, .explorer-header .h2 .small {
+      font-size: 80%;
       color: #8c939e; }
 
-.explorer__view {
+.explorer-view {
   padding: 10px;
-  height: calc(100vh - 220px);
+  height: calc(100vh - 205px);
   overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: #b1b6bf #e9ebef;
   border-top: 1px solid #e9ebef; }
 
 @media (max-width: 767.98px) {
-  .explorer__header {
-    padding: 15px 15px 0; }
-    .explorer__header h2, .explorer__header .h2 {
-      font-size: 1.125rem; }
-  .explorer__view {
-    height: calc(100vh - 110px); } }
+  .explorer-header {
+    padding: 10px 10px 0; }
+    .explorer-header h2, .explorer-header .h2 {
+      font-size: 1.4rem; }
+  .explorer-view {
+    height: calc(100vh - 90px); } }
 
 .feed {
   font-size: 14px; }
@@ -14024,14 +14024,15 @@ END DOCUMENTATION */
 .form-control::placeholder {
   font-style: italic; }
 
-.input-searchbar .ic-search {
-  position: absolute;
-  left: 30px;
-  top: 7px;
-  color: #b1b6bf; }
-
-.input-searchbar .ic-search + input {
-  padding-left: 40px; }
+.input-searchbar {
+  position: relative; }
+  .input-searchbar .ic-search {
+    position: absolute;
+    left: 20px;
+    top: 5px;
+    color: #b1b6bf; }
+  .input-searchbar .ic-search + input {
+    padding-left: 40px; }
 
 .list-header {
   display: flex;
@@ -14167,7 +14168,7 @@ END DOCUMENTATION */
     font-weight: bold;
     margin-bottom: 20px; }
   .sidebar-tree {
-    max-height: calc(100vh - 305px);
+    max-height: calc(100vh - 220px);
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #b1b6bf #e9ebef;
@@ -14225,12 +14226,15 @@ END DOCUMENTATION */
 .sidebar.offcanvas {
   background-color: rgba(255, 255, 255, 0.95); }
   .sidebar.offcanvas .sidebar-tree {
-    max-height: calc(100vh - 205px); }
+    max-height: calc(100vh - 130px); }
 
 @media (max-width: 767.98px) {
   .sidebar {
-    width: inherit;
+    display: none;
+    width: 90%;
     background-color: #ffffff; }
+  .sidebar.sidebar-mobile {
+    display: block; }
   .sidebar + .main-content {
     width: 100%;
     border-radius: 5px; } }
@@ -15524,7 +15528,8 @@ END DOCUMENTATION */
 /* COMPONENT */
 .domino.folder .domino-image,
 .domino.item .domino-image {
-  background-color: rgba(75, 175, 213, 0.1); }
+  background-color: rgba(140, 147, 158, 0.1);
+  color: #8c939e; }
 
 .domino:hover {
   border-color: #4bafd5; }
@@ -15620,7 +15625,7 @@ header.navbar.navbar-dark {
   z-index: 1020;
   box-shadow: 0 0.125rem 0.25rem rgba(33, 37, 41, 0.075); }
   header.navbar.navbar-dark > .btn {
-    font-size: 1.5rem; }
+    font-size: 2.4rem; }
     header.navbar.navbar-dark > .btn:first-child {
       margin-right: auto; }
   header.navbar.navbar-dark .logo {
@@ -15664,7 +15669,7 @@ header.navbar.navbar-dark {
 
 @media (max-width: 767.98px) {
   header.navbar.navbar-dark > .btn {
-    font-size: 1.25rem; }
+    font-size: 2rem; }
     header.navbar.navbar-dark > .btn:first-child {
       margin-right: auto; }
   header.navbar.navbar-dark a.application__title {
