@@ -51,7 +51,7 @@ $sidebar-width: 250px;
     }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .sidebar + .main-content {
         border-radius: $border-radius;
     }
