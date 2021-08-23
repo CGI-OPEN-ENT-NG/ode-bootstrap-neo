@@ -246,7 +246,7 @@ help {
     background-color: $white;
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .container {
         padding: 0;
     }

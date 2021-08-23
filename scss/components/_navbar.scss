@@ -5,10 +5,13 @@ header.navbar.navbar-dark {
     right: 0;
     left: 0;
     z-index: $zindex-sticky;
-    padding: 0 10px;
+    // padding: 0 10px;
     box-shadow: $box-shadow-sm;
-    > .btn {
-        font-size: 1.5rem;
+    .container {
+        padding: 0 20px;
+    }
+    .btn {
+        font-size: 2rem;
         &:first-child {
             margin-right: auto;
         }
@@ -63,12 +66,6 @@ header.navbar.navbar-dark {
 }
 @include media-breakpoint-down(md) {
     header.navbar.navbar-dark {
-        > .btn {
-            font-size: 1.25rem;
-            &:first-child {
-                margin-right: auto;
-            }
-        }
         a.application__title {
             display: block;
             // width: calc(100% - 300px); //A REVOIR

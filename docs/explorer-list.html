@@ -15,36 +15,6 @@
         <a class="btn btn-secondary d-none d-md-none d-lg-block" href="/timeline/timeline" title="Accueil">
             <img class="logo" src="/assets/images/logo.png" alt="Logo de l'ENT">
         </a>
-        <div class="sidebar__mobile">
-            <input type="checkbox" />
-            <i class="ic-burger"></i> Blog
-            <aside class="sidebar">
-                <ul class="sidebar__tree">
-                    <li><a class="active" href="">Mes blogs</a>
-                        <ul>
-                            <li><a href="">Dossier 1</a></li>
-                            <li><a href="">Dossier 2</a>
-                                <ul>
-                                    <li><a href="">Sous-dossier 1</a></li>
-                                    <li><a href="">Sous-dossier 2</a></li>
-                                    <li><a href="">Sous-dossier 3</a></li>
-                                    <li><a href="">Sous-dossier avec un nom très long</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="">Dossier 3</a>
-                                <ul>
-                                    <li><a href="">Sous-dossier 1</a></li>
-                                    <li><a href="">Sous-dossier 2</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="">Ma corbeille</a></li>
-                </ul>
-                <a class="btn btn-outline-secondary btn-block">Créer un dossier</a>
-                <a class="btn btn-outline-secondary btn-block">Importer</a>
-            </aside>
-        </div>
         <button class="btn btn-secondary" title="Accueil">
             <i class="ic-home"></i>
         </button>
@@ -82,9 +52,9 @@
     </header>
     <div class="container d-flex">
         <!-- SIDEBAR -->
-        <aside class="sidebar sidebar--left">
-            <h1 class="sidebar__title">Blog</h1>
-            <ul class="sidebar__tree">
+        <aside class="sidebar sidebar-left">
+            <h1 class="sidebar-title">Blog</h1>
+            <ul class="sidebar-tree">
                 <li><a class="active" href=""><i class="ic-app blog"></i> Mes blogs</a>
                     <ul>
                         <li><a href="">Dossier 1</a></li>
@@ -114,7 +84,7 @@
         <!-- MAIN CONTENT -->
         <main class="main-content">
             <section class="explorer">
-                <section class="explorer__header">
+                <section class="explorer-header">
 
                     <form class="row justify-content-between mb-2 d-none d-sm-none d-md-none d-lg-flex">
                         <div class="col-lg-6 input-searchbar">
@@ -166,202 +136,183 @@
                     </div>
                 </section>
 
-                <section class="explorer__view list">
-                    <section class="list__header">
-                        <span class="list__item--preview"></span>
-                        <span class="list__title"><i class="fas fa-sort"></i> Titre</span>
-                        <span class="list__status text-white">Status</span>
-                        <span class="list__owner"><i class="fas fa-sort"></i> Propriétaire</span>
-                        <span class="list__modification"><i class="fas fa-sort"></i> Dernière modification</span>
+                <section class="explorer-view list">
+                    <section class="list-header">
+                        <span class="list-item-preview"></span>
+                        <span class="list-title"><i class="fas fa-sort"></i> Titre</span>
+                        <span class="list-status text-white">Status</span>
+                        <span class="list-owner"><i class="fas fa-sort"></i> Propriétaire</span>
+                        <span class="list-modification"><i class="fas fa-sort"></i> Dernière modification</span>
                     </section>
-                    <article class="list__item folder">
-                        <i class="list__item--preview ic-folder text-secondary"></i>
-                        <h2 class="list__title">
+                    <article class="list-item folder">
+                        <i class="list-item-preview ic-folder text-secondary"></i>
+                        <h2 class="list-title">
                             Titre du dossier
                         </h2>
-                        <div class="list__status">
+                        <div class="list-status">
                             <span title="Ressource public"><i class="ic-public"></i></span>
                             <span title="Ressource partagée"><i class="ic-users"></i></span>
                         </div>
-                        <article class="list__owner">
+                        <article class="list-owner">
                             <span>Moi</span>
                         </article>
 
-                        <div class="list__modification">
+                        <div class="list-modification">
                             <span class="">Il y a 2 heures</span><br />
-                            <span class="list__modifiedBy">Moi</span>
+                            <span class="list-modifiedBy">Moi</span>
                         </div>
                     </article>
 
-                    <article class="list__item item active">
-                        <span class="list__item--preview">
-                            <img class="list__image" src="https://loremflickr.com/100/100/">
+                    <article class="list-item item active">
+                        <span class="list-item-preview">
+                            <img class="list-image" src="https://loremflickr.com/100/100/">
                         </span>
-                        <h2 class="list__title">
+                        <h2 class="list-title">
                             Titre de la ressource avec une image
                         </h2>
-                        <div class="list__status">
+                        <div class="list-status">
                             <span title="Ressource partagée"><i class="ic-users"></i></span>
                         </div>
-                        <article class="list__owner">
+                        <article class="list-owner">
                             <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
                             <a>Isabelle Polonio</a>
                         </article>
 
-                        <div class="list__modification">
+                        <div class="list-modification">
                             <span class="">Il y a 3 jours</span><br />
-                            <span class="list__modifiedBy">par <a>Brigitte Fontaine</a></span>
+                            <span class="list-modifiedBy">par <a>Brigitte Fontaine</a></span>
                         </div>
                     </article>
-                    <article class="list__item">
-                        <i class="list__item--preview ic-app blog text-secondary"></i>
-                        <h2 class="list__title">
+                    <article class="list-item">
+                        <i class="list-item-preview ic-app blog text-secondary"></i>
+                        <h2 class="list-title">
                             Titre de la ressource avec une icône
                         </h2>
-                        <div class="list__status">
+                        <div class="list-status">
                             <span title="Ressource public"><i class="ic-public"></i></span>
                         </div>
-                        <article class="list__owner">
+                        <article class="list-owner">
                             <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
                             <a>Isabelle Polonio</a>
                         </article>
 
-                        <div class="list__modification">
+                        <div class="list-modification">
                             <span class="">Il y a 1 semaine</span><br />
-                            <span class="list__modifiedBy">par <a>Alain Terrieur</a></span>
+                            <span class="list-modifiedBy">par <a>Alain Terrieur</a></span>
                         </div>
                     </article>
-                    <article class="list__item">
-                        <i class="list__item--preview ic-app blog text-secondary"></i>
-                        <h2 class="list__title">
+                    <article class="list-item">
+                        <i class="list-item-preview ic-app blog text-secondary"></i>
+                        <h2 class="list-title">
                             Titre de la ressource
                         </h2>
-                        <div class="list__status">
+                        <div class="list-status">
                             <span title="Ressource public"><i class="ic-public"></i></span>
                             <span title="Ressource partagée"><i class="ic-users"></i></span>
                         </div>
-                        <article class="list__owner">
+                        <article class="list-owner">
                             <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
                             <a>Brigitte Fontaine</a>
                         </article>
 
-                        <div class="list__modification">
+                        <div class="list-modification">
                             <span class="">Il y a 2 semaines</span><br />
-                            <span class="list__modifiedBy">par <a>Alex Terrieur</a></span>
+                            <span class="list-modifiedBy">par <a>Alex Terrieur</a></span>
                         </div>
                     </article>
-                    <article class="list__item">
-                        <i class="list__item--preview ic-app blog text-secondary"></i>
-                        <h2 class="list__title">
+                    <article class="list-item">
+                        <i class="list-item-preview ic-app blog text-secondary"></i>
+                        <h2 class="list-title">
                             Titre de la ressource
                         </h2>
-                        <div class="list__status">
+                        <div class="list-status">
                             <span title="Ressource public"><i class="ic-public"></i></span>
                             <span title="Ressource partagée"><i class="ic-users"></i></span>
                         </div>
-                        <article class="list__owner">
+                        <article class="list-owner">
                             <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
                             <a>Brigitte Fontaine</a>
                         </article>
 
-                        <div class="list__modification">
+                        <div class="list-modification">
                             <span class="">Il y a 2 semaines</span><br />
-                            <span class="list__modifiedBy">par <a>Alex Terrieur</a></span>
+                            <span class="list-modifiedBy">par <a>Alex Terrieur</a></span>
                         </div>
                     </article>
-                    <article class="list__item">
-                        <i class="list__item--preview ic-app blog text-secondary"></i>
-                        <h2 class="list__title">
+                    <article class="list-item">
+                        <i class="list-item-preview ic-app blog text-secondary"></i>
+                        <h2 class="list-title">
                             Titre de la ressource
                         </h2>
-                        <div class="list__status">
+                        <div class="list-status">
                             <span title="Ressource public"><i class="ic-public"></i></span>
                             <span title="Ressource partagée"><i class="ic-users"></i></span>
                         </div>
-                        <article class="list__owner">
+                        <article class="list-owner">
                             <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
                             <a>Brigitte Fontaine</a>
                         </article>
 
-                        <div class="list__modification">
+                        <div class="list-modification">
                             <span class="">Il y a 2 semaines</span><br />
-                            <span class="list__modifiedBy">par <a>Alex Terrieur</a></span>
+                            <span class="list-modifiedBy">par <a>Alex Terrieur</a></span>
                         </div>
                     </article>
-                    <article class="list__item">
-                        <i class="list__item--preview ic-app blog text-secondary"></i>
-                        <h2 class="list__title">
+                    <article class="list-item">
+                        <i class="list-item-preview ic-app blog text-secondary"></i>
+                        <h2 class="list-title">
                             Titre de la ressource
                         </h2>
-                        <div class="list__status">
+                        <div class="list-status">
                             <span title="Ressource public"><i class="ic-public"></i></span>
                             <span title="Ressource partagée"><i class="ic-users"></i></span>
                         </div>
-                        <article class="list__owner">
+                        <article class="list-owner">
                             <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
                             <a>Brigitte Fontaine</a>
                         </article>
 
-                        <div class="list__modification">
+                        <div class="list-modification">
                             <span class="">Il y a 2 semaines</span><br />
-                            <span class="list__modifiedBy">par <a>Alex Terrieur</a></span>
+                            <span class="list-modifiedBy">par <a>Alex Terrieur</a></span>
                         </div>
                     </article>
-                    <article class="list__item">
-                        <i class="list__item--preview ic-app blog text-secondary"></i>
-                        <h2 class="list__title">
+                    <article class="list-item">
+                        <i class="list-item-preview ic-app blog text-secondary"></i>
+                        <h2 class="list-title">
                             Titre de la ressource
                         </h2>
-                        <div class="list__status">
+                        <div class="list-status">
                             <span title="Ressource public"><i class="ic-public"></i></span>
                             <span title="Ressource partagée"><i class="ic-users"></i></span>
                         </div>
-                        <article class="list__owner">
+                        <article class="list-owner">
                             <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
                             <a>Brigitte Fontaine</a>
                         </article>
 
-                        <div class="list__modification">
+                        <div class="list-modification">
                             <span class="">Il y a 2 semaines</span><br />
-                            <span class="list__modifiedBy">par <a>Alex Terrieur</a></span>
+                            <span class="list-modifiedBy">par <a>Alex Terrieur</a></span>
                         </div>
                     </article>
-                    <article class="list__item">
-                        <i class="list__item--preview ic-app blog text-secondary"></i>
-                        <h2 class="list__title">
+                    <article class="list-item">
+                        <i class="list-item-preview ic-app blog text-secondary"></i>
+                        <h2 class="list-title">
                             Titre de la ressource
                         </h2>
-                        <div class="list__status">
+                        <div class="list-status">
                             <span title="Ressource public"><i class="ic-public"></i></span>
                             <span title="Ressource partagée"><i class="ic-users"></i></span>
                         </div>
-                        <article class="list__owner">
+                        <article class="list-owner">
                             <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
                             <a>Brigitte Fontaine</a>
                         </article>
 
-                        <div class="list__modification">
+                        <div class="list-modification">
                             <span class="">Il y a 2 semaines</span><br />
-                            <span class="list__modifiedBy">par <a>Alex Terrieur</a></span>
-                        </div>
-                    </article>
-                    <article class="list__item">
-                        <i class="list__item--preview ic-app blog text-secondary"></i>
-                        <h2 class="list__title">
-                            Titre de la ressource
-                        </h2>
-                        <div class="list__status">
-                            <span title="Ressource public"><i class="ic-public"></i></span>
-                            <span title="Ressource partagée"><i class="ic-users"></i></span>
-                        </div>
-                        <article class="list__owner">
-                            <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
-                            <a>Brigitte Fontaine</a>
-                        </article>
-
-                        <div class="list__modification">
-                            <span class="">Il y a 2 semaines</span><br />
-                            <span class="list__modifiedBy">par <a>Alex Terrieur</a></span>
+                            <span class="list-modifiedBy">par <a>Alex Terrieur</a></span>
                         </div>
                     </article>
                     <div class="d-flex m-2 justify-content-center" style="flex-basis: 100%;">
