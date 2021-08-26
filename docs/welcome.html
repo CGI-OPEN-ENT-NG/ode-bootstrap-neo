@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="./index.css" />
     <script src="js/jquery-3.6.0.slim.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script src="js/theme.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 
     <script>
 
@@ -95,6 +96,7 @@
             })
 
 
+
             var myModal = new bootstrap.Modal(document.getElementById('theModal'));
 
             $('.tool-option').on("click", function (e) {
@@ -154,7 +156,7 @@
         </div>
     </header>
 
-    <div class="container-advanced-nav d-lg-none">
+    <div class="container-advanced-nav">
         <div class="list-trigger">
             <div class="trigger" data-target-focus="left">
                 Etablissement
@@ -439,15 +441,33 @@
 
                 <div class="widget widget-school">
                     <div class="widget-body">
-                        <div class="header" style="background-image:url(../../assets/images/wallpaper3.png)">
+                        <div class="widget-school-header" style="background-image:url(../../assets/images/wallpaper3.png)">
 
-                            <div class="name">
-                                Charlotte Rose
+                            <div class="d-flex align-items-center">
+                                <div class="me-4">
+                                    <a href="" class="avatar-link">
+                                        <img src="https://picsum.photos/100/100" alt="">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="name">
+                                        Charlotte Rose
+                                    </div>
+                                    <div>
+                                        <div class="school-multiple" id="dropdownSchool" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Lycée Henry IV
+                                        </div>
+                                        <div class="school-choice dropdown-menu">
+                                            <div>Lycée Henry IV</div>
+                                            <div>Lycée Charlemagne</div>
+                                            <div>Collège des jasmins</div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                            <div class="school">
-                                Lycée Henry IV
-                            </div>
-                            <div class="avatar-list">
+
+                            <div class="avatar-list d-none">
                                 <a href="" class="avatar-link">
                                     <img src="https://picsum.photos/100/100" alt="">
                                 </a>
@@ -499,7 +519,7 @@
                         </a>
                         <a class="news-row" href="#">
                             <div class="news-row-image">
-                                <img src="/assets/images/news-icon2.png" alt="">
+                                <img src="https://picsum.photos/200/100" alt="">
                             </div>
                             <div class="news-row-text">
                                 <span class="link d-block">Inscription au projet Chipster</span>
@@ -508,7 +528,7 @@
                         </a>
                         <a class="news-row" href="#">
                             <div class="news-row-image">
-                                <img src="/assets/images/news-icon3.png" alt="">
+                                <img src="https://picsum.photos/100/300" alt="">
                             </div>
                             <div class="news-row-text">
                                 <span class="link d-block">Inscription au projet Chipster</span>
@@ -556,12 +576,24 @@
                                     <li class="moment-item">
                                         <span class="icon"><i class="fas fa-calendar-alt"></i></span>
                                         <span class="hour">8:30</span>
-                                        <span class="link"><a href="#" title="Inauguration CDI">Inauguration CDI</a></span>
+                                        <span class="link"><a href="#" title="Inauguration CDI">Duis, deserunt labore magni, nulla beatae dolorum wisi vulputate porttitor vulputate</a></span>
                                     </li>
                                     <li class="moment-item">
                                         <span class="icon"><i class="fas fa-calendar-alt"></i></span>
                                         <span class="hour">8:30</span>
-                                        <span class="link"><a href="#" title="Inauguration CDI">Inauguration CDI</a></span>
+                                        <span class="link"><a href="#" title="Inauguration CDI">Consequatur explicabo phasellus aliqua</a></span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="day-item">
+                                <div class="day-item-title">
+                                    Lundi 24 mars 2020
+                                </div>
+                                <ul class="moment-list">
+                                    <li class="moment-item">
+                                        <span class="icon"><i class="fas fa-calendar-alt"></i></span>
+                                        <span class="hour">8:30</span>
+                                        <span class="link"><a href="#" title="Inauguration CDI">Nam tempora parturient rhoncus nostrum accusamus cumque dignissim</a></span>
                                     </li>
                                 </ul>
                             </li>
@@ -575,22 +607,10 @@
                                         <span class="hour">8:30</span>
                                         <span class="link"><a href="#" title="Inauguration CDI">Inauguration CDI</a></span>
                                     </li>
-                                </ul>
-                            </li>
-                            <li class="day-item">
-                                <div class="day-item-title">
-                                    Lundi 24 mars 2020
-                                </div>
-                                <ul class="moment-list">
                                     <li class="moment-item">
                                         <span class="icon"><i class="fas fa-calendar-alt"></i></span>
                                         <span class="hour">8:30</span>
-                                        <span class="link"><a href="#" title="Inauguration CDI">Inauguration CDI</a></span>
-                                    </li>
-                                    <li class="moment-item">
-                                        <span class="icon"><i class="fas fa-calendar-alt"></i></span>
-                                        <span class="hour">8:30</span>
-                                        <span class="link"><a href="#" title="Inauguration CDI">Inauguration CDI</a></span>
+                                        <span class="link"><a href="#" title="Inauguration CDI">Suspendisse libero impedit, rhoncus</a></span>
                                     </li>
                                 </ul>
                             </li>
@@ -1012,6 +1032,55 @@
                             <a class="btn-circle" href="#">
                                 <i class="fas fa-video"></i>
                             </a>
+                        </div>
+
+                    </div>
+                </div>
+                <!--End Widget enregistrement-->
+
+                <!--Widget enregistrement-->
+                <div class="widget widget-record">
+                    <div class="widget-header">
+                        <div class="subtitle">Enregistrement</div>
+                        <div class="tools">
+                            <a href="" class="tool tool-option" title="Options du widget">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                            <a href="" class="tool tool-position" title="Position du widget">
+                                <i class="fas fa-arrows-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="widget-body">
+                        <div class="">
+                            <div class="record-timer ng-binding"> <i class="fas fa-microphone"></i> 00:01 </div>
+                            <input type="text" i18n-placeholder="title" class="ng-pristine ng-valid ng-not-empty ng-touched form-control" placeholder="Titre">
+                            <div class="record-controls">
+                                <button type="button" class="start btn btn-circle ">
+                                    <i class="fas fa-microphone"></i>
+                                    <span class="label ng-scope">
+                                        <i18n>Reprendre</i18n>
+                                    </span>
+                                </button>
+                                <button type="button" class=" btn btn-circle">
+                                    <i class="fas fa-play"></i>
+                                    <span class="label ng-scope">
+                                        <i18n>Lire</i18n>
+                                    </span>
+                                </button>
+                                <button type="button" class=" btn btn-circle">
+                                    <i class="fas fa-redo-alt"></i>
+                                    <span class="label ng-scope">
+                                        <i18n>Refaire</i18n>
+                                    </span>
+                                </button>
+                                <button type="button" class=" btn btn-circle " disabled>
+                                    <i class="fas fa-save"></i>
+                                    <span class="label ng-scope">
+                                        <i18n>Sauvegarder</i18n>
+                                    </span>
+                                </button>
+                            </div>
                         </div>
 
                     </div>
