@@ -33,16 +33,15 @@ Lancer la commande suivante:
 
 Le css minifié est généré dans le dossier "dist".
 
-### Lancer un build incorporant la version locale de ode-bootstrap
+### Initier un environnement de développement incluant une version locale de ode-bootstrap
 
-Lancer la commande suivante:
-```
-./build.sh clean init localDep build
-```
+Git-cloner ode-bootstrap et ode-bootstrap-neo côte-à-côte dans un même sous-dossier (par exemple : projects/ode-boostrap et projects/ode-boostrap-neo)
 
-Après chaque modification locale de ode-bootstrap, il faudra lancer la commande suivante:
+Lancer un build de ode-bootstrap (voir la documentation)
+
+Puis lancer la commande suivante:
 ```
-./build.sh localDep build
+./build.sh clean initDev build
 ```
 
 Le css minifié est généré dans le dossier "dist".
