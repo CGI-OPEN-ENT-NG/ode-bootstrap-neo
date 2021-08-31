@@ -1,7 +1,7 @@
 {
   "name": "${modname}",
   "version": "${npmVersion}",
-  "description": "Neo theme by Open Digitale Education\"",
+  "description": "Neo theme by Open Digital Education\"",
   "scripts": {
     "sass:watch": "node-sass --source-map true -w scss/index.scss docs/index.css",
     "sass:build:debug": "node-sass --source-map true scss/index.scss docs/index.css",
@@ -27,12 +27,15 @@
     "bootstrap",
     "theme"
   ],
-  "author": "Open Digitale Education",
+  "author": "Open Digital Education",
   "license": "ISC",
   "dependencies": {
     "ode-bootstrap": "${odeBtVersion}"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "bootstrap": "^5.0.2",
+    "entcore-generic-icons": "opendigitaleducation/generic-icons",
     "concurrently": "^5.0.2",
     "copyfiles": "^2.2.0",
     "cpr": "^3.0.1",
