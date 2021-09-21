@@ -1,20 +1,20 @@
-.btn {
-    //border-radius: $border-radius;
-}
-
 .btn-link,
 .btn[class*="btn-outline-"] {
     box-shadow: none;
 }
 
-.btn-outline-orange:hover,
-.btn-outline-orange.active {
+.btn-outline-primary:hover,
+.btn-outline-primary.active {
     color: $white !important;
 }
 
 .btn-primary {
     color: $white;
-    //box-shadow: $btn-box-shadow;
+    &:hover,
+    &:active,
+    &.active {
+        color: $white !important; // ? faire fonctionner, là en l'état ça marche pas
+    }
     &.disabled,
     &:disabled {
         color: rgba($white, .8);

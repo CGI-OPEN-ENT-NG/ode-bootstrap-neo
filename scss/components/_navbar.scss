@@ -1,50 +1,34 @@
-
 header.navbar.navbar-dark {
     position: sticky;
     top: 0;
     right: 0;
     left: 0;
+    height: 64px;
+    padding: 0 10px;
     z-index: $zindex-sticky;
-    // padding: 0 10px;
     box-shadow: $box-shadow-sm;
     .container {
         padding: 0 20px;
     }
     .btn {
-        font-size: 2rem;
+        font-size: 1.6rem;
+        i {
+            line-height: 1.6;
+            font-size: 2.4rem;
+        }
         &:first-child {
             margin-right: auto;
         }
-    }
-    .logo {
-        display: inline-block;
-        height: 40px;
-        padding: 5px;
-    }
-    .avatar #my-photo {
-        width: 28px;
-        background-color: white; // A retirer quand on aura refait l'avatar
-        border-radius: 50%;
+        .logo {
+            display: inline-block;
+            height: 54px;
+        }
     }
     .navigation {
-        &__item {
-            display: inline-block;
-            padding: 10px 5px;
-            margin: 0 2px;
-            line-height: 1;
-            text-decoration: none !important;
-            vertical-align: middle;
-            border-bottom: 5px solid transparent;
-            &:hover {
-                border-bottom: 5px solid $primary;
-            }
-            a:hover {
-                text-decoration: none;
-            }
-            i[class*="ic-"] {
-                font-size: 1.8rem;
-                color: $white;
-            }
+        a {
+            color: $white;
+        }
+        .btn {
             .new-mails {
                 position: relative;
                 top: -15px;
@@ -61,15 +45,28 @@ header.navbar.navbar-dark {
                 background: $orange;
                 border-radius: 50%;
             }
+            .avatar #my-photo {
+                width: 25px;
+                background-color: white; // A retirer quand on aura refait l'avatar
+                border-radius: 50%;
+                margin: 7px 0;
+            }
         }
     }
 }
 @include media-breakpoint-down(md) {
     header.navbar.navbar-dark {
-        a.application__title {
+        height: 55px;
+        .container {
+            padding: 0;
+        }
+        a.application-title {
             display: block;
-            // width: calc(100% - 300px); //A REVOIR
+            width: calc(100% - 300px); //A REVOIR
             color: $white;
+        }
+        .btn {
+            padding: 0 5px;
         }
         .logo { height: 30px; }
         .dropdown {

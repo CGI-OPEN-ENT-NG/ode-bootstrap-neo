@@ -1,4 +1,4 @@
-// COLORS // grays palette
+// COLORS : grays palette
 $white: #fff;
 $gray-100: #f0f2f4;
 $gray-200: #e9ebef;
@@ -11,7 +11,7 @@ $gray-800: #3f454f;
 $gray-900: #212529;
 $black: #000;
 
-// COLORS // colors palette
+// COLORS : colors palette
 $blue: #4b90d5;
 $indigo: #1a22a2;
 $purple: #763294;
@@ -29,35 +29,36 @@ $colors: (
     "deepBlue": $deepBlue,
 );
 
+// COLORS : Status color
 $primary: $orange;
-$primary--lightest: lighten($primary, 30%);
-$primary--light: lighten($primary, 15%);
-$primary--dark: darken($primary, 15%);
-$primary--darkest: darken($primary, 30%);
-$primary-gradient: linear-gradient($primary, $primary--light);
+$primary-lightest: lighten($primary, 30%);
+$primary-light: lighten($primary, 15%);
+$primary-dark: darken($primary, 15%);
+$primary-darkest: darken($primary, 30%);
+$primary-gradient: linear-gradient($primary, $primary-light);
 
 $secondary: $cyan;
-$secondary--lightest: lighten($secondary, 30%);
-$secondary--light: lighten($secondary, 15%);
-$secondary--dark: darken($secondary, 15%);
-$secondary--darkest: darken($secondary, 30%);
-$secondary-gradient: linear-gradient($secondary, $secondary--light);
+$secondary-lightest: lighten($secondary, 30%);
+$secondary-light: lighten($secondary, 15%);
+$secondary-dark: darken($secondary, 15%);
+$secondary-darkest: darken($secondary, 30%);
+$secondary-gradient: linear-gradient($secondary, $secondary-light);
 
 $success: $green;
-$success--light: lighten($green, 10%);
-$success--dark: darken($green, 10%);
+$success-light: lighten($success, 10%);
+$success-dark: darken($success, 10%);
 
 $info: $cyan;
-$info--light: lighten($cyan, 10%);
-$info--dark: darken($cyan, 10%);
+$info-light: lighten($info, 10%);
+$info-dark: darken($info, 10%);
 
 $warning: $yellow;
-$warning--light: lighten($yellow, 10%);
-$warning--dark: darken($yellow, 10%);
+$warning-light: lighten($warning, 10%);
+$warning-dark: darken($warning, 10%);
 
 $danger: $red;
-$danger--light: lighten($red, 10%);
-$danger--dark: darken($red, 10%);
+$danger-light: lighten($danger, 10%);
+$danger-dark: darken($danger, 10%);
 
 $light: $gray-200;
 $dark: $gray-700;

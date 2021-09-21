@@ -31,10 +31,10 @@ $sidebar-width: 250px;
 .sidebar {
     color: $gray-600;
     background-color: rgba($white, .7);
-    &__title {
+    &-title {
         color: $secondary;
     }
-    &__tree {
+    &-tree {
         li {
             a {
                 &:hover {
