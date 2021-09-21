@@ -125,7 +125,7 @@
         }
         &:active {
             background-color: rgba($white, 0.8);
-            border-color: $accent;
+            border-color: $primary--dark;
             box-shadow: 2px 2px 10px rgba($black, 0.1) inset;
             transition: background-color 0.25s ease-in-out, box-shadow 0.35s ease-in-out, border 0.15s ease-in-out;
         }
@@ -189,7 +189,7 @@
         }
         &:active {
             background-color: rgba($white, 0.8);
-            border-color: $accent;
+            border-color: $primary--dark;
             box-shadow: 2px 2px 10px rgba($black, 0.1) inset;
             transition: background-color 0.25s ease-in-out, box-shadow 0.35s ease-in-out, border 0.15s ease-in-out;
         }
