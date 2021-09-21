@@ -12,41 +12,45 @@
 
 <body id="explorer">
     <header class="no-1d navbar navbar-dark bg-secondary">
-        <a class="btn btn-secondary d-none d-md-none d-lg-block" href="/timeline/timeline" title="Accueil">
-            <img class="logo" src="/assets/images/logo.png" alt="Logo de l'ENT">
-        </a>
-        <button class="btn btn-secondary" title="Accueil">
-            <i class="ic-home"></i>
-        </button>
-        <button class="btn btn-secondary d-none d-sm-block" title="Communautés">
-            <i class="ic-community"></i>
-        </button>
-        <button class="btn btn-secondary" title="Mes applis">
-            <i class="ic-apps"></i>
-        </button>
-        <button class="btn btn-secondary" title="Messagerie">
-            <i class="ic-conversation"></i>
-        </button>
-        <button class="btn btn-secondary d-none d-sm-block" title="Recherche transverse">
-            <i class="ic-search"></i>
-        </button>
-        <button class="btn btn-secondary" title="Aide en ligne">
-            <i class="ic-help"></i>
-        </button>
-        <button class="btn btn-secondary d-none d-sm-block" title="Mon compte">
-            <i class="fas fa-user-circle"></i>
-        </button>
-        <button class="btn btn-secondary d-none d-sm-block" title="Déconnexion">
-            <i class="ic-disconnect"></i>
-        </button>
-        <div class="nav-item dropdown d-block d-sm-none">
-            <a class="dropdown-toggle btn btn-secondary" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#"><i class="ic-community"></i> Communautés</a>
-                <a class="dropdown-item" href="#"><i class="ic-search"></i> Recherche transverse</a>
-                <a class="dropdown-item" href="#"><i class="ic-user"></i> Mon compte</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="ic-disconnect"></i> Déconnexion</a>
+        <div class="container">
+            <a class="btn btn-secondary d-none me-auto d-md-none d-lg-block" href="/timeline/timeline" title="Accueil">
+                <img class="logo" src="/assets/images/neo.svg" alt="Logo de l'ENT">
+            </a>
+            <span class="d-block d-lg-none text-truncate me-auto text-white">Blog</span>
+
+            <button class="btn btn-secondary" title="Accueil">
+                <i class="ic-home"></i>
+            </button>
+            <button class="btn btn-secondary d-none d-sm-block" title="Communautés">
+                <i class="ic-community"></i>
+            </button>
+            <button class="btn btn-secondary" title="Mes applis">
+                <i class="ic-apps"></i>
+            </button>
+            <button class="btn btn-secondary" title="Messagerie">
+                <i class="ic-conversation"></i>
+            </button>
+            <button class="btn btn-secondary d-none d-sm-block" title="Recherche transverse">
+                <i class="ic-search"></i>
+            </button>
+            <button class="btn btn-secondary" title="Aide en ligne">
+                <i class="ic-help"></i>
+            </button>
+            <button class="btn btn-secondary d-none d-sm-block" title="Mon compte">
+                <i class="fas fa-user-circle"></i>
+            </button>
+            <button class="btn btn-secondary d-none d-sm-block" title="Déconnexion">
+                <i class="ic-disconnect"></i>
+            </button>
+            <div class="dropdown d-block d-sm-none">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#"><i class="ic-community"></i> Communautés</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="ic-search"></i> Recherche transverse</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="ic-user"></i> Mon compte</a></li>
+                    <div class="dropdown-divider"></div>
+                    <li><a class="dropdown-item" href="#"><i class="ic-disconnect"></i> Déconnexion</a></li>
+                </ul>
             </div>
         </div>
     </header>
@@ -96,42 +100,165 @@
                         </div>
                     </form>
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                        <h2 class="text-truncate">Mes blogs</h2>
-                        <div class="filters d-flex">
-                            <button class="btn d-block d-sm-block d-md-none" type="button">
-                                <i class="ic-search"></i>
-                            </button>
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle d-none d-sm-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-filter"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item active" href="#">
-                                        <input type="checkbox" aria-label="">
-                                        <i class="ic-user"></i>
-                                        Mes blogs</a>
-                                    <a class="dropdown-item" href="#">
-                                        <input type="checkbox" aria-label="">
-                                        <i class="ic-users"></i>
-                                        Les blogs partagés avec moi
-                                    </a>
-                                    <a class="dropdown-item" href="#">
-                                        <input type="checkbox" aria-label="">
-                                        <i class="ic-public"></i>
-                                        Blogs public
-                                    </a>
+                        <h2 class="text-truncate">
+                            <div class="d-none d-lg-block">
+                                Tous les blogs
+                                <small>(76 éléments)</small>
+                            </div>
+                            <a class="btn d-block d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasSidebar" role="button" aria-controls="offcanvasExample">
+                                <i class="ic-burger"></i> Tous les blogs
+                            </a>
+                            <div class="sidebar sidebar-mobile offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasExampleLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Blog</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <ul class="sidebar-tree">
+                                        <li>
+                                            <input type="checkbox" id="dossier_1" />
+                                            <label for="dossier_1"><a class="active" href=""><i class="ic-app blog"></i> Tous les blogs</a></label>
+                                            <ul>
+                                                <li><a href="">Dossier 1</a></li>
+                                                <li><a href="">Dossier 2</a>
+                                                <li>
+                                                    <input type="checkbox" id="dossier_2" />
+                                                    <label for="dossier_2"><a href="">Dossier 2</a></label>
+                                                    <ul>
+                                                        <li><a href="">Sous-dossier 1</a></li>
+                                                        <li><a href="">Sous-dossier 2</a></li>
+                                                        <li><a href="">Sous-dossier 3</a></li>
+                                                        <li><a href="">Sous-dossier avec un nom très long</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="dossier_3" />
+                                                    <label for="dossier_3"><a href="">Dossier 3</a></label>
+                                                    <ul>
+                                                        <li><a href="">Sous-dossier 1</a></li>
+                                                        <li><a href="">Sous-dossier 2</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href=""><i class="fas fa-trash-alt"></i> Ma corbeille</a></li>
+                                    </ul>
+                                    <a class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#createFolder">Créer un dossier</a>
                                 </div>
                             </div>
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-sort-alpha-down"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Ordre alphabétique</a>
-                                    <a class="dropdown-item active" href="#">Dernière modification</a>
+                        </h2>
+                        <div class="d-flex my-2">
+                            <button class="d-block d-lg-none btn btn-circular btn-primary p-0 me-3" data-bs-toggle="modal" data-bs-target="#createRessource"><i class="fas fa-plus"></i></button>
+                            <div class="filters d-flex">
+                                <button class="btn d-sm-block d-md-none"><i class="fas fa-search"></i></button>
+                                <div class="dropdown d-none d-md-block">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-filter"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><h6 class="dropdown-header">Filtres</h6></li>
+                                        <li><a class="dropdown-item" href="#">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    <i class="ic-user"></i>
+                                                    Mes blogs
+                                                </label>
+                                            </div>
+                                        </a></li>
+                                        <li><a class="dropdown-item" href="#">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    <i class="ic-users"></i>
+                                                    Les blogs partagés avec moi
+                                                </label>
+                                            </div>
+                                        </a></li>
+                                        <li><a class="dropdown-item" href="#">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    <i class="ic-public"></i>
+                                                    Blogs publics
+                                                </label>
+                                            </div>
+                                        </a></li>
+                                    </ul>
                                 </div>
+                                <div class="dropdown d-none d-md-block">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-sort-alpha-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><h6 class="dropdown-header">Ordre d'affichage</h6></li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fas fa-sort-alpha-down"></i> Ordre alphabétique
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fas fa-clock"></i> Dernière modification
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown d-sm-block d-md-none">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                                        <h6 class="dropdown-header">Choix de la vue :</h6>
+                                        <div class="text-center">
+                                            <a class="btn inactive" href="explorer.html">
+                                                <i class="fas fa-th-large"></i><br/>Grille
+                                            </a>
+                                            <a class="btn" href="explorer-list.html">
+                                                <i class="fa fa-list" aria-hidden="true"></i><br/>Liste
+                                            </a>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <h6 class="dropdown-header">Ordre d'affichage :</h6>
+                                        <a class="dropdown-item active" href="#">
+                                            <i class="fas fa-sort-alpha-down"></i> Ordre alphabétique
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-clock"></i> Dernière modification
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <h6 class="dropdown-header">Filtres :</h6>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    <i class="ic-user"></i>
+                                                    Mes blogs
+                                                </label>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    <i class="ic-users"></i>
+                                                    Les blogs partagés avec moi
+                                                </label>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    <i class="ic-public"></i>
+                                                    Blogs publics
+                                                </label>
+                                            </div>
+                                        </a>
+                                    </ul>
+                                </div>
+                                <a class="btn d-none d-md-block" href="explorer.html"><i class="fas fa-th-large"></i></a>
                             </div>
-                            <a class="btn" href="explorer.html"><i class="fas fa-th-large"></i></a>
                         </div>
                     </div>
                 </section>
@@ -336,14 +463,10 @@
             </section>
         </main>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-        })
-    </script>
+    
+    <!-- TODO : APPELER CORRECTEMENT LE JS DE BT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
