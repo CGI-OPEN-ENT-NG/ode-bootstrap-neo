@@ -15908,19 +15908,24 @@ END DOCUMENTATION */
 
 .widget-bookmarks .bookmark-item {
   transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  padding: 0 25px;
   color: #0984b3;
+  padding: 0 25px;
   border-bottom: 1px solid #f0f2f4; }
   .widget-bookmarks .bookmark-item:hover {
     background-color: rgba(9, 132, 179, 0.1); }
   .widget-bookmarks .bookmark-item .link, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a {
     position: relative;
+<<<<<<< HEAD
     display: block;
 <<<<<<< HEAD
     padding: 0.4em 0 0.4em 25px; }
 =======
     padding: .4em 0 .4em 25px; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+    padding: 0.4em 0 0.4em 25px;
+    display: block; }
+>>>>>>> feat: new image background in school widget
     .widget-bookmarks .bookmark-item .link:hover, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a:hover, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a:hover {
       text-decoration: none; }
     .widget-bookmarks .bookmark-item .link::before, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a::before, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a::before {
@@ -16231,6 +16236,7 @@ END DOCUMENTATION */
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   position: relative;
   padding: 30px 25px;
   font-size: 1.3em;
@@ -16238,17 +16244,26 @@ END DOCUMENTATION */
   background-position: center;
   background-size: cover; }
 =======
+=======
+  position: relative;
+>>>>>>> feat: new image background in school widget
   padding: 30px 25px;
+  font-size: 1.3em;
   color: white;
   background-position: center;
+<<<<<<< HEAD
   background-size: cover;
   position: relative;
   font-size: 1.3em; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+  background-size: cover; }
+>>>>>>> feat: new image background in school widget
   .widget-school-header .name {
     font-weight: 600; }
   .widget-school-header .school, .widget-school-header .school-multiple {
     position: relative;
+<<<<<<< HEAD
 <<<<<<< HEAD
     font-size: 0.9em;
     font-weight: 400; }
@@ -16256,6 +16271,10 @@ END DOCUMENTATION */
     font-weight: 400;
     font-size: 0.9em; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+    font-size: .9em;
+    font-weight: 400; }
+>>>>>>> feat: new image background in school widget
   .widget-school-header .school-multiple {
     position: relative;
     padding-left: 1.5em;
@@ -16295,6 +16314,7 @@ END DOCUMENTATION */
   .widget-school-header .avatar-list {
     position: absolute;
 <<<<<<< HEAD
+<<<<<<< HEAD
     bottom: 0;
     left: 0;
     display: flex;
@@ -16306,18 +16326,27 @@ END DOCUMENTATION */
 =======
     width: 100%;
     left: 0;
+=======
+>>>>>>> feat: new image background in school widget
     bottom: 0;
-    transform: translateY(50%);
+    left: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+<<<<<<< HEAD
     padding: 0 25px; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+    width: 100%;
+    padding: 0 25px;
+    transform: translateY(50%); }
+>>>>>>> feat: new image background in school widget
     @media (max-width: 1199.98px) {
       .widget-school-header .avatar-list .avatar-link:nth-child(n + 4) {
         display: none; } }
 
 .widget-school .button-list {
+<<<<<<< HEAD
 <<<<<<< HEAD
   padding: 20px;
   padding-bottom: 0; }
@@ -16332,6 +16361,14 @@ END DOCUMENTATION */
     margin-bottom: 1em;
     margin-right: 0.4em; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+  padding: 20px;
+  padding-bottom: 0; }
+  .widget-school .button-list > * {
+    margin-bottom: 1em; }
+    .widget-school .button-list > *:not(:last-child) {
+      margin-right: .4em; }
+>>>>>>> feat: new image background in school widget
 
 .widget-dashboard .dashboard-choice {
   display: flex;
