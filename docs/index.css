@@ -24,17 +24,25 @@ Ajouter l'option !default pour permettre la surcharge depuis les thèmes
   --bs-danger: #e13a3a;
   --bs-light: #e9ebef;
   --bs-dark: #5b6472;
+<<<<<<< HEAD
   --bs-ghost: #f5f5fb;
   --bs-primary-rgb: 255, 133, 0;
   --bs-secondary-rgb: 75, 175, 213;
   --bs-third-rgb: 9, 132, 179;
+=======
+  --bs-primary-rgb: 255, 133, 0;
+  --bs-secondary-rgb: 75, 175, 213;
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   --bs-success-rgb: 125, 191, 133;
   --bs-info-rgb: 75, 175, 213;
   --bs-warning-rgb: 236, 190, 48;
   --bs-danger-rgb: 225, 58, 58;
   --bs-light-rgb: 233, 235, 239;
   --bs-dark-rgb: 91, 100, 114;
+<<<<<<< HEAD
   --bs-ghost-rgb: 245, 245, 251;
+=======
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-rgb: 91, 100, 114;
@@ -42,7 +50,11 @@ Ajouter l'option !default pour permettre la surcharge depuis les thèmes
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
+<<<<<<< HEAD
   --bs-body-font-size: 1.4rem;
+=======
+  --bs-body-font-size: 1.6rem;
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.6;
   --bs-body-color: #5b6472;
@@ -1214,6 +1226,30 @@ progress {
   .col-xl {
     flex: 1 0 0%; }
   .row-cols-xl-auto > * {
+<<<<<<< HEAD
+    flex: 0 0 auto;
+    width: auto; }
+  .row-cols-xl-1 > * {
+    flex: 0 0 auto;
+    width: 100%; }
+  .row-cols-xl-2 > * {
+    flex: 0 0 auto;
+    width: 50%; }
+  .row-cols-xl-3 > * {
+    flex: 0 0 auto;
+    width: 33.33333%; }
+  .row-cols-xl-4 > * {
+    flex: 0 0 auto;
+    width: 25%; }
+  .row-cols-xl-5 > * {
+    flex: 0 0 auto;
+    width: 20%; }
+  .row-cols-xl-6 > * {
+    flex: 0 0 auto;
+    width: 16.66667%; }
+  .col-xl-auto {
+=======
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     flex: 0 0 auto;
     width: auto; }
   .row-cols-xl-1 > * {
@@ -1753,8 +1789,16 @@ progress {
 .form-control-sm {
   min-height: calc(1.6em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
+<<<<<<< HEAD
   font-size: 1.225rem;
   border-radius: 6px; }
+=======
+  font-size: calc(1.265rem + 0.18vw);
+  border-radius: 6px; }
+  @media (min-width: 1200px) {
+    .form-control-sm {
+      font-size: 1.4rem; } }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   .form-control-sm::file-selector-button {
     padding: 0.25rem 0.5rem;
     margin: -0.25rem -0.5rem;
@@ -2098,8 +2142,19 @@ textarea.form-control-lg {
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn {
   padding: 0.25rem 0.5rem;
+<<<<<<< HEAD
   font-size: 1.225rem;
   border-radius: 6px; }
+=======
+  font-size: calc(1.265rem + 0.18vw);
+  border-radius: 6px; }
+  @media (min-width: 1200px) {
+    .input-group-sm > .form-control,
+    .input-group-sm > .form-select,
+    .input-group-sm > .input-group-text,
+    .input-group-sm > .btn {
+      font-size: 1.4rem; } }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 .input-group-lg > .form-select,
 .input-group-sm > .form-select {
@@ -2139,6 +2194,12 @@ textarea.form-control-lg {
   color: #000;
   background-color: rgba(125, 191, 133, 0.9);
   border-radius: 6px; }
+<<<<<<< HEAD
+=======
+  @media (min-width: 1200px) {
+    .valid-tooltip {
+      font-size: 1.4rem; } }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 .was-validated :valid ~ .valid-feedback,
 .was-validated :valid ~ .valid-tooltip,
@@ -2212,6 +2273,12 @@ textarea.form-control-lg {
   color: #fff;
   background-color: rgba(225, 58, 58, 0.9);
   border-radius: 6px; }
+<<<<<<< HEAD
+=======
+  @media (min-width: 1200px) {
+    .invalid-tooltip {
+      font-size: 1.4rem; } }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 .was-validated :invalid ~ .invalid-feedback,
 .was-validated :invalid ~ .invalid-tooltip,
@@ -2279,7 +2346,11 @@ textarea.form-control-lg {
   background-color: transparent;
   border: 1px solid transparent;
   padding: 0.375rem 1rem;
+<<<<<<< HEAD
   font-size: calc(1.265rem + 0.18vw);
+=======
+  font-size: calc(1.285rem + 0.42vw);
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   border-radius: 6px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (min-width: 1200px) {
@@ -2811,8 +2882,16 @@ textarea.form-control-lg {
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
+<<<<<<< HEAD
   font-size: 1.225rem;
   border-radius: 6px; }
+=======
+  font-size: calc(1.265rem + 0.18vw);
+  border-radius: 6px; }
+  @media (min-width: 1200px) {
+    .btn-sm, .btn-group-sm > .btn {
+      font-size: 1.4rem; } }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 .fade {
   transition: opacity 0.15s linear; }
@@ -5960,13 +6039,21 @@ textarea.form-control-lg {
 .mt-0 {
   margin-top: 0 !important; }
 
+<<<<<<< HEAD
 .mt-1, .applications-search {
+=======
+.mt-1, .applications__search {
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   margin-top: 0.25rem !important; }
 
 .mt-2 {
   margin-top: 0.5rem !important; }
 
+<<<<<<< HEAD
 .mt-3, .applications-favorite {
+=======
+.mt-3, .applications__favorite {
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   margin-top: 1rem !important; }
 
 .mt-4 {
@@ -6008,7 +6095,11 @@ textarea.form-control-lg {
 .mb-2 {
   margin-bottom: 0.5rem !important; }
 
+<<<<<<< HEAD
 .mb-3, .applications-list h2, .applications-list .h2, .applications-connector h2, .applications-connector .h2 {
+=======
+.mb-3, .applications__list h2, .applications__list .h2, .applications__connector h2, .applications__connector .h2 {
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   margin-bottom: 1rem !important; }
 
 .mb-4 {
@@ -6279,10 +6370,13 @@ textarea.form-control-lg {
 .text-secondary {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important; }
+<<<<<<< HEAD
 
 .text-third {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-third-rgb), var(--bs-text-opacity)) !important; }
+=======
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 .text-success {
   --bs-text-opacity: 1;
@@ -6308,10 +6402,13 @@ textarea.form-control-lg {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important; }
 
+<<<<<<< HEAD
 .text-ghost {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-ghost-rgb), var(--bs-text-opacity)) !important; }
 
+=======
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 .text-black {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important; }
@@ -6359,10 +6456,13 @@ textarea.form-control-lg {
 .bg-secondary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important; }
+<<<<<<< HEAD
 
 .bg-third {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-third-rgb), var(--bs-bg-opacity)) !important; }
+=======
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 .bg-success {
   --bs-bg-opacity: 1;
@@ -6388,10 +6488,13 @@ textarea.form-control-lg {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important; }
 
+<<<<<<< HEAD
 .bg-ghost {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-ghost-rgb), var(--bs-bg-opacity)) !important; }
 
+=======
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 .bg-black {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important; }
@@ -13843,8 +13946,13 @@ i[class*="ic-"] {
     .container-advanced.focus-center .container-advanced-wrapper {
       transform: translateX(-33.33333%); } }
   .container-advanced-nav {
+<<<<<<< HEAD
     color: #fff;
     background-color: #0984b3; }
+=======
+    background-color: #0984b3;
+    color: white; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     @media (min-width: 992px) {
       .container-advanced-nav {
         display: none; } }
@@ -13854,12 +13962,16 @@ i[class*="ic-"] {
       overflow: hidden; }
       .container-advanced-nav .list-trigger .trigger {
         position: relative;
-        z-index: 2;
         flex: 1;
         align-self: center;
+        text-align: center;
         padding: 15px;
         font-size: 1.1rem;
+<<<<<<< HEAD
         text-align: center; }
+=======
+        z-index: 2; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
         .container-advanced-nav .list-trigger .trigger::before {
           position: absolute;
           top: 0;
@@ -13871,14 +13983,14 @@ i[class*="ic-"] {
           transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
           transition-duration: 0.4s;
           transition-property: opacity, transform;
-          top: 50%;
-          z-index: -1;
-          height: auto;
-          padding-top: 100%;
           background: #4bafd5;
+          z-index: -1;
           border-radius: 50%;
-          opacity: 0;
-          transform: translateY(-50%) scale(1.1); }
+          padding-top: 100%;
+          height: auto;
+          top: 50%;
+          transform: translateY(-50%) scale(1.1);
+          opacity: 0; }
         .container-advanced-nav .list-trigger .trigger.on::before {
           opacity: 1; }
 
@@ -13920,6 +14032,7 @@ i[class*="ic-"] {
       border-radius: 50%;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       color: white;
       font-size: 18.57143px;
@@ -13928,6 +14041,8 @@ i[class*="ic-"] {
 >>>>>>> feat: Add record widget controls
 =======
 >>>>>>> docs: regenerate index.css and index.css.map
+=======
+>>>>>>> feat: Add toast for infos / read more button in flash widget
       position: absolute;
       right: 0;
       bottom: 0;
@@ -13947,15 +14062,22 @@ i[class*="ic-"] {
       box-shadow: -2px -2px 5px 0 rgba(0, 0, 0, 0.1); }
 
 .btn.btn-alt, .btn.btn-alt-outline {
+  border-radius: 30px;
+  font-size: 14px;
   position: relative;
   z-index: 2;
+<<<<<<< HEAD
   padding: 0 15px;
   font-size: 14px;
   line-height: 2.4em;
   color: #fff;
+=======
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   letter-spacing: 1.08px;
   border: 1px solid currentColor;
-  border-radius: 30px; }
+  padding: 0 15px;
+  line-height: 2.4em;
+  color: white; }
 
 .btn.btn-alt {
   background-color: #0984b3;
@@ -14013,6 +14135,7 @@ i[class*="ic-"] {
   color: #4bafd5; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* DOCUMENTATION
 <<<<<<< HEAD
 =======
@@ -14059,6 +14182,8 @@ i[class*="ic-"] {
 	</article>
 </section>
 =======
+=======
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 .toast-container {
   position: fixed;
   right: 0;
@@ -14088,7 +14213,10 @@ i[class*="ic-"] {
         </div>
 	</article>
 </section>
+<<<<<<< HEAD
 >>>>>>> feat: linter process
+=======
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 END DOCUMENTATION */
 /* VARIABLES */
 /* COMPONENT */
@@ -14282,17 +14410,28 @@ END DOCUMENTATION */
   padding: 15px 15px 0; }
   .explorer-header h2, .explorer-header .h2 {
     position: relative;
+<<<<<<< HEAD
     margin-bottom: 0;
     font-size: 2rem;
     color: #5b6472;
+=======
+    color: #5b6472;
+    font-size: 2rem;
+    margin-bottom: 0;
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     color: #5b6472; }
     .explorer-header h2 small, .explorer-header .h2 small, .explorer-header h2 .small, .explorer-header .h2 .small {
       font-size: 80%;
       color: #8c939e; }
 
 .explorer-view {
+<<<<<<< HEAD
   height: calc(100vh - 210px);
   padding: 10px;
+=======
+  padding: 10px;
+  height: calc(100vh - 205px);
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   overflow-x: auto;
   border-top: 1px solid #e9ebef;
   scrollbar-width: thin;
@@ -14304,11 +14443,16 @@ END DOCUMENTATION */
     .explorer-header h2, .explorer-header .h2 {
       font-size: 1.4rem; }
   .explorer-view {
+<<<<<<< HEAD
     height: calc(100vh - 112px); } }
+=======
+    height: calc(100vh - 110px); } }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 .feed {
   font-size: 14px; }
   .feed .filter-button {
+<<<<<<< HEAD
     padding-right: 1.5em;
     position: relative;
     display: inline-block;
@@ -15033,6 +15177,9 @@ END DOCUMENTATION */
   font-size: 14px; }
   .feed .filter-button {
     position: relative;
+=======
+    position: relative;
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     padding-right: 1.5em;
     display: inline-block;
     margin-bottom: .5em; }
@@ -15141,8 +15288,13 @@ END DOCUMENTATION */
       width: 60%;
       height: 100%;
       padding-left: 20px;
+<<<<<<< HEAD
       background-color: #fff;
       transition-duration: 0.2s;
+=======
+      background-color: white;
+      transition-duration: .2s;
+>>>>>>> feat: Add toast for infos / read more button in flash widget
       transform: translateX(120%);
       justify-self: stretch;
       transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -15207,10 +15359,16 @@ END DOCUMENTATION */
           height: 100%;
           padding: 0 10px;
           transform: translateY(0);
+<<<<<<< HEAD
           transform-origin: center;
           transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
           transition-duration: 0.4s;
           transition-property: transform; }
+=======
+          transform-origin: center; }
+        .feed-item .zone-tools .control:hover {
+          background-color: #ff8500; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
         .feed-item .zone-tools .control:hover {
           color: #fff;
           background-color: #ff8500; }
@@ -15223,8 +15381,13 @@ END DOCUMENTATION */
     .feed-item:hover .zone-tools {
       transform: translateX(101%); }
   .feed.new .date {
+<<<<<<< HEAD
     padding-right: 1.05em;
     position: relative; }
+=======
+    position: relative;
+    padding-right: 1.05em; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     .feed.new .date::before {
       display: inline-block;
       font-family: "Font Awesome 5 Free";
@@ -15636,7 +15799,13 @@ END DOCUMENTATION */
   font-size: 1.4rem;
   background-color: #fff;
   border-radius: 6px;
+<<<<<<< HEAD
   box-shadow: 2px 2px 40px 0 rgba(0, 0, 0, 0.05); }
+=======
+  box-shadow: 2px 2px 40px 0 rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  margin-bottom: 2em; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   .widget a {
     text-decoration: none; }
   .widget ul {
@@ -15747,7 +15916,11 @@ END DOCUMENTATION */
   .widget-bookmarks .bookmark-item .link, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a {
     position: relative;
     display: block;
+<<<<<<< HEAD
     padding: 0.4em 0 0.4em 25px; }
+=======
+    padding: .4em 0 .4em 25px; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     .widget-bookmarks .bookmark-item .link:hover, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a:hover, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a:hover {
       text-decoration: none; }
     .widget-bookmarks .bookmark-item .link::before, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a::before, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a::before {
@@ -15775,8 +15948,13 @@ END DOCUMENTATION */
   margin: 10px 25px; }
 
 .widget-calendar .day-item {
+<<<<<<< HEAD
   position: relative;
   padding-bottom: 0.5em; }
+=======
+  padding-bottom: 0.5em;
+  position: relative; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   .widget-calendar .day-item-title {
     padding-left: 20px;
     position: relative; }
@@ -15819,6 +15997,7 @@ END DOCUMENTATION */
     content: none; }
 
 .widget-calendar .moment-item {
+<<<<<<< HEAD
   display: flex;
   align-items: start;
   padding-bottom: 0.75em;
@@ -15827,6 +16006,16 @@ END DOCUMENTATION */
   .widget-calendar .moment-item .hour {
     width: 1em;
     margin-right: 0.75em; }
+=======
+  padding-left: 25px;
+  padding-bottom: 0.75em;
+  display: flex;
+  align-items: start; }
+  .widget-calendar .moment-item .icon,
+  .widget-calendar .moment-item .hour {
+    margin-right: 0.75em;
+    width: 1em; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   .widget-calendar .moment-item .hour {
     width: 2.5em;
     text-align: right; }
@@ -15894,10 +16083,17 @@ END DOCUMENTATION */
     background-color: #f0f2f4; }
   .widget-news .news-row-image {
     width: 55px;
+<<<<<<< HEAD
     padding-right: 15px;
     text-align: center;
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transform-origin: center; }
+=======
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding-right: 15px;
+    text-align: center; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     .widget-news .news-row-image img {
       max-width: 100%;
       max-height: 4em; }
@@ -16034,18 +16230,32 @@ END DOCUMENTATION */
 .widget-school-header {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+<<<<<<< HEAD
   position: relative;
   padding: 30px 25px;
   font-size: 1.3em;
   color: #fff;
   background-position: center;
   background-size: cover; }
+=======
+  padding: 30px 25px;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  font-size: 1.3em; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   .widget-school-header .name {
     font-weight: 600; }
   .widget-school-header .school, .widget-school-header .school-multiple {
     position: relative;
+<<<<<<< HEAD
     font-size: 0.9em;
     font-weight: 400; }
+=======
+    font-weight: 400;
+    font-size: 0.9em; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   .widget-school-header .school-multiple {
     position: relative;
     padding-left: 1.5em;
@@ -16084,6 +16294,7 @@ END DOCUMENTATION */
       color: #ff8500; }
   .widget-school-header .avatar-list {
     position: absolute;
+<<<<<<< HEAD
     bottom: 0;
     left: 0;
     display: flex;
@@ -16092,17 +16303,35 @@ END DOCUMENTATION */
     width: 100%;
     padding: 0 25px;
     transform: translateY(50%); }
+=======
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transform: translateY(50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 25px; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     @media (max-width: 1199.98px) {
       .widget-school-header .avatar-list .avatar-link:nth-child(n + 4) {
         display: none; } }
 
 .widget-school .button-list {
+<<<<<<< HEAD
   padding: 20px;
   padding-bottom: 0; }
   .widget-school .button-list > * {
     margin-bottom: 1em; }
     .widget-school .button-list > *:not(:last-child) {
       margin-right: 0.4em; }
+=======
+  padding: 25px;
+  padding-bottom: 0; }
+  .widget-school .button-list > * {
+    margin-bottom: 1em;
+    margin-right: 0.4em; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 .widget-dashboard .dashboard-choice {
   display: flex;
@@ -16201,8 +16430,13 @@ END DOCUMENTATION */
       display: block;
       width: 100%;
       padding: 5px;
+<<<<<<< HEAD
       font-size: 0.8em;
       color: #fff;
+=======
+      font-size: .8em;
+      color: white;
+>>>>>>> feat: Add toast for infos / read more button in flash widget
       text-align: center;
       background: rgba(0, 0, 0, 0.1);
       transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
@@ -16269,6 +16503,7 @@ popover popover-content {
     content: "\25b2";
     display: block;
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch; }
@@ -16290,6 +16525,8 @@ popover popover-content {
 =======
 =======
 >>>>>>> feat: linter process
+=======
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     position: absolute;
     top: -17px;
     left: 50%;
@@ -16416,6 +16653,7 @@ help {
     padding: 0;
     line-height: 40px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> docs: regenerate index.css and index.css.map
     border-radius: 5px;
     text-align: center;
@@ -16427,6 +16665,15 @@ help {
     background-color: #ff8500;
     border: none;
     border-radius: 6px; }
+=======
+    border-radius: 6px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    padding: 0;
+    border: none; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     help .burger-button .burger-icon {
       font-family: "generic-icons";
       font-style: normal; }
@@ -16434,6 +16681,7 @@ help {
         content: "\e956"; }
   help .burger-menu.active #TOC ul {
     display: block; }
+<<<<<<< HEAD
 <<<<<<< HEAD
   .was-validated .ode-bootstrap-neo .form-control:valid, .ode-bootstrap-neo .form-control.is-valid {
     border-color: #7DBF85;
@@ -16485,12 +16733,100 @@ help {
     color: #e13a3a; }
   .ode-bootstrap-neo .invalid-tooltip {
 =======
+=======
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   help section.lightbox > div.content div.section {
     width: auto;
     margin: 25px 0 0; }
     help section.lightbox > div.content div.section h2, help section.lightbox > div.content div.section .h2 {
+<<<<<<< HEAD
       width: auto;
       margin-left: 50px; } }
+=======
+      margin-left: 50px;
+      width: auto; } }
+
+.main-content {
+  background-color: #fff; }
+
+@media (max-width: 991.98px) {
+  .container {
+    padding: 0; } }
+
+popover {
+  position: relative;
+  display: inline-block;
+  z-index: 10000; }
+
+popover popover-content.hidden {
+  opacity: 0;
+  pointer-events: none; }
+
+popover popover-content {
+  position: absolute;
+  background: #fff;
+  width: 250px;
+  left: -125px;
+  top: 43px;
+  opacity: 1;
+  transition: opacity 250ms ease;
+  margin-left: 50%;
+  text-align: center;
+  border: 1px solid #d6d9e0;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 2px; }
+  popover popover-content::before {
+    font-family: none;
+    content: "\25b2";
+    display: block;
+    position: absolute;
+    top: -18px;
+    width: 40px;
+    font-size: 20px;
+    left: 50%;
+    margin-left: -21px;
+    color: #fff;
+    z-index: 0; }
+  popover popover-content .my-apps {
+    justify-content: center;
+    margin: auto;
+    padding: 25px 15px; }
+  popover popover-content .bookmarked-app {
+    margin: 1px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 6px; }
+    popover popover-content .bookmarked-app:hover {
+      border-color: #e9ebef; }
+    popover popover-content .bookmarked-app .application {
+      font-size: 3rem; }
+  popover popover-content .more {
+    padding: 10px;
+    text-align: center;
+    background: #b1b6bf;
+    transition: background 250ms ease; }
+    popover popover-content .more:hover {
+      background: #ff8500; }
+  popover popover-content .search-text .searchInput {
+    border: 1px solid #e9ebef;
+    margin: 10px -2px 10px 25px;
+    height: 29px; }
+  popover popover-content .search-text .searchButton {
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    float: left;
+    padding: 0;
+    margin-top: 10px;
+    width: 30px;
+    height: 29px;
+    box-shadow: none;
+    line-height: 27px;
+    text-align: center; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 .main-content {
   background-color: #fff; }
@@ -16551,6 +16887,7 @@ popover popover-content {
     line-height: 70px;
     text-align: center;
     border: 1px solid transparent;
+<<<<<<< HEAD
 <<<<<<< HEAD
     border-radius: 5px; }
 <<<<<<< HEAD
@@ -55813,12 +56150,37 @@ END DOCUMENTATION */
     border-top-right-radius: 0;
     float: left;
     padding: 0;
+=======
+    border-radius: 6px; }
+    popover popover-content .bookmarked-app:hover {
+      border-color: #e9ebef; }
+    popover popover-content .bookmarked-app .application {
+      font-size: 3rem; }
+  popover popover-content .more {
+    padding: 10px;
+    text-align: center;
+    background: #b1b6bf;
+    transition: background 250ms ease; }
+    popover popover-content .more:hover {
+      background: #ff8500; }
+  popover popover-content .search-text .searchInput {
+    border: 1px solid #e9ebef;
+    margin: 10px -2px 10px 25px;
+    height: 29px; }
+  popover popover-content .search-text .searchButton {
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    float: left;
+    padding: 0;
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     margin-top: 10px;
     width: 30px;
     height: 29px;
     box-shadow: none;
     line-height: 27px;
     text-align: center; }
+<<<<<<< HEAD
 =======
     height: 29px;
     margin: 10px -2px 10px 25px;
@@ -55955,30 +56317,56 @@ popover popover-content {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     box-shadow: none; }
+=======
+
+@media (max-width: 767.98px) {
+  .d-mobile-none {
+    display: none !important; } }
+
+@media (min-width: 768px) {
+  .d-desktop-none {
+    display: none !important; } }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
+<<<<<<< HEAD
   src: url("../../assets/fonts/roboto/Roboto-Regular.ttf"); }
+=======
+  src: url("fonts/roboto/Roboto-Regular.ttf"); }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: normal;
+<<<<<<< HEAD
   src: url("../../assets/fonts/roboto/Roboto-Italic.ttf"); }
+=======
+  src: url("fonts/roboto/Roboto-Italic.ttf"); }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
+<<<<<<< HEAD
   src: url("../../assets/fonts/roboto/Roboto-Bold.ttf"); }
+=======
+  src: url("fonts/roboto/Roboto-Bold.ttf"); }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: bold;
+<<<<<<< HEAD
   src: url("../../assets/fonts/roboto/Roboto-BoldItalic.ttf"); }
+=======
+  src: url("fonts/roboto/Roboto-BoldItalic.ttf"); }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 i[class*="ic-"] {
   font-family: "generic-icons";
@@ -56249,6 +56637,7 @@ i[class*="ic-"] {
   transition-duration: .75s;
   transition-property: all; }
 
+<<<<<<< HEAD
 .application-title {
   color: #4bafd5; }
 
@@ -56287,11 +56676,65 @@ i[class*="ic-"] {
     max-height: 100px;
     padding: 10px; }
   .application-item--add, .application-item--remove {
+=======
+.application__title {
+  color: #4bafd5; }
+
+.application__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  position: relative;
+  width: 150px;
+  height: 140px;
+  margin: 5px;
+  padding: 5px;
+  color: #3f454f;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.35s ease-in-out; }
+  .application__item > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    font-size: 3.5rem;
+    color: #3f454f; }
+  .application__item span {
+    padding-top: 5px;
+    line-height: 1.3;
+    display: flex;
+    flex: 1;
+    align-items: center; }
+  .application__item:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    border: 1px solid #d6d9e0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.35s ease-in-out;
+    color: inherit; }
+    .application__item:hover i {
+      transition: color 0.1s ease-in-out; }
+  .application__item:active {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) inset;
+    transition: background-color 0.25s ease-in-out, box-shadow 0.35s ease-in-out, border 0.15s ease-in-out; }
+  .application__item img {
+    max-height: 100px;
+    max-width: 100px;
+    padding: 10px; }
+  .application__item--add, .application__item--remove {
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     position: absolute;
     top: 10px;
     right: 20px;
     width: 40px;
     height: 40px;
+<<<<<<< HEAD
     padding: 0;
     text-align: center;
     background-color: #4bafd5;
@@ -56336,10 +56779,134 @@ i[class*="ic-"] {
     background-color: rgba(75, 175, 213, 0.15); }
 
 .applications-list {
+=======
+    border-radius: 50%;
+    background-color: #4bafd5;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid transparent;
+    padding: 0; }
+    .application__item--add i, .application__item--remove i {
+      color: #fff;
+      font-size: 1rem;
+      line-height: 30px; }
+    .application__item--add:hover, .application__item--remove:hover {
+      background-color: #ff8500; }
+  .application__item.no-hover {
+    background-color: inherit;
+    border-color: transparent;
+    box-shadow: inherit; }
+  .application__item .opacity-50 {
+    opacity: 0.5; }
+  .application__item.app-1d::before {
+    content: "1D";
+    position: absolute;
+    top: 0;
+    right: 25px;
+    background-color: #ff8500;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 0.9rem; }
+  .application__item:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #d6d9e0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.35s ease-in-out;
+    color: #ff8500; }
+    .application__item:hover i {
+      transition: color 0.1s ease-in-out;
+      color: #ff8500; }
+      .application__item:hover i i {
+        color: #ff8500; }
+    .application__item:hover .application__item--add i,
+    .application__item:hover .application__item--remove i {
+      color: #fff; }
+    .application__item:hover .application__item--add i,
+    .application__item:hover .application__item--remove i {
+      color: #fff; }
+  .application__item:active {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: #b35d00;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) inset;
+    transition: background-color 0.25s ease-in-out, box-shadow 0.35s ease-in-out, border 0.15s ease-in-out; }
+  .application__item.blue-background-class {
+    background-color: rgba(75, 175, 213, 0.15); }
+  .application__item--add, .application__item--remove {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25); }
+    .application__item--add i, .application__item--remove i {
+      color: #fff;
+      font-size: 1rem;
+      line-height: 40px; }
+  .application__item--add {
+    background-color: #ecbe30; }
+  .application__item--remove {
+    background-color: #e13a3a; }
+
+@media (max-width: 575.98px) {
+  .application__item {
+    width: 110px;
+    height: 110px;
+    margin: 5px; }
+    .application__item > i {
+      font-size: 3rem;
+      width: 60px;
+      height: 60px; }
+    .application__item span {
+      font-size: 0.9rem; }
+  .application.app-1d::before {
+    content: "1D";
+    position: absolute;
+    top: 0;
+    right: 25px;
+    background-color: #ff8500;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 0.9rem; }
+  .application:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #d6d9e0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.35s ease-in-out;
+    color: #ff8500; }
+    .application:hover i {
+      transition: color 0.1s ease-in-out;
+      color: #ff8500; }
+  .application:active {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: #b35d00;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) inset;
+    transition: background-color 0.25s ease-in-out, box-shadow 0.35s ease-in-out, border 0.15s ease-in-out; } }
+
+@media (max-width: 575.98px) {
+  .application__item {
+    width: 115px;
+    height: 130px;
+    margin: 5px; }
+    .application__item > i {
+      font-size: 3rem;
+      width: 60px;
+      height: 60px; }
+    .application__item span {
+      font-size: 0.9rem; } }
+
+.applications__search input[type="search"] {
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.05); }
+
+.applications__list {
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
 
+<<<<<<< HEAD
 .applications-favorite {
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.75);
@@ -56381,6 +56948,49 @@ i[class*="ic-"] {
   .applications-list {
     justify-content: space-around; }
   .applications-favorite {
+=======
+.applications__favorite {
+  border: 1px solid #d6d9e0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.05);
+  padding: 10px; }
+  .applications__favorite h2, .applications__favorite .h2 {
+    font-size: 1.2rem; }
+
+.applications__list h2, .applications__list .h2, .applications__connector h2, .applications__connector .h2 {
+  flex-basis: 100%;
+  font-size: 1.2rem; }
+  .applications__list h2 span, .applications__list .h2 span, .applications__connector h2 span, .applications__connector .h2 span {
+    padding-right: 10px;
+    background-color: #f0f2f4; }
+  .applications__list h2::after, .applications__list .h2::after, .applications__connector h2::after, .applications__connector .h2::after {
+    display: block;
+    content: "";
+    border-top: 1px solid #d6d9e0;
+    margin-top: -10px; }
+
+@media (max-width: 575.98px) {
+  .application__item {
+    width: 90px;
+    height: 110px;
+    margin: 5px; }
+    .application__item > i {
+      font-size: 3rem;
+      width: 60px;
+      height: 60px; }
+    .application__item span {
+      font-size: 0.8rem; }
+    .application__item img {
+      max-height: 80px;
+      max-width: 80px; }
+    .application__item--add, .application__item--remove {
+      top: 10px;
+      right: 10px; }
+  .applications__list {
+    justify-content: space-around; }
+  .applications__favorite {
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     padding: 10px; } }
 
 .application {
@@ -56401,6 +57011,7 @@ i[class*="ic-"] {
   .application.esidoc, .application.esidoc-large, .application.madmagz, .application.madmagz-large, .application.rbs, .application.rbs-large, .application.unstagepourtous, .application.unstagepourtous-large {
     color: #b930a2; }
   .application.competences::before, .application.competences-large::before {
+<<<<<<< HEAD
     content: "\e927"; }
   .application.cahier-textes::before, .application.cahier-textes-large::before {
     content: "\e86f"; }
@@ -56598,6 +57209,205 @@ i[class*="ic-"] {
     content: "\e8aa"; }
   .application.connecteur-generique2::before, .application.connecteur-generique2-large::before {
     content: "\e8ab"; }
+=======
+    content: '\e927'; }
+  .application.cahier-textes::before, .application.cahier-textes-large::before {
+    content: '\e86f'; }
+  .application.calendar::before, .application.calendar-large::before {
+    content: '\e834'; }
+  .application.collaborative-wall::before, .application.collaborative-wall-large::before {
+    content: '\e800'; }
+  .application.community::before, .application.community-large::before {
+    content: '\e814'; }
+  .application.forum::before, .application.forum-large::before {
+    content: '\e81e'; }
+  .application.pages::before, .application.pages-large::before {
+    content: '\e876'; }
+  .application.poll::before, .application.poll-large::before, .application.polls::before, .application.polls-large::before {
+    content: '\e832'; }
+  .application.rack::before, .application.rack-large::before {
+    content: '\e80d'; }
+  .application.rbs::before, .application.rbs-large::before {
+    content: '\e80e'; }
+  .application.searchengine::before, .application.searchengine-large::before {
+    content: '\e8d0'; }
+  .application.sharebigfiles::before, .application.sharebigfiles-large::before {
+    content: '\e8cb'; }
+  .application.schoolbook::before, .application.schoolbook-large::before {
+    content: '\e91e'; }
+  .application.archive::before, .application.archive-large::before {
+    content: '\e81d'; }
+  .application.admin::before, .application.admin-large::before {
+    content: '\e81a'; }
+  .application.cahier-de-texte::before, .application.cahier-de-texte-large::before {
+    content: '\e910'; }
+  .application.wiki::before, .application.wiki-large::before {
+    content: '\e813'; }
+  .application.cns::before, .application.cns-large::before {
+    content: '\e88a'; }
+  .application.conversation::before, .application.conversation-large::before {
+    content: '\e804'; }
+  .application.paths::before, .application.paths-large::before {
+    content: '\e94d'; }
+  .application.notebook::before, .application.notebook-large::before, .application.scrap-book::before, .application.scrap-book-large::before {
+    content: '\e8d4'; }
+  .application.blog::before, .application.blog-large::before {
+    content: '\e809'; }
+  .application.account::before, .application.account-large::before {
+    content: '\e905'; }
+  .application.support::before, .application.support-large::before {
+    content: '\e835'; }
+  .application.workspace::before, .application.workspace-large::before {
+    content: '\e81b'; }
+  .application.admin-portal::before, .application.admin-portal-large::before {
+    content: '\e908'; }
+  .application.stats::before, .application.stats-large::before {
+    content: '\e909'; }
+  .application.userbook::before, .application.userbook-large::before, .application.directory::before, .application.directory-large::before {
+    content: '\e811'; }
+  .application.mindmap::before, .application.mindmap-large::before {
+    content: '\e859'; }
+  .application.timelinegenerator::before, .application.timelinegenerator-large::before {
+    content: '\e819'; }
+  .application.actualites::before, .application.actualites-large::before {
+    content: '\e85b'; }
+  .application.pad::before, .application.pad-large::before, .application.collaborativeeditor::before, .application.collaborativeeditor-large::before {
+    content: '\e829'; }
+  .application.settings-class::before, .application.settings-class-large::before {
+    content: '\e942'; }
+  .application.library::before, .application.library-large::before {
+    content: '\e94c'; }
+  .application.visioconf::before, .application.visioconf-large::before, .application.Web-conference::before, .application.Web-conference-large::before {
+    content: '\e957'; }
+  .application.notes::before, .application.notes-large::before {
+    content: '\e832'; }
+  .application.attendance::before, .application.attendance-large::before {
+    content: '\e80b'; }
+  .application.exercizer::before, .application.exercizer-large::before {
+    content: '\e833'; }
+  .application.statistics::before, .application.statistics-large::before {
+    content: '\e810'; }
+  .application.website::before, .application.website-large::before {
+    content: '\e90a'; }
+  .application.video::before, .application.video-large::before {
+    content: '\e872'; }
+  .application.pearltrees::before, .application.pearltrees-large::before {
+    content: '\e933'; }
+  .application.esidoc::before, .application.esidoc-large::before {
+    content: '\e826'; }
+  .application.sacoche::before, .application.sacoche-large::before {
+    content: '\e899'; }
+  .application.onisep::before, .application.onisep-large::before, .application.webclasseur::before, .application.webclasseur-large::before {
+    content: '\e88c'; }
+  .application.onisep2::before, .application.onisep2-large::before {
+    content: '\e894'; }
+  .application.edumedia::before, .application.edumedia-large::before {
+    content: '\e887'; }
+  .application.le-site-tv::before, .application.le-site-tv-large::before {
+    content: '\e87a'; }
+  .application.pronote::before, .application.pronote-large::before {
+    content: '\e82a'; }
+  .application.maxicours::before, .application.maxicours-large::before {
+    content: '\e825'; }
+  .application.madmagz::before, .application.madmagz-large::before {
+    content: '\e89d'; }
+  .application.universalis::before, .application.universalis-large::before {
+    content: '\e831'; }
+  .application.kne::before, .application.kne-large::before {
+    content: '\e81f'; }
+  .application.residence-artiste::before, .application.residence-artiste-large::before, .application.ccn::before, .application.ccn-large::before {
+    content: '\e90f'; }
+  .application.hiboutheque::before, .application.hiboutheque-large::before {
+    content: '\e90e'; }
+  .application.cerise::before, .application.cerise-large::before {
+    content: '\e81c'; }
+  .application.paraschool::before, .application.paraschool-large::before {
+    content: '\e82d'; }
+  .application.scolinfo::before, .application.scolinfo-large::before {
+    content: '\e886'; }
+  .application.edumoov::before, .application.edumoov-large::before {
+    content: '\e939'; }
+  .application.lsu::before, .application.lsu-large::before {
+    content: '\e93a'; }
+  .application.charte::before, .application.charte-large::before {
+    content: '\e93b'; }
+  .application.qwant-junior::before, .application.qwant-junior-large::before {
+    content: '\e93d'; }
+  .application.canal-numerique::before, .application.canal-numerique-large::before {
+    content: '\e80a'; }
+  .application.aide-devoirs::before, .application.aide-devoirs-large::before, .application.award::before, .application.award-large::before {
+    content: '\e818'; }
+  .application.admission-post-bac::before, .application.admission-post-bac-large::before {
+    content: '\e816'; }
+  .application.charlemagne::before, .application.charlemagne-large::before {
+    content: '\e885'; }
+  .application.vie-scolaire::before, .application.vie-scolaire-large::before {
+    content: '\e879'; }
+  .application.pro-eps::before, .application.pro-eps-large::before {
+    content: '\e884'; }
+  .application.picardie-cursus::before, .application.picardie-cursus-large::before {
+    content: '\e921'; }
+  .application.banquesavoir::before, .application.banquesavoir-large::before {
+    content: '\e88d'; }
+  .application.unstagepourtous::before, .application.unstagepourtous-large::before {
+    content: '\e88e'; }
+  .application.bcdi::before, .application.bcdi-large::before {
+    content: '\e88f'; }
+  .application.ressourcesdepartementale91::before, .application.ressourcesdepartementale91-large::before {
+    content: '\e890'; }
+  .application.assr::before, .application.assr-large::before {
+    content: '\e891'; }
+  .application.museefrancaisphoto::before, .application.museefrancaisphoto-large::before {
+    content: '\e892'; }
+  .application.cidj::before, .application.cidj-large::before {
+    content: '\e893'; }
+  .application.itopstore::before, .application.itopstore-large::before {
+    content: '\e895'; }
+  .application.cervoprint::before, .application.cervoprint-large::before {
+    content: '\e896'; }
+  .application.glpi::before, .application.glpi-large::before {
+    content: '\e897'; }
+  .application.elyceepicardie::before, .application.elyceepicardie-large::before {
+    content: '\e898'; }
+  .application.electron::before, .application.electron-large::before {
+    content: '\e89b'; }
+  .application.gepi::before, .application.gepi-large::before {
+    content: '\e89c'; }
+  .application.educagri::before, .application.educagri-large::before {
+    content: '\e89e'; }
+  .application.monorientationenligne::before, .application.monorientationenligne-large::before {
+    content: '\e89f'; }
+  .application.turboself::before, .application.turboself-large::before {
+    content: '\e8a0'; }
+  .application.netvibes::before, .application.netvibes-large::before {
+    content: '\e8a1'; }
+  .application.monstageenligne::before, .application.monstageenligne-large::before {
+    content: '\e8a2'; }
+  .application.matholycee::before, .application.matholycee-large::before {
+    content: '\e8a3'; }
+  .application.biblionisep::before, .application.biblionisep-large::before {
+    content: '\e8a4'; }
+  .application.lesechos::before, .application.lesechos-large::before {
+    content: '\e8a5'; }
+  .application.edutheque::before, .application.edutheque-large::before {
+    content: '\e8a6'; }
+  .application.europress::before, .application.europress-large::before {
+    content: '\e8a7'; }
+  .application.lemonde::before, .application.lemonde-large::before {
+    content: '\e8a9'; }
+  .application.assistance::before, .application.assistance-large::before {
+    content: '\e93c'; }
+  .application.note::before, .application.note-large::before {
+    content: '\e806'; }
+  .application.parametrage::before, .application.parametrage-large::before {
+    content: '\e92f'; }
+  .application.public::before, .application.public-large::before, .application.mediacentre::before, .application.mediacentre-large::before {
+    content: '\e863'; }
+  .application.connecteur-generique1::before, .application.connecteur-generique1-large::before {
+    content: '\e8aa'; }
+  .application.connecteur-generique2::before, .application.connecteur-generique2-large::before {
+    content: '\e8ab'; }
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 
 .blue-background-class {
   background-color: rgba(75, 175, 213, 0.15); }
@@ -56606,22 +57416,36 @@ i[class*="ic-"] {
 .btn[class*="btn-outline-"] {
   box-shadow: none; }
 
+<<<<<<< HEAD
 .btn-outline-primary:hover,
 .btn-outline-primary.active {
+=======
+.btn-outline-orange:hover,
+.btn-outline-orange.active {
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   color: #fff !important; }
 
 .btn-primary, popover popover-content .search-text .searchButton {
   color: #fff; }
+<<<<<<< HEAD
   .btn-primary:hover, popover popover-content .search-text .searchButton:hover, .btn-primary:active, popover popover-content .search-text .searchButton:active, .btn-primary.active, popover popover-content .search-text .active.searchButton {
     color: #fff !important; }
+=======
+>>>>>>> feat: Add toast for infos / read more button in flash widget
   .btn-primary.disabled, popover popover-content .search-text .disabled.searchButton, .btn-primary:disabled, popover popover-content .search-text .searchButton:disabled {
     color: rgba(255, 255, 255, 0.8);
     background-color: #8c939e;
     border-color: #8c939e;
+<<<<<<< HEAD
     opacity: 0.8; }
 
 /* DOCUMENTATION
 >>>>>>> docs: regenerate index.css and index.css.map
+=======
+    opacity: .8; }
+
+/* DOCUMENTATION
+>>>>>>> feat: Add toast for infos / read more button in flash widget
 <section class="dominos dominos--square">
     <article class="domino">
         <div class="domino__overlay">
@@ -56723,6 +57547,7 @@ END DOCUMENTATION */
     border-left-color: transparent; }
 <<<<<<< HEAD
   .list__header {
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feat: Add record widget controls
@@ -56764,15 +57589,27 @@ END DOCUMENTATION */
 >>>>>>> docs: regenerate index.css and index.css.map
     display: none; }
   .list-item {
+=======
+    display: none; }
+  .list__item {
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     flex-wrap: wrap;
     padding: 10px;
     margin: 10px 0;
     border-color: #d6d9e0; }
+<<<<<<< HEAD
     .list-item .list-title {
       width: calc(100% - 40px); }
     .list-item .list-status {
       display: none; }
     .list-item .list-owner {
+=======
+    .list__item .list__title {
+      width: calc(100% - 40px); }
+    .list__item .list__status {
+      display: none; }
+    .list__item .list__owner {
+>>>>>>> feat: Add toast for infos / read more button in flash widget
       width: 55%; }
     .list-item .list-modification {
       width: 45%;
@@ -56801,6 +57638,7 @@ END DOCUMENTATION */
 <<<<<<< HEAD
 <<<<<<< HEAD
   header.navbar.navbar-dark .logo {
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feat: Add record widget controls
@@ -56885,8 +57723,9 @@ END DOCUMENTATION */
     position: relative;
 <<<<<<< HEAD
 >>>>>>> feat: Add record widget controls
+=======
+>>>>>>> feat: Add toast for infos / read more button in flash widget
     display: inline-block;
-<<<<<<< HEAD
     height: 40px;
     padding: 5px; }
   header.navbar.navbar-dark .avatar #my-photo {
@@ -56919,6 +57758,7 @@ END DOCUMENTATION */
     .navbar.navbar-dark .btn .logo {
 >>>>>>> feat: linter process
       display: inline-block;
+<<<<<<< HEAD
       height: 54px; }
   .navbar.navbar-dark .navigation a {
     color: #fff; }
@@ -57636,6 +58476,11 @@ END DOCUMENTATION */
 >>>>>>> feat: Add record widget controls
 =======
 >>>>>>> feat: Add record widget controls
+=======
+      width: 20px;
+      height: 20px;
+      margin-right: -20px;
+>>>>>>> feat: Add toast for infos / read more button in flash widget
       font-family: "Roboto";
       font-size: 12px;
       font-weight: bold;
