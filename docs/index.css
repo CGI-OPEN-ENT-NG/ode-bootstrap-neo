@@ -6350,6 +6350,15 @@ textarea.form-control-lg {
 .invisible {
   visibility: hidden !important; }
 
+.c-auto {
+  cursor: auto !important; }
+
+.c-pointer {
+  cursor: pointer !important; }
+
+.c-grab {
+  cursor: grab !important; }
+
 @media (min-width: 360px) {
   .float-xs-start {
     float: left !important; }
@@ -14803,15 +14812,15 @@ END DOCUMENTATION */
 
 .widget-bookmarks .bookmark-item {
   transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  padding: 0 25px;
   color: #0984b3;
+  padding: 0 25px;
   border-bottom: 1px solid #f0f2f4; }
   .widget-bookmarks .bookmark-item:hover {
     background-color: rgba(9, 132, 179, 0.1); }
   .widget-bookmarks .bookmark-item .link, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a {
     position: relative;
-    display: block;
-    padding: .4em 0 .4em 25px; }
+    padding: 0.4em 0 0.4em 25px;
+    display: block; }
     .widget-bookmarks .bookmark-item .link:hover, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a:hover, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a:hover {
       text-decoration: none; }
     .widget-bookmarks .bookmark-item .link::before, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a::before, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a::before {
@@ -15097,18 +15106,18 @@ END DOCUMENTATION */
 .widget-school-header {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  position: relative;
   padding: 30px 25px;
+  font-size: 1.3em;
   color: white;
   background-position: center;
-  background-size: cover;
-  position: relative;
-  font-size: 1.3em; }
+  background-size: cover; }
   .widget-school-header .name {
     font-weight: 600; }
   .widget-school-header .school, .widget-school-header .school-multiple {
     position: relative;
-    font-weight: 400;
-    font-size: 0.9em; }
+    font-size: .9em;
+    font-weight: 400; }
   .widget-school-header .school-multiple {
     position: relative;
     padding-left: 1.5em;
@@ -15147,24 +15156,25 @@ END DOCUMENTATION */
       color: #ff8500; }
   .widget-school-header .avatar-list {
     position: absolute;
-    width: 100%;
-    left: 0;
     bottom: 0;
-    transform: translateY(50%);
+    left: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 25px; }
+    width: 100%;
+    padding: 0 25px;
+    transform: translateY(50%); }
     @media (max-width: 1199.98px) {
       .widget-school-header .avatar-list .avatar-link:nth-child(n + 4) {
         display: none; } }
 
 .widget-school .button-list {
-  padding: 25px;
+  padding: 20px;
   padding-bottom: 0; }
   .widget-school .button-list > * {
-    margin-bottom: 1em;
-    margin-right: 0.4em; }
+    margin-bottom: 1em; }
+    .widget-school .button-list > *:not(:last-child) {
+      margin-right: .4em; }
 
 .widget-dashboard .dashboard-choice {
   background: white;
