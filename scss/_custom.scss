@@ -1,264 +1,264 @@
 .no-2d {
-    display: none;
+  display: none;
 }
 
 // main.main à supprimer quand on aura ajouter la classe container sur mes applis
 .container,
 main.main {
-    max-width: 1700px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1700px;
+  padding: 20px;
+  margin: 0 auto;
 }
 @include media-breakpoint-down(sm) {
-    main.main {
-        padding: 15px;
-    }
+  main.main {
+    padding: 15px;
+  }
 }
 
 .pe-none {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 // Hack for multiline ellipsis
 .text-truncate {
-    &.text-truncate--2 {
-        display: -webkit-box !important;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        white-space: normal;
-    }
-    &.text-truncate--3 {
-        display: -webkit-box !important;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        white-space: normal;
-    }
+  &.text-truncate--2 {
+    display: box !important;
+    -webkit-line-clamp: 2;
+    box-orient: vertical;
+    white-space: normal;
+  }
+  &.text-truncate--3 {
+    display: box !important;
+    -webkit-line-clamp: 3;
+    box-orient: vertical;
+    white-space: normal;
+  }
 }
 
 // TODO : A déporter plus tard - contient tout le css du composant popover et celui de l'aide en ligne
 popover {
-    position: relative;
-    display: inline-block;
-    z-index: 10000;
+  position: relative;
+  z-index: 10000;
+  display: inline-block;
 }
 
 popover popover-content.hidden {
-    opacity: 0;
-    pointer-events: none;
+  pointer-events: none;
+  opacity: 0;
 }
 
 popover popover-content {
+  position: absolute;
+  top: 43px;
+  left: -125px;
+  width: 250px;
+  margin-left: 50%;
+  text-align: center;
+  background: #fff;
+  border: 1px solid $gray-300;
+  border-radius: 2px;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, .1);
+  opacity: 1;
+  transition: opacity 250ms ease;
+  &::before {
     position: absolute;
-    background: #fff;
-    width: 250px;
-    left: -125px;
-    top: 43px;
-    opacity: 1;
-    transition: opacity 250ms ease;
-    margin-left: 50%;
-    text-align: center;
-    border: 1px solid $gray-300;
-    box-shadow: 0 1px 20px rgba(0,0,0,0.1);
-    border-radius: 2px;
+    top: -17px;
+    left: 50%;
+    z-index: 0;
+    display: block;
+    width: 40px;
+    margin-left: -21px;
+    font-family: none;
+    font-size: 20px;
+    color: #fff;
+    content: "\25b2";
+  }
+  &.right {
+    left: -230px;
     &::before {
-        font-family: none;
-        content: "\25b2";
-        display: block;
-        position: absolute;
-        top: -17px;
-        width: 40px;
-        font-size: 20px;
-        left: 50%;
-        margin-left: -21px;
-        color: #fff;
-        z-index: 0;
+      right: 0;
+      left: initial;
     }
-    &.right {
-        left: -230px;
-        &::before {
-            left: initial;
-            right: 0;
-        }
+  }
+  .my-apps {
+    justify-content: center;
+    padding: 25px 15px;
+    margin: auto;
+  }
+  .bookmarked-app {
+    width: 70px;
+    height: 70px;
+    margin: 1px;
+    line-height: 70px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    &:hover {
+      border-color: $gray-200;
     }
-    .my-apps {
-        justify-content: center;
-        margin: auto;
-        padding: 25px 15px;
+    .application {
+      font-size: 3rem;
     }
-    .bookmarked-app {
-        margin: 1px;
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
-        text-align: center;
-        border: 1px solid transparent;
-        border-radius: $border-radius;
-        &:hover {
-            border-color: $gray-200;
-        }
-        .application {
-            font-size: 3rem;
-        }
+  }
+  .more {
+    padding: 10px;
+    text-align: center;
+    background: $gray-500;
+    transition: background 250ms ease;
+    &:hover {
+      background: $primary;
     }
-    .more {
-        padding: 10px;
-        text-align: center;
-        background: $gray-500;
-        transition: background 250ms ease;
-        &:hover {
-            background: $primary; 
-        }
-    }
-    .search-text .searchInput {
-        border: 1px solid $gray-200;
-        margin: 10px -2px 10px 25px;
-        height: 29px;
-    }
-    .search-text .searchButton {
-        @extend .btn-primary;
-        border: none;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        float: left;
-        padding: 0;
-        margin-top: 10px;
-        width: 30px;
-        height: 29px;
-        box-shadow: none;
-        line-height: 27px;
-        text-align: center;
-    }
+  }
+  .search-text .searchInput {
+    height: 29px;
+    margin: 10px -2px 10px 25px;
+    border: 1px solid $gray-200;
+  }
+  .search-text .searchButton {
+    @extend .btn-primary;
+    float: left;
+    width: 30px;
+    height: 29px;
+    padding: 0;
+    margin-top: 10px;
+    line-height: 27px;
+    text-align: center;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: none;
+  }
 }
 help {
+  font-size: 16px;
+  line-height: normal;
+  color: black;
+  i {
+    color: $white !important;
+  }
+  p {
+    margin: 1rem 0;
     color: black;
-    line-height: normal;
-    font-size: 16px;
-    i {
-        color: $white!important;
+  }
+  section.lightbox {
+    z-index: 10002;
+    div.content {
+      width: 920px;
     }
-    p {
-        color: black;
-        margin: 1rem 0;
-    }
-    section.lightbox {
-        z-index: 10002;
-        div.content {
-            width: 920px;
+  }
+  .burger-button {
+    display: none;
+  }
+  #TOC{
+    float: left;
+    width: 20%;
+    margin-right: 5%;
+    ul{
+      border-left: 5px solid #ff8500;
+      li{
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        a {
+          color: $secondary;
+          &:hover {
+            color: $primary;
+          }
         }
+      }
     }
-    .burger-button {
-        display: none;
-    }
-    #TOC{
-        width: 20%;
-        margin-right: 5%;
-        float: left;
-        ul{
-            border-left: 5px solid #FF8500;
-            li{
-                display: block;
-                margin-block-start: 1em;
-                margin-block-end: 1em;
-                margin-inline-start: 0px;
-                margin-inline-end: 0px;
-                a {
-                    color: $secondary;
-                    &:hover {
-                        color: $primary;
-                    }
-                }
-            }
-        }
-    }
-    img{
-        max-width: 100%;
-    }
+  }
+  img{
+    max-width: 100%;
+  }
 
-    section.lightbox > div.content div.section {
-        width: 70%;
-        margin-left: 25%;
-        h2 {
-            width: 100%;
-            margin-bottom: 20px;
-            color: $secondary;
-        }
+  section.lightbox > div.content div.section {
+    width: 70%;
+    margin-left: 25%;
+    h2 {
+      width: 100%;
+      margin-bottom: 20px;
+      color: $secondary;
     }
+  }
 }
 
 @include media-breakpoint-down(sm) {
-    help {
-        #TOC{
-            width: auto;
-            margin: 20px;
-            float: none;
-            ul {
-                display: none;
-                position: absolute;
-                background-color: white;
-                box-shadow: 1px 1px 10px rgba(0,0,0,0.25);
-                margin-left: -20px;
-                margin-top: 40px;
-            }
-            ul li {
-                border-bottom: 1px solid #ddd;
-                padding: 15px;
-                margin: 0;
-                margin-left: -40px;
-                &:hover {
-                    background-color: $orange;
-                    a {
-                        color: white;
-                    }
-                }
-            }
-        }
-        .burger-button {
-            display: block;
-            background-color: $orange;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            border-radius: $border-radius;
-            text-align: center;
+  help {
+    #TOC{
+      float: none;
+      width: auto;
+      margin: 20px;
+      ul {
+        position: absolute;
+        display: none;
+        margin-top: 40px;
+        margin-left: -20px;
+        background-color: white;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, .25);
+      }
+      ul li {
+        padding: 15px;
+        margin: 0;
+        margin-left: -40px;
+        border-bottom: 1px solid #ddd;
+        &:hover {
+          background-color: $orange;
+          a {
             color: white;
-            position: absolute;
-            cursor: pointer;
-            padding: 0;
-            border: none;
-            .burger-icon {
-                font-family: "generic-icons";
-                font-style: normal;
-                &::before {
-                    content: "\e956";
-                }
-            }
+          }
         }
-        .burger-menu.active #TOC ul {
-            display: block;  
-        }
-        section.lightbox > div.content div.section {
-            width: auto;
-            margin: 25px 0 0;
-            h2 {
-                margin-left: 50px;
-                width: auto;
-            }
-        }
+      }
     }
+    .burger-button {
+      position: absolute;
+      display: block;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      line-height: 40px;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      background-color: $orange;
+      border: none;
+      border-radius: $border-radius;
+      .burger-icon {
+        font-family: "generic-icons";
+        font-style: normal;
+        &::before {
+          content: "\e956";
+        }
+      }
+    }
+    .burger-menu.active #TOC ul {
+      display: block;
+    }
+    section.lightbox > div.content div.section {
+      width: auto;
+      margin: 25px 0 0;
+      h2 {
+        width: auto;
+        margin-left: 50px;
+      }
+    }
+  }
 }
 
 .main-content {
-    background-color: $white;
+  background-color: $white;
 }
 
 @include media-breakpoint-down(lg) {
-    .container {
-        padding: 0;
-    }
+  .container {
+    padding: 0;
+  }
 }
 
 a {
-    @extend .transition-hover-fast;
+  @extend .transition-hover-fast;
 }
 
 // DEBUG CSS
@@ -266,107 +266,107 @@ a {
 
 // TODO : A déporter plus tard - contient tout le css du composant popover
 popover {
-    position: relative;
-    display: inline-block;
-    z-index: 10000;
+  position: relative;
+  z-index: 10000;
+  display: inline-block;
 }
 
 popover popover-content.hidden {
-    opacity: 0;
-    pointer-events: none;
+  pointer-events: none;
+  opacity: 0;
 }
 
 popover popover-content {
+  position: absolute;
+  top: 43px;
+  left: -125px;
+  width: 250px;
+  margin-left: 50%;
+  text-align: center;
+  background: #fff;
+  border: 1px solid $gray-300;
+  border-radius: 2px;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, .1);
+  opacity: 1;
+  transition: opacity 250ms ease;
+  &::before {
     position: absolute;
-    background: #fff;
-    width: 250px;
-    left: -125px;
-    top: 43px;
-    opacity: 1;
-    transition: opacity 250ms ease;
-    margin-left: 50%;
+    top: -18px;
+    left: 50%;
+    z-index: 0;
+    display: block;
+    width: 40px;
+    margin-left: -21px;
+    font-family: none;
+    font-size: 20px;
+    color: #fff;
+    content: "\25b2";
+  }
+  .my-apps {
+    justify-content: center;
+    padding: 25px 15px;
+    margin: auto;
+  }
+  .bookmarked-app {
+    width: 70px;
+    height: 70px;
+    margin: 1px;
+    line-height: 70px;
     text-align: center;
-    border: 1px solid $gray-300;
-    box-shadow: 0 1px 20px rgba(0,0,0,0.1);
-    border-radius: 2px;
-    &::before {
-        font-family: none;
-        content: "\25b2";
-        display: block;
-        position: absolute;
-        top: -18px;
-        width: 40px;
-        font-size: 20px;
-        left: 50%;
-        margin-left: -21px;
-        color: #fff;
-        z-index: 0;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    &:hover {
+      border-color: $gray-200;
     }
-    .my-apps {
-        justify-content: center;
-        margin: auto;
-        padding: 25px 15px;
+    .application {
+      font-size: 3rem;
     }
-    .bookmarked-app {
-        margin: 1px;
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
-        text-align: center;
-        border: 1px solid transparent;
-        border-radius: $border-radius;
-        &:hover {
-            border-color: $gray-200;
-        }
-        .application {
-            font-size: 3rem;
-        }
+  }
+  .more {
+    padding: 10px;
+    text-align: center;
+    background: $gray-500;
+    transition: background 250ms ease;
+    &:hover {
+      background: $primary;
     }
-    .more {
-        padding: 10px;
-        text-align: center;
-        background: $gray-500;
-        transition: background 250ms ease;
-        &:hover {
-            background: $primary; 
-        }
-    }
-    .search-text .searchInput {
-        border: 1px solid $gray-200;
-        margin: 10px -2px 10px 25px;
-        height: 29px;
-    }
-    .search-text .searchButton {
-        @extend .btn-primary;
-        border: none;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        float: left;
-        padding: 0;
-        margin-top: 10px;
-        width: 30px;
-        height: 29px;
-        box-shadow: none;
-        line-height: 27px;
-        text-align: center;
-    }
+  }
+  .search-text .searchInput {
+    height: 29px;
+    margin: 10px -2px 10px 25px;
+    border: 1px solid $gray-200;
+  }
+  .search-text .searchButton {
+    @extend .btn-primary;
+    float: left;
+    width: 30px;
+    height: 29px;
+    padding: 0;
+    margin-top: 10px;
+    line-height: 27px;
+    text-align: center;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: none;
+  }
 }
 
 .main-content {
-    background-color: $white;
+  background-color: $white;
 }
 
 @include media-breakpoint-down(md) {
-    .container {
-       // padding: 0;
-    }
+  .container {
+    // padding: 0;
+  }
 }
 
 //Note Julien => Cette propriété générique provoque des effet de bord
 //Je suggère de l'appliquer sur la couleur uniquement
 a {
-    //@extend .transition-hover-fast;
-    //@include add-transitions(color);
+  //@extend .transition-hover-fast;
+  //@include add-transitions(color);
 }
 
 // DEBUG CSS
@@ -374,89 +374,89 @@ a {
 
 // TODO : A déporter plus tard - contient tout le css du composant popover
 popover {
-    position: relative;
-    display: inline-block;
-    z-index: 10000;
+  position: relative;
+  z-index: 10000;
+  display: inline-block;
 }
 
 popover popover-content.hidden {
-    opacity: 0;
-    pointer-events: none;
+  pointer-events: none;
+  opacity: 0;
 }
 
 popover popover-content {
+  position: absolute;
+  top: 43px;
+  left: -125px;
+  width: 250px;
+  margin-left: 50%;
+  text-align: center;
+  background: #fff;
+  border: 1px solid $gray-300;
+  border-radius: 2px;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, .1);
+  opacity: 1;
+  transition: opacity 250ms ease;
+  &::before {
     position: absolute;
-    background: #fff;
-    width: 250px;
-    left: -125px;
-    top: 43px;
-    opacity: 1;
-    transition: opacity 250ms ease;
-    margin-left: 50%;
+    top: -18px;
+    left: 50%;
+    z-index: 0;
+    display: block;
+    width: 40px;
+    margin-left: -21px;
+    font-family: none;
+    font-size: 20px;
+    color: #fff;
+    content: "\25b2";
+  }
+  .my-apps {
+    justify-content: center;
+    padding: 25px 15px;
+    margin: auto;
+  }
+  .bookmarked-app {
+    width: 70px;
+    height: 70px;
+    margin: 1px;
+    line-height: 70px;
     text-align: center;
-    border: 1px solid $gray-300;
-    box-shadow: 0 1px 20px rgba(0,0,0,0.1);
-    border-radius: 2px;
-    &::before {
-        font-family: none;
-        content: "\25b2";
-        display: block;
-        position: absolute;
-        top: -18px;
-        width: 40px;
-        font-size: 20px;
-        left: 50%;
-        margin-left: -21px;
-        color: #fff;
-        z-index: 0;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    &:hover {
+      border-color: $gray-200;
     }
-    .my-apps {
-        justify-content: center;
-        margin: auto;
-        padding: 25px 15px;
+    .application {
+      font-size: 3rem;
     }
-    .bookmarked-app {
-        margin: 1px;
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
-        text-align: center;
-        border: 1px solid transparent;
-        border-radius: $border-radius;
-        &:hover {
-            border-color: $gray-200;
-        }
-        .application {
-            font-size: 3rem;
-        }
+  }
+  .more {
+    padding: 10px;
+    text-align: center;
+    background: $gray-500;
+    transition: background 250ms ease;
+    &:hover {
+      background: $primary;
     }
-    .more {
-        padding: 10px;
-        text-align: center;
-        background: $gray-500;
-        transition: background 250ms ease;
-        &:hover {
-            background: $primary; 
-        }
-    }
-    .search-text .searchInput {
-        border: 1px solid $gray-200;
-        margin: 10px -2px 10px 20px;
-        width: 75%;
-        height: 29px;
-    }
-    .search-text .searchButton {
-        @extend .btn-primary;
-        border: none;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        float: left;
-        padding: 0;
-        margin-top: 10px;
-        width: 30px;
-        height: 29px;
-        box-shadow: none;
-        line-height: 27px;
-        text-align: center;
-    }
+  }
+  .search-text .searchInput {
+    width: 75%;
+    height: 29px;
+    margin: 10px -2px 10px 20px;
+    border: 1px solid $gray-200;
+  }
+  .search-text .searchButton {
+    @extend .btn-primary;
+    float: left;
+    width: 30px;
+    height: 29px;
+    padding: 0;
+    margin-top: 10px;
+    line-height: 27px;
+    text-align: center;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: none;
+  }
 }
