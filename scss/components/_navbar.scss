@@ -1,33 +1,40 @@
-header.navbar.navbar-dark {
+.navbar.navbar-dark {
     position: sticky;
     top: 0;
     right: 0;
     left: 0;
+    z-index: $zindex-sticky;
     height: 64px;
     padding: 0 10px;
-    z-index: $zindex-sticky;
     box-shadow: $box-shadow-sm;
+
     .container {
         padding: 0 20px;
     }
+
     .btn {
         font-size: 1.6rem;
+
         i {
-            line-height: 1.6;
             font-size: 2.4rem;
+            line-height: 1.6;
         }
+
         &:first-child {
             margin-right: auto;
         }
+
         .logo {
             display: inline-block;
             height: 54px;
         }
     }
+
     .navigation {
         a {
-            color: $white;
+            color: $#fff;
         }
+
         .btn {
             .new-mails {
                 position: relative;
@@ -37,7 +44,6 @@ header.navbar.navbar-dark {
                 width: 20px;
                 height: 20px;
                 margin-right: -20px;
-                font-family: "Roboto";
                 font-size: 12px;
                 font-weight: bold;
                 line-height: 20px;
@@ -45,32 +51,38 @@ header.navbar.navbar-dark {
                 background: $orange;
                 border-radius: 50%;
             }
-            .avatar #my-photo {
+
+            #my-photo {
                 width: 25px;
-                background-color: white; // A retirer quand on aura refait l'avatar
-                border-radius: 50%;
                 margin: 7px 0;
+                background-color: #fff; // A retirer quand on aura refait l'avatar
+                border-radius: 50%;
             }
         }
     }
 }
+
 @include media-breakpoint-down(md) {
-    header.navbar.navbar-dark {
+    .navbar.navbar-dark {
         height: 55px;
+
         .container {
             padding: 0;
         }
-        a.application-title {
+
+        .application-title {
             display: block;
             width: calc(100% - 300px); //A REVOIR
-            color: $white;
+            color: $#fff;
         }
+
         .btn {
             padding: 0 5px;
         }
         .logo { height: 30px; }
+
         .dropdown {
-            i[class*="ic-"] {
+            [class*="ic-"] {
                 margin-right: 10px;
                 font-size: 2rem;
                 vertical-align: middle;
