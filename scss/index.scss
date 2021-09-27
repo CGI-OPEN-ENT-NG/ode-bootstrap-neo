@@ -1,17 +1,20 @@
-// --- IMPORT BOOTSTRAP NATIVE ---
-// Contient nos fichiers bootstrap
-@import "variables"; // A supprimer une fois que celui de tokens sera prit en compte
 
+// --- INIT VARIABLES ---
+@import "variables/colors";
+@import "variables/var-bootstrap";
+@import "variables/var-ode-bootstrap";
+
+// --- IMPORT ODE BOOTSTRAP Framework ---
 @import "node_modules/ode-bootstrap/scss/index";
 
-@import "custom"; // A supprimer / déplacer ?
+// --- ???? A supprimer / déplacer ???? ---
+@import "custom";
 
 // --- IMPORT TOKENS ---
 // Contient tous nos éléments de style les plus petits et les plus insécables
 @import "tokens/fonts";
 @import "tokens/icons";
 @import "tokens/mixins";
-@import "tokens/transitions";
 
 // --- IMPORT COMPONENTS ---
 // Contient tous nos composants visuels, simple ou complexe
