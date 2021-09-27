@@ -30,21 +30,24 @@ $sidebar-width: 250px;
 /* aside */
 .sidebar {
     color: $gray-600;
-    background-color: rgba($white, .7);
+    background-color: rgba($white, 0.7);
+
     &-title {
         color: $secondary;
     }
+
     &-tree {
         li {
             a {
                 &:hover {
                     color: $secondary;
-                    background-color: rgba($secondary, .075);
+                    background-color: rgba($secondary, 0.075);
                 }
+
                 &.active,
                 &:active {
                     color: $secondary;
-                    background-color: rgba($secondary, .2);
+                    background-color: rgba($secondary, 0.2);
                 }
             }
         }

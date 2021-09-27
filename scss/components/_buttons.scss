@@ -10,16 +10,18 @@
 
 .btn-primary {
     color: $white;
+
     &:hover,
     &:active,
     &.active {
         color: $white !important; // ? faire fonctionner, là en l'état ça marche pas
     }
+
     &.disabled,
     &:disabled {
-        color: rgba($white, .8);
+        color: rgba($white, 0.8);
         background-color: $gray-600;
         border-color: $gray-600;
-        opacity: .8;
+        opacity: 0.8;
     }
 }

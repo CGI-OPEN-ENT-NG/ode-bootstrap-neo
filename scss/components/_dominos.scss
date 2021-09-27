@@ -27,49 +27,55 @@ $overlay-width: $domino-width / 1.5;
 
 /* COMPONENT */
 .domino {
-  &.folder .domino-image,
-  &.item .domino-image {
-    background-color: rgba($gray-600, 0.1);
-    color: $gray-600;
-  }
-  &:hover {
-    border-color: $secondary;
-  }
-  &:active,
-  &.active {
-    background-color: rgba($secondary, 0.1);
-    border-color: $secondary;
-  }
+    &.folder .domino-image,
+    &.item .domino-image {
+        color: $gray-600;
+        background-color: rgba($gray-600, 0.1);
+    }
+
+    &:hover {
+        border-color: $secondary;
+    }
+
+    &:active,
+    &.active {
+        background-color: rgba($secondary, 0.1);
+        border-color: $secondary;
+    }
 }
 
 .domino.blog {
     .domino-image {
         color: $indigo;
-        background-color: rgba($indigo, .1);
+        background-color: rgba($indigo, 0.1);
     }
 }
+
 .domino.exercizer {
     .domino-image {
         color: $purple;
-        background-color: rgba($purple, .1);
+        background-color: rgba($purple, 0.1);
     }
 }
+
 .domino.timelinegenerator {
     .domino-image {
         color: $yellow;
-        background-color: rgba($yellow, .1);
+        background-color: rgba($yellow, 0.1);
     }
 }
+
 .domino.rack {
     .domino-image {
         color: $red;
-        background-color: rgba($red, .1);
+        background-color: rgba($red, 0.1);
     }
 }
+
 .domino.homeworks {
     .domino-image {
         color: $teal;
-        background-color: rgba($teal, .1);
+        background-color: rgba($teal, 0.1);
     }
 }
 
@@ -82,26 +88,31 @@ $overlay-width: $domino-width / 1.5;
         width: calc(19% - 10px); // 5 per line, sidebar on
     }
 }
+
 @media (min-width: 1120px) and (max-width: 1380px) {
     .dominos .domino {
         width: calc(23% - 10px); // 4 per line, sidebar on
     }
 }
+
 @media (min-width: 992px) and (max-width: 1120px) {
     .dominos .domino {
         width: calc(31% - 10px); // 3 per line, sidebar on
     }
 }
+
 @media (min-width: 760px) and (max-width: 992px) {
     .dominos .domino {
         width: calc(25% - 10px); // 4 per line
     }
 }
+
 @media (min-width: 520px) and (max-width: 760px) {
     .dominos .domino {
         width: calc(33% - 10px); // 3 per line
     }
 }
+
 @media (max-width: 520px) {
     .dominos .domino {
         width: calc(50% - 10px); // 2 per line

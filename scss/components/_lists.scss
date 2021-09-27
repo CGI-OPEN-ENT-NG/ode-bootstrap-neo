@@ -3,9 +3,10 @@
         &:hover {
             border-color: $secondary;
         }
+
         &:active,
         &.active {
-            background-color: rgba($secondary, .1);
+            background-color: rgba($secondary, 0.1);
             border-color: $secondary;
         }
     }
@@ -18,28 +19,35 @@
         border-bottom-color: transparent;
         border-left-color: transparent;
     }
+
     .list {
         &-header {
             display: none;
         }
+
         &-item {
             flex-wrap: wrap;
             padding: 10px;
             margin: 10px 0;
             border-color: $gray-300;
+
             .list-title {
                 width: calc(100% - 40px); // 100% - .list__item--preview
             }
+
             .list-status {
                 display: none;
             }
+
             .list-owner {
                 width: 55%;
             }
+
             .list-modification {
                 width: 45%;
                 text-align: right;
             }
+
             .list-modifiedBy {
                 display: none;
             }
