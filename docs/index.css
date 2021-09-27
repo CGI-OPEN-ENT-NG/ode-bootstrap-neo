@@ -25,14 +25,20 @@ Ajouter l'option !default pour permettre la surcharge depuis les thèmes
   --bs-light: #e9ebef;
   --bs-dark: #5b6472;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feat: Add footer zone to widget
   --bs-ghost: #f5f5fb;
   --bs-primary-rgb: 255, 133, 0;
   --bs-secondary-rgb: 75, 175, 213;
   --bs-third-rgb: 9, 132, 179;
+<<<<<<< HEAD
 =======
   --bs-primary-rgb: 255, 133, 0;
   --bs-secondary-rgb: 75, 175, 213;
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: Add footer zone to widget
   --bs-success-rgb: 125, 191, 133;
   --bs-info-rgb: 75, 175, 213;
   --bs-warning-rgb: 236, 190, 48;
@@ -40,9 +46,13 @@ Ajouter l'option !default pour permettre la surcharge depuis les thèmes
   --bs-light-rgb: 233, 235, 239;
   --bs-dark-rgb: 91, 100, 114;
 <<<<<<< HEAD
+<<<<<<< HEAD
   --bs-ghost-rgb: 245, 245, 251;
 =======
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+  --bs-ghost-rgb: 245, 245, 251;
+>>>>>>> feat: Add footer zone to widget
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-rgb: 91, 100, 114;
@@ -51,10 +61,14 @@ Ajouter l'option !default pour permettre la surcharge depuis les thèmes
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
 <<<<<<< HEAD
+<<<<<<< HEAD
   --bs-body-font-size: 1.4rem;
 =======
   --bs-body-font-size: 1.6rem;
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+  --bs-body-font-size: 1.4rem;
+>>>>>>> feat: Add footer zone to widget
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.6;
   --bs-body-color: #5b6472;
@@ -1790,6 +1804,7 @@ progress {
   min-height: calc(1.6em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-size: 1.225rem;
   border-radius: 6px; }
 =======
@@ -1799,6 +1814,10 @@ progress {
     .form-control-sm {
       font-size: 1.4rem; } }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+  font-size: 1.225rem;
+  border-radius: 6px; }
+>>>>>>> feat: Add footer zone to widget
   .form-control-sm::file-selector-button {
     padding: 0.25rem 0.5rem;
     margin: -0.25rem -0.5rem;
@@ -2143,6 +2162,7 @@ textarea.form-control-lg {
 .input-group-sm > .btn {
   padding: 0.25rem 0.5rem;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-size: 1.225rem;
   border-radius: 6px; }
 =======
@@ -2155,6 +2175,10 @@ textarea.form-control-lg {
     .input-group-sm > .btn {
       font-size: 1.4rem; } }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+  font-size: 1.225rem;
+  border-radius: 6px; }
+>>>>>>> feat: Add footer zone to widget
 
 .input-group-lg > .form-select,
 .input-group-sm > .form-select {
@@ -2195,11 +2219,14 @@ textarea.form-control-lg {
   background-color: rgba(125, 191, 133, 0.9);
   border-radius: 6px; }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   @media (min-width: 1200px) {
     .valid-tooltip {
       font-size: 1.4rem; } }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: Add footer zone to widget
 
 .was-validated :valid ~ .valid-feedback,
 .was-validated :valid ~ .valid-tooltip,
@@ -2274,11 +2301,14 @@ textarea.form-control-lg {
   background-color: rgba(225, 58, 58, 0.9);
   border-radius: 6px; }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   @media (min-width: 1200px) {
     .invalid-tooltip {
       font-size: 1.4rem; } }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: Add footer zone to widget
 
 .was-validated :invalid ~ .invalid-feedback,
 .was-validated :invalid ~ .invalid-tooltip,
@@ -2347,10 +2377,14 @@ textarea.form-control-lg {
   border: 1px solid transparent;
   padding: 0.375rem 1rem;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-size: calc(1.265rem + 0.18vw);
 =======
   font-size: calc(1.285rem + 0.42vw);
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+  font-size: calc(1.265rem + 0.18vw);
+>>>>>>> feat: Add footer zone to widget
   border-radius: 6px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (min-width: 1200px) {
@@ -2883,6 +2917,7 @@ textarea.form-control-lg {
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-size: 1.225rem;
   border-radius: 6px; }
 =======
@@ -2892,6 +2927,10 @@ textarea.form-control-lg {
     .btn-sm, .btn-group-sm > .btn {
       font-size: 1.4rem; } }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+  font-size: 1.225rem;
+  border-radius: 6px; }
+>>>>>>> feat: Add footer zone to widget
 
 .fade {
   transition: opacity 0.15s linear; }
@@ -6378,6 +6417,10 @@ textarea.form-control-lg {
 =======
 >>>>>>> feat: Add toast for infos / read more button in flash widget
 
+.text-third {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-third-rgb), var(--bs-text-opacity)) !important; }
+
 .text-success {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important; }
@@ -6403,12 +6446,18 @@ textarea.form-control-lg {
   color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feat: Add footer zone to widget
 .text-ghost {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-ghost-rgb), var(--bs-text-opacity)) !important; }
 
+<<<<<<< HEAD
 =======
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: Add footer zone to widget
 .text-black {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important; }
@@ -6464,6 +6513,10 @@ textarea.form-control-lg {
 =======
 >>>>>>> feat: Add toast for infos / read more button in flash widget
 
+.bg-third {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-third-rgb), var(--bs-bg-opacity)) !important; }
+
 .bg-success {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important; }
@@ -6489,12 +6542,18 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feat: Add footer zone to widget
 .bg-ghost {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-ghost-rgb), var(--bs-bg-opacity)) !important; }
 
+<<<<<<< HEAD
 =======
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: Add footer zone to widget
 .bg-black {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important; }
@@ -13947,12 +14006,17 @@ i[class*="ic-"] {
       transform: translateX(-33.33333%); } }
   .container-advanced-nav {
 <<<<<<< HEAD
+<<<<<<< HEAD
     color: #fff;
     background-color: #0984b3; }
 =======
     background-color: #0984b3;
     color: white; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+    color: white;
+    background-color: #0984b3; }
+>>>>>>> feat: Add footer zone to widget
     @media (min-width: 992px) {
       .container-advanced-nav {
         display: none; } }
@@ -13962,16 +14026,20 @@ i[class*="ic-"] {
       overflow: hidden; }
       .container-advanced-nav .list-trigger .trigger {
         position: relative;
+        z-index: 2;
         flex: 1;
         align-self: center;
-        text-align: center;
         padding: 15px;
         font-size: 1.1rem;
+<<<<<<< HEAD
 <<<<<<< HEAD
         text-align: center; }
 =======
         z-index: 2; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+        text-align: center; }
+>>>>>>> feat: Add footer zone to widget
         .container-advanced-nav .list-trigger .trigger::before {
           position: absolute;
           top: 0;
@@ -13983,14 +14051,14 @@ i[class*="ic-"] {
           transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
           transition-duration: 0.4s;
           transition-property: opacity, transform;
-          background: #4bafd5;
-          z-index: -1;
-          border-radius: 50%;
-          padding-top: 100%;
-          height: auto;
           top: 50%;
-          transform: translateY(-50%) scale(1.1);
-          opacity: 0; }
+          z-index: -1;
+          height: auto;
+          padding-top: 100%;
+          background: #4bafd5;
+          border-radius: 50%;
+          opacity: 0;
+          transform: translateY(-50%) scale(1.1); }
         .container-advanced-nav .list-trigger .trigger.on::before {
           opacity: 1; }
 
@@ -14062,10 +14130,9 @@ i[class*="ic-"] {
       box-shadow: -2px -2px 5px 0 rgba(0, 0, 0, 0.1); }
 
 .btn.btn-alt, .btn.btn-alt-outline {
-  border-radius: 30px;
-  font-size: 14px;
   position: relative;
   z-index: 2;
+<<<<<<< HEAD
 <<<<<<< HEAD
   padding: 0 15px;
   font-size: 14px;
@@ -14075,9 +14142,15 @@ i[class*="ic-"] {
 >>>>>>> feat: Add toast for infos / read more button in flash widget
   letter-spacing: 1.08px;
   border: 1px solid currentColor;
+=======
+>>>>>>> feat: Add footer zone to widget
   padding: 0 15px;
+  font-size: 14px;
   line-height: 2.4em;
-  color: white; }
+  color: white;
+  letter-spacing: 1.08px;
+  border: 1px solid currentColor;
+  border-radius: 30px; }
 
 .btn.btn-alt {
   background-color: #0984b3;
@@ -15800,12 +15873,16 @@ END DOCUMENTATION */
   background-color: #fff;
   border-radius: 6px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   box-shadow: 2px 2px 40px 0 rgba(0, 0, 0, 0.05); }
 =======
   box-shadow: 2px 2px 40px 0 rgba(0, 0, 0, 0.05);
   font-size: 14px;
   margin-bottom: 2em; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+  box-shadow: 2px 2px 40px 0 rgba(0, 0, 0, 0.05); }
+>>>>>>> feat: Add footer zone to widget
   .widget a {
     text-decoration: none; }
   .widget ul {
@@ -15813,7 +15890,11 @@ END DOCUMENTATION */
     margin: 0;
     list-style-type: none; }
   .widget .meta {
+<<<<<<< HEAD
     font-size: 0.8em;
+=======
+    font-size: .8em;
+>>>>>>> feat: Add footer zone to widget
     color: #5b6472; }
   .widget-empty-message {
     display: block;
@@ -15833,8 +15914,13 @@ END DOCUMENTATION */
       .widget-header .subtitle .seemore:hover {
         text-decoration: none; }
     .widget-header .subtitle .seemore-text {
+<<<<<<< HEAD
       padding-left: 0.5em;
       font-size: 0.8em;
+=======
+      padding-left: .5em;
+      font-size: .8em;
+>>>>>>> feat: Add footer zone to widget
       font-weight: 400;
       text-transform: initial; }
     .widget-header .tools {
@@ -15845,7 +15931,11 @@ END DOCUMENTATION */
       top: 52%;
       right: 10px;
       width: auto;
+<<<<<<< HEAD
       background: #fff;
+=======
+      background: white;
+>>>>>>> feat: Add footer zone to widget
       opacity: 0;
       transform: translateY(-50%); }
       .widget-header .tools .tool {
@@ -15864,7 +15954,11 @@ END DOCUMENTATION */
     text-align: center; }
     .widget-footer-action .link, .widget-footer-action .feed-item .zone-text .report a, .feed-item .zone-text .report .widget-footer-action a {
       display: block;
+<<<<<<< HEAD
       padding: 0.4em 0;
+=======
+      padding: .4em 0;
+>>>>>>> feat: Add footer zone to widget
       font-size: 1.2rem;
       color: #8c939e;
       transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -15908,13 +16002,14 @@ END DOCUMENTATION */
 
 .widget-bookmarks .bookmark-item {
   transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #0984b3;
   padding: 0 25px;
+  color: #0984b3;
   border-bottom: 1px solid #f0f2f4; }
   .widget-bookmarks .bookmark-item:hover {
     background-color: rgba(9, 132, 179, 0.1); }
   .widget-bookmarks .bookmark-item .link, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a {
     position: relative;
+<<<<<<< HEAD
 <<<<<<< HEAD
     display: block;
 <<<<<<< HEAD
@@ -15926,6 +16021,10 @@ END DOCUMENTATION */
     padding: 0.4em 0 0.4em 25px;
     display: block; }
 >>>>>>> feat: new image background in school widget
+=======
+    display: block;
+    padding: .4em 0 .4em 25px; }
+>>>>>>> feat: Add footer zone to widget
     .widget-bookmarks .bookmark-item .link:hover, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a:hover, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a:hover {
       text-decoration: none; }
     .widget-bookmarks .bookmark-item .link::before, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a::before, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a::before {
@@ -16188,11 +16287,16 @@ END DOCUMENTATION */
 .widget-rss .rss-feed .feed-title {
   padding: 8px 25px;
   font-weight: 700;
+<<<<<<< HEAD
   color: #fff;
   background: #0984b3;
   padding-right: 1.5em;
   position: relative;
   cursor: pointer; }
+=======
+  color: white;
+  background: #0984b3; }
+>>>>>>> feat: Add footer zone to widget
   .widget-rss .rss-feed .feed-title::before {
     display: inline-block;
     font-family: "Font Awesome 5 Free";
@@ -16373,14 +16477,22 @@ END DOCUMENTATION */
 .widget-dashboard .dashboard-choice {
   display: flex;
   justify-content: start;
+<<<<<<< HEAD
   background: #fff; }
+=======
+  background: white; }
+>>>>>>> feat: Add footer zone to widget
   .widget-dashboard .dashboard-choice .avatar-link {
     flex: 1;
     padding: 10px 25px;
     text-align: center;
+<<<<<<< HEAD
     text-decoration: none;
     transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+=======
+    text-decoration: none; }
+>>>>>>> feat: Add footer zone to widget
     .widget-dashboard .dashboard-choice .avatar-link:hover {
       background-color: #4bafd5; }
     .widget-dashboard .dashboard-choice .avatar-link:hover {
@@ -16393,7 +16505,11 @@ END DOCUMENTATION */
     .widget-dashboard .dashboard-choice .avatar-link span {
       display: block; }
     .widget-dashboard .dashboard-choice .avatar-link.active {
+<<<<<<< HEAD
       color: #fff;
+=======
+      color: white;
+>>>>>>> feat: Add footer zone to widget
       background: #0984b3; }
     .widget-dashboard .dashboard-choice .avatar-link:not(:last-child) {
       border-right: #4bafd5 1px solid; }
@@ -16418,7 +16534,14 @@ END DOCUMENTATION */
   border-radius: 50%;
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   justify-content: center; }
+=======
+  justify-content: center;
+  font-size: 1.4em;
+  color: white;
+  background: #0d5571; }
+>>>>>>> feat: Add footer zone to widget
 
 .widget-dashboard .dashboard-list .item:nth-child(2n) {
   background: rgba(9, 132, 179, 0.07); }
