@@ -2022,7 +2022,7 @@ textarea.form-control-lg {
   .btn-check[disabled] + .btn, .btn-check:disabled + .btn {
     pointer-events: none;
     filter: none;
-    opacity: 0.65; }
+    opacity: 0.3; }
 
 .form-range {
   width: 100%;
@@ -2426,7 +2426,7 @@ textarea.form-control-lg {
   .btn:disabled, .btn.disabled,
   fieldset:disabled .btn {
     pointer-events: none;
-    opacity: 0.65; }
+    opacity: 0.3; }
 
 .btn-primary, popover popover-content .search-text .searchButton {
   color: #fff;
@@ -2929,7 +2929,7 @@ textarea.form-control-lg {
   .btn-link:hover {
     color: #ff8500; }
   .btn-link:disabled, .btn-link.disabled {
-    color: #6c757d; }
+    color: #adb5bd; }
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
@@ -57791,6 +57791,7 @@ i[class*="ic-"] {
 .blue-background-class {
   background-color: rgba(75, 175, 213, 0.15); }
 
+<<<<<<< HEAD
 .btn-link,
 .btn[class*="btn-outline-"] {
   box-shadow: none; }
@@ -57825,6 +57826,8 @@ i[class*="ic-"] {
 =======
 >>>>>>> feat: clean variables
 
+=======
+>>>>>>> feat: Clean Neo theme files
 /* DOCUMENTATION
 >>>>>>> feat: Add toast for infos / read more button in flash widget
 <section class="dominos dominos--square">

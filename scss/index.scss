@@ -13,17 +13,32 @@
 // --- IMPORT TOKENS ---
 // Contient tous nos éléments de style les plus petits et les plus insécables
 @import "tokens/fonts";
-@import "tokens/icons";
-@import "tokens/mixins";
 
 // --- IMPORT COMPONENTS ---
 // Contient tous nos composants visuels, simple ou complexe
+
+//!!!Conflit avec le widget du meme nom
+//Voir comment normaliser
 @import "components/applications";
-@import "components/buttons";
+
+//A mettre plutot dans le framework
 @import "components/dominos";
-@import "components/explorer";
+
+//A enlever après création du bouton custom
 @import "components/filters";
+
+//Nom de composant trop générique
+//Peut-être explorer-list ou table-list
 @import "components/lists";
+
+//Le code html + css peut être optimisé
 @import "components/navbar";
+
+//Nom de composant trop générique
+//Peut-être folder-tree ou file-tree
 @import "components/sidebar";
+
+//Bootstrap propose un composant toast, plus proche du standard du nom
+//Ici on est plutot sur une navbar fixée en bottom
+//Le container serait un composant off-canvas https://getbootstrap.com/docs/5.0/components/offcanvas/#placement
 @import "components/toaster";
