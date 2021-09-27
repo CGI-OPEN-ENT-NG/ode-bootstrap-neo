@@ -6,7 +6,7 @@ then
 fi
 
 case `uname -s` in
-  MINGW*)
+  MINGW* | Darwin*)
     USER_UID=1000
     GROUP_UID=1000
     ;;
@@ -29,6 +29,9 @@ fi
 clean () {
   rm -rf node_modules
   rm -rf dist
+  rm -rf build
+  rm -rf build-css
+  rm -rf deployment/*
 }
 
 init () {
@@ -42,6 +45,17 @@ init () {
   docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm rebuild node-sass --no-bin-links && npm install"
 }
 
+initDev () {
+  echo "[init] Get branch name from jenkins env..."
+  BRANCH_NAME=`echo $GIT_BRANCH | sed -e "s|origin/||g"`
+  if [ "$BRANCH_NAME" = "" ]; then
+    echo "[init] Get branch name from git..."
+    BRANCH_NAME=`git branch | sed -n -e "s/^\* \(.*\)/\1/p"`
+  fi
+  docker-compose run -e BRANCH_NAME=$BRANCH_NAME -e FRONT_TAG=$FRONT_TAG -e NEXUS_ODE_USERNAME=$NEXUS_ODE_USERNAME -e NEXUS_ODE_PASSWORD=$NEXUS_ODE_PASSWORD --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle generateTemplateDev"
+  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm rebuild node-sass --no-bin-links && npm install"
+}
+
 build () {
   local extras=$1
   dirs=($(ls -d ./skins/*))
@@ -50,7 +64,7 @@ build () {
     tmp=`echo $dir | sed 's/.\/skins\///'`
     docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "SKIN=$tmp npm run sass:build:release"
   done
-  cp node_modules/ode-bootstrap/version.txt dist/version.txt
+  cp node_modules/ode-bootstrap/dist/version.txt dist/version.txt
   VERSION=`grep "version="  gradle.properties| sed 's/version=//g'`
   echo "ode-bootstrap-neo=$VERSION `date +'%d/%m/%Y %H:%M:%S'`" >> dist/version.txt
 }
@@ -95,6 +109,9 @@ do
       ;;
     init)
       init
+      ;;
+    initDev)
+      initDev
       ;;
     build)
       build

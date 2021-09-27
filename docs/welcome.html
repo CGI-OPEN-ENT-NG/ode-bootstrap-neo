@@ -104,6 +104,19 @@
                 myModal.toggle();
             });
 
+            var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+            var toastList = toastElList.map(function (toastEl) {
+                return new bootstrap.Toast(toastEl, {
+                    document: true,
+                    autohide: true,
+                    delay: 10000,
+                });
+            })
+
+            toastList.forEach(toast => {
+                toast.show();
+            });
+
         });
 
 
@@ -185,12 +198,13 @@
                             <p>
                                 <strong>Holy guacamole!</strong> Accusantium sit vulputate ultrices! Mi anim amet. Wisi! Iaculis aliquam est laborum nec mi, alias, aut, enim aliqua dignissim vehicula, dolorem pharetra officiis scelerisque, suspendisse nonummy dictumst numquam sit incididunt
                                 excepteur
-                                maiores similique aptent. Cursus, ullamco eleifend soluta curabitur felis.
+                                maiores similique aptent. Cursus, ullamco eleifend soluta curabitur felis...
                             </p>
-                        </div>
 
+                        </div>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
+                    <a href="" class="btn-read-more"><span class="btn-read-more-inner">Afficher le message complet</span></a>
                 </div>
 
                 <!--Widget Actualités à la une-->
@@ -441,7 +455,7 @@
 
                 <div class="widget widget-school">
                     <div class="widget-body">
-                        <div class="widget-school-header" style="background-image:url(../../assets/images/wallpaper3.png)">
+                        <div class="widget-school-header" style="background-image:url(../../assets/images/widget-3.png)">
 
                             <div class="d-flex align-items-center">
                                 <div class="me-4">
@@ -483,7 +497,78 @@
                             </div>
                         </div>
                         <div class="button-list">
-                            <a href="#" class="btn btn-alt">Ma classe</a>
+                            <a href="#" class="btn btn-alt">Mes classes</a>
+                            <a href="#" class="btn btn-alt-outline">Equipe pédagogique</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="widget widget-school">
+                    <div class="widget-body">
+                        <div class="widget-school-header" style="background-image:url(../../assets/images/widget-2.png)">
+
+                            <div class="d-flex align-items-center">
+                                <div class="me-4">
+                                    <a href="" class="avatar-link">
+                                        <img src="https://picsum.photos/100/100" alt="">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="name">
+                                        Charlotte Rose
+                                    </div>
+                                    <div>
+                                        <div class="school-multiple" id="dropdownSchool" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Lycée Henry IV
+                                        </div>
+                                        <div class="school-choice dropdown-menu">
+                                            <div>Lycée Henry IV</div>
+                                            <div>Lycée Charlemagne</div>
+                                            <div>Collège des jasmins</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-list">
+                            <a href="#" class="btn btn-alt">Mes classes</a>
+                            <a href="#" class="btn btn-alt-outline">Equipe pédagogique</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="widget widget-school">
+                    <div class="widget-body">
+                        <div class="widget-school-header" style="background-image:url(../../assets/images/widget-1.png)">
+
+                            <div class="d-flex align-items-center">
+                                <div class="me-4">
+                                    <a href="" class="avatar-link">
+                                        <img src="https://picsum.photos/100/100" alt="">
+                                    </a>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="name">
+                                        Charlotte Rose
+                                    </div>
+                                    <div>
+                                        <div class="school-multiple" id="dropdownSchool" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Lycée Henry IV
+                                        </div>
+                                        <div class="school-choice dropdown-menu">
+                                            <div>Lycée Henry IV</div>
+                                            <div>Lycée Charlemagne</div>
+                                            <div>Collège des jasmins</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-list">
+                            <a href="#" class="btn btn-alt">Mes classes</a>
                             <a href="#" class="btn btn-alt-outline">Equipe pédagogique</a>
                         </div>
                     </div>
@@ -842,6 +927,11 @@
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                    <div class="widget-footer border-top border-ghost">
+                        <div class="widget-footer-action">
+                            <a class="link" href="">voir plus</a>
+                        </div>
                     </div>
                 </div>
                 <!--End Widget Applications-->
@@ -1218,23 +1308,57 @@
                 <div class="modal-body">
                     <p>Modal body text goes here.</p>
                     <form id="formCreated" class="">
-                        <h4 class="mb-4 text-secondary"><i18n>Nouveau signet</i18n></h4>
+                        <h4 class="mb-4 text-secondary">
+                            <i18n>Nouveau signet</i18n>
+                        </h4>
                         <div class="input-group  mb-3">
-                          <label for="inputCreatedName" class="col-sm-2 col-form-label"><i18n>Nom</i18n></label>
-                          <div class="col-sm-10"> <input type="text" id="inputCreatedName" class="form-control"></div>
+                            <label for="inputCreatedName" class="col-sm-2 col-form-label">
+                                <i18n>Nom</i18n>
+                            </label>
+                            <div class="col-sm-10"> <input type="text" id="inputCreatedName" class="form-control"></div>
                         </div>
-                      
+
                         <div class="input-group ">
-                          <label for="inputCreatedUrl" class="col-sm-2 col-form-label"><i18n>Adresse</i18n></label>
-                          <div class="col-sm-10">
-                            <input type="text" id="inputCreatedUrl" class="form-control" > </div>
+                            <label for="inputCreatedUrl" class="col-sm-2 col-form-label">
+                                <i18n>Adresse</i18n>
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="text" id="inputCreatedUrl" class="form-control">
+                            </div>
                         </div>
-                      </form>
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-light text-primary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container">
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto text-primary">Information</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Parce que nous sommes soucieux de la protection de vos données personnelles, les cookies que nous utilisons collectent des informations anonymiseés. Notre seule utilisation de ces cookies vise à améliorer votre expérience utilisateur. vous pouvez consulter à tout moment ces cookies depuis la page "Mon compte " dans la section "cookies".
+                <div class="mt-4 pt-4 border-top d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary btn-sm me-4">Consulter</button>
+                    <button type="button" class="btn btn-light btn-sm " data-bs-dismiss="toast">Fermer</button>
+                  </div>
+            </div>
+        </div>
+
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Bootstrap</strong>
+                <small class="text-muted">2 seconds ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Heads up, toasts will stack automatically
             </div>
         </div>
     </div>

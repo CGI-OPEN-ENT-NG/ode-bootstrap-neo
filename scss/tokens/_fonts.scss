@@ -3,14 +3,14 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: 400;
-    src: url("../../assets/fonts/roboto/Roboto-Regular.ttf");
+    src: url("#{$fonts-path}/roboto/Roboto-Regular.ttf");
 }
 
 @font-face {
     font-family: Roboto;
     font-style: italic;
     font-weight: 400;
-    src: url("../../assets/fonts/roboto/Roboto-Italic.ttf");
+    src: url("#{$fonts-path}/roboto/Roboto-Italic.ttf");
 }
 
 // Roboto bold
@@ -19,12 +19,12 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: 700;
-    src: url("../../assets/fonts/roboto/Roboto-Bold.ttf");
+    src: url("#{$fonts-path}/roboto/Roboto-Bold.ttf");
 }
 
 @font-face {
     font-family: Roboto;
     font-style: italic;
     font-weight: 700;
-    src: url("../../assets/fonts/roboto/Roboto-BoldItalic.ttf");
+    src: url("#{$fonts-path}/roboto/Roboto-BoldItalic.ttf");
 }

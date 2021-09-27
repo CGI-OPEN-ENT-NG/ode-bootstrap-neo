@@ -1,8 +1,9 @@
 // --- IMPORT BOOTSTRAP NATIVE ---
 // Contient nos fichiers bootstrap
 @import "variables"; // A supprimer une fois que celui de tokens sera prit en compte
-//@import "node_modules/ode-bootstrap/scss/index";
-@import "../../ode-bootstrap/scss/index";
+
+@import "node_modules/ode-bootstrap/scss/index";
+
 @import "custom"; // A supprimer / déplacer ?
 
 // --- IMPORT TOKENS ---
