@@ -23,7 +23,8 @@ $input-bg: $white;
 
 // Buttons
 $btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($gray-900, 0.3);
-// $btn-border-radius: 0;
+$btn-disabled-opacity: 0.3;
+$btn-link-disabled-color: $gray-500;
 
 // Forms
 $input-font-family: "Roboto";

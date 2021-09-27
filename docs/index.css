@@ -1946,7 +1946,7 @@ textarea.form-control-lg {
   .btn-check[disabled] + .btn, .btn-check:disabled + .btn {
     pointer-events: none;
     filter: none;
-    opacity: 0.65; }
+    opacity: 0.3; }
 
 .form-range {
   width: 100%;
@@ -2308,7 +2308,7 @@ textarea.form-control-lg {
   .btn:disabled, .btn.disabled,
   fieldset:disabled .btn {
     pointer-events: none;
-    opacity: 0.65; }
+    opacity: 0.3; }
 
 .btn-primary, popover popover-content .search-text .searchButton {
   color: #fff;
@@ -2811,7 +2811,7 @@ textarea.form-control-lg {
   .btn-link:hover {
     color: #ff8500; }
   .btn-link:disabled, .btn-link.disabled {
-    color: #6c757d; }
+    color: #adb5bd; }
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
@@ -16421,24 +16421,6 @@ i[class*="ic-"] {
 
 .blue-background-class {
   background-color: rgba(75, 175, 213, 0.15); }
-
-.btn-link,
-.btn[class*="btn-outline-"] {
-  box-shadow: none; }
-
-.btn-outline-primary:hover,
-.btn-outline-primary.active {
-  color: #fff !important; }
-
-.btn-primary, popover popover-content .search-text .searchButton {
-  color: #fff; }
-  .btn-primary:hover, popover popover-content .search-text .searchButton:hover, .btn-primary:active, popover popover-content .search-text .searchButton:active, .btn-primary.active, popover popover-content .search-text .active.searchButton {
-    color: #fff !important; }
-  .btn-primary.disabled, popover popover-content .search-text .disabled.searchButton, .btn-primary:disabled, popover popover-content .search-text .searchButton:disabled {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #6c757d;
-    border-color: #6c757d;
-    opacity: 0.8; }
 
 /* DOCUMENTATION
 <section class="dominos dominos--square">
