@@ -2,18 +2,33 @@
 /*
 Personnalisation de certains paramètres de boostrap
 Ajouter l'option !default pour permettre la surcharge depuis les thèmes
+<<<<<<< HEAD
+=======
+Ref : https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+>>>>>>> feat: clean variables
 */
 :root {
-  --bs-gray: #8c939e;
-  --bs-deepBlue: #0984b3;
-  --bs-gray-100: #f0f2f4;
-  --bs-gray-200: #e9ebef;
-  --bs-gray-300: #d6d9e0;
-  --bs-gray-400: #c9ced5;
-  --bs-gray-500: #b1b6bf;
-  --bs-gray-600: #8c939e;
-  --bs-gray-700: #5b6472;
-  --bs-gray-800: #3f454f;
+  --bs-blue: #4b90d5;
+  --bs-indigo: #1a22a2;
+  --bs-purple: #763294;
+  --bs-pink: #b930a2;
+  --bs-red: #e13a3a;
+  --bs-orange: #ff8500;
+  --bs-yellow: #ecbe30;
+  --bs-green: #7dbf85;
+  --bs-teal: #46bfaf;
+  --bs-cyan: #4bafd5;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #ff8500;
   --bs-secondary: #4bafd5;
@@ -22,12 +37,17 @@ Ajouter l'option !default pour permettre la surcharge depuis les thèmes
   --bs-info: #4bafd5;
   --bs-warning: #ecbe30;
   --bs-danger: #e13a3a;
+<<<<<<< HEAD
   --bs-light: #e9ebef;
   --bs-dark: #5b6472;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> feat: Add footer zone to widget
+=======
+  --bs-light: #e9ecef;
+  --bs-dark: #495057;
+>>>>>>> feat: clean variables
   --bs-ghost: #f5f5fb;
   --bs-primary-rgb: 255, 133, 0;
   --bs-secondary-rgb: 75, 175, 213;
@@ -43,6 +63,7 @@ Ajouter l'option !default pour permettre la surcharge depuis les thèmes
   --bs-info-rgb: 75, 175, 213;
   --bs-warning-rgb: 236, 190, 48;
   --bs-danger-rgb: 225, 58, 58;
+<<<<<<< HEAD
   --bs-light-rgb: 233, 235, 239;
   --bs-dark-rgb: 91, 100, 114;
 <<<<<<< HEAD
@@ -51,11 +72,15 @@ Ajouter l'option !default pour permettre la surcharge depuis les thèmes
 =======
 >>>>>>> feat: Add toast for infos / read more button in flash widget
 =======
+=======
+  --bs-light-rgb: 233, 236, 239;
+  --bs-dark-rgb: 73, 80, 87;
+>>>>>>> feat: clean variables
   --bs-ghost-rgb: 245, 245, 251;
 >>>>>>> feat: Add footer zone to widget
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-rgb: 91, 100, 114;
+  --bs-body-rgb: 73, 80, 87;
   --bs-font-sans-serif: "Roboto", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -71,8 +96,8 @@ Ajouter l'option !default pour permettre la surcharge depuis les thèmes
 >>>>>>> feat: Add footer zone to widget
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.6;
-  --bs-body-color: #5b6472;
-  --bs-body-bg: #f0f2f4; }
+  --bs-body-color: #495057;
+  --bs-body-bg: #f8f9fa; }
 
 *,
 *::before,
@@ -274,7 +299,7 @@ table {
 caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  color: #8c939e;
+  color: #6c757d;
   text-align: left; }
 
 th {
@@ -500,7 +525,7 @@ progress {
   margin-top: -1rem;
   margin-bottom: 1rem;
   font-size: 1.2rem;
-  color: #8c939e; }
+  color: #6c757d; }
   .blockquote-footer::before {
     content: "\2014\00A0"; }
 
@@ -511,7 +536,7 @@ progress {
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
-  border: 1px solid #d6d9e0;
+  border: 1px solid #dee2e6;
   border-radius: 6px;
   max-width: 100%;
   height: auto; }
@@ -525,7 +550,7 @@ progress {
 
 .figure-caption {
   font-size: 1.2rem;
-  color: #8c939e; }
+  color: #6c757d; }
 
 .container,
 .container-fluid,
@@ -1511,17 +1536,17 @@ progress {
 .table {
   --bs-table-bg: transparent;
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: #5b6472;
+  --bs-table-striped-color: #495057;
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-  --bs-table-active-color: #5b6472;
+  --bs-table-active-color: #495057;
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
-  --bs-table-hover-color: #5b6472;
+  --bs-table-hover-color: #495057;
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
   width: 100%;
   margin-bottom: 1rem;
-  color: #5b6472;
+  color: #495057;
   vertical-align: top;
-  border-color: #d6d9e0; }
+  border-color: #dee2e6; }
   .table > :not(caption) > * > * {
     padding: 0.5rem 0.5rem;
     background-color: var(--bs-table-bg);
@@ -1627,26 +1652,26 @@ progress {
   border-color: #e0c2c2; }
 
 .table-light {
-  --bs-table-bg: #e9ebef;
-  --bs-table-striped-bg: #dddfe3;
+  --bs-table-bg: #e9ecef;
+  --bs-table-striped-bg: #dde0e3;
   --bs-table-striped-color: #000;
   --bs-table-active-bg: #d2d4d7;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #d8d9dd;
+  --bs-table-hover-bg: #d8dadd;
   --bs-table-hover-color: #000;
   color: #000;
   border-color: #d2d4d7; }
 
 .table-dark {
-  --bs-table-bg: #5b6472;
-  --bs-table-striped-bg: #636c79;
+  --bs-table-bg: #495057;
+  --bs-table-striped-bg: #52595f;
   --bs-table-striped-color: #fff;
-  --bs-table-active-bg: #6b7480;
+  --bs-table-active-bg: #5b6268;
   --bs-table-active-color: #fff;
-  --bs-table-hover-bg: #67707d;
+  --bs-table-hover-bg: #575d64;
   --bs-table-hover-color: #fff;
   color: #fff;
-  border-color: #6b7480; }
+  border-color: #5b6268; }
 
 .table-responsive {
   overflow-x: auto;
@@ -1708,7 +1733,7 @@ progress {
 .form-text {
   margin-top: 0.25rem;
   font-size: 1.2rem;
-  color: #8c939e; }
+  color: #6c757d; }
 
 .form-control {
   display: block;
@@ -1718,10 +1743,10 @@ progress {
   font-size: calc(1.265rem + 0.18vw);
   font-weight: 400;
   line-height: 1.6;
-  color: #5b6472;
+  color: #495057;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #d6d9e0;
+  border: 1px solid #dee2e6;
   appearance: none;
   border-radius: 6px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
@@ -1736,7 +1761,7 @@ progress {
     .form-control[type="file"]:not(:disabled):not([readonly]) {
       cursor: pointer; }
   .form-control:focus {
-    color: #5b6472;
+    color: #495057;
     background-color: #fff;
     border-color: #4bafd5;
     outline: 0;
@@ -1744,17 +1769,17 @@ progress {
   .form-control::-webkit-date-and-time-value {
     height: 1.6em; }
   .form-control::placeholder {
-    color: #8c939e;
+    color: #6c757d;
     opacity: 1; }
   .form-control:disabled, .form-control[readonly] {
-    background-color: #e9ebef;
+    background-color: #e9ecef;
     opacity: 1; }
   .form-control::file-selector-button {
     padding: 0.375rem 1rem;
     margin: -0.375rem -1rem;
     margin-inline-end: 1rem;
-    color: #5b6472;
-    background-color: #e9ebef;
+    color: #495057;
+    background-color: #e9ecef;
     pointer-events: none;
     border-color: inherit;
     border-style: solid;
@@ -1766,13 +1791,13 @@ progress {
       .form-control::file-selector-button {
         transition: none; } }
   .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
-    background-color: #dddfe3; }
+    background-color: #dde0e3; }
   .form-control::-webkit-file-upload-button {
     padding: 0.375rem 1rem;
     margin: -0.375rem -1rem;
     margin-inline-end: 1rem;
-    color: #5b6472;
-    background-color: #e9ebef;
+    color: #495057;
+    background-color: #e9ecef;
     pointer-events: none;
     border-color: inherit;
     border-style: solid;
@@ -1784,7 +1809,7 @@ progress {
       .form-control::-webkit-file-upload-button {
         transition: none; } }
   .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-    background-color: #dddfe3; }
+    background-color: #dde0e3; }
 
 .form-control-plaintext {
   display: block;
@@ -1792,7 +1817,7 @@ progress {
   padding: 0.375rem 0;
   margin-bottom: 0;
   line-height: 1.6;
-  color: #5b6472;
+  color: #495057;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0; }
@@ -1875,13 +1900,13 @@ textarea.form-control-lg {
   font-size: calc(1.265rem + 0.18vw);
   font-weight: 400;
   line-height: 1.6;
-  color: #5b6472;
+  color: #495057;
   background-color: #fff;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%233f454f' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   background-size: 16px 12px;
-  border: 1px solid #d6d9e0;
+  border: 1px solid #dee2e6;
   border-radius: 6px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none; }
@@ -1899,10 +1924,10 @@ textarea.form-control-lg {
     padding-right: 1rem;
     background-image: none; }
   .form-select:disabled {
-    background-color: #e9ebef; }
+    background-color: #e9ecef; }
   .form-select:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 #5b6472; }
+    text-shadow: 0 0 0 #495057; }
 
 .form-select-sm {
   padding-top: 0.25rem;
@@ -2008,9 +2033,9 @@ textarea.form-control-lg {
   .form-range:focus {
     outline: 0; }
     .form-range:focus::-webkit-slider-thumb {
-      box-shadow: 0 0 0 1px #f0f2f4, 0 0 0 0.25rem rgba(75, 175, 213, 0.25); }
+      box-shadow: 0 0 0 1px #f8f9fa, 0 0 0 0.25rem rgba(75, 175, 213, 0.25); }
     .form-range:focus::-moz-range-thumb {
-      box-shadow: 0 0 0 1px #f0f2f4, 0 0 0 0.25rem rgba(75, 175, 213, 0.25); }
+      box-shadow: 0 0 0 1px #f8f9fa, 0 0 0 0.25rem rgba(75, 175, 213, 0.25); }
   .form-range::-moz-focus-outer {
     border: 0; }
   .form-range::-webkit-slider-thumb {
@@ -2032,7 +2057,7 @@ textarea.form-control-lg {
     height: 0.5rem;
     color: transparent;
     cursor: pointer;
-    background-color: #d6d9e0;
+    background-color: #dee2e6;
     border-color: transparent;
     border-radius: 1rem; }
   .form-range::-moz-range-thumb {
@@ -2053,15 +2078,15 @@ textarea.form-control-lg {
     height: 0.5rem;
     color: transparent;
     cursor: pointer;
-    background-color: #d6d9e0;
+    background-color: #dee2e6;
     border-color: transparent;
     border-radius: 1rem; }
   .form-range:disabled {
     pointer-events: none; }
     .form-range:disabled::-webkit-slider-thumb {
-      background-color: #b1b6bf; }
+      background-color: #adb5bd; }
     .form-range:disabled::-moz-range-thumb {
-      background-color: #b1b6bf; }
+      background-color: #adb5bd; }
 
 .form-floating {
   position: relative; }
@@ -2132,11 +2157,11 @@ textarea.form-control-lg {
   font-size: calc(1.265rem + 0.18vw);
   font-weight: 400;
   line-height: 1.6;
-  color: #5b6472;
+  color: #495057;
   text-align: center;
   white-space: nowrap;
-  background-color: #e9ebef;
-  border: 1px solid #d6d9e0;
+  background-color: #e9ecef;
+  border: 1px solid #dee2e6;
   border-radius: 6px; }
   @media (min-width: 1200px) {
     .input-group-text {
@@ -2253,7 +2278,7 @@ textarea.form-control-lg {
   border-color: #7dbf85; }
   .was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"] {
     padding-right: 5.5rem;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%233f454f' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%237dbf85' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%237dbf85' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
     background-position: right 1rem center, center right 3rem;
     background-size: 16px 12px, calc(0.8em + 0.375rem) calc(0.8em + 0.375rem); }
   .was-validated .form-select:valid:focus, .form-select.is-valid:focus {
@@ -2335,7 +2360,7 @@ textarea.form-control-lg {
   border-color: #e13a3a; }
   .was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"] {
     padding-right: 5.5rem;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%233f454f' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23e13a3a'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23e13a3a' stroke='none'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23e13a3a'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23e13a3a' stroke='none'/%3e%3c/svg%3e");
     background-position: right 1rem center, center right 3rem;
     background-size: 16px 12px, calc(0.8em + 0.375rem) calc(0.8em + 0.375rem); }
   .was-validated .form-select:invalid:focus, .form-select.is-invalid:focus {
@@ -2368,7 +2393,7 @@ textarea.form-control-lg {
   font-family: "Roboto";
   font-weight: 400;
   line-height: 1.6;
-  color: #5b6472;
+  color: #495057;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -2394,7 +2419,7 @@ textarea.form-control-lg {
     .btn {
       transition: none; } }
   .btn:hover {
-    color: #5b6472; }
+    color: #495057; }
   .btn-check:focus + .btn, .btn:focus {
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(75, 175, 213, 0.25); }
@@ -2605,59 +2630,59 @@ textarea.form-control-lg {
 
 .btn-light {
   color: #000;
-  background-color: #e9ebef;
-  border-color: #e9ebef; }
+  background-color: #e9ecef;
+  border-color: #e9ecef; }
   .btn-light:hover {
     color: #000;
-    background-color: #eceef1;
-    border-color: #ebedf1; }
+    background-color: #eceff1;
+    border-color: #ebeef1; }
   .btn-check:focus + .btn-light, .btn-light:focus {
     color: #000;
-    background-color: #eceef1;
-    border-color: #ebedf1;
-    box-shadow: 0 0 0 0.25rem rgba(198, 200, 203, 0.5); }
+    background-color: #eceff1;
+    border-color: #ebeef1;
+    box-shadow: 0 0 0 0.25rem rgba(198, 201, 203, 0.5); }
   .btn-check:checked + .btn-light,
   .btn-check:active + .btn-light, .btn-light:active, .btn-light.active,
   .show > .btn-light.dropdown-toggle {
     color: #000;
-    background-color: #edeff2;
-    border-color: #ebedf1; }
+    background-color: #edf0f2;
+    border-color: #ebeef1; }
     .btn-check:checked + .btn-light:focus,
     .btn-check:active + .btn-light:focus, .btn-light:active:focus, .btn-light.active:focus,
     .show > .btn-light.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.25rem rgba(198, 200, 203, 0.5); }
+      box-shadow: 0 0 0 0.25rem rgba(198, 201, 203, 0.5); }
   .btn-light:disabled, .btn-light.disabled {
     color: #000;
-    background-color: #e9ebef;
-    border-color: #e9ebef; }
+    background-color: #e9ecef;
+    border-color: #e9ecef; }
 
 .btn-dark {
   color: #fff;
-  background-color: #5b6472;
-  border-color: #5b6472; }
+  background-color: #495057;
+  border-color: #495057; }
   .btn-dark:hover {
     color: #fff;
-    background-color: #4d5561;
-    border-color: #49505b; }
+    background-color: #3e444a;
+    border-color: #3a4046; }
   .btn-check:focus + .btn-dark, .btn-dark:focus {
     color: #fff;
-    background-color: #4d5561;
-    border-color: #49505b;
-    box-shadow: 0 0 0 0.25rem rgba(116, 123, 135, 0.5); }
+    background-color: #3e444a;
+    border-color: #3a4046;
+    box-shadow: 0 0 0 0.25rem rgba(100, 106, 112, 0.5); }
   .btn-check:checked + .btn-dark,
   .btn-check:active + .btn-dark, .btn-dark:active, .btn-dark.active,
   .show > .btn-dark.dropdown-toggle {
     color: #fff;
-    background-color: #49505b;
-    border-color: #444b56; }
+    background-color: #3a4046;
+    border-color: #373c41; }
     .btn-check:checked + .btn-dark:focus,
     .btn-check:active + .btn-dark:focus, .btn-dark:active:focus, .btn-dark.active:focus,
     .show > .btn-dark.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.25rem rgba(116, 123, 135, 0.5); }
+      box-shadow: 0 0 0 0.25rem rgba(100, 106, 112, 0.5); }
   .btn-dark:disabled, .btn-dark.disabled {
     color: #fff;
-    background-color: #5b6472;
-    border-color: #5b6472; }
+    background-color: #495057;
+    border-color: #495057; }
 
 .btn-ghost {
   color: #000;
@@ -2835,45 +2860,45 @@ textarea.form-control-lg {
     background-color: transparent; }
 
 .btn-outline-light {
-  color: #e9ebef;
-  border-color: #e9ebef; }
+  color: #e9ecef;
+  border-color: #e9ecef; }
   .btn-outline-light:hover {
     color: #000;
-    background-color: #e9ebef;
-    border-color: #e9ebef; }
+    background-color: #e9ecef;
+    border-color: #e9ecef; }
   .btn-check:focus + .btn-outline-light, .btn-outline-light:focus {
-    box-shadow: 0 0 0 0.25rem rgba(233, 235, 239, 0.5); }
+    box-shadow: 0 0 0 0.25rem rgba(233, 236, 239, 0.5); }
   .btn-check:checked + .btn-outline-light,
   .btn-check:active + .btn-outline-light, .btn-outline-light:active, .btn-outline-light.active, .btn-outline-light.dropdown-toggle.show {
     color: #000;
-    background-color: #e9ebef;
-    border-color: #e9ebef; }
+    background-color: #e9ecef;
+    border-color: #e9ecef; }
     .btn-check:checked + .btn-outline-light:focus,
     .btn-check:active + .btn-outline-light:focus, .btn-outline-light:active:focus, .btn-outline-light.active:focus, .btn-outline-light.dropdown-toggle.show:focus {
-      box-shadow: 0 0 0 0.25rem rgba(233, 235, 239, 0.5); }
+      box-shadow: 0 0 0 0.25rem rgba(233, 236, 239, 0.5); }
   .btn-outline-light:disabled, .btn-outline-light.disabled {
-    color: #e9ebef;
+    color: #e9ecef;
     background-color: transparent; }
 
 .btn-outline-dark {
-  color: #5b6472;
-  border-color: #5b6472; }
+  color: #495057;
+  border-color: #495057; }
   .btn-outline-dark:hover {
     color: #fff;
-    background-color: #5b6472;
-    border-color: #5b6472; }
+    background-color: #495057;
+    border-color: #495057; }
   .btn-check:focus + .btn-outline-dark, .btn-outline-dark:focus {
-    box-shadow: 0 0 0 0.25rem rgba(91, 100, 114, 0.5); }
+    box-shadow: 0 0 0 0.25rem rgba(73, 80, 87, 0.5); }
   .btn-check:checked + .btn-outline-dark,
   .btn-check:active + .btn-outline-dark, .btn-outline-dark:active, .btn-outline-dark.active, .btn-outline-dark.dropdown-toggle.show {
     color: #fff;
-    background-color: #5b6472;
-    border-color: #5b6472; }
+    background-color: #495057;
+    border-color: #495057; }
     .btn-check:checked + .btn-outline-dark:focus,
     .btn-check:active + .btn-outline-dark:focus, .btn-outline-dark:active:focus, .btn-outline-dark.active:focus, .btn-outline-dark.dropdown-toggle.show:focus {
-      box-shadow: 0 0 0 0.25rem rgba(91, 100, 114, 0.5); }
+      box-shadow: 0 0 0 0.25rem rgba(73, 80, 87, 0.5); }
   .btn-outline-dark:disabled, .btn-outline-dark.disabled {
-    color: #5b6472;
+    color: #495057;
     background-color: transparent; }
 
 .btn-outline-ghost {
@@ -2904,7 +2929,7 @@ textarea.form-control-lg {
   .btn-link:hover {
     color: #ff8500; }
   .btn-link:disabled, .btn-link.disabled {
-    color: #8c939e; }
+    color: #6c757d; }
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
@@ -2986,7 +3011,7 @@ textarea.form-control-lg {
   padding: 0.5rem 0;
   margin: 0;
   font-size: calc(1.265rem + 0.18vw);
-  color: #5b6472;
+  color: #495057;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -3170,7 +3195,7 @@ textarea.form-control-lg {
   padding: 0.25rem 1rem;
   clear: both;
   font-weight: 400;
-  color: #5b6472;
+  color: #495057;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -3183,7 +3208,7 @@ textarea.form-control-lg {
     text-decoration: none;
     background-color: #4bafd5; }
   .dropdown-item.disabled, .dropdown-item:disabled {
-    color: #b1b6bf;
+    color: #adb5bd;
     pointer-events: none;
     background-color: transparent; }
 
@@ -3195,20 +3220,20 @@ textarea.form-control-lg {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   font-size: 1.225rem;
-  color: #8c939e;
+  color: #6c757d;
   white-space: nowrap; }
 
 .dropdown-item-text {
   display: block;
   padding: 0.25rem 1rem;
-  color: #5b6472; }
+  color: #495057; }
 
 .dropdown-menu-dark {
-  color: #d6d9e0;
-  background-color: #3f454f;
+  color: #dee2e6;
+  background-color: #343a40;
   border-color: rgba(0, 0, 0, 0.15); }
   .dropdown-menu-dark .dropdown-item {
-    color: #d6d9e0; }
+    color: #dee2e6; }
     .dropdown-menu-dark .dropdown-item:hover, .dropdown-menu-dark .dropdown-item:focus {
       color: #fff;
       background-color: rgba(255, 255, 255, 0.15); }
@@ -3216,13 +3241,13 @@ textarea.form-control-lg {
       color: #fff;
       background-color: #4bafd5; }
     .dropdown-menu-dark .dropdown-item.disabled, .dropdown-menu-dark .dropdown-item:disabled {
-      color: #b1b6bf; }
+      color: #adb5bd; }
   .dropdown-menu-dark .dropdown-divider {
     border-color: rgba(0, 0, 0, 0.15); }
   .dropdown-menu-dark .dropdown-item-text {
-    color: #d6d9e0; }
+    color: #dee2e6; }
   .dropdown-menu-dark .dropdown-header {
-    color: #b1b6bf; }
+    color: #adb5bd; }
 
 .btn-group,
 .btn-group-vertical {
@@ -3324,12 +3349,12 @@ textarea.form-control-lg {
   .nav-link:hover, .nav-link:focus {
     color: #ff8500; }
   .nav-link.disabled {
-    color: #8c939e;
+    color: #6c757d;
     pointer-events: none;
     cursor: default; }
 
 .nav-tabs {
-  border-bottom: 1px solid #d6d9e0; }
+  border-bottom: 1px solid #dee2e6; }
   .nav-tabs .nav-link {
     margin-bottom: -1px;
     background: none;
@@ -3337,17 +3362,17 @@ textarea.form-control-lg {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px; }
     .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-      border-color: #e9ebef #e9ebef #d6d9e0;
+      border-color: #e9ecef #e9ecef #dee2e6;
       isolation: isolate; }
     .nav-tabs .nav-link.disabled {
-      color: #8c939e;
+      color: #6c757d;
       background-color: transparent;
       border-color: transparent; }
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
-    color: #5b6472;
-    background-color: #f0f2f4;
-    border-color: #d6d9e0 #d6d9e0 #f0f2f4; }
+    color: #495057;
+    background-color: #f8f9fa;
+    border-color: #dee2e6 #dee2e6 #f8f9fa; }
   .nav-tabs .dropdown-menu {
     margin-top: -1px;
     border-top-left-radius: 0;
@@ -3953,9 +3978,9 @@ textarea.form-control-lg {
   width: 100%;
   padding: 1rem 1.25rem;
   font-size: calc(1.265rem + 0.18vw);
-  color: #5b6472;
+  color: #495057;
   text-align: left;
-  background-color: #f0f2f4;
+  background-color: #f8f9fa;
   border: 0;
   border-radius: 0;
   overflow-anchor: none;
@@ -3979,7 +4004,7 @@ textarea.form-control-lg {
     height: 1.25rem;
     margin-left: auto;
     content: "";
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%235b6472'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23495057'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-size: 1.25rem;
     transition: transform 0.2s ease-in-out; }
@@ -3998,7 +4023,7 @@ textarea.form-control-lg {
   margin-bottom: 0; }
 
 .accordion-item {
-  background-color: #f0f2f4;
+  background-color: #f8f9fa;
   border: 1px solid rgba(0, 0, 0, 0.125); }
   .accordion-item:first-of-type {
     border-top-left-radius: 6px;
@@ -4047,11 +4072,11 @@ textarea.form-control-lg {
   .breadcrumb-item + .breadcrumb-item::before {
     float: left;
     padding-right: 0.5rem;
-    color: #8c939e;
+    color: #6c757d;
     content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */; }
 
 .breadcrumb-item.active {
-  color: #8c939e; }
+  color: #6c757d; }
 
 .pagination {
   display: flex;
@@ -4063,7 +4088,7 @@ textarea.form-control-lg {
   display: block;
   color: #4bafd5;
   background-color: #fff;
-  border: 1px solid #d6d9e0;
+  border: 1px solid #dee2e6;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .page-link {
@@ -4071,12 +4096,12 @@ textarea.form-control-lg {
   .page-link:hover {
     z-index: 2;
     color: #ff8500;
-    background-color: #e9ebef;
-    border-color: #d6d9e0; }
+    background-color: #e9ecef;
+    border-color: #dee2e6; }
   .page-link:focus {
     z-index: 3;
     color: #ff8500;
-    background-color: #e9ebef;
+    background-color: #e9ecef;
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(75, 175, 213, 0.25); }
 
@@ -4090,10 +4115,10 @@ textarea.form-control-lg {
   border-color: #4bafd5; }
 
 .page-item.disabled .page-link {
-  color: #8c939e;
+  color: #6c757d;
   pointer-events: none;
   background-color: #fff;
-  border-color: #d6d9e0; }
+  border-color: #dee2e6; }
 
 .page-link {
   padding: 0.375rem 0.75rem; }
@@ -4136,7 +4161,7 @@ textarea.form-control-lg {
 .badge {
   display: inline-block;
   padding: 0.35em 0.65em;
-  font-size: 80%;
+  font-size: 0.75em;
   font-weight: 700;
   line-height: 1;
   color: #fff;
@@ -4223,18 +4248,18 @@ textarea.form-control-lg {
     color: #6c1c1c; }
 
 .alert-light {
-  color: #8c8d8f;
+  color: #8c8e8f;
   background-color: #fbfbfc;
   border-color: #f8f9fa; }
   .alert-light .alert-link {
-    color: #707172; }
+    color: #707272; }
 
 .alert-dark {
-  color: #373c44;
-  background-color: #dee0e3;
-  border-color: #ced1d5; }
+  color: #2c3034;
+  background-color: #dbdcdd;
+  border-color: #c8cbcd; }
   .alert-dark .alert-link {
-    color: #2c3036; }
+    color: #23262a; }
 
 .alert-ghost {
   color: #939397;
@@ -4252,7 +4277,7 @@ textarea.form-control-lg {
   height: 1rem;
   overflow: hidden;
   font-size: 1.05rem;
-  background-color: #e9ebef;
+  background-color: #e9ecef;
   border-radius: 6px; }
 
 .progress-bar {
@@ -4295,16 +4320,16 @@ textarea.form-control-lg {
 
 .list-group-item-action {
   width: 100%;
-  color: #5b6472;
+  color: #495057;
   text-align: inherit; }
   .list-group-item-action:hover, .list-group-item-action:focus {
     z-index: 1;
-    color: #5b6472;
+    color: #495057;
     text-decoration: none;
-    background-color: #f0f2f4; }
+    background-color: #f8f9fa; }
   .list-group-item-action:active {
-    color: #5b6472;
-    background-color: #e9ebef; }
+    color: #495057;
+    background-color: #e9ecef; }
 
 .list-group-item {
   position: relative;
@@ -4320,7 +4345,7 @@ textarea.form-control-lg {
     border-bottom-right-radius: inherit;
     border-bottom-left-radius: inherit; }
   .list-group-item.disabled, .list-group-item:disabled {
-    color: #8c939e;
+    color: #6c757d;
     pointer-events: none;
     background-color: #fff; }
   .list-group-item.active {
@@ -4544,26 +4569,26 @@ textarea.form-control-lg {
     border-color: #872323; }
 
 .list-group-item-light {
-  color: #8c8d8f;
+  color: #8c8e8f;
   background-color: #fbfbfc; }
   .list-group-item-light.list-group-item-action:hover, .list-group-item-light.list-group-item-action:focus {
-    color: #8c8d8f;
+    color: #8c8e8f;
     background-color: #e2e2e3; }
   .list-group-item-light.list-group-item-action.active {
     color: #fff;
-    background-color: #8c8d8f;
-    border-color: #8c8d8f; }
+    background-color: #8c8e8f;
+    border-color: #8c8e8f; }
 
 .list-group-item-dark {
-  color: #373c44;
-  background-color: #dee0e3; }
+  color: #2c3034;
+  background-color: #dbdcdd; }
   .list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
-    color: #373c44;
-    background-color: #c8cacc; }
+    color: #2c3034;
+    background-color: #c5c6c7; }
   .list-group-item-dark.list-group-item-action.active {
     color: #fff;
-    background-color: #373c44;
-    border-color: #373c44; }
+    background-color: #2c3034;
+    border-color: #2c3034; }
 
 .list-group-item-ghost {
   color: #939397;
@@ -4631,7 +4656,7 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   padding: 15px 20px;
-  color: #8c939e;
+  color: #6c757d;
   background-color: #fff;
   background-clip: padding-box;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -4705,7 +4730,7 @@ textarea.form-control-lg {
   z-index: 1050;
   width: 100vw;
   height: 100vh;
-  background-color: #3f454f; }
+  background-color: #343a40; }
   .modal-backdrop.fade {
     opacity: 0; }
   .modal-backdrop.show {
@@ -4717,7 +4742,7 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 1.5rem;
-  border-bottom: 0 solid #d6d9e0;
+  border-bottom: 0 solid #dee2e6;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px; }
   .modal-header .btn-close {
@@ -4740,7 +4765,7 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: flex-end;
   padding: 1.25rem;
-  border-top: 0 solid #d6d9e0;
+  border-top: 0 solid #dee2e6;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px; }
   .modal-footer > * {
@@ -5080,7 +5105,7 @@ textarea.form-control-lg {
 
 .popover-body {
   padding: 1rem 1rem;
-  color: #5b6472; }
+  color: #495057; }
 
 .carousel {
   position: relative; }
@@ -5327,7 +5352,7 @@ textarea.form-control-lg {
   z-index: 1040;
   width: 100vw;
   height: 100vh;
-  background-color: #3f454f; }
+  background-color: #343a40; }
   .offcanvas-backdrop.fade {
     opacity: 0; }
   .offcanvas-backdrop.show {
@@ -5428,14 +5453,14 @@ textarea.form-control-lg {
     color: #b42e2e; }
 
 .link-light {
-  color: #e9ebef; }
+  color: #e9ecef; }
   .link-light:hover, .link-light:focus {
-    color: #edeff2; }
+    color: #edf0f2; }
 
 .link-dark {
-  color: #5b6472; }
+  color: #495057; }
   .link-dark:hover, .link-dark:focus {
-    color: #49505b; }
+    color: #3a4046; }
 
 .link-ghost {
   color: #f5f5fb; }
@@ -5726,31 +5751,31 @@ textarea.form-control-lg {
   transform: translateY(-50%) !important; }
 
 .border {
-  border: 1px solid #d6d9e0 !important; }
+  border: 1px solid #dee2e6 !important; }
 
 .border-0 {
   border: 0 !important; }
 
 .border-top {
-  border-top: 1px solid #d6d9e0 !important; }
+  border-top: 1px solid #dee2e6 !important; }
 
 .border-top-0 {
   border-top: 0 !important; }
 
 .border-end {
-  border-right: 1px solid #d6d9e0 !important; }
+  border-right: 1px solid #dee2e6 !important; }
 
 .border-end-0 {
   border-right: 0 !important; }
 
 .border-bottom {
-  border-bottom: 1px solid #d6d9e0 !important; }
+  border-bottom: 1px solid #dee2e6 !important; }
 
 .border-bottom-0 {
   border-bottom: 0 !important; }
 
 .border-start {
-  border-left: 1px solid #d6d9e0 !important; }
+  border-left: 1px solid #dee2e6 !important; }
 
 .border-start-0 {
   border-left: 0 !important; }
@@ -5777,10 +5802,10 @@ textarea.form-control-lg {
   border-color: #e13a3a !important; }
 
 .border-light {
-  border-color: #e9ebef !important; }
+  border-color: #e9ecef !important; }
 
 .border-dark {
-  border-color: #5b6472 !important; }
+  border-color: #495057 !important; }
 
 .border-ghost {
   border-color: #f5f5fb !important; }
@@ -6078,21 +6103,25 @@ textarea.form-control-lg {
 .mt-0 {
   margin-top: 0 !important; }
 
-<<<<<<< HEAD
 .mt-1, .applications-search {
+<<<<<<< HEAD
 =======
 .mt-1, .applications__search {
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
   margin-top: 0.25rem !important; }
 
 .mt-2 {
   margin-top: 0.5rem !important; }
 
-<<<<<<< HEAD
 .mt-3, .applications-favorite {
+<<<<<<< HEAD
 =======
 .mt-3, .applications__favorite {
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
   margin-top: 1rem !important; }
 
 .mt-4 {
@@ -6134,11 +6163,13 @@ textarea.form-control-lg {
 .mb-2 {
   margin-bottom: 0.5rem !important; }
 
-<<<<<<< HEAD
 .mb-3, .applications-list h2, .applications-list .h2, .applications-connector h2, .applications-connector .h2 {
+<<<<<<< HEAD
 =======
 .mb-3, .applications__list h2, .applications__list .h2, .applications__connector h2, .applications__connector .h2 {
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
   margin-bottom: 1rem !important; }
 
 .mb-4 {
@@ -6355,7 +6386,7 @@ textarea.form-control-lg {
   line-height: 1 !important; }
 
 .lh-sm {
-  line-height: 1.2 !important; }
+  line-height: 1.25 !important; }
 
 .lh-base {
   line-height: 1.6 !important; }
@@ -6472,7 +6503,7 @@ textarea.form-control-lg {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #8c939e !important; }
+  color: #6c757d !important; }
 
 .text-black-50 {
   --bs-text-opacity: 1;
@@ -14138,6 +14169,7 @@ i[class*="ic-"] {
   font-size: 14px;
   line-height: 2.4em;
   color: #fff;
+<<<<<<< HEAD
 =======
 >>>>>>> feat: Add toast for infos / read more button in flash widget
   letter-spacing: 1.08px;
@@ -14148,6 +14180,8 @@ i[class*="ic-"] {
   font-size: 14px;
   line-height: 2.4em;
   color: white;
+=======
+>>>>>>> feat: clean variables
   letter-spacing: 1.08px;
   border: 1px solid currentColor;
   border-radius: 30px; }
@@ -14197,7 +14231,7 @@ i[class*="ic-"] {
     position: absolute;
     bottom: -2em;
     font-size: 0.8em;
-    color: #5b6472; }
+    color: #495057; }
 
 .btn-circular {
   width: 32px;
@@ -14207,6 +14241,7 @@ i[class*="ic-"] {
 .modal .modal-title {
   color: #4bafd5; }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 /* DOCUMENTATION
@@ -14257,6 +14292,8 @@ i[class*="ic-"] {
 =======
 =======
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
 .toast-container {
   position: fixed;
   right: 0;
@@ -14287,9 +14324,12 @@ i[class*="ic-"] {
 	</article>
 </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> feat: linter process
 =======
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
 END DOCUMENTATION */
 /* VARIABLES */
 /* COMPONENT */
@@ -14304,7 +14344,7 @@ END DOCUMENTATION */
   margin: 10px;
   cursor: pointer;
   background-color: #fff;
-  border: 1px solid #d6d9e0;
+  border: 1px solid #dee2e6;
   border-radius: 10px; }
   .domino-image {
     position: relative;
@@ -14361,10 +14401,10 @@ END DOCUMENTATION */
       margin-bottom: 5px;
       font-size: 1.4rem;
       font-weight: bold;
-      color: #5b6472; }
+      color: #495057; }
     .domino-infos .domino-info {
       font-size: 1.2rem;
-      color: #8c939e; }
+      color: #6c757d; }
       .domino-infos .domino-info a {
         font-weight: bold;
         color: #4bafd5;
@@ -14484,6 +14524,7 @@ END DOCUMENTATION */
   .explorer-header h2, .explorer-header .h2 {
     position: relative;
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin-bottom: 0;
     font-size: 2rem;
     color: #5b6472;
@@ -14493,9 +14534,15 @@ END DOCUMENTATION */
     margin-bottom: 0;
 >>>>>>> feat: Add toast for infos / read more button in flash widget
     color: #5b6472; }
+=======
+    margin-bottom: 0;
+    font-size: 2rem;
+    color: #495057;
+    color: #495057; }
+>>>>>>> feat: clean variables
     .explorer-header h2 small, .explorer-header .h2 small, .explorer-header h2 .small, .explorer-header .h2 .small {
       font-size: 80%;
-      color: #8c939e; }
+      color: #6c757d; }
 
 .explorer-view {
 <<<<<<< HEAD
@@ -14506,9 +14553,9 @@ END DOCUMENTATION */
   height: calc(100vh - 205px);
 >>>>>>> feat: Add toast for infos / read more button in flash widget
   overflow-x: auto;
-  border-top: 1px solid #e9ebef;
+  border-top: 1px solid #e9ecef;
   scrollbar-width: thin;
-  scrollbar-color: #b1b6bf #e9ebef; }
+  scrollbar-color: #adb5bd #e9ecef; }
 
 @media (max-width: 991.98px) {
   .explorer-header {
@@ -14547,6 +14594,7 @@ END DOCUMENTATION */
       font-size: 1em;
       line-height: 1em;
       color: inherit;
+<<<<<<< HEAD
 <<<<<<< HEAD
       word-break: normal; }
   .ode-bootstrap-neo .pre-scrollable {
@@ -15306,6 +15354,39 @@ END DOCUMENTATION */
       background: #f0f2f4; }
   .feed-item {
     display: flex;
+=======
+      text-transform: initial;
+      content: "" !important;
+      font-feature-settings: "liga"; }
+    .feed .filter-button::before {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: unset;
+      z-index: 10;
+      transform: translateY(-50%); }
+  .feed-divider-message {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center; }
+    .feed-divider-message::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: "";
+      top: 50%;
+      z-index: -1;
+      height: 1px;
+      border-top: 2px dashed #ced4da; }
+    .feed-divider-message .message {
+      color: #6c757d;
+      background: #f8f9fa; }
+  .feed-item {
+    display: flex;
+>>>>>>> feat: clean variables
     padding: 15px 20px;
     margin-bottom: 20px;
     overflow: hidden;
@@ -15333,15 +15414,24 @@ END DOCUMENTATION */
       justify-self: stretch; }
     .feed-item .zone-text {
       flex: 1;
+<<<<<<< HEAD
       color: #3f454f; }
+=======
+      color: #343a40; }
+>>>>>>> feat: clean variables
       .feed-item .zone-text .meta {
         display: flex;
         justify-content: space-between;
         padding-bottom: 0.4em;
         margin-bottom: 0.4em;
         font-size: 0.8em;
+<<<<<<< HEAD
         color: #8c939e;
         border-bottom: 1px solid #e9ebef; }
+=======
+        color: #6c757d;
+        border-bottom: 1px solid #e9ecef; }
+>>>>>>> feat: clean variables
         @media (max-width: 991.98px) {
           .feed-item .zone-text .meta {
             padding-right: 50px; } }
@@ -15361,13 +15451,15 @@ END DOCUMENTATION */
       width: 60%;
       height: 100%;
       padding-left: 20px;
-<<<<<<< HEAD
       background-color: #fff;
       transition-duration: 0.2s;
+<<<<<<< HEAD
 =======
       background-color: white;
       transition-duration: .2s;
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
       transform: translateX(120%);
       justify-self: stretch;
       transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -15390,7 +15482,7 @@ END DOCUMENTATION */
         color: #ff8500;
         cursor: pointer;
         background: #fff;
-        border-color: #e9ebef;
+        border-color: #e9ecef;
         border-right: 1px solid;
         border-left: 1px solid;
         box-shadow: -5px 0 10px -10px rgba(0, 0, 0, 0.25);
@@ -15432,16 +15524,18 @@ END DOCUMENTATION */
           height: 100%;
           padding: 0 10px;
           transform: translateY(0);
-<<<<<<< HEAD
           transform-origin: center;
           transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
           transition-duration: 0.4s;
           transition-property: transform; }
+<<<<<<< HEAD
 =======
           transform-origin: center; }
         .feed-item .zone-tools .control:hover {
           background-color: #ff8500; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
         .feed-item .zone-tools .control:hover {
           color: #fff;
           background-color: #ff8500; }
@@ -15454,13 +15548,15 @@ END DOCUMENTATION */
     .feed-item:hover .zone-tools {
       transform: translateX(101%); }
   .feed.new .date {
-<<<<<<< HEAD
     padding-right: 1.05em;
     position: relative; }
+<<<<<<< HEAD
 =======
     position: relative;
     padding-right: 1.05em; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
     .feed.new .date::before {
       display: inline-block;
       font-family: "Font Awesome 5 Free";
@@ -15492,10 +15588,10 @@ END DOCUMENTATION */
       top: 1em; }
 
 .filters .btn {
-  color: #8c939e;
+  color: #6c757d;
   box-shadow: none; }
   .filters .btn.inactive {
-    color: #c9ced5; }
+    color: #ced4da; }
 
 .filters-chips {
   margin-bottom: 1em; }
@@ -15553,7 +15649,7 @@ END DOCUMENTATION */
     position: absolute;
     top: 5px;
     left: 20px;
-    color: #b1b6bf; }
+    color: #adb5bd; }
   .input-searchbar .ic-search + input {
     padding-left: 40px; }
 
@@ -15563,7 +15659,7 @@ END DOCUMENTATION */
   padding: 5px 15px;
   font-size: 1.4rem;
   font-weight: bold;
-  color: #8c939e; }
+  color: #6c757d; }
   .list-header .list__item--preview {
     width: 40px; }
 
@@ -15574,9 +15670,9 @@ END DOCUMENTATION */
   padding: 5px 15px;
   margin: 5px 0;
   font-size: 1.4rem;
-  color: #8c939e;
+  color: #6c757d;
   cursor: pointer;
-  border: 1px solid #e9ebef;
+  border: 1px solid #e9ecef;
   border-radius: 10px; }
   .list-item:hover {
     border-color: #4bafd5; }
@@ -15593,7 +15689,7 @@ END DOCUMENTATION */
     overflow: hidden;
     font-size: 1.6rem;
     font-weight: bold;
-    color: #5b6472;
+    color: #495057;
     text-overflow: ellipsis;
     white-space: nowrap; }
   .list-item .list-image {
@@ -15634,7 +15730,7 @@ END DOCUMENTATION */
     flex-wrap: wrap;
     padding: 10px;
     margin: 10px 0;
-    border-color: #d6d9e0; }
+    border-color: #dee2e6; }
     .list-item .list-title {
       width: calc(100% - 40px); }
     .list-item .list-status {
@@ -15682,7 +15778,7 @@ END DOCUMENTATION */
   padding: 15px;
   font-size: 1.4rem;
   font-weight: bold;
-  color: #5b6472;
+  color: #495057;
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.05); }
   .sidebar-title {
@@ -15697,7 +15793,7 @@ END DOCUMENTATION */
     margin-left: 0;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: #b1b6bf #e9ebef; }
+    scrollbar-color: #adb5bd #e9ecef; }
     .sidebar-tree ul {
       padding-left: 10px;
       margin-left: 0; }
@@ -15725,7 +15821,7 @@ END DOCUMENTATION */
         padding: 7px 15px;
         margin: 5px 0;
         line-height: 1.2;
-        color: #8c939e;
+        color: #6c757d;
         border-radius: 6px; }
         .sidebar-tree li a:hover {
           color: #4bafd5;
@@ -15890,17 +15986,20 @@ END DOCUMENTATION */
     margin: 0;
     list-style-type: none; }
   .widget .meta {
-<<<<<<< HEAD
     font-size: 0.8em;
+<<<<<<< HEAD
 =======
     font-size: .8em;
 >>>>>>> feat: Add footer zone to widget
     color: #5b6472; }
+=======
+    color: #495057; }
+>>>>>>> feat: clean variables
   .widget-empty-message {
     display: block;
     padding: 10px 25px;
     font-style: italic;
-    color: #5b6472;
+    color: #495057;
     text-align: center; }
   .widget-header {
     position: relative;
@@ -15914,13 +16013,15 @@ END DOCUMENTATION */
       .widget-header .subtitle .seemore:hover {
         text-decoration: none; }
     .widget-header .subtitle .seemore-text {
-<<<<<<< HEAD
       padding-left: 0.5em;
       font-size: 0.8em;
+<<<<<<< HEAD
 =======
       padding-left: .5em;
       font-size: .8em;
 >>>>>>> feat: Add footer zone to widget
+=======
+>>>>>>> feat: clean variables
       font-weight: 400;
       text-transform: initial; }
     .widget-header .tools {
@@ -15931,20 +16032,22 @@ END DOCUMENTATION */
       top: 52%;
       right: 10px;
       width: auto;
-<<<<<<< HEAD
       background: #fff;
+<<<<<<< HEAD
 =======
       background: white;
 >>>>>>> feat: Add footer zone to widget
+=======
+>>>>>>> feat: clean variables
       opacity: 0;
       transform: translateY(-50%); }
       .widget-header .tools .tool {
         transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         padding: 5px;
-        color: #c9ced5;
+        color: #ced4da;
         text-decoration: none; }
         .widget-header .tools .tool:hover {
-          color: #5b6472; }
+          color: #495057; }
       @media (max-width: 991.98px) {
         .widget-header .tools {
           display: none; } }
@@ -15954,13 +16057,15 @@ END DOCUMENTATION */
     text-align: center; }
     .widget-footer-action .link, .widget-footer-action .feed-item .zone-text .report a, .feed-item .zone-text .report .widget-footer-action a {
       display: block;
-<<<<<<< HEAD
       padding: 0.4em 0;
+<<<<<<< HEAD
 =======
       padding: .4em 0;
 >>>>>>> feat: Add footer zone to widget
+=======
+>>>>>>> feat: clean variables
       font-size: 1.2rem;
-      color: #8c939e;
+      color: #6c757d;
       transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
       transition-duration: 0.4s;
       transition-property: background-color, color; }
@@ -15985,7 +16090,7 @@ END DOCUMENTATION */
     padding-top: 100%;
     margin: 1px;
     text-decoration: none;
-    background: #f0f2f4; }
+    background: #f8f9fa; }
     .widget-applications .application-item a:hover {
       background-color: white; }
     .widget-applications .application-item a > i {
@@ -16004,7 +16109,7 @@ END DOCUMENTATION */
   transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   padding: 0 25px;
   color: #0984b3;
-  border-bottom: 1px solid #f0f2f4; }
+  border-bottom: 1px solid #f8f9fa; }
   .widget-bookmarks .bookmark-item:hover {
     background-color: rgba(9, 132, 179, 0.1); }
   .widget-bookmarks .bookmark-item .link, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a {
@@ -16012,8 +16117,8 @@ END DOCUMENTATION */
 <<<<<<< HEAD
 <<<<<<< HEAD
     display: block;
-<<<<<<< HEAD
     padding: 0.4em 0 0.4em 25px; }
+<<<<<<< HEAD
 =======
     padding: .4em 0 .4em 25px; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
@@ -16025,6 +16130,8 @@ END DOCUMENTATION */
     display: block;
     padding: .4em 0 .4em 25px; }
 >>>>>>> feat: Add footer zone to widget
+=======
+>>>>>>> feat: clean variables
     .widget-bookmarks .bookmark-item .link:hover, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a:hover, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a:hover {
       text-decoration: none; }
     .widget-bookmarks .bookmark-item .link::before, .widget-bookmarks .bookmark-item .feed-item .zone-text .report a::before, .feed-item .zone-text .report .widget-bookmarks .bookmark-item a::before {
@@ -16052,13 +16159,15 @@ END DOCUMENTATION */
   margin: 10px 25px; }
 
 .widget-calendar .day-item {
-<<<<<<< HEAD
   position: relative;
   padding-bottom: 0.5em; }
+<<<<<<< HEAD
 =======
   padding-bottom: 0.5em;
   position: relative; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
   .widget-calendar .day-item-title {
     padding-left: 20px;
     position: relative; }
@@ -16101,7 +16210,6 @@ END DOCUMENTATION */
     content: none; }
 
 .widget-calendar .moment-item {
-<<<<<<< HEAD
   display: flex;
   align-items: start;
   padding-bottom: 0.75em;
@@ -16110,6 +16218,7 @@ END DOCUMENTATION */
   .widget-calendar .moment-item .hour {
     width: 1em;
     margin-right: 0.75em; }
+<<<<<<< HEAD
 =======
   padding-left: 25px;
   padding-bottom: 0.75em;
@@ -16120,6 +16229,8 @@ END DOCUMENTATION */
     margin-right: 0.75em;
     width: 1em; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
   .widget-calendar .moment-item .hour {
     width: 2.5em;
     text-align: right; }
@@ -16184,20 +16295,22 @@ END DOCUMENTATION */
   padding: 10px 25px;
   text-decoration: none; }
   .widget-news .news-row:hover {
-    background-color: #f0f2f4; }
+    background-color: #f8f9fa; }
   .widget-news .news-row-image {
     width: 55px;
-<<<<<<< HEAD
     padding-right: 15px;
     text-align: center;
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transform-origin: center; }
+<<<<<<< HEAD
 =======
     transform-origin: center;
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     padding-right: 15px;
     text-align: center; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
     .widget-news .news-row-image img {
       max-width: 100%;
       max-height: 4em; }
@@ -16209,9 +16322,9 @@ END DOCUMENTATION */
 .widget-recently-viewed .recently-viewed-item {
   transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   .widget-recently-viewed .recently-viewed-item:hover {
-    background-color: #f0f2f4; }
+    background-color: #f8f9fa; }
   .widget-recently-viewed .recently-viewed-item:hover .icon-app {
-    background-color: #f0f2f4;
+    background-color: #f8f9fa;
     transform: translateX(60%); }
 
 .widget-recently-viewed .link-card {
@@ -16220,7 +16333,7 @@ END DOCUMENTATION */
   align-items: center;
   justify-content: flex-end;
   padding-left: 25px;
-  border-top: 1px solid #f0f2f4; }
+  border-top: 1px solid #f8f9fa; }
   .widget-recently-viewed .link-card:hover {
     text-decoration: none; }
   .widget-recently-viewed .link-card .text {
@@ -16287,16 +16400,18 @@ END DOCUMENTATION */
 .widget-rss .rss-feed .feed-title {
   padding: 8px 25px;
   font-weight: 700;
-<<<<<<< HEAD
   color: #fff;
   background: #0984b3;
   padding-right: 1.5em;
   position: relative;
   cursor: pointer; }
+<<<<<<< HEAD
 =======
   color: white;
   background: #0984b3; }
 >>>>>>> feat: Add footer zone to widget
+=======
+>>>>>>> feat: clean variables
   .widget-rss .rss-feed .feed-title::before {
     display: inline-block;
     font-family: "Font Awesome 5 Free";
@@ -16334,7 +16449,7 @@ END DOCUMENTATION */
   text-decoration: none;
   transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   .widget-rss .rss-feed .item a:hover {
-    background-color: #f0f2f4; }
+    background-color: #f8f9fa; }
 
 .widget-school-header {
   border-top-left-radius: 6px;
@@ -16345,6 +16460,7 @@ END DOCUMENTATION */
   padding: 30px 25px;
   font-size: 1.3em;
   color: #fff;
+<<<<<<< HEAD
   background-position: center;
   background-size: cover; }
 =======
@@ -16354,6 +16470,8 @@ END DOCUMENTATION */
   padding: 30px 25px;
   font-size: 1.3em;
   color: white;
+=======
+>>>>>>> feat: clean variables
   background-position: center;
 <<<<<<< HEAD
   background-size: cover;
@@ -16369,6 +16487,7 @@ END DOCUMENTATION */
     position: relative;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-size: 0.9em;
     font-weight: 400; }
 =======
@@ -16377,6 +16496,9 @@ END DOCUMENTATION */
 >>>>>>> feat: Add toast for infos / read more button in flash widget
 =======
     font-size: .9em;
+=======
+    font-size: 0.9em;
+>>>>>>> feat: clean variables
     font-weight: 400; }
 >>>>>>> feat: new image background in school widget
   .widget-school-header .school-multiple {
@@ -16458,6 +16580,7 @@ END DOCUMENTATION */
     margin-bottom: 1em; }
     .widget-school .button-list > *:not(:last-child) {
       margin-right: 0.4em; }
+<<<<<<< HEAD
 =======
   padding: 25px;
   padding-bottom: 0; }
@@ -16473,26 +16596,32 @@ END DOCUMENTATION */
     .widget-school .button-list > *:not(:last-child) {
       margin-right: .4em; }
 >>>>>>> feat: new image background in school widget
+=======
+>>>>>>> feat: clean variables
 
 .widget-dashboard .dashboard-choice {
   display: flex;
   justify-content: start;
-<<<<<<< HEAD
   background: #fff; }
+<<<<<<< HEAD
 =======
   background: white; }
 >>>>>>> feat: Add footer zone to widget
+=======
+>>>>>>> feat: clean variables
   .widget-dashboard .dashboard-choice .avatar-link {
     flex: 1;
     padding: 10px 25px;
     text-align: center;
-<<<<<<< HEAD
     text-decoration: none;
     transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+<<<<<<< HEAD
 =======
     text-decoration: none; }
 >>>>>>> feat: Add footer zone to widget
+=======
+>>>>>>> feat: clean variables
     .widget-dashboard .dashboard-choice .avatar-link:hover {
       background-color: #4bafd5; }
     .widget-dashboard .dashboard-choice .avatar-link:hover {
@@ -16505,11 +16634,13 @@ END DOCUMENTATION */
     .widget-dashboard .dashboard-choice .avatar-link span {
       display: block; }
     .widget-dashboard .dashboard-choice .avatar-link.active {
-<<<<<<< HEAD
       color: #fff;
+<<<<<<< HEAD
 =======
       color: white;
 >>>>>>> feat: Add footer zone to widget
+=======
+>>>>>>> feat: clean variables
       background: #0984b3; }
     .widget-dashboard .dashboard-choice .avatar-link:not(:last-child) {
       border-right: #4bafd5 1px solid; }
@@ -16520,7 +16651,7 @@ END DOCUMENTATION */
   text-decoration: none;
   transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   .widget-dashboard .dashboard-list .item-inner:hover {
-    background-color: #f0f2f4; }
+    background-color: #f8f9fa; }
 
 .widget-dashboard .dashboard-list .item .left {
   padding-right: 25px; }
@@ -16534,14 +16665,16 @@ END DOCUMENTATION */
   border-radius: 50%;
   display: flex;
   align-items: center;
-<<<<<<< HEAD
   justify-content: center; }
+<<<<<<< HEAD
 =======
   justify-content: center;
   font-size: 1.4em;
   color: white;
   background: #0d5571; }
 >>>>>>> feat: Add footer zone to widget
+=======
+>>>>>>> feat: clean variables
 
 .widget-dashboard .dashboard-list .item:nth-child(2n) {
   background: rgba(9, 132, 179, 0.07); }
@@ -16573,7 +16706,7 @@ END DOCUMENTATION */
   .widget-flash.blue {
     background: #4b90d5; }
   .widget-flash.grey-dark {
-    background: #5b6472; }
+    background: #495057; }
   .widget-flash .btn-close {
     position: absolute;
     top: 10px;
@@ -16590,13 +16723,15 @@ END DOCUMENTATION */
       display: block;
       width: 100%;
       padding: 5px;
-<<<<<<< HEAD
       font-size: 0.8em;
       color: #fff;
+<<<<<<< HEAD
 =======
       font-size: .8em;
       color: white;
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
       text-align: center;
       background: rgba(0, 0, 0, 0.1);
       transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
@@ -16652,12 +16787,13 @@ popover popover-content {
   margin-left: 50%;
   text-align: center;
   background: #fff;
-  border: 1px solid #d6d9e0;
+  border: 1px solid #dee2e6;
   border-radius: 2px;
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
   opacity: 1;
   transition: opacity 250ms ease; }
   popover popover-content::before {
+<<<<<<< HEAD
 <<<<<<< HEAD
     font-family: none;
     content: "\25b2";
@@ -16670,6 +16806,12 @@ popover popover-content {
     .ode-bootstrap-neo .table-responsive > .table-bordered {
       border: 0; }
   .ode-bootstrap-neo .form-control {
+=======
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    z-index: 0;
+>>>>>>> feat: clean variables
     display: block;
     width: 100%;
     height: calc(1.6em + 0.75rem + 2px);
@@ -16716,20 +16858,20 @@ popover popover-content {
     border: 1px solid transparent;
     border-radius: 6px; }
     popover popover-content .bookmarked-app:hover {
-      border-color: #e9ebef; }
+      border-color: #e9ecef; }
     popover popover-content .bookmarked-app .application {
       font-size: 3rem; }
   popover popover-content .more {
     padding: 10px;
     text-align: center;
-    background: #b1b6bf;
+    background: #adb5bd;
     transition: background 250ms ease; }
     popover popover-content .more:hover {
       background: #ff8500; }
   popover popover-content .search-text .searchInput {
     height: 29px;
     margin: 10px -2px 10px 25px;
-    border: 1px solid #e9ebef; }
+    border: 1px solid #e9ecef; }
   popover popover-content .search-text .searchButton {
     float: left;
     width: 30px;
@@ -16814,17 +16956,21 @@ help {
     line-height: 40px;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> docs: regenerate index.css and index.css.map
     border-radius: 5px;
     text-align: center;
 =======
 >>>>>>> feat: linter process
+=======
+>>>>>>> feat: clean variables
     color: white;
     text-align: center;
     cursor: pointer;
     background-color: #ff8500;
     border: none;
     border-radius: 6px; }
+<<<<<<< HEAD
 =======
     border-radius: 6px;
     text-align: center;
@@ -16834,6 +16980,8 @@ help {
     padding: 0;
     border: none; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
     help .burger-button .burger-icon {
       font-family: "generic-icons";
       font-style: normal; }
@@ -16932,10 +17080,17 @@ popover popover-content {
   transition: opacity 250ms ease;
   margin-left: 50%;
   text-align: center;
+<<<<<<< HEAD
   border: 1px solid #d6d9e0;
+=======
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 2px;
+>>>>>>> feat: clean variables
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
   border-radius: 2px; }
   popover popover-content::before {
+<<<<<<< HEAD
     font-family: none;
     content: "\25b2";
     display: block;
@@ -16955,25 +17110,50 @@ popover popover-content {
     margin: 1px;
     width: 70px;
     height: 70px;
+=======
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    z-index: 0;
+    display: block;
+    width: 40px;
+    margin-left: -21px;
+    font-family: none;
+    font-size: 20px;
+    color: #fff;
+    content: "\25b2"; }
+  popover popover-content .my-apps {
+    justify-content: center;
+    padding: 25px 15px;
+    margin: auto; }
+  popover popover-content .bookmarked-app {
+    width: 70px;
+    height: 70px;
+    margin: 1px;
+>>>>>>> feat: clean variables
     line-height: 70px;
     text-align: center;
     border: 1px solid transparent;
     border-radius: 6px; }
     popover popover-content .bookmarked-app:hover {
-      border-color: #e9ebef; }
+      border-color: #e9ecef; }
     popover popover-content .bookmarked-app .application {
       font-size: 3rem; }
   popover popover-content .more {
     padding: 10px;
     text-align: center;
-    background: #b1b6bf;
+    background: #adb5bd;
     transition: background 250ms ease; }
     popover popover-content .more:hover {
       background: #ff8500; }
   popover popover-content .search-text .searchInput {
     border: 1px solid #e9ebef;
     margin: 10px -2px 10px 25px;
+<<<<<<< HEAD
     height: 29px; }
+=======
+    border: 1px solid #e9ecef; }
+>>>>>>> feat: clean variables
   popover popover-content .search-text .searchButton {
     border: none;
     border-top-left-radius: 0;
@@ -17012,7 +17192,7 @@ popover popover-content {
   margin-left: 50%;
   text-align: center;
   background: #fff;
-  border: 1px solid #d6d9e0;
+  border: 1px solid #dee2e6;
   border-radius: 2px;
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
   opacity: 1;
@@ -17047,6 +17227,7 @@ popover popover-content {
     line-height: 70px;
     text-align: center;
     border: 1px solid transparent;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     border-radius: 5px; }
@@ -56470,6 +56651,30 @@ popover popover-content {
     width: 30px;
     height: 29px;
     padding: 0;
+=======
+    border-radius: 6px; }
+    popover popover-content .bookmarked-app:hover {
+      border-color: #e9ecef; }
+    popover popover-content .bookmarked-app .application {
+      font-size: 3rem; }
+  popover popover-content .more {
+    padding: 10px;
+    text-align: center;
+    background: #adb5bd;
+    transition: background 250ms ease; }
+    popover popover-content .more:hover {
+      background: #ff8500; }
+  popover popover-content .search-text .searchInput {
+    width: 75%;
+    height: 29px;
+    margin: 10px -2px 10px 20px;
+    border: 1px solid #e9ecef; }
+  popover popover-content .search-text .searchButton {
+    float: left;
+    width: 30px;
+    height: 29px;
+    padding: 0;
+>>>>>>> feat: clean variables
     margin-top: 10px;
     line-height: 27px;
     text-align: center;
@@ -56477,6 +56682,7 @@ popover popover-content {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     box-shadow: none; }
+<<<<<<< HEAD
 =======
 
 @media (max-width: 767.98px) {
@@ -56527,6 +56733,32 @@ popover popover-content {
 =======
   src: url("fonts/roboto/Roboto-BoldItalic.ttf"); }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/roboto/Roboto-Regular.ttf"); }
+
+@font-face {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 400;
+  src: url("fonts/roboto/Roboto-Italic.ttf"); }
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/roboto/Roboto-Bold.ttf"); }
+
+@font-face {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 700;
+  src: url("fonts/roboto/Roboto-BoldItalic.ttf"); }
+>>>>>>> feat: clean variables
 
 i[class*="ic-"] {
   font-family: "generic-icons";
@@ -56776,28 +57008,6 @@ i[class*="ic-"] {
 .ic-app.sacoche::before, .ic-app.sacoche-large::before {
   content: "\e899"; }
 
-.transition-hover-fast, .list-item:hover, .sidebar-tree li a:hover, a {
-  transition-timing-function: ease;
-  transition-duration: .25s;
-  transition-property: all; }
-
-.transition-hover, .domino, .domino:hover .domino-overlay .left,
-.domino:hover .domino-overlay .right, .list-item {
-  transition-timing-function: ease;
-  transition-duration: .5s;
-  transition-property: all; }
-
-.transition-hover-slow, .domino:hover, .sidebar-tree li a {
-  transition-timing-function: ease;
-  transition-duration: .75s;
-  transition-property: all; }
-
-.transition-hover-very-slow {
-  transition-timing-function: ease;
-  transition-duration: .75s;
-  transition-property: all; }
-
-<<<<<<< HEAD
 .application-title {
   color: #4bafd5; }
 
@@ -56811,7 +57021,7 @@ i[class*="ic-"] {
   height: 140px;
   padding: 5px;
   margin: 5px;
-  color: #3f454f;
+  color: #343a40;
   text-align: center;
   background-color: transparent;
   border: 1px solid transparent;
@@ -56824,7 +57034,7 @@ i[class*="ic-"] {
     width: 80px;
     height: 80px;
     font-size: 5rem;
-    color: #3f454f; }
+    color: #343a40; }
   .application-item span {
     display: flex;
     flex: 1;
@@ -56836,6 +57046,7 @@ i[class*="ic-"] {
     max-height: 100px;
     padding: 10px; }
   .application-item--add, .application-item--remove {
+<<<<<<< HEAD
 =======
 .application__title {
   color: #4bafd5; }
@@ -56889,12 +57100,13 @@ i[class*="ic-"] {
     padding: 10px; }
   .application__item--add, .application__item--remove {
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
     position: absolute;
     top: 10px;
     right: 20px;
     width: 40px;
     height: 40px;
-<<<<<<< HEAD
     padding: 0;
     text-align: center;
     background-color: #4bafd5;
@@ -56927,7 +57139,7 @@ i[class*="ic-"] {
   .application-item:hover {
     color: inherit;
     background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid #d6d9e0;
+    border: 1px solid #dee2e6;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
     transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.35s ease-in-out; }
   .application-item:active {
@@ -56939,6 +57151,7 @@ i[class*="ic-"] {
     background-color: rgba(75, 175, 213, 0.15); }
 
 .applications-list {
+<<<<<<< HEAD
 =======
     border-radius: 50%;
     background-color: #4bafd5;
@@ -57062,15 +57275,16 @@ i[class*="ic-"] {
 
 .applications__list {
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
 
-<<<<<<< HEAD
 .applications-favorite {
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.75);
-  border: 1px solid #d6d9e0;
+  border: 1px solid #dee2e6;
   border-radius: 10px;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.05); }
   .applications-favorite h2, .applications-favorite .h2 {
@@ -57081,12 +57295,12 @@ i[class*="ic-"] {
   font-size: 1.2rem; }
   .applications-list h2 span, .applications-list .h2 span, .applications-connector h2 span, .applications-connector .h2 span {
     padding-right: 10px;
-    background-color: #f0f2f4; }
+    background-color: #f8f9fa; }
   .applications-list h2::after, .applications-list .h2::after, .applications-connector h2::after, .applications-connector .h2::after {
     display: block;
     margin-top: -10px;
     content: "";
-    border-top: 1px solid #d6d9e0; }
+    border-top: 1px solid #dee2e6; }
 
 @media (max-width: 575.98px) {
   .application-item {
@@ -57108,6 +57322,7 @@ i[class*="ic-"] {
   .applications-list {
     justify-content: space-around; }
   .applications-favorite {
+<<<<<<< HEAD
 =======
 .applications__favorite {
   border: 1px solid #d6d9e0;
@@ -57151,6 +57366,8 @@ i[class*="ic-"] {
     justify-content: space-around; }
   .applications__favorite {
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
     padding: 10px; } }
 
 .application {
@@ -57171,7 +57388,6 @@ i[class*="ic-"] {
   .application.esidoc, .application.esidoc-large, .application.madmagz, .application.madmagz-large, .application.rbs, .application.rbs-large, .application.unstagepourtous, .application.unstagepourtous-large {
     color: #b930a2; }
   .application.competences::before, .application.competences-large::before {
-<<<<<<< HEAD
     content: "\e927"; }
   .application.cahier-textes::before, .application.cahier-textes-large::before {
     content: "\e86f"; }
@@ -57369,6 +57585,7 @@ i[class*="ic-"] {
     content: "\e8aa"; }
   .application.connecteur-generique2::before, .application.connecteur-generique2-large::before {
     content: "\e8ab"; }
+<<<<<<< HEAD
 =======
     content: '\e927'; }
   .application.cahier-textes::before, .application.cahier-textes-large::before {
@@ -57568,6 +57785,8 @@ i[class*="ic-"] {
   .application.connecteur-generique2::before, .application.connecteur-generique2-large::before {
     content: '\e8ab'; }
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
 
 .blue-background-class {
   background-color: rgba(75, 175, 213, 0.15); }
@@ -57594,15 +57813,17 @@ i[class*="ic-"] {
 >>>>>>> feat: Add toast for infos / read more button in flash widget
   .btn-primary.disabled, popover popover-content .search-text .disabled.searchButton, .btn-primary:disabled, popover popover-content .search-text .searchButton:disabled {
     color: rgba(255, 255, 255, 0.8);
-    background-color: #8c939e;
-    border-color: #8c939e;
-<<<<<<< HEAD
+    background-color: #6c757d;
+    border-color: #6c757d;
     opacity: 0.8; }
+<<<<<<< HEAD
 
 /* DOCUMENTATION
 >>>>>>> docs: regenerate index.css and index.css.map
 =======
     opacity: .8; }
+=======
+>>>>>>> feat: clean variables
 
 /* DOCUMENTATION
 >>>>>>> feat: Add toast for infos / read more button in flash widget
@@ -57631,8 +57852,8 @@ END DOCUMENTATION */
 /* COMPONENT */
 .domino.folder .domino-image,
 .domino.item .domino-image {
-  color: #8c939e;
-  background-color: rgba(140, 147, 158, 0.1); }
+  color: #6c757d;
+  background-color: rgba(108, 117, 125, 0.1); }
 
 .domino:hover {
   border-color: #4bafd5; }
@@ -57706,6 +57927,7 @@ END DOCUMENTATION */
     border-bottom-color: transparent;
     border-left-color: transparent; }
 <<<<<<< HEAD
+<<<<<<< HEAD
   .list__header {
 <<<<<<< HEAD
 =======
@@ -57745,24 +57967,29 @@ END DOCUMENTATION */
 =======
 >>>>>>> feat: Add record widget controls
 =======
+=======
+>>>>>>> feat: clean variables
   .list-header {
 >>>>>>> docs: regenerate index.css and index.css.map
     display: none; }
   .list-item {
+<<<<<<< HEAD
 =======
     display: none; }
   .list__item {
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
     flex-wrap: wrap;
     padding: 10px;
     margin: 10px 0;
-    border-color: #d6d9e0; }
-<<<<<<< HEAD
+    border-color: #dee2e6; }
     .list-item .list-title {
       width: calc(100% - 40px); }
     .list-item .list-status {
       display: none; }
     .list-item .list-owner {
+<<<<<<< HEAD
 =======
     .list__item .list__title {
       width: calc(100% - 40px); }
@@ -57770,6 +57997,8 @@ END DOCUMENTATION */
       display: none; }
     .list__item .list__owner {
 >>>>>>> feat: Add toast for infos / read more button in flash widget
+=======
+>>>>>>> feat: clean variables
       width: 55%; }
     .list-item .list-modification {
       width: 45%;
@@ -57795,6 +58024,7 @@ END DOCUMENTATION */
       line-height: 1.6; }
     .navbar.navbar-dark .btn:first-child {
       margin-right: auto; }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   header.navbar.navbar-dark .logo {
@@ -58662,21 +58892,47 @@ END DOCUMENTATION */
 =======
     border-radius: 50%; }
 >>>>>>> feat: linter process
+=======
+    .navbar.navbar-dark .btn .logo {
+      display: inline-block;
+      height: 54px; }
+  .navbar.navbar-dark .navigation a {
+    color: #fff; }
+  .navbar.navbar-dark .navigation .btn .new-mails {
+    position: relative;
+    top: -15px;
+    right: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: -20px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    background: #ff8500;
+    border-radius: 50%; }
+  .navbar.navbar-dark .navigation .btn #my-photo {
+    width: 25px;
+    margin: 7px 0;
+    background-color: #fff;
+    border-radius: 50%; }
+>>>>>>> feat: clean variables
 
 @media (max-width: 767.98px) {
-  header.navbar.navbar-dark {
+  .navbar.navbar-dark {
     height: 55px; }
-    header.navbar.navbar-dark .container {
+    .navbar.navbar-dark .container {
       padding: 0; }
-    header.navbar.navbar-dark a.application-title {
+    .navbar.navbar-dark .application-title {
       display: block;
       width: calc(100% - 300px);
       color: #fff; }
-    header.navbar.navbar-dark .btn {
+    .navbar.navbar-dark .btn {
       padding: 0 5px; }
-    header.navbar.navbar-dark .logo {
+    .navbar.navbar-dark .logo {
       height: 30px; }
-    header.navbar.navbar-dark .dropdown i[class*="ic-"] {
+    .navbar.navbar-dark .dropdown [class*="ic-"] {
       margin-right: 10px;
       font-size: 2rem;
       vertical-align: middle; } }
@@ -58708,7 +58964,7 @@ END DOCUMENTATION */
 /* COMPONENT */
 /* aside */
 .sidebar {
-  color: #8c939e;
+  color: #6c757d;
   background-color: rgba(255, 255, 255, 0.7); }
   .sidebar-title {
     color: #4bafd5; }
