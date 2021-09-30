@@ -7,9 +7,7 @@
 </head>
 <body>
   <h4 class="mt-3">Sidebar mobile (offcanvas)</h4>
-  <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-    Link with href
-  </a>
+  <a class="btn btn-primary mb-3" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Ouvrir la sidebar mobile</a>
   
   <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
@@ -19,7 +17,7 @@
     <div class="offcanvas-body">
       <ul class="sidebar-tree">
         <li>
-          <input type="checkbox" id="dossier_1" />
+          <input type="checkbox" id="dossier_1" checked />
           <label for="dossier_1"><a class="active" href=""><i class="ic-app blog"></i> Mes blogs</a></label>
           <ul>
             <li><a href="">Dossier 1</a></li>
@@ -35,7 +33,7 @@
               </ul>
             </li>
             <li>
-              <input type="checkbox" id="dossier_3" />
+              <input type="checkbox" id="dossier_3" checked />
               <label for="dossier_3"><a href="">Dossier 3</a></label>
               <ul>
                 <li><a href="">Sous-dossier 1</a></li>
@@ -46,52 +44,17 @@
         </li>
         <li><a href=""><i class="fas fa-trash-alt"></i> Ma corbeille</a></li>
       </ul>
-      <a class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#createFolder">Créer un dossier</a>
-      <a class="btn btn-outline-secondary btn-block">Importer</a>
+      <div class="d-grid gap-2">
+        <a class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#createFolder">Créer un dossier</a>
+      </div>
     </div>
   </div>
-  <!-- Sidebar mobile
-  <h4 class="mt-3">Sidebar mobile</h4>
-  <div class="sidebar-mobile d-block">
-    <input type="checkbox" uncheck />
-    <i class="ic-burger"></i> Dossier courant
-    <aside class="sidebar">
-        <ul class="sidebar-tree">
-            <a href="" class="sidebar-close">
-                <i class="fas fa-times"></i>
-            </a>
-            <li><a class="active" href="">Mes blogs</a>
-                <ul>
-                    <li><a href="">Dossier 1</a></li>
-                    <li><a href="">Dossier 2</a>
-                        <ul>
-                            <li><a href="">Sous-dossier 1</a></li>
-                            <li><a href="">Sous-dossier 2</a></li>
-                            <li><a href="">Sous-dossier 3</a></li>
-                            <li><a href="">Sous-dossier avec un nom très long</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">Dossier 3</a>
-                        <ul>
-                            <li><a href="">Sous-dossier 1</a></li>
-                            <li><a href="">Sous-dossier 2</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="">Ma corbeille</a></li>
-        </ul>
-        <a class="btn btn-secondary btn-block">Créer un blog</a>
-        <a class="btn btn-outline-secondary btn-block">Créer un dossier</a>
-        <a class="btn btn-outline-secondary btn-block">Importer</a>
-    </aside>
-  </div> -->
   <h4 class="mt-3">Sidebar desktop</h4>
   <aside class="sidebar left">
     <h1 class="sidebar-title">Sidebar</h1>
     <ul class="sidebar-tree" style="max-height: calc(100vh - 110px)">
       <li>
-        <input type="checkbox" id="dossier_1" />
+        <input type="checkbox" id="dossier_1" checked />
         <label for="dossier_1"><a class="active" href=""><i class="ic-app blog"></i> Mes blogs</a></label>
         <ul>
           <li><a href="">Dossier 1</a></li>
@@ -107,7 +70,7 @@
             </ul>
           </li>
           <li>
-            <input type="checkbox" id="dossier_3" />
+            <input type="checkbox" id="dossier_3" checked />
             <label for="dossier_3"><a href="">Dossier 3</a></label>
             <ul>
               <li><a href="">Sous-dossier 1</a></li>
@@ -118,8 +81,9 @@
       </li>
       <li><a href=""><i class="fas fa-trash-alt"></i> Ma corbeille</a></li>
     </ul>
-    <a class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#createFolder">Créer un dossier</a>
-    <a class="btn btn-outline-secondary btn-block">Importer</a>
+    <div class="d-grid gap-2">
+      <a class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#createFolder">Créer un dossier</a>
+    </div>
   </aside>
 
   <!-- TODO : APPELER CORRECTEMENT LE JS DE BT -->

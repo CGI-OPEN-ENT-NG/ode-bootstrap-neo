@@ -272,7 +272,7 @@
                         <span class="list-modification"><i class="fas fa-sort"></i> Dernière modification</span>
                     </section>
                     <article class="list-item folder">
-                        <i class="list-item-preview ic-folder text-secondary"></i>
+                        <i class="list-item-preview ic-folder"></i>
                         <h2 class="list-title">
                             Titre du dossier
                         </h2>
@@ -311,7 +311,7 @@
                         </div>
                     </article>
                     <article class="list-item">
-                        <i class="list-item-preview ic-app blog text-secondary"></i>
+                        <i class="list-item-preview ic-app blog"></i>
                         <h2 class="list-title">
                             Titre de la ressource avec une icône
                         </h2>
@@ -329,7 +329,7 @@
                         </div>
                     </article>
                     <article class="list-item">
-                        <i class="list-item-preview ic-app blog text-secondary"></i>
+                        <i class="list-item-preview ic-app blog"></i>
                         <h2 class="list-title">
                             Titre de la ressource
                         </h2>
@@ -348,7 +348,7 @@
                         </div>
                     </article>
                     <article class="list-item">
-                        <i class="list-item-preview ic-app blog text-secondary"></i>
+                        <i class="list-item-preview ic-app blog"></i>
                         <h2 class="list-title">
                             Titre de la ressource
                         </h2>
@@ -367,7 +367,7 @@
                         </div>
                     </article>
                     <article class="list-item">
-                        <i class="list-item-preview ic-app blog text-secondary"></i>
+                        <i class="list-item-preview ic-app blog"></i>
                         <h2 class="list-title">
                             Titre de la ressource
                         </h2>
@@ -386,7 +386,7 @@
                         </div>
                     </article>
                     <article class="list-item">
-                        <i class="list-item-preview ic-app blog text-secondary"></i>
+                        <i class="list-item-preview ic-app blog"></i>
                         <h2 class="list-title">
                             Titre de la ressource
                         </h2>
@@ -405,7 +405,7 @@
                         </div>
                     </article>
                     <article class="list-item">
-                        <i class="list-item-preview ic-app blog text-secondary"></i>
+                        <i class="list-item-preview ic-app blog"></i>
                         <h2 class="list-title">
                             Titre de la ressource
                         </h2>
@@ -424,7 +424,7 @@
                         </div>
                     </article>
                     <article class="list-item">
-                        <i class="list-item-preview ic-app blog text-secondary"></i>
+                        <i class="list-item-preview ic-app blog"></i>
                         <h2 class="list-title">
                             Titre de la ressource
                         </h2>
@@ -448,13 +448,13 @@
                 </section>
 
                 <!-- TOASTER -->
-                <div class="toaster d-none">
+                <div class="toaster">
                     <a class="d-mobile-none" href="">Ouvrir</a>
                     <a href="">Propriétés</a>
                     <a href="">Déplacer</a>
                     <a href="">Dupliquer</a>
                     <a class="d-mobile-none" href="">Exporter</a>
-                    <a href="">Partager</a>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#share">Partager</a>
                     <a class="d-mobile-none" href="">Commenter</a>
                     <a class="d-mobile-none" href="">Imprimer</a>
                     <a class="d-mobile-none" href="">Publier dans la bibliothèque</a>
@@ -464,6 +464,117 @@
         </main>
     </div>
     
+    <!-- Modale de partage -->
+    <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Partager le blog "Titre de la ressource"</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-info justify-content-center fw-bold mb-4">Vous êtes gestionnaire</div>
+                    <div class="table-responsive">
+                        <table class="table align-middle table-striped">
+                            <thead>
+                                <tr class="text-center">
+                                <th scope="col"></th>
+                                <th scope="col">Consulter</th>
+                                <th scope="col">Commenter</th>
+                                <th scope="col">Contribuer</th>
+                                <th scope="col">Gestionnaire</th>
+                                <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td scope="row">
+                                    <img class="avatar avatar--25" src="https://loremflickr.com/50/50/man">
+                                    Patrick Mossion
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" value="" checked>
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" value="" checked>
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" value="" checked>
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" value="" checked>
+                                </td>
+                                <td class="text-center"><a href=""><i class="remove fas fa-times"></i></a></td>
+                                </tr>
+                                <tr>
+                                <td scope="row">
+                                    <img class="avatar avatar--25" src="https://loremflickr.com/50/50/woman">
+                                    Brigitte Fontaine
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" value="" checked>
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" value="" checked>
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" value="" checked>
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                </td>
+                                <td class="text-center"><a href=""><i class="remove fas fa-times"></i></a></td>
+                                </tr>
+                                <tr>
+                                <td scope="row">
+                                    <img class="avatar avatar--25" src="https://loremflickr.com/50/50/woman">
+                                    Isabelle Polonio
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" value="" checked>
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" value="" checked>
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                </td>
+                                <td class="text-center"><a href=""><i class="remove fas fa-times"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href=""><i class="fas fa-bookmark"></i> Enregistrer cette liste comme favori de partage</a>
+                    <div class="my-5">
+                        <h5 class="mb-3">Ajouter des utilisateurs, des groupes et des favoris de partage</h5>
+                        <div class="col-lg-12 input-searchbar">
+                            <i class="ic-search form-control-feedback"></i>
+                            <input type="search" class="form-control" id="" placeholder="Saisissez 3 lettres pour démarrer la recherche ou appuyez sur entrée">
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="mb-3">Circuit de publication</h5>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio" value="option" checked>
+                            <label class="form-check-label" for="inlineRadio">Publication immédiate</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio" value="option">
+                            <label class="form-check-label" for="inlineRadio">Billet à soumettre</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link" data-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary">Enregistrer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- TODO : APPELER CORRECTEMENT LE JS DE BT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
