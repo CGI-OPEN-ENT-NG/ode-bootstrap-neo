@@ -11,6 +11,11 @@
             border-color: $secondary;
         }
     }
+    
+    // À VARIABILISER
+    &-item-preview.blog {
+        color: $indigo;
+    }
 }
 
 @include media-breakpoint-down(sm) {
