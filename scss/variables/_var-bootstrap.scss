@@ -28,11 +28,8 @@ $btn-link-disabled-color: $gray-500;
 
 // Forms
 $input-font-family: "Roboto";
-$input-focus-border-color: $secondary;
 
-// Dropdowns
-$dropdown-link-color: $gray-700;
-$dropdown-link-hover-bg: rgba($secondary, 0.1);
-
-// Image thumbnails
-$thumbnail-bg: $white;
+// Alerts
+$alert-border-width: 0;
+$alert-bg-scale: -85%;
+$alert-color-scale: 20%;
