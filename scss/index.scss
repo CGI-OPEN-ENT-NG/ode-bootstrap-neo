@@ -16,27 +16,15 @@
 // Contient tous nos composants visuels, simple ou complexe
 
 //!!!Conflit avec le widget du meme nom
-//Voir comment normaliser
+// Voir comment normaliser
+// > On le renomme en applications-board, et on mutualise dans ode-bt
+// > Julien renomme son widget en icon-list
 @import "components/applications";
 
-//A mettre plutot dans le framework
 @import "components/dominos";
 
 //A enlever après création du bouton custom
 @import "components/filters";
 
-//Nom de composant trop générique
-//Peut-être explorer-list ou table-list
-@import "components/lists";
-
-//Le code html + css peut être optimisé
+//Le code html + css peut être optimisé » à réécrire complétement
 @import "components/navbar";
-
-//Nom de composant trop générique
-//Peut-être folder-tree ou file-tree
-@import "components/sidebar";
-
-//Bootstrap propose un composant toast, plus proche du standard du nom
-//Ici on est plutot sur une navbar fixée en bottom
-//Le container serait un composant off-canvas https://getbootstrap.com/docs/5.0/components/offcanvas/#placement
-@import "components/toaster";
