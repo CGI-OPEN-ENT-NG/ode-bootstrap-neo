@@ -53,8 +53,7 @@ Ref : https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
   --bs-ghost-rgb: 245, 245, 251;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 73, 80, 87;
-  --bs-body-bg-rgb: 248, 249, 250;
+  --bs-body-rgb: 73, 80, 87;
   --bs-font-sans-serif: "Roboto", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -6415,7 +6414,7 @@ textarea.form-control-lg {
 
 .text-body {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important; }
+  color: rgba(var(--bs-body-rgb), var(--bs-text-opacity)) !important; }
 
 .text-muted {
   --bs-text-opacity: 1;
@@ -6499,7 +6498,7 @@ textarea.form-control-lg {
 
 .bg-body {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important; }
+  background-color: rgba(var(--bs-body-rgb), var(--bs-bg-opacity)) !important; }
 
 .bg-transparent {
   --bs-bg-opacity: 1;
@@ -13306,8 +13305,7 @@ readers do not read off random characters that represent icons */
 html {
   font-size: 62.5%; }
 
-[class*="ic-"],
-.ic-app {
+[class^="ic-"] {
   font-family: "generic-icons";
   font-style: normal;
   font-weight: 400; }
@@ -13409,7 +13407,7 @@ html {
   content: ""; }
 
 .color-app-account {
-  color: #e13a3a; }
+  color: #763294; }
 
 .color-app-actualites {
   color: #4bafd5; }
@@ -13468,9 +13466,6 @@ html {
 .color-app-forum {
   color: #4bafd5; }
 
-.color-app-kne {
-  color: #e13a3a; }
-
 .color-app-library {
   color: #ecbe30; }
 
@@ -13499,7 +13494,7 @@ html {
   color: #ff8500; }
 
 .color-app-poll {
-  color: #e13a3a; }
+  color: #4bafd5; }
 
 .color-app-polls {
   color: #4bafd5; }
@@ -13509,9 +13504,6 @@ html {
 
 .color-app-rbs {
   color: #b930a2; }
-
-.color-app-sacoche {
-  color: #e13a3a; }
 
 .color-app-schoolbook {
   color: #46bfaf; }
@@ -13523,7 +13515,7 @@ html {
   color: #46bfaf; }
 
 .color-app-searchengine {
-  color: #e13a3a; }
+  color: #4bafd5; }
 
 .color-app-settings-class {
   color: #ecbe30; }
@@ -13550,16 +13542,16 @@ html {
   color: #46bfaf; }
 
 .color-app-video {
-  color: #e13a3a; }
+  color: #4bafd5; }
 
 .color-app-visioconf {
-  color: #763294; }
+  color: #4bafd5; }
 
 .color-app-Web-conference {
-  color: #e13a3a; }
+  color: #4bafd5; }
 
 .color-app-website {
-  color: #e13a3a; }
+  color: #4bafd5; }
 
 .color-app-wiki {
   color: #763294; }
@@ -13567,8 +13559,215 @@ html {
 .color-app-workspace {
   color: #e13a3a; }
 
+.color-app-absences {
+  color: #e13a3a; }
+
+.color-app-admission-post-bac {
+  color: #e13a3a; }
+
+.color-app-aide-devoirs {
+  color: #46bfaf; }
+
+.color-app-agenda {
+  color: #ecbe30; }
+
+.color-app-assistance {
+  color: #4bafd5; }
+
+.color-app-assr {
+  color: #e13a3a; }
+
+.color-app-award {
+  color: #46bfaf; }
+
+.color-app-banquesavoir {
+  color: #4bafd5; }
+
+.color-app-bcdi {
+  color: #763294; }
+
+.color-app-biblionisep {
+  color: #46bfaf; }
+
+.color-app-bookmark-empty {
+  color: #46bfaf; }
+
+.color-app-canal-numerique {
+  color: #e13a3a; }
+
+.color-app-ccn {
+  color: #46bfaf; }
+
+.color-app-cerise {
+  color: #e13a3a; }
+
+.color-app-cervoprint {
+  color: #4bafd5; }
+
+.color-app-charlemagne {
+  color: #e13a3a; }
+
+.color-app-charte {
+  color: #ecbe30; }
+
+.color-app-chat {
+  color: #e13a3a; }
+
+.color-app-cidj {
+  color: #46bfaf; }
+
+.color-app-connecteur-generique1 {
+  color: #e13a3a; }
+
+.color-app-connecteur-generique2 {
+  color: #e13a3a; }
+
+.color-app-educagri {
+  color: #1a22a2; }
+
+.color-app-edumedia {
+  color: #4bafd5; }
+
+.color-app-edumoov {
+  color: #e13a3a; }
+
+.color-app-edutheque {
+  color: #ecbe30; }
+
+.color-app-electron {
+  color: #e13a3a; }
+
+.color-app-elyceepicardie {
+  color: #1a22a2; }
+
+.color-app-esidoc {
+  color: #b930a2; }
+
+.color-app-europress {
+  color: #4bafd5; }
+
+.color-app-gepi {
+  color: #4bafd5; }
+
+.color-app-glpi {
+  color: #e13a3a; }
+
+.color-app-hiboutheque {
+  color: #46bfaf; }
+
+.color-app-itopstore {
+  color: #46bfaf; }
+
+.color-app-kne {
+  color: #763294; }
+
+.color-app-le-site-tv {
+  color: #ecbe30; }
+
+.color-app-lemonde {
+  color: #1a22a2; }
+
+.color-app-lesechos {
+  color: #1a22a2; }
+
+.color-app-lsu {
+  color: #4bafd5; }
+
+.color-app-madmagz {
+  color: #b930a2; }
+
+.color-app-matholycee {
+  color: #e13a3a; }
+
+.color-app-maxicours {
+  color: #1a22a2; }
+
+.color-app-mediacentre {
+  color: #e13a3a; }
+
+.color-app-monorientationenligne {
+  color: #ecbe30; }
+
+.color-app-monstageenligne {
+  color: #4bafd5; }
+
+.color-app-moodle {
+  color: #ff8500; }
+
+.color-app-museefrancaisphoto {
+  color: #1a22a2; }
+
+.color-app-my-network {
+  color: #1a22a2; }
+
+.color-app-netvibes {
+  color: #46bfaf; }
+
+.color-app-note {
+  color: #ecbe30; }
+
+.color-app-onisep {
+  color: #4bafd5; }
+
+.color-app-onisep2 {
+  color: #4bafd5; }
+
+.color-app-parametrage {
+  color: #e13a3a; }
+
+.color-app-paraschool {
+  color: #46bfaf; }
+
+.color-app-pearltress {
+  color: #4bafd5; }
+
+.color-app-picardie-cursus {
+  color: #763294; }
+
+.color-app-pro-eps {
+  color: #4bafd5; }
+
+.color-app-pronote {
+  color: #763294; }
+
+.color-app-public {
+  color: #e13a3a; }
+
+.color-app-qwant-junior {
+  color: #e13a3a; }
+
+.color-app-residence-artiste {
+  color: #46bfaf; }
+
+.color-app-ressourcesdepartementale91 {
+  color: #1a22a2; }
+
+.color-app-sacoche {
+  color: #1a22a2; }
+
+.color-app-scolinfo {
+  color: #e13a3a; }
+
+.color-app-suitcase {
+  color: #e13a3a; }
+
+.color-app-turboself {
+  color: #ecbe30; }
+
+.color-app-universalis {
+  color: #e13a3a; }
+
+.color-app-unstagepourtous {
+  color: #b930a2; }
+
+.color-app-vie-scolaire {
+  color: #ecbe30; }
+
+.color-app-webclasseur {
+  color: #4bafd5; }
+
 .bg-app-account {
-  background-color: #e13a3a; }
+  background-color: #763294; }
 
 .bg-app-actualites {
   background-color: #4bafd5; }
@@ -13627,9 +13826,6 @@ html {
 .bg-app-forum {
   background-color: #4bafd5; }
 
-.bg-app-kne {
-  background-color: #e13a3a; }
-
 .bg-app-library {
   background-color: #ecbe30; }
 
@@ -13658,7 +13854,7 @@ html {
   background-color: #ff8500; }
 
 .bg-app-poll {
-  background-color: #e13a3a; }
+  background-color: #4bafd5; }
 
 .bg-app-polls {
   background-color: #4bafd5; }
@@ -13668,9 +13864,6 @@ html {
 
 .bg-app-rbs {
   background-color: #b930a2; }
-
-.bg-app-sacoche {
-  background-color: #e13a3a; }
 
 .bg-app-schoolbook {
   background-color: #46bfaf; }
@@ -13682,7 +13875,7 @@ html {
   background-color: #46bfaf; }
 
 .bg-app-searchengine {
-  background-color: #e13a3a; }
+  background-color: #4bafd5; }
 
 .bg-app-settings-class {
   background-color: #ecbe30; }
@@ -13709,16 +13902,16 @@ html {
   background-color: #46bfaf; }
 
 .bg-app-video {
-  background-color: #e13a3a; }
+  background-color: #4bafd5; }
 
 .bg-app-visioconf {
-  background-color: #763294; }
+  background-color: #4bafd5; }
 
 .bg-app-Web-conference {
-  background-color: #e13a3a; }
+  background-color: #4bafd5; }
 
 .bg-app-website {
-  background-color: #e13a3a; }
+  background-color: #4bafd5; }
 
 .bg-app-wiki {
   background-color: #763294; }
@@ -13726,164 +13919,572 @@ html {
 .bg-app-workspace {
   background-color: #e13a3a; }
 
-.ic-app.account::before, .ic-app.account-large::before {
+.bg-app-absences {
+  background-color: #e13a3a; }
+
+.bg-app-admission-post-bac {
+  background-color: #e13a3a; }
+
+.bg-app-aide-devoirs {
+  background-color: #46bfaf; }
+
+.bg-app-agenda {
+  background-color: #ecbe30; }
+
+.bg-app-assistance {
+  background-color: #4bafd5; }
+
+.bg-app-assr {
+  background-color: #e13a3a; }
+
+.bg-app-award {
+  background-color: #46bfaf; }
+
+.bg-app-banquesavoir {
+  background-color: #4bafd5; }
+
+.bg-app-bcdi {
+  background-color: #763294; }
+
+.bg-app-biblionisep {
+  background-color: #46bfaf; }
+
+.bg-app-bookmark-empty {
+  background-color: #46bfaf; }
+
+.bg-app-canal-numerique {
+  background-color: #e13a3a; }
+
+.bg-app-ccn {
+  background-color: #46bfaf; }
+
+.bg-app-cerise {
+  background-color: #e13a3a; }
+
+.bg-app-cervoprint {
+  background-color: #4bafd5; }
+
+.bg-app-charlemagne {
+  background-color: #e13a3a; }
+
+.bg-app-charte {
+  background-color: #ecbe30; }
+
+.bg-app-chat {
+  background-color: #e13a3a; }
+
+.bg-app-cidj {
+  background-color: #46bfaf; }
+
+.bg-app-connecteur-generique1 {
+  background-color: #e13a3a; }
+
+.bg-app-connecteur-generique2 {
+  background-color: #e13a3a; }
+
+.bg-app-educagri {
+  background-color: #1a22a2; }
+
+.bg-app-edumedia {
+  background-color: #4bafd5; }
+
+.bg-app-edumoov {
+  background-color: #e13a3a; }
+
+.bg-app-edutheque {
+  background-color: #ecbe30; }
+
+.bg-app-electron {
+  background-color: #e13a3a; }
+
+.bg-app-elyceepicardie {
+  background-color: #1a22a2; }
+
+.bg-app-esidoc {
+  background-color: #b930a2; }
+
+.bg-app-europress {
+  background-color: #4bafd5; }
+
+.bg-app-gepi {
+  background-color: #4bafd5; }
+
+.bg-app-glpi {
+  background-color: #e13a3a; }
+
+.bg-app-hiboutheque {
+  background-color: #46bfaf; }
+
+.bg-app-itopstore {
+  background-color: #46bfaf; }
+
+.bg-app-kne {
+  background-color: #763294; }
+
+.bg-app-le-site-tv {
+  background-color: #ecbe30; }
+
+.bg-app-lemonde {
+  background-color: #1a22a2; }
+
+.bg-app-lesechos {
+  background-color: #1a22a2; }
+
+.bg-app-lsu {
+  background-color: #4bafd5; }
+
+.bg-app-madmagz {
+  background-color: #b930a2; }
+
+.bg-app-matholycee {
+  background-color: #e13a3a; }
+
+.bg-app-maxicours {
+  background-color: #1a22a2; }
+
+.bg-app-mediacentre {
+  background-color: #e13a3a; }
+
+.bg-app-monorientationenligne {
+  background-color: #ecbe30; }
+
+.bg-app-monstageenligne {
+  background-color: #4bafd5; }
+
+.bg-app-moodle {
+  background-color: #ff8500; }
+
+.bg-app-museefrancaisphoto {
+  background-color: #1a22a2; }
+
+.bg-app-my-network {
+  background-color: #1a22a2; }
+
+.bg-app-netvibes {
+  background-color: #46bfaf; }
+
+.bg-app-note {
+  background-color: #ecbe30; }
+
+.bg-app-onisep {
+  background-color: #4bafd5; }
+
+.bg-app-onisep2 {
+  background-color: #4bafd5; }
+
+.bg-app-parametrage {
+  background-color: #e13a3a; }
+
+.bg-app-paraschool {
+  background-color: #46bfaf; }
+
+.bg-app-pearltress {
+  background-color: #4bafd5; }
+
+.bg-app-picardie-cursus {
+  background-color: #763294; }
+
+.bg-app-pro-eps {
+  background-color: #4bafd5; }
+
+.bg-app-pronote {
+  background-color: #763294; }
+
+.bg-app-public {
+  background-color: #e13a3a; }
+
+.bg-app-qwant-junior {
+  background-color: #e13a3a; }
+
+.bg-app-residence-artiste {
+  background-color: #46bfaf; }
+
+.bg-app-ressourcesdepartementale91 {
+  background-color: #1a22a2; }
+
+.bg-app-sacoche {
+  background-color: #1a22a2; }
+
+.bg-app-scolinfo {
+  background-color: #e13a3a; }
+
+.bg-app-suitcase {
+  background-color: #e13a3a; }
+
+.bg-app-turboself {
+  background-color: #ecbe30; }
+
+.bg-app-universalis {
+  background-color: #e13a3a; }
+
+.bg-app-unstagepourtous {
+  background-color: #b930a2; }
+
+.bg-app-vie-scolaire {
+  background-color: #ecbe30; }
+
+.bg-app-webclasseur {
+  background-color: #4bafd5; }
+
+.ic-app-account::before, .ic-app-account-large::before {
   content: ""; }
 
-.ic-app.actualites::before, .ic-app.actualites-large::before {
+.ic-app-actualites::before, .ic-app-actualites-large::before {
   content: ""; }
 
-.ic-app.admin-portal::before, .ic-app.admin-portal-large::before {
+.ic-app-admin-portal::before, .ic-app-admin-portal-large::before {
   content: ""; }
 
-.ic-app.admin::before, .ic-app.admin-large::before {
+.ic-app-admin::before, .ic-app-admin-large::before {
   content: ""; }
 
-.ic-app.archive::before, .ic-app.archive-large::before {
+.ic-app-archive::before, .ic-app-archive-large::before {
   content: ""; }
 
-.ic-app.attendance::before, .ic-app.attendance-large::before {
+.ic-app-attendance::before, .ic-app-attendance-large::before {
   content: ""; }
 
-.ic-app.blog::before, .ic-app.blog-large::before {
+.ic-app-blog::before, .ic-app-blog-large::before {
   content: ""; }
 
-.ic-app.cahier-de-texte::before, .ic-app.cahier-de-texte-large::before {
+.ic-app-cahier-de-texte::before, .ic-app-cahier-de-texte-large::before {
   content: ""; }
 
-.ic-app.cahier-textes::before, .ic-app.cahier-textes-large::before {
+.ic-app-cahier-textes::before, .ic-app-cahier-textes-large::before {
   content: ""; }
 
-.ic-app.calendar::before, .ic-app.calendar-large::before {
+.ic-app-calendar::before, .ic-app-calendar-large::before {
   content: ""; }
 
-.ic-app.canal-numerique::before, .ic-app.canal-numerique-large::before {
+.ic-app-canal-numerique::before, .ic-app-canal-numerique-large::before {
   content: ""; }
 
-.ic-app.cns::before, .ic-app.cns-large::before {
+.ic-app-cns::before, .ic-app-cns-large::before {
   content: ""; }
 
-.ic-app.collaborative-wall::before, .ic-app.collaborative-wall-large::before {
+.ic-app-collaborative-wall::before, .ic-app-collaborative-wall-large::before {
   content: ""; }
 
-.ic-app.collaborativeeditor::before, .ic-app.collaborativeeditor-large::before {
+.ic-app-collaborativeeditor::before, .ic-app-collaborativeeditor-large::before {
   content: ""; }
 
-.ic-app.community::before, .ic-app.community-large::before {
+.ic-app-community::before, .ic-app-community-large::before {
   content: ""; }
 
-.ic-app.competences::before, .ic-app.competences-large::before {
+.ic-app-competences::before, .ic-app-competences-large::before {
   content: ""; }
 
-.ic-app.conversation::before, .ic-app.conversation-large::before {
+.ic-app-conversation::before, .ic-app-conversation-large::before {
   content: ""; }
 
-.ic-app.directory::before, .ic-app.directory-large::before {
+.ic-app-directory::before, .ic-app-directory-large::before {
   content: ""; }
 
-.ic-app.exercizer::before, .ic-app.exercizer-large::before {
+.ic-app-exercizer::before, .ic-app-exercizer-large::before {
   content: ""; }
 
-.ic-app.forum::before, .ic-app.forum-large::before {
+.ic-app-forum::before, .ic-app-forum-large::before {
   content: ""; }
 
-.ic-app.kne::before, .ic-app.kne-large::before {
-  content: ""; }
-
-.ic-app.library::before, .ic-app.library-large::before {
+.ic-app-library::before, .ic-app-library-large::before {
   content: ""; }
 
-.ic-app.mindmap::before, .ic-app.mindmap-large::before {
+.ic-app-mindmap::before, .ic-app-mindmap-large::before {
   content: ""; }
 
-.ic-app.notebook::before, .ic-app.notebook-large::before {
+.ic-app-notebook::before, .ic-app-notebook-large::before {
   content: ""; }
 
-.ic-app.notes::before, .ic-app.notes-large::before {
+.ic-app-notes::before, .ic-app-notes-large::before {
   content: ""; }
 
-.ic-app.pad::before, .ic-app.pad-large::before {
+.ic-app-pad::before, .ic-app-pad-large::before {
   content: ""; }
 
-.ic-app.pages::before, .ic-app.pages-large::before {
-  content: ""; }
+.ic-app-pages::before, .ic-app-pages-large::before {
+  content: ""; }
 
-.ic-app.parametrage::before, .ic-app.parametrage-large::before {
+.ic-app-parametrage::before, .ic-app-parametrage-large::before {
   content: ""; }
 
-.ic-app.parcours::before, .ic-app.parcours-large::before {
+.ic-app-parcours::before, .ic-app-parcours-large::before {
   content: ""; }
 
-.ic-app.paths::before, .ic-app.paths-large::before {
+.ic-app-paths::before, .ic-app-paths-large::before {
   content: ""; }
 
-.ic-app.poll::before, .ic-app.poll-large::before {
+.ic-app-poll::before, .ic-app-poll-large::before {
   content: ""; }
 
-.ic-app.polls::before, .ic-app.polls-large::before {
+.ic-app-polls::before, .ic-app-polls-large::before {
   content: ""; }
 
-.ic-app.rack::before, .ic-app.rack-large::before {
+.ic-app-rack::before, .ic-app-rack-large::before {
   content: ""; }
 
-.ic-app.rbs::before, .ic-app.rbs-large::before {
+.ic-app-rbs::before, .ic-app-rbs-large::before {
   content: ""; }
 
-.ic-app.sacoche::before, .ic-app.sacoche-large::before {
-  content: ""; }
-
-.ic-app.schoolbook::before, .ic-app.schoolbook-large::before {
+.ic-app-schoolbook::before, .ic-app-schoolbook-large::before {
   content: ""; }
 
-.ic-app.scrap-book::before, .ic-app.scrap-book-large::before {
+.ic-app-scrap-book::before, .ic-app-scrap-book-large::before {
   content: ""; }
 
-.ic-app.scrapbook::before, .ic-app.scrapbook-large::before {
+.ic-app-scrapbook::before, .ic-app-scrapbook-large::before {
   content: ""; }
 
-.ic-app.searchengine::before, .ic-app.searchengine-large::before {
+.ic-app-searchengine::before, .ic-app-searchengine-large::before {
   content: ""; }
 
-.ic-app.settings-class::before, .ic-app.settings-class-large::before {
+.ic-app-settings-class::before, .ic-app-settings-class-large::before {
   content: ""; }
 
-.ic-app.sharebigfiles::before, .ic-app.sharebigfiles-large::before {
+.ic-app-sharebigfiles::before, .ic-app-sharebigfiles-large::before {
   content: ""; }
 
-.ic-app.statistics::before, .ic-app.statistics-large::before {
+.ic-app-statistics::before, .ic-app-statistics-large::before {
   content: ""; }
 
-.ic-app.stats::before, .ic-app.stats-large::before {
+.ic-app-stats::before, .ic-app-stats-large::before {
   content: ""; }
 
-.ic-app.support::before, .ic-app.support-large::before {
+.ic-app-support::before, .ic-app-support-large::before {
   content: ""; }
 
-.ic-app.timeline::before, .ic-app.timeline-large::before {
+.ic-app-timeline::before, .ic-app-timeline-large::before {
   content: ""; }
 
-.ic-app.timelinegenerator::before, .ic-app.timelinegenerator-large::before {
+.ic-app-timelinegenerator::before, .ic-app-timelinegenerator-large::before {
   content: ""; }
 
-.ic-app.userbook::before, .ic-app.userbook-large::before {
+.ic-app-userbook::before, .ic-app-userbook-large::before {
   content: ""; }
 
-.ic-app.video::before, .ic-app.video-large::before {
+.ic-app-video::before, .ic-app-video-large::before {
   content: ""; }
 
-.ic-app.visioconf::before, .ic-app.visioconf-large::before {
+.ic-app-visioconf::before, .ic-app-visioconf-large::before {
   content: ""; }
 
-.ic-app.Web-conference::before, .ic-app.Web-conference-large::before {
+.ic-app-Web-conference::before, .ic-app-Web-conference-large::before {
   content: ""; }
 
-.ic-app.website::before, .ic-app.website-large::before {
+.ic-app-website::before, .ic-app-website-large::before {
   content: ""; }
 
-.ic-app.wiki::before, .ic-app.wiki-large::before {
+.ic-app-wiki::before, .ic-app-wiki-large::before {
   content: ""; }
 
-.ic-app.workspace::before, .ic-app.workspace-large::before {
+.ic-app-workspace::before, .ic-app-workspace-large::before {
   content: ""; }
+
+.ic-app-absences::before, .ic-app-absences-large::before {
+  content: ""; }
+
+.ic-app-admission-post-bac::before, .ic-app-admission-post-bac-large::before {
+  content: ""; }
+
+.ic-app-aide-devoirs::before, .ic-app-aide-devoirs-large::before {
+  content: ""; }
+
+.ic-app-agenda::before, .ic-app-agenda-large::before {
+  content: ""; }
+
+.ic-app-assistance::before, .ic-app-assistance-large::before {
+  content: ""; }
+
+.ic-app-assr::before, .ic-app-assr-large::before {
+  content: ""; }
+
+.ic-app-award::before, .ic-app-award-large::before {
+  content: ""; }
+
+.ic-app-banquesavoir::before, .ic-app-banquesavoir-large::before {
+  content: ""; }
+
+.ic-app-bcdi::before, .ic-app-bcdi-large::before {
+  content: ""; }
+
+.ic-app-biblionisep::before, .ic-app-biblionisep-large::before {
+  content: ""; }
+
+.ic-app-bookmark-empty::before, .ic-app-bookmark-empty-large::before {
+  content: ""; }
+
+.ic-app-canal-numerique::before, .ic-app-canal-numerique-large::before {
+  content: ""; }
+
+.ic-app-ccn::before, .ic-app-ccn-large::before {
+  content: ""; }
+
+.ic-app-cerise::before, .ic-app-cerise-large::before {
+  content: ""; }
+
+.ic-app-cervoprint::before, .ic-app-cervoprint-large::before {
+  content: ""; }
+
+.ic-app-charlemagne::before, .ic-app-charlemagne-large::before {
+  content: ""; }
+
+.ic-app-charte::before, .ic-app-charte-large::before {
+  content: ""; }
+
+.ic-app-chat::before, .ic-app-chat-large::before {
+  content: ""; }
+
+.ic-app-cidj::before, .ic-app-cidj-large::before {
+  content: ""; }
+
+.ic-app-connecteur-generique1::before, .ic-app-connecteur-generique1-large::before {
+  content: ""; }
+
+.ic-app-connecteur-generique2::before, .ic-app-connecteur-generique2-large::before {
+  content: ""; }
+
+.ic-app-educagri::before, .ic-app-educagri-large::before {
+  content: ""; }
+
+.ic-app-edumedia::before, .ic-app-edumedia-large::before {
+  content: ""; }
+
+.ic-app-edumoov::before, .ic-app-edumoov-large::before {
+  content: ""; }
+
+.ic-app-edutheque::before, .ic-app-edutheque-large::before {
+  content: ""; }
+
+.ic-app-electron::before, .ic-app-electron-large::before {
+  content: ""; }
+
+.ic-app-elyceepicardie::before, .ic-app-elyceepicardie-large::before {
+  content: ""; }
+
+.ic-app-esidoc::before, .ic-app-esidoc-large::before {
+  content: ""; }
+
+.ic-app-europress::before, .ic-app-europress-large::before {
+  content: ""; }
+
+.ic-app-gepi::before, .ic-app-gepi-large::before {
+  content: ""; }
+
+.ic-app-glpi::before, .ic-app-glpi-large::before {
+  content: ""; }
+
+.ic-app-hiboutheque::before, .ic-app-hiboutheque-large::before {
+  content: ""; }
+
+.ic-app-itopstore::before, .ic-app-itopstore-large::before {
+  content: ""; }
+
+.ic-app-kne::before, .ic-app-kne-large::before {
+  content: ""; }
+
+.ic-app-le-site-tv::before, .ic-app-le-site-tv-large::before {
+  content: ""; }
+
+.ic-app-lemonde::before, .ic-app-lemonde-large::before {
+  content: ""; }
+
+.ic-app-lesechos::before, .ic-app-lesechos-large::before {
+  content: ""; }
+
+.ic-app-lsu::before, .ic-app-lsu-large::before {
+  content: ""; }
+
+.ic-app-madmagz::before, .ic-app-madmagz-large::before {
+  content: ""; }
+
+.ic-app-matholycee::before, .ic-app-matholycee-large::before {
+  content: ""; }
+
+.ic-app-maxicours::before, .ic-app-maxicours-large::before {
+  content: ""; }
+
+.ic-app-mediacentre::before, .ic-app-mediacentre-large::before {
+  content: ""; }
+
+.ic-app-monorientationenligne::before, .ic-app-monorientationenligne-large::before {
+  content: ""; }
+
+.ic-app-monstageenligne::before, .ic-app-monstageenligne-large::before {
+  content: ""; }
+
+.ic-app-moodle::before, .ic-app-moodle-large::before {
+  content: ""; }
+
+.ic-app-museefrancaisphoto::before, .ic-app-museefrancaisphoto-large::before {
+  content: ""; }
+
+.ic-app-my-network::before, .ic-app-my-network-large::before {
+  content: ""; }
+
+.ic-app-netvibes::before, .ic-app-netvibes-large::before {
+  content: ""; }
+
+.ic-app-note::before, .ic-app-note-large::before {
+  content: ""; }
+
+.ic-app-onisep::before, .ic-app-onisep-large::before {
+  content: ""; }
+
+.ic-app-onisep2::before, .ic-app-onisep2-large::before {
+  content: ""; }
+
+.ic-app-parametrage::before, .ic-app-parametrage-large::before {
+  content: ""; }
+
+.ic-app-paraschool::before, .ic-app-paraschool-large::before {
+  content: ""; }
+
+.ic-app-pearltress::before, .ic-app-pearltress-large::before {
+  content: ""; }
+
+.ic-app-picardie-cursus::before, .ic-app-picardie-cursus-large::before {
+  content: ""; }
+
+.ic-app-pro-eps::before, .ic-app-pro-eps-large::before {
+  content: ""; }
+
+.ic-app-pronote::before, .ic-app-pronote-large::before {
+  content: ""; }
+
+.ic-app-public::before, .ic-app-public-large::before {
+  content: ""; }
+
+.ic-app-qwant-junior::before, .ic-app-qwant-junior-large::before {
+  content: ""; }
+
+.ic-app-residence-artiste::before, .ic-app-residence-artiste-large::before {
+  content: ""; }
+
+.ic-app-ressourcesdepartementale91::before, .ic-app-ressourcesdepartementale91-large::before {
+  content: ""; }
+
+.ic-app-sacoche::before, .ic-app-sacoche-large::before {
+  content: ""; }
+
+.ic-app-scolinfo::before, .ic-app-scolinfo-large::before {
+  content: ""; }
+
+.ic-app-suitcase::before, .ic-app-suitcase-large::before {
+  content: ""; }
+
+.ic-app-turboself::before, .ic-app-turboself-large::before {
+  content: ""; }
+
+.ic-app-universalis::before, .ic-app-universalis-large::before {
+  content: ""; }
+
+.ic-app-unstagepourtous::before, .ic-app-unstagepourtous-large::before {
+  content: ""; }
+
+.ic-app-vie-scolaire::before, .ic-app-vie-scolaire-large::before {
+  content: ""; }
+
+.ic-app-webclasseur::before, .ic-app-webclasseur-large::before {
+  content: ""; }
 
 .link, .feed-item .zone-text .report a,
 .link a,
@@ -14993,37 +15594,36 @@ html {
         color: #ff8500;
         background-color: #f5f5fb; }
 
-.widget-applications .application-list {
+.widget-applications .icon-grid {
   display: flex;
   flex-wrap: wrap; }
-
-.widget-applications .application-item {
-  position: relative;
-  width: 25%;
-  font-size: 3.2em; }
-  .widget-applications .application-item a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  .widget-applications .icon-grid-item {
     position: relative;
-    padding-top: 100%;
-    margin: 1px;
-    text-decoration: none;
-    background: #f8f9fa; }
-    .widget-applications .application-item a:hover {
-      background-color: white; }
-    .widget-applications .application-item a > i {
+    width: 25%;
+    font-size: 3.2em; }
+    .widget-applications .icon-grid-item a {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0; }
-  @media (min-width: 576px) and (max-width: 767.98px) {
-    .widget-applications .application-item {
-      width: 16.66667%; } }
+      transition: background-color 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      padding-top: 100%;
+      margin: 1px;
+      text-decoration: none;
+      background: #f8f9fa; }
+      .widget-applications .icon-grid-item a:hover {
+        background-color: white; }
+      .widget-applications .icon-grid-item a > i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0; }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      .widget-applications .icon-grid-item {
+        width: 16.66667%; } }
 
 .widget-bookmarks .bookmark-item {
   transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -15881,8 +16481,7 @@ popover popover-content {
     justify-content: center;
     width: 80px;
     height: 80px;
-    font-size: 5rem;
-    color: #343a40; }
+    font-size: 5rem; }
   .application-item span {
     display: flex;
     flex: 1;
@@ -15989,222 +16588,6 @@ popover popover-content {
     justify-content: space-around; }
   .applications-favorite {
     padding: 10px; } }
-
-.application {
-  font-family: "generic-icons";
-  font-style: normal; }
-  .application.admission-post-bac, .application.admission-post-bac-large, .application.assr, .application.assr-large, .application.canal-numerique, .application.canal-numerique-large, .application.cerise, .application.cerise-large, .application.charlemagne, .application.charlemagne-large, .application.competences, .application.competences-large, .application.edumoov, .application.edumoov-large, .application.electron, .application.electron-large, .application.glpi, .application.glpi-large, .application.madmagz, .application.madmagz-large, .application.matholycee, .application.matholycee-large, .application.mediacentre, .application.mediacentre-large, .application.public, .application.public-large, .application.notes, .application.notes-large, .application.notes, .application.notes-large, .application.notes, .application.notes-large, .application.pages, .application.pages-large, .application.parametrage, .application.parametrage-large, .application.rack, .application.rack-large, .application.rbs, .application.rbs-large, .application.support, .application.support-large, .application.universalis, .application.universalis-large, .application.wiki, .application.wiki-large, .application.workspace, .application.workspace-large {
-    color: #e13a3a; }
-  .application.admin, .application.admin-large, .application.archive, .application.archive-large, .application.calendar, .application.calendar-large, .application.charte, .application.charte-large, .application.conversation, .application.conversation-large, .application.edutheque, .application.edutheque-large, .application.le-site-tv, .application.le-site-tv-large, .application.library, .application.library-large, .application.monorientationenligne, .application.monorientationenligne-large, .application.note, .application.note-large, .application.settings-class, .application.settings-class-large, .application.timelinegenerator, .application.timelinegenerator-large, .application.turboself, .application.turboself-large, .application.vie-scolaire, .application.vie-scolaire-large {
-    color: #ecbe30; }
-  .application.aide-devoirs, .application.aide-devoirs-large, .application.award, .application.award-large, .application.biblionisep, .application.biblionisep-large, .application.ccn, .application.ccn-large, .application.residence-artiste, .application.residence-artiste-large, .application.cahier-de-texte, .application.cahier-de-texte-large, .application.cahier-textes, .application.cahier-textes-large, .application.cidj, .application.cidj-large, .application.cns, .application.cns-large, .application.collaborative-wall, .application.collaborative-wall-large, .application.hiboutheque, .application.hiboutheque-large, .application.itopstore, .application.itopstore-large, .application.netvibes, .application.netvibes-large, .application.notebook, .application.notebook-large, .application.paraschool, .application.paraschool-large, .application.schoolbook, .application.schoolbook-large, .application.scrap-book, .application.scrap-book-large, .application.support, .application.support-large, .application.userbook, .application.userbook-large {
-    color: #46bfaf; }
-  .application.actualites, .application.actualites-large, .application.assistance, .application.assistance-large, .application.banquesavoir, .application.banquesavoir-large, .application.cervoprint, .application.cervoprint-large, .application.edumedia, .application.edumedia-large, .application.europress, .application.europress-large, .application.forum, .application.forum-large, .application.gepi, .application.gepi-large, .application.lsu, .application.lsu-large, .application.mindmap, .application.mindmap-large, .application.monstageenligne, .application.monstageenligne-large, .application.onisep, .application.onisep-large, .application.webclasseur, .application.webclasseur-large, .application.onisep2, .application.onisep2-large, .application.pad, .application.pad-large, .application.pearltrees, .application.pearltrees-large, .application.poll, .application.poll-large, .application.pro-eps, .application.pro-eps-large, .application.searchengine, .application.searchengine-large, .application.video, .application.video-large, .application.visioconf, .application.visioconf-large, .application.Web-conference, .application.Web-conference-large, .application.website, .application.website-large {
-    color: #4bafd5; }
-  .application.blog, .application.blog-large, .application.educagri, .application.educagri-large, .application.elyceepicardie, .application.elyceepicardie-large, .application.lemonde, .application.lemonde-large, .application.lesechos, .application.lesechos-large, .application.maxicours, .application.maxicours-large, .application.museefrancaisphoto, .application.museefrancaisphoto-large, .application.ressourcesdepartementale91, .application.ressourcesdepartementale91-large, .application.sacoche, .application.sacoche-large {
-    color: #1a22a2; }
-  .application.account, .application.account-large, .application.admin, .application.admin-large, .application.bcdi, .application.bcdi-large, .application.community, .application.community-large, .application.exercizer, .application.exercizer-large, .application.kne, .application.kne-large, .application.paths, .application.paths-large, .application.picardie-cursus, .application.picardie-cursus-large, .application.pronote, .application.pronote-large, .application.sharebigfiles, .application.sharebigfiles-large, .application.stats, .application.stats-large, .application.statistics, .application.statistics-large, .application.wiki, .application.wiki-large {
-    color: #763294; }
-  .application.esidoc, .application.esidoc-large, .application.madmagz, .application.madmagz-large, .application.rbs, .application.rbs-large, .application.unstagepourtous, .application.unstagepourtous-large {
-    color: #b930a2; }
-  .application.competences::before, .application.competences-large::before {
-    content: "\e927"; }
-  .application.cahier-textes::before, .application.cahier-textes-large::before {
-    content: "\e86f"; }
-  .application.calendar::before, .application.calendar-large::before {
-    content: "\e834"; }
-  .application.collaborative-wall::before, .application.collaborative-wall-large::before {
-    content: "\e800"; }
-  .application.community::before, .application.community-large::before {
-    content: "\e814"; }
-  .application.forum::before, .application.forum-large::before {
-    content: "\e81e"; }
-  .application.pages::before, .application.pages-large::before {
-    content: "\e876"; }
-  .application.poll::before, .application.poll-large::before, .application.polls::before, .application.polls-large::before {
-    content: "\e832"; }
-  .application.rack::before, .application.rack-large::before {
-    content: "\e80d"; }
-  .application.rbs::before, .application.rbs-large::before {
-    content: "\e80e"; }
-  .application.searchengine::before, .application.searchengine-large::before {
-    content: "\e8d0"; }
-  .application.sharebigfiles::before, .application.sharebigfiles-large::before {
-    content: "\e8cb"; }
-  .application.schoolbook::before, .application.schoolbook-large::before {
-    content: "\e91e"; }
-  .application.archive::before, .application.archive-large::before {
-    content: "\e81d"; }
-  .application.admin::before, .application.admin-large::before {
-    content: "\e81a"; }
-  .application.cahier-de-texte::before, .application.cahier-de-texte-large::before {
-    content: "\e910"; }
-  .application.wiki::before, .application.wiki-large::before {
-    content: "\e813"; }
-  .application.cns::before, .application.cns-large::before {
-    content: "\e88a"; }
-  .application.conversation::before, .application.conversation-large::before {
-    content: "\e804"; }
-  .application.paths::before, .application.paths-large::before {
-    content: "\e94d"; }
-  .application.notebook::before, .application.notebook-large::before, .application.scrap-book::before, .application.scrap-book-large::before {
-    content: "\e8d4"; }
-  .application.blog::before, .application.blog-large::before {
-    content: "\e809"; }
-  .application.account::before, .application.account-large::before {
-    content: "\e905"; }
-  .application.support::before, .application.support-large::before {
-    content: "\e835"; }
-  .application.workspace::before, .application.workspace-large::before {
-    content: "\e81b"; }
-  .application.admin-portal::before, .application.admin-portal-large::before {
-    content: "\e908"; }
-  .application.stats::before, .application.stats-large::before {
-    content: "\e909"; }
-  .application.userbook::before, .application.userbook-large::before, .application.directory::before, .application.directory-large::before {
-    content: "\e811"; }
-  .application.mindmap::before, .application.mindmap-large::before {
-    content: "\e859"; }
-  .application.timelinegenerator::before, .application.timelinegenerator-large::before {
-    content: "\e819"; }
-  .application.actualites::before, .application.actualites-large::before {
-    content: "\e85b"; }
-  .application.pad::before, .application.pad-large::before, .application.collaborativeeditor::before, .application.collaborativeeditor-large::before {
-    content: "\e829"; }
-  .application.settings-class::before, .application.settings-class-large::before {
-    content: "\e942"; }
-  .application.library::before, .application.library-large::before {
-    content: "\e94c"; }
-  .application.visioconf::before, .application.visioconf-large::before, .application.Web-conference::before, .application.Web-conference-large::before {
-    content: "\e957"; }
-  .application.notes::before, .application.notes-large::before {
-    content: "\e832"; }
-  .application.attendance::before, .application.attendance-large::before {
-    content: "\e80b"; }
-  .application.exercizer::before, .application.exercizer-large::before {
-    content: "\e833"; }
-  .application.statistics::before, .application.statistics-large::before {
-    content: "\e810"; }
-  .application.website::before, .application.website-large::before {
-    content: "\e90a"; }
-  .application.video::before, .application.video-large::before {
-    content: "\e872"; }
-  .application.pearltrees::before, .application.pearltrees-large::before {
-    content: "\e933"; }
-  .application.esidoc::before, .application.esidoc-large::before {
-    content: "\e826"; }
-  .application.sacoche::before, .application.sacoche-large::before {
-    content: "\e899"; }
-  .application.onisep::before, .application.onisep-large::before, .application.webclasseur::before, .application.webclasseur-large::before {
-    content: "\e88c"; }
-  .application.onisep2::before, .application.onisep2-large::before {
-    content: "\e894"; }
-  .application.edumedia::before, .application.edumedia-large::before {
-    content: "\e887"; }
-  .application.le-site-tv::before, .application.le-site-tv-large::before {
-    content: "\e87a"; }
-  .application.pronote::before, .application.pronote-large::before {
-    content: "\e82a"; }
-  .application.maxicours::before, .application.maxicours-large::before {
-    content: "\e825"; }
-  .application.madmagz::before, .application.madmagz-large::before {
-    content: "\e89d"; }
-  .application.universalis::before, .application.universalis-large::before {
-    content: "\e831"; }
-  .application.kne::before, .application.kne-large::before {
-    content: "\e81f"; }
-  .application.residence-artiste::before, .application.residence-artiste-large::before, .application.ccn::before, .application.ccn-large::before {
-    content: "\e90f"; }
-  .application.hiboutheque::before, .application.hiboutheque-large::before {
-    content: "\e90e"; }
-  .application.cerise::before, .application.cerise-large::before {
-    content: "\e81c"; }
-  .application.paraschool::before, .application.paraschool-large::before {
-    content: "\e82d"; }
-  .application.scolinfo::before, .application.scolinfo-large::before {
-    content: "\e886"; }
-  .application.edumoov::before, .application.edumoov-large::before {
-    content: "\e939"; }
-  .application.lsu::before, .application.lsu-large::before {
-    content: "\e93a"; }
-  .application.charte::before, .application.charte-large::before {
-    content: "\e93b"; }
-  .application.qwant-junior::before, .application.qwant-junior-large::before {
-    content: "\e93d"; }
-  .application.canal-numerique::before, .application.canal-numerique-large::before {
-    content: "\e80a"; }
-  .application.aide-devoirs::before, .application.aide-devoirs-large::before, .application.award::before, .application.award-large::before {
-    content: "\e818"; }
-  .application.admission-post-bac::before, .application.admission-post-bac-large::before {
-    content: "\e816"; }
-  .application.charlemagne::before, .application.charlemagne-large::before {
-    content: "\e885"; }
-  .application.vie-scolaire::before, .application.vie-scolaire-large::before {
-    content: "\e879"; }
-  .application.pro-eps::before, .application.pro-eps-large::before {
-    content: "\e884"; }
-  .application.picardie-cursus::before, .application.picardie-cursus-large::before {
-    content: "\e921"; }
-  .application.banquesavoir::before, .application.banquesavoir-large::before {
-    content: "\e88d"; }
-  .application.unstagepourtous::before, .application.unstagepourtous-large::before {
-    content: "\e88e"; }
-  .application.bcdi::before, .application.bcdi-large::before {
-    content: "\e88f"; }
-  .application.ressourcesdepartementale91::before, .application.ressourcesdepartementale91-large::before {
-    content: "\e890"; }
-  .application.assr::before, .application.assr-large::before {
-    content: "\e891"; }
-  .application.museefrancaisphoto::before, .application.museefrancaisphoto-large::before {
-    content: "\e892"; }
-  .application.cidj::before, .application.cidj-large::before {
-    content: "\e893"; }
-  .application.itopstore::before, .application.itopstore-large::before {
-    content: "\e895"; }
-  .application.cervoprint::before, .application.cervoprint-large::before {
-    content: "\e896"; }
-  .application.glpi::before, .application.glpi-large::before {
-    content: "\e897"; }
-  .application.elyceepicardie::before, .application.elyceepicardie-large::before {
-    content: "\e898"; }
-  .application.electron::before, .application.electron-large::before {
-    content: "\e89b"; }
-  .application.gepi::before, .application.gepi-large::before {
-    content: "\e89c"; }
-  .application.educagri::before, .application.educagri-large::before {
-    content: "\e89e"; }
-  .application.monorientationenligne::before, .application.monorientationenligne-large::before {
-    content: "\e89f"; }
-  .application.turboself::before, .application.turboself-large::before {
-    content: "\e8a0"; }
-  .application.netvibes::before, .application.netvibes-large::before {
-    content: "\e8a1"; }
-  .application.monstageenligne::before, .application.monstageenligne-large::before {
-    content: "\e8a2"; }
-  .application.matholycee::before, .application.matholycee-large::before {
-    content: "\e8a3"; }
-  .application.biblionisep::before, .application.biblionisep-large::before {
-    content: "\e8a4"; }
-  .application.lesechos::before, .application.lesechos-large::before {
-    content: "\e8a5"; }
-  .application.edutheque::before, .application.edutheque-large::before {
-    content: "\e8a6"; }
-  .application.europress::before, .application.europress-large::before {
-    content: "\e8a7"; }
-  .application.lemonde::before, .application.lemonde-large::before {
-    content: "\e8a9"; }
-  .application.assistance::before, .application.assistance-large::before {
-    content: "\e93c"; }
-  .application.note::before, .application.note-large::before {
-    content: "\e806"; }
-  .application.parametrage::before, .application.parametrage-large::before {
-    content: "\e92f"; }
-  .application.public::before, .application.public-large::before, .application.mediacentre::before, .application.mediacentre-large::before {
-    content: "\e863"; }
-  .application.connecteur-generique1::before, .application.connecteur-generique1-large::before {
-    content: "\e8aa"; }
-  .application.connecteur-generique2::before, .application.connecteur-generique2-large::before {
-    content: "\e8ab"; }
 
 .blue-background-class {
   background-color: rgba(75, 175, 213, 0.15); }
