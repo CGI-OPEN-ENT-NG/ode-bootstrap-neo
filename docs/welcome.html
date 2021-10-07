@@ -21,13 +21,17 @@
             $('.filter-button').each(function (i) {
                 var target = '#' + $(this).data('target');
                 var filterTween = gsap.timeline().reversed(true).pause();
-                filterTween.from(target, { duration: 0.5, height: 0, autoAlpha: 0, display: 'none' });
+                filterTween.from(target, { duration: 1, height: 1, autoAlpha: 0, ease: "sin.inOut", display: 'none' });
                 filterTween.from(target + " .filter", {
                     duration: 0.3,
                     autoAlpha: 0,
                     translateY: '100%',
-                    stagger: 0.1
-                }, "-=0.1");
+                    ease: "power1.inOut",
+                    stagger: {
+                        amount: 1.2,
+                        ease: "sin.in",
+                    }
+                }, "-=1");
                 $(target).data('tween', filterTween);
             });
 
@@ -236,7 +240,7 @@
                         <div class="filter color-app-timelinegenerator">
                             <input type="checkbox" class="hidden-checkbox" value="test">
                             <div class="icon">
-                                <i class="ic-app timelinegenerator"></i>
+                                <i class="ic-app-timelinegenerator"></i>
                             </div>
                             <div class="label">
                                 Timeline
@@ -245,7 +249,7 @@
                         <div class="filter color-app-pages">
                             <input type="checkbox" class="hidden-checkbox" value="test">
                             <div class="icon">
-                                <i class="ic-app pages"></i>
+                                <i class="ic-app-pages"></i>
                             </div>
                             <div class="label">
                                 Pages
@@ -254,7 +258,7 @@
                         <div class="filter color-app-wiki  active">
                             <input type="checkbox" class="hidden-checkbox" value="test">
                             <div class="icon">
-                                <i class="ic-app wiki"></i>
+                                <i class="ic-app-wiki"></i>
                             </div>
                             <div class="label">
                                 Wiki
@@ -263,7 +267,277 @@
                         <div class="filter color-app-blog">
                             <input type="checkbox" class="hidden-checkbox" value="test">
                             <div class="icon">
-                                <i class="ic-app blog"></i>
+                                <i class="ic-app-blog"></i>
+                            </div>
+                            <div class="label">
+                                Blog
+                            </div>
+                        </div>
+                        <div class="filter color-app-timelinegenerator">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-timelinegenerator"></i>
+                            </div>
+                            <div class="label">
+                                Timeline
+                            </div>
+                        </div>
+                        <div class="filter color-app-pages">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-pages"></i>
+                            </div>
+                            <div class="label">
+                                Pages
+                            </div>
+                        </div>
+                        <div class="filter color-app-wiki  active">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-wiki"></i>
+                            </div>
+                            <div class="label">
+                                Wiki
+                            </div>
+                        </div>
+                        <div class="filter color-app-blog">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-blog"></i>
+                            </div>
+                            <div class="label">
+                                Blog
+                            </div>
+                        </div>
+                        <div class="filter color-app-timelinegenerator">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-timelinegenerator"></i>
+                            </div>
+                            <div class="label">
+                                Timeline
+                            </div>
+                        </div>
+                        <div class="filter color-app-pages">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-pages"></i>
+                            </div>
+                            <div class="label">
+                                Pages
+                            </div>
+                        </div>
+                        <div class="filter color-app-wiki  active">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-wiki"></i>
+                            </div>
+                            <div class="label">
+                                Wiki
+                            </div>
+                        </div>
+                        <div class="filter color-app-blog">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-blog"></i>
+                            </div>
+                            <div class="label">
+                                Blog
+                            </div>
+                        </div>
+                        <div class="filter color-app-timelinegenerator">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-timelinegenerator"></i>
+                            </div>
+                            <div class="label">
+                                Timeline
+                            </div>
+                        </div>
+                        <div class="filter color-app-pages">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-pages"></i>
+                            </div>
+                            <div class="label">
+                                Pages
+                            </div>
+                        </div>
+                        <div class="filter color-app-wiki  active">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-wiki"></i>
+                            </div>
+                            <div class="label">
+                                Wiki
+                            </div>
+                        </div>
+                        <div class="filter color-app-blog">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-blog"></i>
+                            </div>
+                            <div class="label">
+                                Blog
+                            </div>
+                        </div>
+                        <div class="filter color-app-blog">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-blog"></i>
+                            </div>
+                            <div class="label">
+                                Blog
+                            </div>
+                        </div>
+                        <div class="filter color-app-timelinegenerator">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-timelinegenerator"></i>
+                            </div>
+                            <div class="label">
+                                Timeline
+                            </div>
+                        </div>
+                        <div class="filter color-app-pages">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-pages"></i>
+                            </div>
+                            <div class="label">
+                                Pages
+                            </div>
+                        </div>
+                        <div class="filter color-app-wiki  active">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-wiki"></i>
+                            </div>
+                            <div class="label">
+                                Wiki
+                            </div>
+                        </div>
+                        <div class="filter color-app-blog">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-blog"></i>
+                            </div>
+                            <div class="label">
+                                Blog
+                            </div>
+                        </div>
+                        <div class="filter color-app-timelinegenerator">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-timelinegenerator"></i>
+                            </div>
+                            <div class="label">
+                                Timeline
+                            </div>
+                        </div>
+                        <div class="filter color-app-pages">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-pages"></i>
+                            </div>
+                            <div class="label">
+                                Pages
+                            </div>
+                        </div>
+                        <div class="filter color-app-wiki  active">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-wiki"></i>
+                            </div>
+                            <div class="label">
+                                Wiki
+                            </div>
+                        </div>
+                        <div class="filter color-app-blog">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-blog"></i>
+                            </div>
+                            <div class="label">
+                                Blog
+                            </div>
+                        </div>
+                        <div class="filter color-app-blog">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-blog"></i>
+                            </div>
+                            <div class="label">
+                                Blog
+                            </div>
+                        </div>
+                        <div class="filter color-app-timelinegenerator">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-timelinegenerator"></i>
+                            </div>
+                            <div class="label">
+                                Timeline
+                            </div>
+                        </div>
+                        <div class="filter color-app-pages">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-pages"></i>
+                            </div>
+                            <div class="label">
+                                Pages
+                            </div>
+                        </div>
+                        <div class="filter color-app-wiki  active">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-wiki"></i>
+                            </div>
+                            <div class="label">
+                                Wiki
+                            </div>
+                        </div>
+                        <div class="filter color-app-blog">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-blog"></i>
+                            </div>
+                            <div class="label">
+                                Blog
+                            </div>
+                        </div>
+                        <div class="filter color-app-timelinegenerator">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-timelinegenerator"></i>
+                            </div>
+                            <div class="label">
+                                Timeline
+                            </div>
+                        </div>
+                        <div class="filter color-app-pages">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-pages"></i>
+                            </div>
+                            <div class="label">
+                                Pages
+                            </div>
+                        </div>
+                        <div class="filter color-app-wiki  active">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-wiki"></i>
+                            </div>
+                            <div class="label">
+                                Wiki
+                            </div>
+                        </div>
+                        <div class="filter color-app-blog">
+                            <input type="checkbox" class="hidden-checkbox" value="test">
+                            <div class="icon">
+                                <i class="ic-app-blog"></i>
                             </div>
                             <div class="label">
                                 Blog
@@ -282,7 +556,7 @@
                                     </div>
 
                                     <div class="circle bg-app-pages">
-                                        <i class="ic-app pages-large"></i>
+                                        <i class="ic-app-pages-large"></i>
                                     </div>
                                 </div>
 
@@ -322,7 +596,7 @@
                                     </div>
 
                                     <div class="circle bg-app-wiki">
-                                        <i class="ic-app wiki"></i>
+                                        <i class="ic-app-wiki"></i>
                                     </div>
                                 </div>
 
@@ -363,7 +637,7 @@
                                     </div>
 
                                     <div class="circle bg-app-timelinegenerator">
-                                        <i class="ic-app timelinegenerator"></i>
+                                        <i class="ic-app-timelinegenerator"></i>
                                     </div>
                                 </div>
 
@@ -409,7 +683,7 @@
                                     </div>
 
                                     <div class="circle bg-app-timelinegenerator">
-                                        <i class="ic-app timelinegenerator"></i>
+                                        <i class="ic-app-timelinegenerator"></i>
                                     </div>
                                 </div>
 
@@ -506,7 +780,7 @@
 
                 <div class="widget widget-school">
                     <div class="widget-body">
-                        <div class="widget-school-header" style="background-image:url(../../assets/images/widget-2.png)">
+                        <div class="widget-school-header" style="background-image:url(../../assets/images/bleu-ciel.png)">
 
                             <div class="d-flex align-items-center">
                                 <div class="me-4">
@@ -541,7 +815,7 @@
                 </div>
                 <div class="widget widget-school">
                     <div class="widget-body">
-                        <div class="widget-school-header" style="background-image:url(../../assets/images/widget-1.png)">
+                        <div class="widget-school-header" style="background-image:url(../../assets/images/dessin-plus-clair.png)">
 
                             <div class="d-flex align-items-center">
                                 <div class="me-4">
@@ -890,40 +1164,40 @@
                         </div>
                     </div>
                     <div class="widget-body">
-                        <ul class="application-list">
-                            <li class="application-item">
+                        <ul class="icon-grid">
+                            <li class="icon-grid-item">
                                 <a href="#">
-                                    <i class="ic-app wiki color-app-wiki"></i>
+                                    <i class="ic-app-wiki color-app-wiki"></i>
                                 </a>
                             </li>
-                            <li class="application-item">
+                            <li class="icon-grid-item">
                                 <a href="#">
-                                    <i class="ic-app pages color-app-pages"></i>
+                                    <i class="ic-app-pages color-app-pages"></i>
                                 </a>
                             </li>
-                            <li class="application-item">
+                            <li class="icon-grid-item">
                                 <a href="#">
-                                    <i class="ic-app blog color-app-blog"></i>
+                                    <i class="ic-app-blog color-app-blog"></i>
                                 </a>
                             </li>
-                            <li class="application-item">
+                            <li class="icon-grid-item">
                                 <a href="#">
-                                    <i class="ic-app scrap-book color-app-scrap-book"></i>
+                                    <i class="ic-app-scrap-book color-app-scrap-book"></i>
                                 </a>
                             </li>
-                            <li class="application-item">
+                            <li class="icon-grid-item">
                                 <a href="#">
-                                    <i class="ic-app mindmap color-app-mindmap"></i>
+                                    <i class="ic-app-mindmap color-app-mindmap"></i>
                                 </a>
                             </li>
-                            <li class="application-item">
+                            <li class="icon-grid-item">
                                 <a href="#">
-                                    <i class="ic-app timelinegenerator color-app-timelinegenerator"></i>
+                                    <i class="ic-app-timelinegenerator color-app-timelinegenerator"></i>
                                 </a>
                             </li>
-                            <li class="application-item">
+                            <li class="icon-grid-item">
                                 <a href="#">
-                                    <i class="ic-app visioconf color-app-visioconf"></i>
+                                    <i class="ic-app-visioconf color-app-visioconf"></i>
                                 </a>
                             </li>
                         </ul>
@@ -1045,7 +1319,7 @@
                                         <img src="https://picsum.photos/200" alt="">
                                     </div>
                                     <div class="icon-app">
-                                        <i class="ic-app timelinegenerator-large color-app-timelinegenerator"></i>
+                                        <i class="ic-app-timelinegenerator-large color-app-timelinegenerator"></i>
                                     </div>
                                 </a>
                             </li>
@@ -1064,7 +1338,7 @@
                                         <img src="https://picsum.photos/201" alt="">
                                     </div>
                                     <div class="icon-app">
-                                        <i class="ic-app exercizer-large  color-app-exercizer"></i>
+                                        <i class="ic-app-exercizer-large  color-app-exercizer"></i>
                                     </div>
                                 </a>
                             </li>
@@ -1083,7 +1357,7 @@
                                         <img src="https://picsum.photos/202" alt="">
                                     </div>
                                     <div class="icon-app">
-                                        <i class="ic-app mindmap-large  color-app-mindmap"></i>
+                                        <i class="ic-app-mindmap-large  color-app-mindmap"></i>
                                     </div>
                                 </a>
                             </li>
@@ -1199,7 +1473,7 @@
                 <div class="col-3">
                     <a href="" class="bt selected">
                         <span class="inner">
-                            <i class="ic-app notes"></i>
+                            <i class="ic-app-notes"></i>
                         </span>
                     </a>
                 </div>
@@ -1213,7 +1487,7 @@
                 <div class="col-3">
                     <a href="" class="bt selected">
                         <span class="inner">
-                            <i class="ic-app actualites"></i>
+                            <i class="ic-app-actualites"></i>
                         </span>
                     </a>
                 </div>
