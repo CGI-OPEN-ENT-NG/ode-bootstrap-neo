@@ -13810,6 +13810,12 @@ html {
 .color-app-userbook-moto {
   color: #20c997; }
 
+.color-app-userbook-mood {
+  color: #46bfaf; }
+
+.color-app-userbook-moto {
+  color: #46bfaf; }
+
 .color-app-video {
   color: #0dcaf0; }
 
@@ -14175,6 +14181,12 @@ html {
 
 .bg-app-userbook-moto {
   background-color: #20c997; }
+
+.bg-app-userbook-mood {
+  background-color: #46bfaf; }
+
+.bg-app-userbook-moto {
+  background-color: #46bfaf; }
 
 .bg-app-video {
   background-color: #0dcaf0; }
@@ -16509,7 +16521,7 @@ END DOCUMENTATION */
 >>>>>>> feat: clean variables
         .feed-item .zone-tools .control:hover {
           color: #fff;
-          background-color: #0d6efd; }
+          background-color: #ff8500; }
         @media (max-width: 991.98px) {
           .feed-item .zone-tools .control {
             border-color: #e9ecef; } }
@@ -16568,6 +16580,11 @@ END DOCUMENTATION */
     color: #ced4da; }
 
 .filters-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-start;
+  margin: 0 -5px 1rem;
   margin-bottom: 1em; }
   .filters-chips:hover {
     color: unset;
@@ -16576,6 +16593,7 @@ END DOCUMENTATION */
     position: relative;
     display: inline-block;
     padding: 3px 15px;
+    margin: 0 5px 10px;
     overflow: hidden;
     font-weight: 400;
     text-decoration: none;
