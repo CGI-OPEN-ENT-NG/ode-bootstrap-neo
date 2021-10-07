@@ -30,11 +30,11 @@
         }
 
         /* Surcharge de composant pour un rendu correct sur la page */
-        .sidebar__tree {
+        .tree-structure-tree {
             max-height: calc(100vh - 195px) !important;
         }
 
-        .sidebar+.main-content {
+        .tree-structure+.main-content {
             height: calc(100vh - 100px);
             overflow-y: scroll;
         }
@@ -53,27 +53,24 @@
         </a>
         <a class="btn btn-primary my-3 d-block d-sm-none" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Ouvrir le menu</a>
     </header>
-    <!-- SIDEBAR RESPONSIVE -->
-    <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <!-- TREE STRUCTURE RESPONSIVE -->
+    <div class="tree-structure offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasExampleLabel">Composants UI</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <ul class="sidebar-tree">
+            <ul class="tree-structure-tree">
                 <li><a href="#alerts">Alerts</a></li>
-                <!-- <li><a href="#avatar">Avatar</a></li> -->
                 <li><a href="#badges">Badges</a></li>
                 <li><a href="#buttons">Buttons</a></li>
                 <li><a href="#dominos">Dominos <span class="badge bg-primary">Nouveau</span></a></li>
                 <li><a href="#dropdowns">Dropdowns</a></li>
-                <!-- <li><a href="#explorer">Explorer</a></li> -->
                 <li><a href="#forms">Forms</a></li>
                 <li><a href="#lists">Lists <span class="badge bg-primary">Nouveau</span></a></li>
                 <li><a href="#modals">Modals</a></li>
                 <li><a href="#navbar">Navbar</a></li>
-                <!-- <li><a href="#search">Search</a></li> -->
-                <li><a href="#sidebar">Sidebar</a></li>
+                <li><a href="#tree-structure">Tree structure</a></li>
                 <li><a href="#tables">Tables</a></li>
                 <li><a href="#toaster">Toaster</a></li>
                 <li><a href="#widget">Widgets</a></li>
@@ -84,12 +81,11 @@
   </div>
   
   <div class="container d-flex">
-    <!-- SIDEBAR -->
-    <aside class="sidebar sidebar-left d-none d-sm-block">
-      <h1 class="sidebar-title">Composants UI</h1>
-      <ul class="sidebar-tree">
+    <!-- Tree structure -->
+    <aside class="tree-structure tree-structure-left d-none d-sm-block">
+      <h1 class="tree-structure-title">Composants UI</h1>
+      <ul class="tree-structure-tree">
         <li><a href="#alerts">Alerts</a></li>
-        <!-- <li><a href="#avatar">Avatar</a></li> -->
         <li><a href="#badges">Badges</a></li>
         <li><a href="#buttons">Buttons</a></li>
         <li><a href="#dominos">Dominos <span class="badge bg-primary">Nouveau</span></a></li>
@@ -99,10 +95,11 @@
         <li><a href="#lists">Lists <span class="badge bg-primary">Nouveau</span></a></li>
         <li><a href="#modals">Modals</a></li>
         <li><a href="#navbar">Navbar</a></li>
-        <!-- <li><a href="#search">Search</a></li> -->
-        <li><a href="#sidebar">Sidebar</a></li>
+        <li><a href="#tree-structure">Tree structure</a></li>
         <li><a href="#tables">Tables</a></li>
         <li><a href="#toaster">Toaster</a></li>
+        <li><a href="#widget">Widgets</a></li>
+        <li><a href="#feed">Feed</a></li>
       </ul>
     </aside>
     <!-- MAIN CONTENT -->
@@ -153,9 +150,9 @@
         <h1>Navbar</h1>
         <iframe src="components/navbar.html" height="100"></iframe>
       </section>
-      <section id="sidebar">
-        <h1>Sidebar</h1>
-        <iframe src="components/sidebar.html" height="600"></iframe>
+      <section id="tree-structure">
+        <h1>Tree structure</h1>
+        <iframe src="components/tree-structure.html" height="600"></iframe>
       </section>
       <section id="tables">
         <h1>Tables</h1>
@@ -164,6 +161,14 @@
       <section id="toaster">
         <h1>Toaster</h1>
         <iframe src="components/toaster.html"></iframe>
+      </section>
+      <section id="widget">
+        <h1>Widget</h1>
+        <iframe src="components/widgets.html" height="250"></iframe>
+      </section>
+      <section id="feed">
+        <h1>Feed</h1>
+        <iframe src="components/feed.html"></iframe>
       </section>
     </main>
 

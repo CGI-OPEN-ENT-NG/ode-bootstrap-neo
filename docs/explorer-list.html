@@ -55,14 +55,19 @@
         </div>
     </header>
     <div class="container d-flex">
-        <!-- SIDEBAR -->
-        <aside class="sidebar sidebar-left">
-            <h1 class="sidebar-title">Blog</h1>
-            <ul class="sidebar-tree">
-                <li><a class="active" href=""><i class="ic-app blog"></i> Mes blogs</a>
+        <!-- Tree structure -->
+        <aside class="tree-structure tree-structure-left">
+            <h1 class="tree-structure-title">Blog</h1>
+            <ul class="tree-structure-tree">
+                <li>
+                    <input type="checkbox" id="dossier_1" />
+                    <label for="dossier_1"><a class="active" href=""><i class="ic-app blog"></i> Tous les blogs</a></label>
                     <ul>
                         <li><a href="">Dossier 1</a></li>
                         <li><a href="">Dossier 2</a>
+                        <li>
+                            <input type="checkbox" id="dossier_2" />
+                            <label for="dossier_2"><a href="">Dossier 2</a></label>
                             <ul>
                                 <li><a href="">Sous-dossier 1</a></li>
                                 <li><a href="">Sous-dossier 2</a></li>
@@ -70,7 +75,9 @@
                                 <li><a href="">Sous-dossier avec un nom très long</a></li>
                             </ul>
                         </li>
-                        <li><a href="">Dossier 3</a>
+                        <li>
+                            <input type="checkbox" id="dossier_3" />
+                            <label for="dossier_3"><a href="">Dossier 3</a></label>
                             <ul>
                                 <li><a href="">Sous-dossier 1</a></li>
                                 <li><a href="">Sous-dossier 2</a></li>
@@ -81,8 +88,7 @@
                 <li><a href=""><i class="fas fa-trash-alt"></i> Ma corbeille</a></li>
             </ul>
             <div class="d-grid gap-2">
-                <a class="btn btn-outline-secondary" data-toggle="modal" data-target="#createFolder"><i class="fas fa-folder-plus"></i> Créer un dossier</a>
-                <a class="btn btn-outline-secondary"><i class="fas fa-file-import"></i> Importer</a>
+                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#createFolder">Créer un dossier</button>
             </div>
         </aside>
         <!-- MAIN CONTENT -->
@@ -91,12 +97,12 @@
                 <section class="explorer-header">
 
                     <form class="row justify-content-between mb-2 d-none d-sm-none d-md-none d-lg-flex">
-                        <div class="col-lg-6 input-searchbar">
+                        <div class="col-md-8 col-xl-4 input-searchbar">
                             <i class="ic-search form-control-feedback"></i>
-                            <input type="search" class="form-control" id="" placeholder="Rechercher un blog">
+                            <input type="search" class="form-control" id="" placeholder="Rechercher dans $currentFolder">
                         </div>
                         <div class="col-auto">
-                            <a class="btn btn-primary px-4" data-toggle="modal" data-target="#createRessource">Créer un blog</a>
+                            <a class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#createRessource">Créer un blog</a>
                         </div>
                     </form>
                     <div class="d-flex justify-content-between align-items-center mb-2">
@@ -105,16 +111,16 @@
                                 Tous les blogs
                                 <small>(76 éléments)</small>
                             </div>
-                            <a class="btn d-block d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasSidebar" role="button" aria-controls="offcanvasExample">
+                            <a class="btn d-block d-lg-none" data-bs-toggle="offcanvas" href="#offcanvas-tree-structure" role="button" aria-controls="offcanvasExample">
                                 <i class="ic-burger"></i> Tous les blogs
                             </a>
-                            <div class="sidebar sidebar-mobile offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasExampleLabel">
+                            <div class="tree-structure tree-structure-mobile offcanvas offcanvas-start" tabindex="-1" id="offcanvas-tree-structure" aria-labelledby="offcanvasExampleLabel">
                                 <div class="offcanvas-header">
                                     <h5 class="offcanvas-title" id="offcanvasExampleLabel">Blog</h5>
                                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                 </div>
                                 <div class="offcanvas-body">
-                                    <ul class="sidebar-tree">
+                                    <ul class="tree-structure-tree">
                                         <li>
                                             <input type="checkbox" id="dossier_1" />
                                             <label for="dossier_1"><a class="active" href=""><i class="ic-app blog"></i> Tous les blogs</a></label>
@@ -263,207 +269,241 @@
                     </div>
                 </section>
 
-                <section class="explorer-view list">
-                    <section class="list-header">
-                        <span class="list-item-preview"></span>
-                        <span class="list-title"><i class="fas fa-sort"></i> Titre</span>
-                        <span class="list-status text-white">Status</span>
-                        <span class="list-owner"><i class="fas fa-sort"></i> Propriétaire</span>
-                        <span class="list-modification"><i class="fas fa-sort"></i> Dernière modification</span>
+                <section class="explorer-view table-list">
+                    <section class="table-list-header">
+                        <span class="table-list-item-preview"></span>
+                        <span class="table-list-title"><i class="fas fa-sort"></i> Titre</span>
+                        <span class="table-list-status text-white">Status</span>
+                        <span class="table-list-owner"><i class="fas fa-sort"></i> Propriétaire</span>
+                        <span class="table-list-modification"><i class="fas fa-sort"></i> Dernière modification</span>
                     </section>
-                    <article class="list-item folder">
-                        <i class="list-item-preview ic-folder"></i>
-                        <h2 class="list-title">
+                    <article class="table-list-item folder" data-bs-toggle="offcanvas" href="#toaster" role="button" aria-controls="offcanvasExample">
+                        <i class="table-list-item-preview ic-folder"></i>
+                        <h2 class="table-list-title">
                             Titre du dossier
                         </h2>
-                        <div class="list-status">
+                        <div class="table-list-status">
                             <span title="Ressource public"><i class="ic-public"></i></span>
                             <span title="Ressource partagée"><i class="ic-users"></i></span>
                         </div>
-                        <article class="list-owner">
+                        <article class="table-list-owner">
                             <span>Moi</span>
                         </article>
 
-                        <div class="list-modification">
+                        <div class="table-list-modification">
                             <span class="">Il y a 2 heures</span><br />
-                            <span class="list-modifiedBy">Moi</span>
+                            <span class="table-list-modifiedBy">Moi</span>
                         </div>
                     </article>
 
-                    <article class="list-item item active">
-                        <span class="list-item-preview">
-                            <img class="list-image" src="https://loremflickr.com/100/100/">
+                    <article class="table-list-item file active">
+                        <span class="table-list-item-preview">
+                            <img class="table-list-image" src="https://loremflickr.com/100/100/">
                         </span>
-                        <h2 class="list-title">
+                        <h2 class="table-list-title">
                             Titre de la ressource avec une image
                         </h2>
-                        <div class="list-status">
+                        <div class="table-list-status">
                             <span title="Ressource partagée"><i class="ic-users"></i></span>
                         </div>
-                        <article class="list-owner">
+                        <article class="table-list-owner">
                             <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
                             <a>Isabelle Polonio</a>
                         </article>
 
-                        <div class="list-modification">
+                        <div class="table-list-modification">
                             <span class="">Il y a 3 jours</span><br />
-                            <span class="list-modifiedBy">par <a>Brigitte Fontaine</a></span>
+                            <span class="table-list-modifiedBy">par <a>Brigitte Fontaine</a></span>
                         </div>
                     </article>
-                    <article class="list-item">
-                        <i class="list-item-preview ic-app blog"></i>
-                        <h2 class="list-title">
+                    <article class="table-list-item">
+                        <i class="table-list-item-preview ic-app blog color-app-blog"></i>
+                        <h2 class="table-list-title">
                             Titre de la ressource avec une icône
                         </h2>
-                        <div class="list-status">
+                        <div class="table-list-status">
                             <span title="Ressource public"><i class="ic-public"></i></span>
                         </div>
-                        <article class="list-owner">
+                        <article class="table-list-owner">
                             <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
                             <a>Isabelle Polonio</a>
                         </article>
 
-                        <div class="list-modification">
+                        <div class="table-list-modification">
                             <span class="">Il y a 1 semaine</span><br />
-                            <span class="list-modifiedBy">par <a>Alain Terrieur</a></span>
+                            <span class="table-list-modifiedBy">par <a>Alain Terrieur</a></span>
                         </div>
                     </article>
-                    <article class="list-item">
-                        <i class="list-item-preview ic-app blog"></i>
-                        <h2 class="list-title">
+                    <article class="table-list-item">
+                        <i class="table-list-item-preview ic-app blog color-app-blog"></i>
+                        <h2 class="table-list-title">
                             Titre de la ressource
                         </h2>
-                        <div class="list-status">
+                        <div class="table-list-status">
                             <span title="Ressource public"><i class="ic-public"></i></span>
                             <span title="Ressource partagée"><i class="ic-users"></i></span>
                         </div>
-                        <article class="list-owner">
+                        <article class="table-list-owner">
                             <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
                             <a>Brigitte Fontaine</a>
                         </article>
 
-                        <div class="list-modification">
+                        <div class="table-list-modification">
                             <span class="">Il y a 2 semaines</span><br />
-                            <span class="list-modifiedBy">par <a>Alex Terrieur</a></span>
+                            <span class="table-list-modifiedBy">par <a>Alex Terrieur</a></span>
                         </div>
                     </article>
-                    <article class="list-item">
-                        <i class="list-item-preview ic-app blog"></i>
-                        <h2 class="list-title">
+                    <article class="table-list-item">
+                        <i class="table-list-item-preview ic-app blog color-app-blog"></i>
+                        <h2 class="table-list-title">
                             Titre de la ressource
                         </h2>
-                        <div class="list-status">
+                        <div class="table-list-status">
                             <span title="Ressource public"><i class="ic-public"></i></span>
                             <span title="Ressource partagée"><i class="ic-users"></i></span>
                         </div>
-                        <article class="list-owner">
+                        <article class="table-list-owner">
                             <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
                             <a>Brigitte Fontaine</a>
                         </article>
 
-                        <div class="list-modification">
+                        <div class="table-list-modification">
                             <span class="">Il y a 2 semaines</span><br />
-                            <span class="list-modifiedBy">par <a>Alex Terrieur</a></span>
+                            <span class="table-list-modifiedBy">par <a>Alex Terrieur</a></span>
                         </div>
                     </article>
-                    <article class="list-item">
-                        <i class="list-item-preview ic-app blog"></i>
-                        <h2 class="list-title">
+                    <article class="table-list-item">
+                        <i class="table-list-item-preview ic-app blog color-app-blog"></i>
+                        <h2 class="table-list-title">
                             Titre de la ressource
                         </h2>
-                        <div class="list-status">
+                        <div class="table-list-status">
                             <span title="Ressource public"><i class="ic-public"></i></span>
                             <span title="Ressource partagée"><i class="ic-users"></i></span>
                         </div>
-                        <article class="list-owner">
+                        <article class="table-list-owner">
                             <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
                             <a>Brigitte Fontaine</a>
                         </article>
 
-                        <div class="list-modification">
+                        <div class="table-list-modification">
                             <span class="">Il y a 2 semaines</span><br />
-                            <span class="list-modifiedBy">par <a>Alex Terrieur</a></span>
+                            <span class="table-list-modifiedBy">par <a>Alex Terrieur</a></span>
                         </div>
                     </article>
-                    <article class="list-item">
-                        <i class="list-item-preview ic-app blog"></i>
-                        <h2 class="list-title">
+                    <article class="table-list-item">
+                        <i class="table-list-item-preview ic-app blog color-app-blog"></i>
+                        <h2 class="table-list-title">
                             Titre de la ressource
                         </h2>
-                        <div class="list-status">
+                        <div class="table-list-status">
                             <span title="Ressource public"><i class="ic-public"></i></span>
                             <span title="Ressource partagée"><i class="ic-users"></i></span>
                         </div>
-                        <article class="list-owner">
+                        <article class="table-list-owner">
                             <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
                             <a>Brigitte Fontaine</a>
                         </article>
 
-                        <div class="list-modification">
+                        <div class="table-list-modification">
                             <span class="">Il y a 2 semaines</span><br />
-                            <span class="list-modifiedBy">par <a>Alex Terrieur</a></span>
-                        </div>
-                    </article>
-                    <article class="list-item">
-                        <i class="list-item-preview ic-app blog"></i>
-                        <h2 class="list-title">
-                            Titre de la ressource
-                        </h2>
-                        <div class="list-status">
-                            <span title="Ressource public"><i class="ic-public"></i></span>
-                            <span title="Ressource partagée"><i class="ic-users"></i></span>
-                        </div>
-                        <article class="list-owner">
-                            <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
-                            <a>Brigitte Fontaine</a>
-                        </article>
-
-                        <div class="list-modification">
-                            <span class="">Il y a 2 semaines</span><br />
-                            <span class="list-modifiedBy">par <a>Alex Terrieur</a></span>
-                        </div>
-                    </article>
-                    <article class="list-item">
-                        <i class="list-item-preview ic-app blog"></i>
-                        <h2 class="list-title">
-                            Titre de la ressource
-                        </h2>
-                        <div class="list-status">
-                            <span title="Ressource public"><i class="ic-public"></i></span>
-                            <span title="Ressource partagée"><i class="ic-users"></i></span>
-                        </div>
-                        <article class="list-owner">
-                            <img class="avatar avatar--25" src="https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png" />
-                            <a>Brigitte Fontaine</a>
-                        </article>
-
-                        <div class="list-modification">
-                            <span class="">Il y a 2 semaines</span><br />
-                            <span class="list-modifiedBy">par <a>Alex Terrieur</a></span>
+                            <span class="table-list-modifiedBy">par <a>Alex Terrieur</a></span>
                         </div>
                     </article>
                     <div class="d-flex m-2 justify-content-center" style="flex-basis: 100%;">
                         <a class="btn btn-secondary">Charger plus de ressources (20)</a>
                     </div>
                 </section>
-
                 <!-- TOASTER -->
-                <div class="toaster">
-                    <a class="d-mobile-none" href="">Ouvrir</a>
-                    <a href="">Propriétés</a>
-                    <a href="">Déplacer</a>
-                    <a href="">Dupliquer</a>
-                    <a class="d-mobile-none" href="">Exporter</a>
-                    <a href="" data-bs-toggle="modal" data-bs-target="#share">Partager</a>
-                    <a class="d-mobile-none" href="">Commenter</a>
-                    <a class="d-mobile-none" href="">Imprimer</a>
-                    <a class="d-mobile-none" href="">Publier dans la bibliothèque</a>
-                    <a href="">Supprimer</a>
+                <div class="navbar navbbar-primary bg-primary offcanvas offcanvas-bottom align-items-start" data-bs-backdrop="false" tabindex="-1" id="toaster" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-body">
+                        <a class="btn btn-primary" href="">Ouvrir</a>
+                        <a class="btn btn-primary" href="">Propriétés</a>
+                        <a class="btn btn-primary" href="">Déplacer</a>
+                        <a class="btn btn-primary d-mobile-none" href="">Dupliquer</a>
+                        <a class="btn btn-primary d-mobile-none" href="">Exporter</a>
+                        <a class="btn btn-primary" href="" data-bs-toggle="modal" data-bs-target="#share">Partager</a>
+                        <a class="btn btn-primary d-mobile-none" href="">Commenter</a>
+                        <a class="btn btn-primary d-mobile-none" href="">Imprimer</a>
+                        <a class="btn btn-primary d-mobile-none" href="">Publier dans la bibliothèque</a>
+                        <a class="btn btn-primary d-mobile-none" href="">Supprimer</a>
+
+                        <div class="dropdown d-inline-block d-desktop-none">
+                            <a class="btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Actions supplémentaires">
+                                <i class="fas fa-ellipsis-v text-white"></i></a>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Dupliquer</a>
+                                <a class="dropdown-item" href="#">Exporter</a>
+                                <a class="dropdown-item" href="#">Commenter</a>
+                                <a class="dropdown-item" href="#">Partager dans la bibliothèque</a>
+                                <a class="dropdown-item" href="#">Supprimer</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
     </div>
     
+    <!-- Modale de création de blog -->
+    <div class="modal fade" id="createRessource" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Créer un blog</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12 col-md-5 col-lg-3 text-center">
+                        <img src="https://dummyimage.com/200x200/f0f2f4/aaa" alt="..." class="img-thumbnail">
+                        <div class="d-grid gap-2 col-8 mt-4 mx-auto">
+                            <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#multimedia">Ajouter une image</button>
+                        </div>
+                    </div>
+                    <form class="col-sm-12 col-md-7 col-lg-9">
+                        <div class="form-group mb-4">
+                            <label for="">Titre de mon blog :</label>
+                            <input type="text" class="form-control" id="" placeholder="Taper ici le titre de votre blog">
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">Le blog est accessible publiquement via cette adresse personnalisable</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-link" data-bs-dismiss="modal">Annuler</button>
+              <button type="button" class="btn btn-primary">Valider</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- Modale de création de dossier -->
+    <div class="modal fade" id="createFolder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Créer un dossier</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-0">
+                <form class="col">
+                    <div class="form-group">
+                        <label for="">Nom de mon dossier :</label>
+                        <input type="text" class="form-control" id="" placeholder="Titre de mon dossier">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-link" data-bs-dismiss="modal">Annuler</button>
+              <button type="button" class="btn btn-primary">Valider</button>
+            </div>
+          </div>
+        </div>
+    </div>
     <!-- Modale de partage -->
     <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
@@ -473,7 +513,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="alert alert-info justify-content-center fw-bold mb-4">Vous êtes gestionnaire</div>
+                    <div class="alert alert-info text-center fw-bold mb-4">Vous êtes gestionnaire</div>
                     <div class="table-responsive">
                         <table class="table align-middle table-striped">
                             <thead>
