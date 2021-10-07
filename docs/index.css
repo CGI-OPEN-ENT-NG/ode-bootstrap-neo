@@ -11,12 +11,19 @@ Ref : https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
 =======
 =======
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+<<<<<<< HEAD
 >>>>>>> fix: upgrade documentation
 /*
 Personnalisation de certains paramètres de boostrap
 Ajouter l'option !default pour permettre la surcharge depuis les thèmes
 Ref : https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
 >>>>>>> fix: add logo neo on svg
+=======
+/*
+Personnalisation de certains paramètres de boostrap
+Ajouter l'option !default pour permettre la surcharge depuis les thèmes
+Ref : https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+>>>>>>> feat: remove icons classes from component application
 */
 /* prettier-ignore */
 :root {
@@ -98,8 +105,7 @@ Ref : https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
 >>>>>>> feat: Add footer zone to widget
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 73, 80, 87;
-  --bs-body-bg-rgb: 248, 249, 250;
+  --bs-body-rgb: 73, 80, 87;
   --bs-font-sans-serif: "Roboto", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -6618,7 +6624,7 @@ textarea.form-control-lg {
 
 .text-body {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important; }
+  color: rgba(var(--bs-body-rgb), var(--bs-text-opacity)) !important; }
 
 .text-muted {
   --bs-text-opacity: 1;
@@ -6718,7 +6724,7 @@ textarea.form-control-lg {
 
 .bg-body {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important; }
+  background-color: rgba(var(--bs-body-rgb), var(--bs-bg-opacity)) !important; }
 
 .bg-transparent {
   --bs-bg-opacity: 1;
@@ -13525,8 +13531,7 @@ readers do not read off random characters that represent icons */
 html {
   font-size: 62.5%; }
 
-[class*="ic-"],
-.ic-app {
+[class^="ic-"] {
   font-family: "generic-icons";
   font-style: normal;
   font-weight: 400; }
@@ -13628,7 +13633,7 @@ html {
   content: ""; }
 
 .color-app-account {
-  color: #e13a3a; }
+  color: #763294; }
 
 .color-app-actualites {
   color: #4bafd5; }
@@ -13687,9 +13692,6 @@ html {
 .color-app-forum {
   color: #4bafd5; }
 
-.color-app-kne {
-  color: #e13a3a; }
-
 .color-app-library {
   color: #ecbe30; }
 
@@ -13718,7 +13720,7 @@ html {
   color: #ff8500; }
 
 .color-app-poll {
-  color: #e13a3a; }
+  color: #4bafd5; }
 
 .color-app-polls {
   color: #4bafd5; }
@@ -13728,9 +13730,6 @@ html {
 
 .color-app-rbs {
   color: #b930a2; }
-
-.color-app-sacoche {
-  color: #e13a3a; }
 
 .color-app-schoolbook {
   color: #46bfaf; }
@@ -13742,7 +13741,7 @@ html {
   color: #46bfaf; }
 
 .color-app-searchengine {
-  color: #e13a3a; }
+  color: #4bafd5; }
 
 .color-app-settings-class {
   color: #ecbe30; }
@@ -13769,16 +13768,16 @@ html {
   color: #46bfaf; }
 
 .color-app-video {
-  color: #e13a3a; }
+  color: #4bafd5; }
 
 .color-app-visioconf {
-  color: #763294; }
+  color: #4bafd5; }
 
 .color-app-Web-conference {
-  color: #e13a3a; }
+  color: #4bafd5; }
 
 .color-app-website {
-  color: #e13a3a; }
+  color: #4bafd5; }
 
 .color-app-wiki {
   color: #763294; }
@@ -13786,8 +13785,215 @@ html {
 .color-app-workspace {
   color: #e13a3a; }
 
+.color-app-absences {
+  color: #e13a3a; }
+
+.color-app-admission-post-bac {
+  color: #e13a3a; }
+
+.color-app-aide-devoirs {
+  color: #46bfaf; }
+
+.color-app-agenda {
+  color: #ecbe30; }
+
+.color-app-assistance {
+  color: #4bafd5; }
+
+.color-app-assr {
+  color: #e13a3a; }
+
+.color-app-award {
+  color: #46bfaf; }
+
+.color-app-banquesavoir {
+  color: #4bafd5; }
+
+.color-app-bcdi {
+  color: #763294; }
+
+.color-app-biblionisep {
+  color: #46bfaf; }
+
+.color-app-bookmark-empty {
+  color: #46bfaf; }
+
+.color-app-canal-numerique {
+  color: #e13a3a; }
+
+.color-app-ccn {
+  color: #46bfaf; }
+
+.color-app-cerise {
+  color: #e13a3a; }
+
+.color-app-cervoprint {
+  color: #4bafd5; }
+
+.color-app-charlemagne {
+  color: #e13a3a; }
+
+.color-app-charte {
+  color: #ecbe30; }
+
+.color-app-chat {
+  color: #e13a3a; }
+
+.color-app-cidj {
+  color: #46bfaf; }
+
+.color-app-connecteur-generique1 {
+  color: #e13a3a; }
+
+.color-app-connecteur-generique2 {
+  color: #e13a3a; }
+
+.color-app-educagri {
+  color: #1a22a2; }
+
+.color-app-edumedia {
+  color: #4bafd5; }
+
+.color-app-edumoov {
+  color: #e13a3a; }
+
+.color-app-edutheque {
+  color: #ecbe30; }
+
+.color-app-electron {
+  color: #e13a3a; }
+
+.color-app-elyceepicardie {
+  color: #1a22a2; }
+
+.color-app-esidoc {
+  color: #b930a2; }
+
+.color-app-europress {
+  color: #4bafd5; }
+
+.color-app-gepi {
+  color: #4bafd5; }
+
+.color-app-glpi {
+  color: #e13a3a; }
+
+.color-app-hiboutheque {
+  color: #46bfaf; }
+
+.color-app-itopstore {
+  color: #46bfaf; }
+
+.color-app-kne {
+  color: #763294; }
+
+.color-app-le-site-tv {
+  color: #ecbe30; }
+
+.color-app-lemonde {
+  color: #1a22a2; }
+
+.color-app-lesechos {
+  color: #1a22a2; }
+
+.color-app-lsu {
+  color: #4bafd5; }
+
+.color-app-madmagz {
+  color: #b930a2; }
+
+.color-app-matholycee {
+  color: #e13a3a; }
+
+.color-app-maxicours {
+  color: #1a22a2; }
+
+.color-app-mediacentre {
+  color: #e13a3a; }
+
+.color-app-monorientationenligne {
+  color: #ecbe30; }
+
+.color-app-monstageenligne {
+  color: #4bafd5; }
+
+.color-app-moodle {
+  color: #ff8500; }
+
+.color-app-museefrancaisphoto {
+  color: #1a22a2; }
+
+.color-app-my-network {
+  color: #1a22a2; }
+
+.color-app-netvibes {
+  color: #46bfaf; }
+
+.color-app-note {
+  color: #ecbe30; }
+
+.color-app-onisep {
+  color: #4bafd5; }
+
+.color-app-onisep2 {
+  color: #4bafd5; }
+
+.color-app-parametrage {
+  color: #e13a3a; }
+
+.color-app-paraschool {
+  color: #46bfaf; }
+
+.color-app-pearltress {
+  color: #4bafd5; }
+
+.color-app-picardie-cursus {
+  color: #763294; }
+
+.color-app-pro-eps {
+  color: #4bafd5; }
+
+.color-app-pronote {
+  color: #763294; }
+
+.color-app-public {
+  color: #e13a3a; }
+
+.color-app-qwant-junior {
+  color: #e13a3a; }
+
+.color-app-residence-artiste {
+  color: #46bfaf; }
+
+.color-app-ressourcesdepartementale91 {
+  color: #1a22a2; }
+
+.color-app-sacoche {
+  color: #1a22a2; }
+
+.color-app-scolinfo {
+  color: #e13a3a; }
+
+.color-app-suitcase {
+  color: #e13a3a; }
+
+.color-app-turboself {
+  color: #ecbe30; }
+
+.color-app-universalis {
+  color: #e13a3a; }
+
+.color-app-unstagepourtous {
+  color: #b930a2; }
+
+.color-app-vie-scolaire {
+  color: #ecbe30; }
+
+.color-app-webclasseur {
+  color: #4bafd5; }
+
 .bg-app-account {
-  background-color: #e13a3a; }
+  background-color: #763294; }
 
 .bg-app-actualites {
   background-color: #4bafd5; }
@@ -13846,9 +14052,6 @@ html {
 .bg-app-forum {
   background-color: #4bafd5; }
 
-.bg-app-kne {
-  background-color: #e13a3a; }
-
 .bg-app-library {
   background-color: #ecbe30; }
 
@@ -13877,7 +14080,7 @@ html {
   background-color: #ff8500; }
 
 .bg-app-poll {
-  background-color: #e13a3a; }
+  background-color: #4bafd5; }
 
 .bg-app-polls {
   background-color: #4bafd5; }
@@ -13887,9 +14090,6 @@ html {
 
 .bg-app-rbs {
   background-color: #b930a2; }
-
-.bg-app-sacoche {
-  background-color: #e13a3a; }
 
 .bg-app-schoolbook {
   background-color: #46bfaf; }
@@ -13901,7 +14101,7 @@ html {
   background-color: #46bfaf; }
 
 .bg-app-searchengine {
-  background-color: #e13a3a; }
+  background-color: #4bafd5; }
 
 .bg-app-settings-class {
   background-color: #ecbe30; }
@@ -13928,16 +14128,16 @@ html {
   background-color: #46bfaf; }
 
 .bg-app-video {
-  background-color: #e13a3a; }
+  background-color: #4bafd5; }
 
 .bg-app-visioconf {
-  background-color: #763294; }
+  background-color: #4bafd5; }
 
 .bg-app-Web-conference {
-  background-color: #e13a3a; }
+  background-color: #4bafd5; }
 
 .bg-app-website {
-  background-color: #e13a3a; }
+  background-color: #4bafd5; }
 
 .bg-app-wiki {
   background-color: #763294; }
@@ -13945,164 +14145,572 @@ html {
 .bg-app-workspace {
   background-color: #e13a3a; }
 
-.ic-app.account::before, .ic-app.account-large::before {
+.bg-app-absences {
+  background-color: #e13a3a; }
+
+.bg-app-admission-post-bac {
+  background-color: #e13a3a; }
+
+.bg-app-aide-devoirs {
+  background-color: #46bfaf; }
+
+.bg-app-agenda {
+  background-color: #ecbe30; }
+
+.bg-app-assistance {
+  background-color: #4bafd5; }
+
+.bg-app-assr {
+  background-color: #e13a3a; }
+
+.bg-app-award {
+  background-color: #46bfaf; }
+
+.bg-app-banquesavoir {
+  background-color: #4bafd5; }
+
+.bg-app-bcdi {
+  background-color: #763294; }
+
+.bg-app-biblionisep {
+  background-color: #46bfaf; }
+
+.bg-app-bookmark-empty {
+  background-color: #46bfaf; }
+
+.bg-app-canal-numerique {
+  background-color: #e13a3a; }
+
+.bg-app-ccn {
+  background-color: #46bfaf; }
+
+.bg-app-cerise {
+  background-color: #e13a3a; }
+
+.bg-app-cervoprint {
+  background-color: #4bafd5; }
+
+.bg-app-charlemagne {
+  background-color: #e13a3a; }
+
+.bg-app-charte {
+  background-color: #ecbe30; }
+
+.bg-app-chat {
+  background-color: #e13a3a; }
+
+.bg-app-cidj {
+  background-color: #46bfaf; }
+
+.bg-app-connecteur-generique1 {
+  background-color: #e13a3a; }
+
+.bg-app-connecteur-generique2 {
+  background-color: #e13a3a; }
+
+.bg-app-educagri {
+  background-color: #1a22a2; }
+
+.bg-app-edumedia {
+  background-color: #4bafd5; }
+
+.bg-app-edumoov {
+  background-color: #e13a3a; }
+
+.bg-app-edutheque {
+  background-color: #ecbe30; }
+
+.bg-app-electron {
+  background-color: #e13a3a; }
+
+.bg-app-elyceepicardie {
+  background-color: #1a22a2; }
+
+.bg-app-esidoc {
+  background-color: #b930a2; }
+
+.bg-app-europress {
+  background-color: #4bafd5; }
+
+.bg-app-gepi {
+  background-color: #4bafd5; }
+
+.bg-app-glpi {
+  background-color: #e13a3a; }
+
+.bg-app-hiboutheque {
+  background-color: #46bfaf; }
+
+.bg-app-itopstore {
+  background-color: #46bfaf; }
+
+.bg-app-kne {
+  background-color: #763294; }
+
+.bg-app-le-site-tv {
+  background-color: #ecbe30; }
+
+.bg-app-lemonde {
+  background-color: #1a22a2; }
+
+.bg-app-lesechos {
+  background-color: #1a22a2; }
+
+.bg-app-lsu {
+  background-color: #4bafd5; }
+
+.bg-app-madmagz {
+  background-color: #b930a2; }
+
+.bg-app-matholycee {
+  background-color: #e13a3a; }
+
+.bg-app-maxicours {
+  background-color: #1a22a2; }
+
+.bg-app-mediacentre {
+  background-color: #e13a3a; }
+
+.bg-app-monorientationenligne {
+  background-color: #ecbe30; }
+
+.bg-app-monstageenligne {
+  background-color: #4bafd5; }
+
+.bg-app-moodle {
+  background-color: #ff8500; }
+
+.bg-app-museefrancaisphoto {
+  background-color: #1a22a2; }
+
+.bg-app-my-network {
+  background-color: #1a22a2; }
+
+.bg-app-netvibes {
+  background-color: #46bfaf; }
+
+.bg-app-note {
+  background-color: #ecbe30; }
+
+.bg-app-onisep {
+  background-color: #4bafd5; }
+
+.bg-app-onisep2 {
+  background-color: #4bafd5; }
+
+.bg-app-parametrage {
+  background-color: #e13a3a; }
+
+.bg-app-paraschool {
+  background-color: #46bfaf; }
+
+.bg-app-pearltress {
+  background-color: #4bafd5; }
+
+.bg-app-picardie-cursus {
+  background-color: #763294; }
+
+.bg-app-pro-eps {
+  background-color: #4bafd5; }
+
+.bg-app-pronote {
+  background-color: #763294; }
+
+.bg-app-public {
+  background-color: #e13a3a; }
+
+.bg-app-qwant-junior {
+  background-color: #e13a3a; }
+
+.bg-app-residence-artiste {
+  background-color: #46bfaf; }
+
+.bg-app-ressourcesdepartementale91 {
+  background-color: #1a22a2; }
+
+.bg-app-sacoche {
+  background-color: #1a22a2; }
+
+.bg-app-scolinfo {
+  background-color: #e13a3a; }
+
+.bg-app-suitcase {
+  background-color: #e13a3a; }
+
+.bg-app-turboself {
+  background-color: #ecbe30; }
+
+.bg-app-universalis {
+  background-color: #e13a3a; }
+
+.bg-app-unstagepourtous {
+  background-color: #b930a2; }
+
+.bg-app-vie-scolaire {
+  background-color: #ecbe30; }
+
+.bg-app-webclasseur {
+  background-color: #4bafd5; }
+
+.ic-app-account::before, .ic-app-account-large::before {
   content: ""; }
 
-.ic-app.actualites::before, .ic-app.actualites-large::before {
+.ic-app-actualites::before, .ic-app-actualites-large::before {
   content: ""; }
 
-.ic-app.admin-portal::before, .ic-app.admin-portal-large::before {
+.ic-app-admin-portal::before, .ic-app-admin-portal-large::before {
   content: ""; }
 
-.ic-app.admin::before, .ic-app.admin-large::before {
+.ic-app-admin::before, .ic-app-admin-large::before {
   content: ""; }
 
-.ic-app.archive::before, .ic-app.archive-large::before {
+.ic-app-archive::before, .ic-app-archive-large::before {
   content: ""; }
 
-.ic-app.attendance::before, .ic-app.attendance-large::before {
+.ic-app-attendance::before, .ic-app-attendance-large::before {
   content: ""; }
 
-.ic-app.blog::before, .ic-app.blog-large::before {
+.ic-app-blog::before, .ic-app-blog-large::before {
   content: ""; }
 
-.ic-app.cahier-de-texte::before, .ic-app.cahier-de-texte-large::before {
+.ic-app-cahier-de-texte::before, .ic-app-cahier-de-texte-large::before {
   content: ""; }
 
-.ic-app.cahier-textes::before, .ic-app.cahier-textes-large::before {
+.ic-app-cahier-textes::before, .ic-app-cahier-textes-large::before {
   content: ""; }
 
-.ic-app.calendar::before, .ic-app.calendar-large::before {
+.ic-app-calendar::before, .ic-app-calendar-large::before {
   content: ""; }
 
-.ic-app.canal-numerique::before, .ic-app.canal-numerique-large::before {
+.ic-app-canal-numerique::before, .ic-app-canal-numerique-large::before {
   content: ""; }
 
-.ic-app.cns::before, .ic-app.cns-large::before {
+.ic-app-cns::before, .ic-app-cns-large::before {
   content: ""; }
 
-.ic-app.collaborative-wall::before, .ic-app.collaborative-wall-large::before {
+.ic-app-collaborative-wall::before, .ic-app-collaborative-wall-large::before {
   content: ""; }
 
-.ic-app.collaborativeeditor::before, .ic-app.collaborativeeditor-large::before {
+.ic-app-collaborativeeditor::before, .ic-app-collaborativeeditor-large::before {
   content: ""; }
 
-.ic-app.community::before, .ic-app.community-large::before {
+.ic-app-community::before, .ic-app-community-large::before {
   content: ""; }
 
-.ic-app.competences::before, .ic-app.competences-large::before {
+.ic-app-competences::before, .ic-app-competences-large::before {
   content: ""; }
 
-.ic-app.conversation::before, .ic-app.conversation-large::before {
+.ic-app-conversation::before, .ic-app-conversation-large::before {
   content: ""; }
 
-.ic-app.directory::before, .ic-app.directory-large::before {
+.ic-app-directory::before, .ic-app-directory-large::before {
   content: ""; }
 
-.ic-app.exercizer::before, .ic-app.exercizer-large::before {
+.ic-app-exercizer::before, .ic-app-exercizer-large::before {
   content: ""; }
 
-.ic-app.forum::before, .ic-app.forum-large::before {
+.ic-app-forum::before, .ic-app-forum-large::before {
   content: ""; }
 
-.ic-app.kne::before, .ic-app.kne-large::before {
-  content: ""; }
-
-.ic-app.library::before, .ic-app.library-large::before {
+.ic-app-library::before, .ic-app-library-large::before {
   content: ""; }
 
-.ic-app.mindmap::before, .ic-app.mindmap-large::before {
+.ic-app-mindmap::before, .ic-app-mindmap-large::before {
   content: ""; }
 
-.ic-app.notebook::before, .ic-app.notebook-large::before {
+.ic-app-notebook::before, .ic-app-notebook-large::before {
   content: ""; }
 
-.ic-app.notes::before, .ic-app.notes-large::before {
+.ic-app-notes::before, .ic-app-notes-large::before {
   content: ""; }
 
-.ic-app.pad::before, .ic-app.pad-large::before {
+.ic-app-pad::before, .ic-app-pad-large::before {
   content: ""; }
 
-.ic-app.pages::before, .ic-app.pages-large::before {
-  content: ""; }
+.ic-app-pages::before, .ic-app-pages-large::before {
+  content: ""; }
 
-.ic-app.parametrage::before, .ic-app.parametrage-large::before {
+.ic-app-parametrage::before, .ic-app-parametrage-large::before {
   content: ""; }
 
-.ic-app.parcours::before, .ic-app.parcours-large::before {
+.ic-app-parcours::before, .ic-app-parcours-large::before {
   content: ""; }
 
-.ic-app.paths::before, .ic-app.paths-large::before {
+.ic-app-paths::before, .ic-app-paths-large::before {
   content: ""; }
 
-.ic-app.poll::before, .ic-app.poll-large::before {
+.ic-app-poll::before, .ic-app-poll-large::before {
   content: ""; }
 
-.ic-app.polls::before, .ic-app.polls-large::before {
+.ic-app-polls::before, .ic-app-polls-large::before {
   content: ""; }
 
-.ic-app.rack::before, .ic-app.rack-large::before {
+.ic-app-rack::before, .ic-app-rack-large::before {
   content: ""; }
 
-.ic-app.rbs::before, .ic-app.rbs-large::before {
+.ic-app-rbs::before, .ic-app-rbs-large::before {
   content: ""; }
 
-.ic-app.sacoche::before, .ic-app.sacoche-large::before {
-  content: ""; }
-
-.ic-app.schoolbook::before, .ic-app.schoolbook-large::before {
+.ic-app-schoolbook::before, .ic-app-schoolbook-large::before {
   content: ""; }
 
-.ic-app.scrap-book::before, .ic-app.scrap-book-large::before {
+.ic-app-scrap-book::before, .ic-app-scrap-book-large::before {
   content: ""; }
 
-.ic-app.scrapbook::before, .ic-app.scrapbook-large::before {
+.ic-app-scrapbook::before, .ic-app-scrapbook-large::before {
   content: ""; }
 
-.ic-app.searchengine::before, .ic-app.searchengine-large::before {
+.ic-app-searchengine::before, .ic-app-searchengine-large::before {
   content: ""; }
 
-.ic-app.settings-class::before, .ic-app.settings-class-large::before {
+.ic-app-settings-class::before, .ic-app-settings-class-large::before {
   content: ""; }
 
-.ic-app.sharebigfiles::before, .ic-app.sharebigfiles-large::before {
+.ic-app-sharebigfiles::before, .ic-app-sharebigfiles-large::before {
   content: ""; }
 
-.ic-app.statistics::before, .ic-app.statistics-large::before {
+.ic-app-statistics::before, .ic-app-statistics-large::before {
   content: ""; }
 
-.ic-app.stats::before, .ic-app.stats-large::before {
+.ic-app-stats::before, .ic-app-stats-large::before {
   content: ""; }
 
-.ic-app.support::before, .ic-app.support-large::before {
+.ic-app-support::before, .ic-app-support-large::before {
   content: ""; }
 
-.ic-app.timeline::before, .ic-app.timeline-large::before {
+.ic-app-timeline::before, .ic-app-timeline-large::before {
   content: ""; }
 
-.ic-app.timelinegenerator::before, .ic-app.timelinegenerator-large::before {
+.ic-app-timelinegenerator::before, .ic-app-timelinegenerator-large::before {
   content: ""; }
 
-.ic-app.userbook::before, .ic-app.userbook-large::before {
+.ic-app-userbook::before, .ic-app-userbook-large::before {
   content: ""; }
 
-.ic-app.video::before, .ic-app.video-large::before {
+.ic-app-video::before, .ic-app-video-large::before {
   content: ""; }
 
-.ic-app.visioconf::before, .ic-app.visioconf-large::before {
+.ic-app-visioconf::before, .ic-app-visioconf-large::before {
   content: ""; }
 
-.ic-app.Web-conference::before, .ic-app.Web-conference-large::before {
+.ic-app-Web-conference::before, .ic-app-Web-conference-large::before {
   content: ""; }
 
-.ic-app.website::before, .ic-app.website-large::before {
+.ic-app-website::before, .ic-app-website-large::before {
   content: ""; }
 
-.ic-app.wiki::before, .ic-app.wiki-large::before {
+.ic-app-wiki::before, .ic-app-wiki-large::before {
   content: ""; }
 
-.ic-app.workspace::before, .ic-app.workspace-large::before {
+.ic-app-workspace::before, .ic-app-workspace-large::before {
   content: ""; }
+
+.ic-app-absences::before, .ic-app-absences-large::before {
+  content: ""; }
+
+.ic-app-admission-post-bac::before, .ic-app-admission-post-bac-large::before {
+  content: ""; }
+
+.ic-app-aide-devoirs::before, .ic-app-aide-devoirs-large::before {
+  content: ""; }
+
+.ic-app-agenda::before, .ic-app-agenda-large::before {
+  content: ""; }
+
+.ic-app-assistance::before, .ic-app-assistance-large::before {
+  content: ""; }
+
+.ic-app-assr::before, .ic-app-assr-large::before {
+  content: ""; }
+
+.ic-app-award::before, .ic-app-award-large::before {
+  content: ""; }
+
+.ic-app-banquesavoir::before, .ic-app-banquesavoir-large::before {
+  content: ""; }
+
+.ic-app-bcdi::before, .ic-app-bcdi-large::before {
+  content: ""; }
+
+.ic-app-biblionisep::before, .ic-app-biblionisep-large::before {
+  content: ""; }
+
+.ic-app-bookmark-empty::before, .ic-app-bookmark-empty-large::before {
+  content: ""; }
+
+.ic-app-canal-numerique::before, .ic-app-canal-numerique-large::before {
+  content: ""; }
+
+.ic-app-ccn::before, .ic-app-ccn-large::before {
+  content: ""; }
+
+.ic-app-cerise::before, .ic-app-cerise-large::before {
+  content: ""; }
+
+.ic-app-cervoprint::before, .ic-app-cervoprint-large::before {
+  content: ""; }
+
+.ic-app-charlemagne::before, .ic-app-charlemagne-large::before {
+  content: ""; }
+
+.ic-app-charte::before, .ic-app-charte-large::before {
+  content: ""; }
+
+.ic-app-chat::before, .ic-app-chat-large::before {
+  content: ""; }
+
+.ic-app-cidj::before, .ic-app-cidj-large::before {
+  content: ""; }
+
+.ic-app-connecteur-generique1::before, .ic-app-connecteur-generique1-large::before {
+  content: ""; }
+
+.ic-app-connecteur-generique2::before, .ic-app-connecteur-generique2-large::before {
+  content: ""; }
+
+.ic-app-educagri::before, .ic-app-educagri-large::before {
+  content: ""; }
+
+.ic-app-edumedia::before, .ic-app-edumedia-large::before {
+  content: ""; }
+
+.ic-app-edumoov::before, .ic-app-edumoov-large::before {
+  content: ""; }
+
+.ic-app-edutheque::before, .ic-app-edutheque-large::before {
+  content: ""; }
+
+.ic-app-electron::before, .ic-app-electron-large::before {
+  content: ""; }
+
+.ic-app-elyceepicardie::before, .ic-app-elyceepicardie-large::before {
+  content: ""; }
+
+.ic-app-esidoc::before, .ic-app-esidoc-large::before {
+  content: ""; }
+
+.ic-app-europress::before, .ic-app-europress-large::before {
+  content: ""; }
+
+.ic-app-gepi::before, .ic-app-gepi-large::before {
+  content: ""; }
+
+.ic-app-glpi::before, .ic-app-glpi-large::before {
+  content: ""; }
+
+.ic-app-hiboutheque::before, .ic-app-hiboutheque-large::before {
+  content: ""; }
+
+.ic-app-itopstore::before, .ic-app-itopstore-large::before {
+  content: ""; }
+
+.ic-app-kne::before, .ic-app-kne-large::before {
+  content: ""; }
+
+.ic-app-le-site-tv::before, .ic-app-le-site-tv-large::before {
+  content: ""; }
+
+.ic-app-lemonde::before, .ic-app-lemonde-large::before {
+  content: ""; }
+
+.ic-app-lesechos::before, .ic-app-lesechos-large::before {
+  content: ""; }
+
+.ic-app-lsu::before, .ic-app-lsu-large::before {
+  content: ""; }
+
+.ic-app-madmagz::before, .ic-app-madmagz-large::before {
+  content: ""; }
+
+.ic-app-matholycee::before, .ic-app-matholycee-large::before {
+  content: ""; }
+
+.ic-app-maxicours::before, .ic-app-maxicours-large::before {
+  content: ""; }
+
+.ic-app-mediacentre::before, .ic-app-mediacentre-large::before {
+  content: ""; }
+
+.ic-app-monorientationenligne::before, .ic-app-monorientationenligne-large::before {
+  content: ""; }
+
+.ic-app-monstageenligne::before, .ic-app-monstageenligne-large::before {
+  content: ""; }
+
+.ic-app-moodle::before, .ic-app-moodle-large::before {
+  content: ""; }
+
+.ic-app-museefrancaisphoto::before, .ic-app-museefrancaisphoto-large::before {
+  content: ""; }
+
+.ic-app-my-network::before, .ic-app-my-network-large::before {
+  content: ""; }
+
+.ic-app-netvibes::before, .ic-app-netvibes-large::before {
+  content: ""; }
+
+.ic-app-note::before, .ic-app-note-large::before {
+  content: ""; }
+
+.ic-app-onisep::before, .ic-app-onisep-large::before {
+  content: ""; }
+
+.ic-app-onisep2::before, .ic-app-onisep2-large::before {
+  content: ""; }
+
+.ic-app-parametrage::before, .ic-app-parametrage-large::before {
+  content: ""; }
+
+.ic-app-paraschool::before, .ic-app-paraschool-large::before {
+  content: ""; }
+
+.ic-app-pearltress::before, .ic-app-pearltress-large::before {
+  content: ""; }
+
+.ic-app-picardie-cursus::before, .ic-app-picardie-cursus-large::before {
+  content: ""; }
+
+.ic-app-pro-eps::before, .ic-app-pro-eps-large::before {
+  content: ""; }
+
+.ic-app-pronote::before, .ic-app-pronote-large::before {
+  content: ""; }
+
+.ic-app-public::before, .ic-app-public-large::before {
+  content: ""; }
+
+.ic-app-qwant-junior::before, .ic-app-qwant-junior-large::before {
+  content: ""; }
+
+.ic-app-residence-artiste::before, .ic-app-residence-artiste-large::before {
+  content: ""; }
+
+.ic-app-ressourcesdepartementale91::before, .ic-app-ressourcesdepartementale91-large::before {
+  content: ""; }
+
+.ic-app-sacoche::before, .ic-app-sacoche-large::before {
+  content: ""; }
+
+.ic-app-scolinfo::before, .ic-app-scolinfo-large::before {
+  content: ""; }
+
+.ic-app-suitcase::before, .ic-app-suitcase-large::before {
+  content: ""; }
+
+.ic-app-turboself::before, .ic-app-turboself-large::before {
+  content: ""; }
+
+.ic-app-universalis::before, .ic-app-universalis-large::before {
+  content: ""; }
+
+.ic-app-unstagepourtous::before, .ic-app-unstagepourtous-large::before {
+  content: ""; }
+
+.ic-app-vie-scolaire::before, .ic-app-vie-scolaire-large::before {
+  content: ""; }
+
+.ic-app-webclasseur::before, .ic-app-webclasseur-large::before {
+  content: ""; }
 
 .link, .feed-item .zone-text .report a,
 .link a,
@@ -16233,37 +16841,36 @@ END DOCUMENTATION */
         color: #ff8500;
         background-color: #f5f5fb; }
 
-.widget-applications .application-list {
+.widget-applications .icon-grid {
   display: flex;
   flex-wrap: wrap; }
-
-.widget-applications .application-item {
-  position: relative;
-  width: 25%;
-  font-size: 3.2em; }
-  .widget-applications .application-item a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  .widget-applications .icon-grid-item {
     position: relative;
-    padding-top: 100%;
-    margin: 1px;
-    text-decoration: none;
-    background: #f8f9fa; }
-    .widget-applications .application-item a:hover {
-      background-color: white; }
-    .widget-applications .application-item a > i {
+    width: 25%;
+    font-size: 3.2em; }
+    .widget-applications .icon-grid-item a {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0; }
-  @media (min-width: 576px) and (max-width: 767.98px) {
-    .widget-applications .application-item {
-      width: 16.66667%; } }
+      transition: background-color 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      padding-top: 100%;
+      margin: 1px;
+      text-decoration: none;
+      background: #f8f9fa; }
+      .widget-applications .icon-grid-item a:hover {
+        background-color: white; }
+      .widget-applications .icon-grid-item a > i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0; }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      .widget-applications .icon-grid-item {
+        width: 16.66667%; } }
 
 .widget-bookmarks .bookmark-item {
   transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -17390,6 +17997,7 @@ popover popover-content {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     border-radius: 5px; }
 <<<<<<< HEAD
     .form-row > .col > .ode-bootstrap-neo .invalid-tooltip,
@@ -17442,6 +18050,65 @@ popover popover-content {
     border-color: #e13a3a;
     box-shadow: 0 0 0 0.2rem rgba(225, 58, 58, 0.25); }
   .ode-bootstrap-neo .form-inline {
+=======
+    border-radius: 6px; }
+    popover popover-content .bookmarked-app:hover {
+      border-color: #e9ecef; }
+    popover popover-content .bookmarked-app .application {
+      font-size: 3rem; }
+  popover popover-content .more {
+    padding: 10px;
+    text-align: center;
+    background: #adb5bd;
+    transition: background 250ms ease; }
+    popover popover-content .more:hover {
+      background: #ff8500; }
+  popover popover-content .search-text .searchInput {
+    width: 75%;
+    height: 29px;
+    margin: 10px -2px 10px 20px;
+    border: 1px solid #e9ecef; }
+  popover popover-content .search-text .searchButton {
+    float: left;
+    width: 30px;
+    height: 29px;
+    padding: 0;
+    margin-top: 10px;
+    line-height: 27px;
+    text-align: center;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: none; }
+
+.application-title {
+  color: #4bafd5; }
+
+.application-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 140px;
+  padding: 5px;
+  margin: 5px;
+  color: #343a40;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.35s ease-in-out; }
+  .application-item > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    font-size: 5rem; }
+  .application-item span {
+>>>>>>> feat: remove icons classes from component application
     display: flex;
     flex-flow: row wrap;
     align-items: center; }
@@ -57533,6 +58200,7 @@ i[class*="ic-"] {
 >>>>>>> feat: clean variables
     padding: 10px; } }
 
+<<<<<<< HEAD
 .application {
   font-family: "generic-icons";
   font-style: normal; }
@@ -57951,6 +58619,8 @@ i[class*="ic-"] {
 =======
 >>>>>>> feat: clean variables
 
+=======
+>>>>>>> feat: remove icons classes from component application
 .blue-background-class {
   background-color: rgba(75, 175, 213, 0.15); }
 
