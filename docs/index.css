@@ -12,11 +12,15 @@ Ref : https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
 =======
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fix: upgrade documentation
+=======
+>>>>>>> docs: regenerate index.css and index.css.map
 /*
 Personnalisation de certains paramètres de boostrap
 Ajouter l'option !default pour permettre la surcharge depuis les thèmes
 Ref : https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+<<<<<<< HEAD
 >>>>>>> fix: add logo neo on svg
 =======
 /*
@@ -24,6 +28,8 @@ Personnalisation de certains paramètres de boostrap
 Ajouter l'option !default pour permettre la surcharge depuis les thèmes
 Ref : https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
 >>>>>>> feat: remove icons classes from component application
+=======
+>>>>>>> docs: regenerate index.css and index.css.map
 */
 /* prettier-ignore */
 :root {
@@ -6202,6 +6208,7 @@ textarea.form-control-lg {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .mt-1, .applications-search {
 <<<<<<< HEAD
 =======
@@ -6215,11 +6222,15 @@ textarea.form-control-lg {
 =======
 .mt-1, .applications-search {
 >>>>>>> fix: upgrade documentation
+=======
+.mt-1 {
+>>>>>>> docs: regenerate index.css and index.css.map
   margin-top: 0.25rem !important; }
 
 .mt-2 {
   margin-top: 0.5rem !important; }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .mt-3, .applications-favorite {
@@ -6235,6 +6246,9 @@ textarea.form-control-lg {
 =======
 .mt-3, .applications-favorite {
 >>>>>>> fix: upgrade documentation
+=======
+.mt-3 {
+>>>>>>> docs: regenerate index.css and index.css.map
   margin-top: 1rem !important; }
 
 .mt-4 {
@@ -6278,6 +6292,7 @@ textarea.form-control-lg {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .mb-3, .applications-list h2, .applications-list .h2, .applications-connector h2, .applications-connector .h2 {
 <<<<<<< HEAD
 =======
@@ -6291,6 +6306,9 @@ textarea.form-control-lg {
 =======
 .mb-3, .applications-list h2, .applications-list .h2, .applications-connector h2, .applications-connector .h2 {
 >>>>>>> fix: upgrade documentation
+=======
+.mb-3 {
+>>>>>>> docs: regenerate index.css and index.css.map
   margin-bottom: 1rem !important; }
 
 .mb-4 {
@@ -18081,6 +18099,7 @@ popover popover-content {
     border-top-right-radius: 0;
     box-shadow: none; }
 
+<<<<<<< HEAD
 .application-title {
   color: #4bafd5; }
 
@@ -58201,6 +58220,8 @@ i[class*="ic-"] {
     padding: 10px; } }
 
 <<<<<<< HEAD
+=======
+>>>>>>> docs: regenerate index.css and index.css.map
 .application {
   font-family: "generic-icons";
   font-style: normal; }
@@ -58416,6 +58437,7 @@ i[class*="ic-"] {
     content: "\e8aa"; }
   .application.connecteur-generique2::before, .application.connecteur-generique2-large::before {
     content: "\e8ab"; }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     content: '\e927'; }
@@ -58688,6 +58710,12 @@ END DOCUMENTATION */
 /* VARIABLES */
 =======
 >>>>>>> fix: upgrade documentation
+=======
+
+.blue-background-class {
+  background-color: rgba(75, 175, 213, 0.15); }
+
+>>>>>>> docs: regenerate index.css and index.css.map
 /* COMPONENT */
 .dominos .domino {
   width: calc(16.667% - 20px); }
