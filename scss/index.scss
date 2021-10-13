@@ -14,13 +14,6 @@
 
 // --- IMPORT COMPONENTS ---
 // Contient tous nos composants visuels, simple ou complexe
-
-//!!!Conflit avec le widget du meme nom
-// Voir comment normaliser
-// > On le renomme en applications-board, et on mutualise dans ode-bt
-// > Julien renomme son widget en icon-list
-@import "components/applications";
-
 @import "components/dominos";
 
 //A enlever après création du bouton custom
