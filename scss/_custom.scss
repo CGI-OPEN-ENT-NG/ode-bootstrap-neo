@@ -79,6 +79,8 @@ popover {
     .widget-applications {
       .widget-body {
         padding: 1.5rem;
+        max-height: 60vh;
+        overflow: auto;
       }
       
       .widget-footer-action & {
