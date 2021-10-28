@@ -4,7 +4,6 @@
         padding: 0 2rem;
         width: 100%;
         box-shadow: 0 .2rem .5rem rgba($black, .4);
-        background: linear-gradient(to bottom right, $cyan, $darker-cyan);
 
         .container {
             padding: 0;
@@ -18,7 +17,7 @@
             align-items: center;
             border-bottom: 3px solid transparent;
 
-            a {
+            > a {
                 color: inherit;
             }
 
@@ -40,12 +39,6 @@
         .navigation {
             display: inline-flex;
             align-items: center;
-
-            a {
-                .widget-footer-action & {
-                    color: $gray-600;
-                }
-            }
 
             .btn {
                 .new-mails {
