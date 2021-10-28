@@ -9,6 +9,7 @@ main.main {
   padding: 20px;
   margin: 0 auto;
 }
+
 @include media-breakpoint-down(sm) {
   main.main {
     padding: 15px;
@@ -27,6 +28,7 @@ main.main {
     box-orient: vertical;
     white-space: normal;
   }
+
   &.text-truncate--3 {
     display: box !important;
     -webkit-line-clamp: 3;
@@ -40,129 +42,146 @@ popover {
   position: relative;
   z-index: 10000;
   display: inline-block;
-}
 
-popover popover-content.hidden {
-  pointer-events: none;
-  opacity: 0;
-}
-
-popover popover-content {
-  position: absolute;
-  top: 43px;
-  left: -125px;
-  width: 250px;
-  margin-left: 50%;
-  text-align: center;
-  background: #fff;
-  border: 1px solid $gray-300;
-  border-radius: 2px;
-  box-shadow: 0 1px 20px rgba(0, 0, 0, .1);
-  opacity: 1;
-  transition: opacity 250ms ease;
-  &::before {
+  popover-content.hidden {
+    pointer-events: none;
+    opacity: 0;
+  }
+  
+  popover-content {
     position: absolute;
-    top: -17px;
+    top: 100%;
     left: 50%;
-    z-index: 0;
-    display: block;
-    width: 40px;
-    margin-left: -21px;
-    font-family: none;
-    font-size: 20px;
-    color: #fff;
-    content: "\25b2";
-  }
-  &.right {
-    left: -230px;
+    width: 250px;
+    text-align: center;
+    background: $white;
+    border: 1px solid $gray-300;
+    border-radius: 2px;
+    box-shadow: 0 .1rem 2rem rgba(0, 0, 0, .1);
+    opacity: 0;
+    transition: opacity 250ms ease;
+    transform: translate(-50%, 4%);
+  
     &::before {
-      right: 0;
-      left: initial;
+      content: "\25b2";
+      position: absolute;
+      top: -2rem;
+      left: 50%;
+      z-index: 0;
+      display: block;
+      width: 40px;
+      font-family: none;
+      font-size: 2rem;
+      color: $white;
+      transform: translateX(-50%);
     }
-  }
-  .my-apps {
-    justify-content: center;
-    padding: 25px 15px;
-    margin: auto;
-  }
-  .bookmarked-app {
-    width: 70px;
-    height: 70px;
-    margin: 1px;
-    line-height: 70px;
-    text-align: center;
-    border: 1px solid transparent;
-    border-radius: $border-radius;
-    &:hover {
-      border-color: $gray-200;
+  
+    .widget-applications {
+      .widget-body {
+        padding: 1.5rem;
+      }
     }
-    .application {
-      font-size: 3rem;
+  
+    .bookmarked-app {
+      padding: .5rem;
+      flex: 1 1 33%;
+      text-align: center;
+      border: 1px solid transparent;
+      border-radius: $border-radius;
+  
+      &:hover {
+        border-color: $gray-200;
+      }
+  
+      .application {
+        font-size: 3rem;
+      }
     }
-  }
-  .more {
-    padding: 10px;
-    text-align: center;
-    background: $gray-500;
-    transition: background 250ms ease;
-    &:hover {
-      background: $primary;
+  
+    .more {
+      padding: 1rem;
+      text-align: center;
+      background-color: $gray-500;
+      transition: background-color 250ms ease;
+  
+      &:hover {
+        background-color: $primary;
+      }
     }
-  }
-  .search-text .searchInput {
-    height: 29px;
-    margin: 10px -2px 10px 25px;
-    border: 1px solid $gray-200;
-  }
-  .search-text .searchButton {
-    @extend .btn-primary;
-    float: left;
-    width: 30px;
-    height: 29px;
-    padding: 0;
-    margin-top: 10px;
-    line-height: 27px;
-    text-align: center;
-    border: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    box-shadow: none;
+  
+    .search-text .searchInput {
+      height: 29px;
+      margin: 1rem -0.2rem 1rem 2.5rem;
+      border: 1px solid $gray-200;
+    }
+  
+    .search-text .searchButton {
+      @extend .btn-primary;
+      float: left;
+      width: 30px;
+      height: 29px;
+      padding: 0;
+      margin-top: 1rem;
+      line-height: 27px;
+      text-align: center;
+      border: none;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      box-shadow: none;
+    }
+
+    popover & {
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }
+
 help {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: normal;
   color: black;
+
   i {
     color: $white !important;
   }
+
   p {
     margin: 1rem 0;
     color: black;
   }
+
   section.lightbox {
     z-index: 10002;
+
     div.content {
       width: 920px;
     }
   }
+
   .burger-button {
     display: none;
   }
-  #TOC{
+
+  #TOC {
     float: left;
     width: 20%;
     margin-right: 5%;
-    ul{
+
+    ul {
       border-left: 5px solid #ff8500;
-      li{
+
+      li {
         display: block;
         margin-block-start: 1em;
         margin-block-end: 1em;
         margin-inline-start: 0;
         margin-inline-end: 0;
+
         a {
           color: $secondary;
+
           &:hover {
             color: $primary;
           }
@@ -170,16 +189,18 @@ help {
       }
     }
   }
-  img{
+
+  img {
     max-width: 100%;
   }
 
-  section.lightbox > div.content div.section {
+  section.lightbox>div.content div.section {
     width: 70%;
     margin-left: 25%;
+
     h2 {
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 2rem;
       color: $secondary;
     }
   }
@@ -187,31 +208,36 @@ help {
 
 @include media-breakpoint-down(sm) {
   help {
-    #TOC{
+    #TOC {
       float: none;
       width: auto;
-      margin: 20px;
+      margin: 2rem;
+
       ul {
         position: absolute;
         display: none;
-        margin-top: 40px;
-        margin-left: -20px;
+        margin-top: 4rem;
+        margin-left: -2rem;
         background-color: white;
-        box-shadow: 1px 1px 10px rgba(0, 0, 0, .25);
+        box-shadow: .1rem .1rem 1rem rgba(0, 0, 0, .25);
       }
+
       ul li {
-        padding: 15px;
+        padding: 1.5rem;
         margin: 0;
-        margin-left: -40px;
-        border-bottom: 1px solid #ddd;
+        margin-left: -4rem;
+        border-bottom: .1rem solid #ddd;
+
         &:hover {
           background-color: $orange;
+
           a {
-            color: white;
+            color: $white;
           }
         }
       }
     }
+
     .burger-button {
       position: absolute;
       display: block;
@@ -219,26 +245,31 @@ help {
       height: 40px;
       padding: 0;
       line-height: 40px;
-      color: white;
+      color: $white;
       text-align: center;
       cursor: pointer;
       background-color: $orange;
       border: none;
       border-radius: $border-radius;
+
       .burger-icon {
         font-family: "generic-icons";
         font-style: normal;
+
         &::before {
           content: "\e956";
         }
       }
     }
+
     .burger-menu.active #TOC ul {
       display: block;
     }
-    section.lightbox > div.content div.section {
+
+    section.lightbox>div.content div.section {
       width: auto;
       margin: 25px 0 0;
+
       h2 {
         width: auto;
         margin-left: 50px;
@@ -257,206 +288,19 @@ help {
   }
 }
 
-a {
+/* a {
   @extend .transition-hover-fast;
-}
+} */
 
-// DEBUG CSS
-// aside, main {border: 1px solid red;}
-
-// TODO : A déporter plus tard - contient tout le css du composant popover
-popover {
-  position: relative;
-  z-index: 10000;
-  display: inline-block;
-}
-
-popover popover-content.hidden {
-  pointer-events: none;
-  opacity: 0;
-}
-
-popover popover-content {
-  position: absolute;
-  top: 43px;
-  left: -125px;
-  width: 250px;
-  margin-left: 50%;
-  text-align: center;
-  background: #fff;
-  border: 1px solid $gray-300;
-  border-radius: 2px;
-  box-shadow: 0 1px 20px rgba(0, 0, 0, .1);
-  opacity: 1;
-  transition: opacity 250ms ease;
-  &::before {
-    position: absolute;
-    top: -18px;
-    left: 50%;
-    z-index: 0;
-    display: block;
-    width: 40px;
-    margin-left: -21px;
-    font-family: none;
-    font-size: 20px;
-    color: #fff;
-    content: "\25b2";
-  }
-  .my-apps {
-    justify-content: center;
-    padding: 25px 15px;
-    margin: auto;
-  }
-  .bookmarked-app {
-    width: 70px;
-    height: 70px;
-    margin: 1px;
-    line-height: 70px;
-    text-align: center;
-    border: 1px solid transparent;
-    border-radius: $border-radius;
-    &:hover {
-      border-color: $gray-200;
-    }
-    .application {
-      font-size: 3rem;
-    }
-  }
-  .more {
-    padding: 10px;
-    text-align: center;
-    background: $gray-500;
-    transition: background 250ms ease;
-    &:hover {
-      background: $primary;
-    }
-  }
-  .search-text .searchInput {
-    height: 29px;
-    margin: 10px -2px 10px 25px;
-    border: 1px solid $gray-200;
-  }
-  .search-text .searchButton {
-    @extend .btn-primary;
-    float: left;
-    width: 30px;
-    height: 29px;
-    padding: 0;
-    margin-top: 10px;
-    line-height: 27px;
-    text-align: center;
-    border: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    box-shadow: none;
-  }
-}
-
-.main-content {
-  background-color: $white;
-}
-
-@include media-breakpoint-down(md) {
+/* @include media-breakpoint-down(md) {
   .container {
     // padding: 0;
   }
-}
+} */
 
 //Note Julien => Cette propriété générique provoque des effet de bord
 //Je suggère de l'appliquer sur la couleur uniquement
-a {
+/* a {
   //@extend .transition-hover-fast;
   //@include add-transitions(color);
-}
-
-// DEBUG CSS
-// aside, main {border: 1px solid red;}
-
-// TODO : A déporter plus tard - contient tout le css du composant popover
-popover {
-  position: relative;
-  z-index: 10000;
-  display: inline-block;
-}
-
-popover popover-content.hidden {
-  pointer-events: none;
-  opacity: 0;
-}
-
-popover popover-content {
-  position: absolute;
-  top: 43px;
-  left: -125px;
-  width: 250px;
-  margin-left: 50%;
-  text-align: center;
-  background: #fff;
-  border: 1px solid $gray-300;
-  border-radius: 2px;
-  box-shadow: 0 1px 20px rgba(0, 0, 0, .1);
-  opacity: 1;
-  transition: opacity 250ms ease;
-  &::before {
-    position: absolute;
-    top: -18px;
-    left: 50%;
-    z-index: 0;
-    display: block;
-    width: 40px;
-    margin-left: -21px;
-    font-family: none;
-    font-size: 20px;
-    color: #fff;
-    content: "\25b2";
-  }
-  .my-apps {
-    justify-content: center;
-    padding: 25px 15px;
-    margin: auto;
-  }
-  .bookmarked-app {
-    width: 70px;
-    height: 70px;
-    margin: 1px;
-    line-height: 70px;
-    text-align: center;
-    border: 1px solid transparent;
-    border-radius: $border-radius;
-    &:hover {
-      border-color: $gray-200;
-    }
-    .application {
-      font-size: 3rem;
-    }
-  }
-  .more {
-    padding: 10px;
-    text-align: center;
-    background: $gray-500;
-    transition: background 250ms ease;
-    &:hover {
-      background: $primary;
-    }
-  }
-  .search-text .searchInput {
-    width: 75%;
-    height: 29px;
-    margin: 10px -2px 10px 20px;
-    border: 1px solid $gray-200;
-  }
-  .search-text .searchButton {
-    @extend .btn-primary;
-    float: left;
-    width: 30px;
-    height: 29px;
-    padding: 0;
-    margin-top: 10px;
-    line-height: 27px;
-    text-align: center;
-    border: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    box-shadow: none;
-  }
-}
+} */
