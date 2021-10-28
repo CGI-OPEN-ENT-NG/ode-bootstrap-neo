@@ -11,47 +11,47 @@
 </head>
 
 <body id="explorer">
-    <header class="no-1d navbar navbar-dark bg-secondary">
+    <header class="no-1d navbar navbar-dark sticky-top bg-secondary">
         <div class="container">
-            <a class="btn btn-secondary d-none me-auto d-md-none d-lg-block" href="/timeline/timeline" title="Accueil">
-                <img class="logo" src="/assets/images/neo.svg" alt="Logo de l'ENT">
+            <a class="navbar-brand" href="#e" title="Accueil">
+                <img class="logo" src="/assets/images/logo.png" alt="Logo de l'ENT">
             </a>
-            <span class="d-block d-lg-none text-truncate me-auto text-white">Blog</span>
-
-            <button class="btn btn-secondary" title="Accueil">
-                <i class="ic-home"></i>
-            </button>
-            <button class="btn btn-secondary d-none d-sm-block" title="Communautés">
-                <i class="ic-community"></i>
-            </button>
-            <button class="btn btn-secondary" title="Mes applis">
-                <i class="ic-apps"></i>
-            </button>
-            <button class="btn btn-secondary" title="Messagerie">
-                <i class="ic-conversation"></i>
-            </button>
-            <button class="btn btn-secondary d-none d-sm-block" title="Recherche transverse">
-                <i class="ic-search"></i>
-            </button>
-            <button class="btn btn-secondary" title="Aide en ligne">
-                <i class="ic-help"></i>
-            </button>
-            <button class="btn btn-secondary d-none d-sm-block" title="Mon compte">
-                <i class="fas fa-user-circle"></i>
-            </button>
-            <button class="btn btn-secondary d-none d-sm-block" title="Déconnexion">
-                <i class="ic-disconnect"></i>
-            </button>
-            <div class="dropdown d-block d-sm-none">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#"><i class="ic-community"></i> Communautés</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="ic-search"></i> Recherche transverse</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="ic-user"></i> Mon compte</a></li>
-                    <div class="dropdown-divider"></div>
-                    <li><a class="dropdown-item" href="#"><i class="ic-disconnect"></i> Déconnexion</a></li>
-                </ul>
-            </div>
+            <nav class="navigation">
+                <a href="#" class="btn" title="Accueil">
+                    <i class="ic-home"></i>
+                </a href="#">
+                <a href="#" class="btn d-none d-sm-block" title="Communautés">
+                    <i class="ic-community"></i>
+                </a href="#">
+                <a href="#" class="btn" title="Mes applis">
+                    <i class="ic-apps"></i>
+                </a href="#">
+                <a href="#" class="btn" title="Messagerie">
+                    <i class="ic-conversation"></i>
+                </a href="#">
+                <a href="#" class="btn d-none d-sm-block" title="Recherche transverse">
+                    <i class="ic-search"></i>
+                </a href="#">
+                <a href="#" class="btn" title="Aide en ligne">
+                    <i class="ic-help"></i>
+                </a href="#">
+                <a href="#" class="btn d-none d-sm-block" title="Mon compte">
+                    <i class="fas fa-user-circle"></i>
+                </a href="#">
+                <a href="#" class="btn d-none d-sm-block" title="Déconnexion">
+                    <i class="ic-disconnect"></i>
+                </a href="#">
+                <div class="dropdown d-inline-block d-sm-none">
+                    <button id="dropdown-label" type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-label">
+                        <a class="dropdown-item" href="#"><i class="ic-community"></i> Communautés</a>
+                        <a class="dropdown-item" href="#"><i class="ic-search"></i> Recherche transverse</a>
+                        <a class="dropdown-item" href="#"><i class="ic-user"></i> Mon compte</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="ic-disconnect"></i> Déconnexion</a>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
     <div class="container d-flex">

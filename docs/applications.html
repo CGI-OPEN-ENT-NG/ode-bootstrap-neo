@@ -16,44 +16,47 @@
 </head>
 
 <body>
-    <header class="no-1d navbar navbar-dark bg-secondary">
-        <a class="btn btn-secondary" href="#e" title="Accueil">
-            <img class="logo" src="/assets/images/logo.png" alt="Logo de l'ENT">
-        </a>
-
-        <button class="btn btn-secondary" title="Accueil">
-            <i class="ic-home"></i>
-        </button>
-        <button class="btn btn-secondary d-none d-sm-block" title="Communautés">
-            <i class="ic-community"></i>
-        </button>
-        <button class="btn btn-secondary" title="Mes applis">
-            <i class="ic-apps"></i>
-        </button>
-        <button class="btn btn-secondary" title="Messagerie">
-            <i class="ic-conversation"></i>
-        </button>
-        <button class="btn btn-secondary d-none d-sm-block" title="Recherche transverse">
-            <i class="ic-search"></i>
-        </button>
-        <button class="btn btn-secondary" title="Aide en ligne">
-            <i class="ic-help"></i>
-        </button>
-        <button class="btn btn-secondary d-none d-sm-block" title="Mon compte">
-            <i class="fas fa-user-circle"></i>
-        </button>
-        <button class="btn btn-secondary d-none d-sm-block" title="Déconnexion">
-            <i class="ic-disconnect"></i>
-        </button>
-        <div class="nav-item dropdown d-block d-sm-none">
-            <a class="dropdown-toggle btn btn-secondary" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#"><i class="ic-community"></i> Communautés</a>
-                <a class="dropdown-item" href="#"><i class="ic-search"></i> Recherche transverse</a>
-                <a class="dropdown-item" href="#"><i class="ic-user"></i> Mon compte</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="ic-disconnect"></i> Déconnexion</a>
-            </div>
+    <header class="no-1d navbar navbar-dark sticky-top bg-secondary">
+        <div class="container">
+            <a class="navbar-brand" href="#e" title="Accueil">
+                <img class="logo" src="/assets/images/logo.png" alt="Logo de l'ENT">
+            </a>
+            <nav class="navigation">
+                <a href="#" class="btn" title="Accueil">
+                    <i class="ic-home"></i>
+                </a href="#">
+                <a href="#" class="btn d-none d-sm-block" title="Communautés">
+                    <i class="ic-community"></i>
+                </a href="#">
+                <a href="#" class="btn" title="Mes applis">
+                    <i class="ic-apps"></i>
+                </a href="#">
+                <a href="#" class="btn" title="Messagerie">
+                    <i class="ic-conversation"></i>
+                </a href="#">
+                <a href="#" class="btn d-none d-sm-block" title="Recherche transverse">
+                    <i class="ic-search"></i>
+                </a href="#">
+                <a href="#" class="btn" title="Aide en ligne">
+                    <i class="ic-help"></i>
+                </a href="#">
+                <a href="#" class="btn d-none d-sm-block" title="Mon compte">
+                    <i class="fas fa-user-circle"></i>
+                </a href="#">
+                <a href="#" class="btn d-none d-sm-block" title="Déconnexion">
+                    <i class="ic-disconnect"></i>
+                </a href="#">
+                <div class="dropdown d-inline-block d-sm-none">
+                    <button id="dropdown-label" type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-label">
+                        <a class="dropdown-item" href="#"><i class="ic-community"></i> Communautés</a>
+                        <a class="dropdown-item" href="#"><i class="ic-search"></i> Recherche transverse</a>
+                        <a class="dropdown-item" href="#"><i class="ic-user"></i> Mon compte</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="ic-disconnect"></i> Déconnexion</a>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
 
@@ -87,7 +90,7 @@
                             <section class="applications-list" id="bookmarked-apps">
                                 <!-- ngRepeat: application in filteredBookmarks = (bookmarks | filter:searchDisplayName) -->
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Actualites" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/actualites" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/actualites">
+                                    <a ng-if="!application.isExternal" ng-href="/actualites" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/actualites">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-actualites-large color-app-actualites" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Actualités</span>
@@ -95,7 +98,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Calendar" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/calendar" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/calendar">
+                                    <a ng-if="!application.isExternal" ng-href="/calendar" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/calendar">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-calendar-large color-app-calendar" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Agenda</span>
@@ -103,7 +106,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Annuaire" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/userbook/annuaire#/search" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/userbook/annuaire#/search">
+                                    <a ng-if="!application.isExternal" ng-href="/userbook/annuaire#/search" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/userbook/annuaire#/search">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-userbook-large color-app-userbook" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Annuaire</span>
@@ -111,7 +114,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Blog" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/blog" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/blog">
+                                    <a ng-if="!application.isExternal" ng-href="/blog" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/blog">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-blog-large color-app-blog" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Blog</span>
@@ -119,7 +122,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Diary" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/diary" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/diary">
+                                    <a ng-if="!application.isExternal" ng-href="/diary" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/diary">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-cahier-textes color-app-cahier-textes" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Cahier de texte 2D</span>
@@ -127,7 +130,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Cahier de texte" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/homeworks" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/homeworks">
+                                    <a ng-if="!application.isExternal" ng-href="/homeworks" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/homeworks">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-cahier-de-texte-large color-app-cahier-de-texte" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Carnet d'activités</span>
@@ -135,7 +138,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Cahier Multimédia" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/scrapbook" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/scrapbook">
+                                    <a ng-if="!application.isExternal" ng-href="/scrapbook" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/scrapbook">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-scrap-book-large color-app-scrap-book" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Cahier multimédia</span>
@@ -143,7 +146,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Schoolbook" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/schoolbook" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/schoolbook">
+                                    <a ng-if="!application.isExternal" ng-href="/schoolbook" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/schoolbook">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-schoolbook color-app-schoolbook" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Carnet de liaison</span>
@@ -151,7 +154,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Mindmap" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/mindmap" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/mindmap">
+                                    <a ng-if="!application.isExternal" ng-href="/mindmap" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/mindmap">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-mindmap-large color-app-mindmap" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Carte mentale</span>
@@ -159,7 +162,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Rack" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/rack" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/rack">
+                                    <a ng-if="!application.isExternal" ng-href="/rack" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/rack">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-rack-large color-app-rack" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Casier</span>
@@ -167,7 +170,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Community" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/community" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/community">
+                                    <a ng-if="!application.isExternal" ng-href="/community" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/community">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-community-large color-app-community" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Communautés</span>
@@ -175,7 +178,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Competences" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/competences" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/competences">
+                                    <a ng-if="!application.isExternal" ng-href="/competences" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/competences">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-competences color-app-competences" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Compétences</span>
@@ -183,7 +186,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Espace documentaire" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/workspace/workspace" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/workspace/workspace">
+                                    <a ng-if="!application.isExternal" ng-href="/workspace/workspace" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/workspace/workspace">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-workspace-large color-app-workspace" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Documents</span>
@@ -191,7 +194,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Edt" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/edt" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/edt">
+                                    <a ng-if="!application.isExternal" ng-href="/edt" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/edt">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-calendar-large color-app-calendar" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Emploi du temps</span>
@@ -199,7 +202,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Exercices et évaluations" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/exercizer" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/exercizer">
+                                    <a ng-if="!application.isExternal" ng-href="/exercizer" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/exercizer">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-exercizer-large color-app-exercizer" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Exercices</span>
@@ -207,7 +210,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Forum" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/forum" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/forum">
+                                    <a ng-if="!application.isExternal" ng-href="/forum" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/forum">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-forum-large color-app-forum" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Forum</span>
@@ -215,7 +218,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="TimelineGenerator" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/timelinegenerator" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/timelinegenerator">
+                                    <a ng-if="!application.isExternal" ng-href="/timelinegenerator" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/timelinegenerator">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-timelinegenerator-large color-app-timelinegenerator" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Frise chronologique</span>
@@ -223,7 +226,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Messagerie" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/conversation/conversation" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/conversation/conversation">
+                                    <a ng-if="!application.isExternal" ng-href="/conversation/conversation" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/conversation/conversation">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-conversation-large color-app-conversation" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Messagerie</span>
@@ -231,7 +234,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="CollaborativeWall" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/collaborativewall" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/collaborativewall">
+                                    <a ng-if="!application.isExternal" ng-href="/collaborativewall" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/collaborativewall">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-collaborative-wall-large color-app-collaborative-wall" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Mur Collaboratif</span>
@@ -239,7 +242,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Collaborative Editor" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/collaborativeeditor" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/collaborativeeditor">
+                                    <a ng-if="!application.isExternal" ng-href="/collaborativeeditor" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/collaborativeeditor">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-pad-large color-app-pad" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Pad</span>
@@ -247,7 +250,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Pages" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/pages" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/pages">
+                                    <a ng-if="!application.isExternal" ng-href="/pages" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/pages">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-pages-large color-app-pages" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Pages</span>
@@ -255,7 +258,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Réservation de ressources" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/rbs" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/rbs">
+                                    <a ng-if="!application.isExternal" ng-href="/rbs" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/rbs">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-rbs-large color-app-rbs" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Réservation de ressources</span>
@@ -263,7 +266,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Poll" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/poll" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/poll">
+                                    <a ng-if="!application.isExternal" ng-href="/poll" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/poll">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-support-large color-app-support" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Sondage</span>
@@ -271,7 +274,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Wiki" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/wiki" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/wiki">
+                                    <a ng-if="!application.isExternal" ng-href="/wiki" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/wiki">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-wiki-large color-app-wiki" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Wiki</span>
@@ -280,7 +283,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="banquesavoir-connector" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-banquesavoir color-app-banquesavoir" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Banques des savoirs</span>
@@ -288,7 +291,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Mediacentre" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/mediacentre" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/mediacentre">
+                                    <a ng-if="!application.isExternal" ng-href="/mediacentre" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/mediacentre">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-public color-app-public" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">mediacentre</span>
@@ -296,7 +299,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Viescolaire" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/viescolaire" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/viescolaire">
+                                    <a ng-if="!application.isExternal" ng-href="/viescolaire" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/viescolaire">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-parametrage color-app-parametrage" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Paramétrage compétences</span>
@@ -304,7 +307,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Presences" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/presences" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/presences">
+                                    <a ng-if="!application.isExternal" ng-href="/presences" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/presences">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-absences color-app-absences" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">presences</span>
@@ -312,7 +315,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Statistiques" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/stats" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/stats">
+                                    <a ng-if="!application.isExternal" ng-href="/stats" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/stats">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-stats-large color-app-stats" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Statistiques (2D)</span>
@@ -320,7 +323,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="ShareBigFiles" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/sharebigfiles" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/sharebigfiles">
+                                    <a ng-if="!application.isExternal" ng-href="/sharebigfiles" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/sharebigfiles">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-sharebigfiles-large color-app-sharebigfiles" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Poste-fichiers</span>
@@ -329,7 +332,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="attendance-connector" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-attendance color-app-attendance" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Présence (co)</span>
@@ -338,7 +341,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Admin test icone" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-admin color-app-admin" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Admin test icone</span>
@@ -347,7 +350,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="bcdi-connecteur" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-bcdi color-app-bcdi" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">BCDI</span>
@@ -356,7 +359,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="assr-connecteur" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-assr color-app-assr" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">ASSR</span>
@@ -365,7 +368,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Agenda (Axess)" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-agenda color-app-agenda" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Agenda (Axess)</span>
@@ -374,7 +377,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="admission-post-bac" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-admission-post-bac color-app-admission-post-bac" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Admission post-bac</span>
@@ -383,7 +386,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="cerise-large" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-cerise-large color-app-cerise" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Cerise</span>
@@ -392,7 +395,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="cervoprint" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-cervoprint color-app-cervoprint" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">CervoPrint</span>
@@ -401,7 +404,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="cidj" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-cidj color-app-cidj" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">CIDJ</span>
@@ -410,7 +413,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="cns" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-cns color-app-cns" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">cns</span>
@@ -419,7 +422,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="canal-numerique" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-canal-numerique color-app-canal-numerique" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">CNS (canal-numerique)</span>
@@ -428,7 +431,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="charlemagne" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-charlemagne color-app-charlemagne" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">charlemagne</span>
@@ -437,7 +440,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="residence-artiste" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-residence-artiste color-app-residence-artiste" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Residence d'Artiste (CCN)</span>
@@ -446,7 +449,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Moodle 2" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-moodle color-app-moodle" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Moodle</span>
@@ -455,7 +458,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="library" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-library color-app-library" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">library</span>
@@ -464,7 +467,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="aide-devoirs" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-aide-devoirs color-app-aide-devoirs" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">aide-devoirs</span>
@@ -473,7 +476,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="assistance" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-assistance color-app-assistance" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Assistance e-primo</span>
@@ -482,7 +485,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="bookmark-empty" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-bookmark-empty color-app-bookmark-empty" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">bookmark-empty</span>
@@ -491,7 +494,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="charte" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-charte color-app-charte" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Charte</span>
@@ -500,7 +503,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="chat" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-chat color-app-chat" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">chat</span>
@@ -509,7 +512,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="connecteur-generique1" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-connecteur-generique1 color-app-connecteur-generique1" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">connecteur-generique1</span>
@@ -518,7 +521,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="connecteur-generique2" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-connecteur-generique2 color-app-connecteur-generique2" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">connecteur-generique2</span>
@@ -527,7 +530,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="picardie-cursus" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-picardie-cursus color-app-picardie-cursus" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Cursus HDF</span>
@@ -536,7 +539,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="esidoc" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-esidoc color-app-esidoc" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">E-Sidoc</span>
@@ -545,7 +548,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="edumedia" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-edumedia color-app-edumedia" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Edumedia</span>
@@ -554,7 +557,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="edumoov" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-edumoov color-app-edumoov" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Edumoov</span>
@@ -563,7 +566,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="elyceepicardie" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-elyceepicardie color-app-elyceepicardie" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Elycee Picardie</span>
@@ -572,7 +575,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Europress" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-europress color-app-europress" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Europress</span>
@@ -581,7 +584,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="gepi" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-gepi color-app-gepi" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Gepi</span>
@@ -590,7 +593,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="glpi" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-glpi color-app-glpi" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">GLPI</span>
@@ -599,7 +602,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="hiboutheque" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-hiboutheque color-app-hiboutheque" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Hiboutheque</span>
@@ -608,7 +611,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="itopstore" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-itopstore color-app-itopstore" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">itopstore</span>
@@ -617,7 +620,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="kne" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-kne color-app-kne" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">kne</span>
@@ -626,7 +629,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="lemonde" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-lemonde color-app-lemonde" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Le Monde</span>
@@ -635,7 +638,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="le-site-tv" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-le-site-tv color-app-le-site-tv" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Le site TV</span>
@@ -644,7 +647,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="lesechos" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-lesechos color-app-lesechos" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">lesechos</span>
@@ -653,7 +656,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="biblionisep" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-biblionisep color-app-biblionisep" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">biblionisep</span>
@@ -662,7 +665,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="lsu" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-lsu color-app-lsu" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">lsu</span>
@@ -671,7 +674,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="madmagz" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-madmagz color-app-madmagz" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">madmagz</span>
@@ -680,7 +683,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="matholycee" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-matholycee color-app-matholycee" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">matholycee</span>
@@ -689,7 +692,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="maxicours" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-maxicours color-app-maxicours" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Maxicours</span>
@@ -698,7 +701,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="my-network" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-my-network color-app-my-network" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">my-network</span>
@@ -707,7 +710,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="suitcase" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-suitcase color-app-suitcase" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">suitcase</span>
@@ -716,7 +719,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="universalis" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-universalis color-app-universalis" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Universalis</span>
@@ -725,7 +728,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="edutheque" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-edutheque color-app-edutheque" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Éduthèque</span>
@@ -734,7 +737,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="electron" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-electron color-app-electron" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Électron</span>
@@ -743,7 +746,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="monorientationenligne" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-monorientationenligne color-app-monorientationenligne" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">monorientationenligne</span>
@@ -752,7 +755,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="museefrancaisphoto" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-museefrancaisphoto color-app-museefrancaisphoto" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Musee francais Photo</span>
@@ -761,7 +764,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="netvibes" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-netvibes color-app-netvibes" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">netvibes</span>
@@ -770,7 +773,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="note" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-note color-app-note" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">note</span>
@@ -779,7 +782,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="notes" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-notes color-app-notes" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Notes</span>
@@ -788,7 +791,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="onisep" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-onisep color-app-onisep" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">onisep</span>
@@ -797,7 +800,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="onisep2" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-onisep2 color-app-onisep2" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">onisep2</span>
@@ -806,7 +809,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="paraschool" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-paraschool color-app-paraschool" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">paraschool</span>
@@ -815,7 +818,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="paths" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-paths color-app-paths" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Parcours</span>
@@ -824,7 +827,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="pearltress" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-pearltress color-app-pearltress" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">pearltress</span>
@@ -833,7 +836,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="pro-eps" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-pro-eps color-app-pro-eps" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">pro-eps</span>
@@ -842,7 +845,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="pronote" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-pronote color-app-pronote" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Pronote Collège Poisson</span>
@@ -851,7 +854,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="public" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-public color-app-public" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">public</span>
@@ -859,7 +862,7 @@
 
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="Archive" class="position-relative ng-scope">
-                                    <a ng-if="!application.isExternal" ng-href="/archive" class="application-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/archive">
+                                    <a ng-if="!application.isExternal" ng-href="/archive" class="applications-item ng-scope" target="" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}" href="/archive">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-archive-large color-app-archive" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Mes données</span>
@@ -868,7 +871,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="qwant-junior" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-qwant-junior color-app-qwant-junior" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">qwant-junior</span>
@@ -877,7 +880,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="ressourcesdepartementale91" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-ressourcesdepartementale91 color-app-ressourcesdepartementale91" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Ressources Departementale 91</span>
@@ -886,7 +889,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="sacoche" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-sacoche color-app-sacoche" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">sacoche</span>
@@ -895,7 +898,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="turboself" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-turboself color-app-turboself" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">turboself</span>
@@ -904,7 +907,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="searchengine" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-searchengine color-app-searchengine" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Search Engine</span>
@@ -913,7 +916,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="unstagepourtous" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-unstagepourtous color-app-unstagepourtous" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Un Stage pour tous</span>
@@ -922,7 +925,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="scolinfo" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-scolinfo color-app-scolinfo" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Scolinfo</span>
@@ -931,7 +934,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="vie-scolaire" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-vie-scolaire color-app-vie-scolaire" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">vie-scolaire</span>
@@ -940,7 +943,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="visioconf" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-visioconf color-app-visioconf" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Visio Conférence</span>
@@ -949,7 +952,7 @@
                                 </article>
                                 <article ng-repeat="application in filteredBookmarks = (bookmarks | filter:searchDisplayName)" id="websiteaa" class="position-relative ng-scope">
 
-                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="application-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
+                                    <a ng-if="application.isExternal" connector-lightbox-trigger="application" href="" class="applications-item ng-scope ng-isolate-scope" ng-class="{'no-hover': display.modeBookmarkEdition, 'pe-none': display.modeBookmarkEdition}">
                                         <i ng-if="!isIconUrl(application)" class="ic-app-website color-app-website" ng-class="{'opacity-50': display.modeBookmarkEdition}">
                                         </i>
                                         <span class="text-truncate text-truncate--2 ng-binding">Web Site</span>

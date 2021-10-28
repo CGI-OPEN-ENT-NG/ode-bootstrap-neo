@@ -132,44 +132,47 @@
 </head>
 
 <body>
-    <header class="no-1d navbar navbar-dark bg-secondary">
-        <a class="btn btn-secondary" href="#e" title="Accueil">
-            <img class="logo" src="/assets/images/logo.png" alt="Logo de l'ENT">
-        </a>
-
-        <button class="btn btn-secondary" title="Accueil">
-            <i class="ic-home"></i>
-        </button>
-        <button class="btn btn-secondary d-none d-sm-block" title="Communautés">
-            <i class="ic-community"></i>
-        </button>
-        <button class="btn btn-secondary" title="Mes applis">
-            <i class="ic-apps"></i>
-        </button>
-        <button class="btn btn-secondary" title="Messagerie">
-            <i class="ic-conversation"></i>
-        </button>
-        <button class="btn btn-secondary d-none d-sm-block" title="Recherche transverse">
-            <i class="ic-search"></i>
-        </button>
-        <button class="btn btn-secondary" title="Aide en ligne">
-            <i class="ic-help"></i>
-        </button>
-        <button class="btn btn-secondary d-none d-sm-block" title="Mon compte">
-            <i class="fas fa-user-circle"></i>
-        </button>
-        <button class="btn btn-secondary d-none d-sm-block" title="Déconnexion">
-            <i class="ic-disconnect"></i>
-        </button>
-        <div class="nav-item dropdown d-block d-sm-none">
-            <a class="dropdown-toggle btn btn-secondary" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#"><i class="ic-community"></i> Communautés</a>
-                <a class="dropdown-item" href="#"><i class="ic-search"></i> Recherche transverse</a>
-                <a class="dropdown-item" href="#"><i class="ic-user"></i> Mon compte</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="ic-disconnect"></i> Déconnexion</a>
-            </div>
+    <header class="no-1d navbar navbar-dark sticky-top bg-secondary">
+        <div class="container">
+            <a class="navbar-brand" href="#e" title="Accueil">
+                <img class="logo" src="/assets/images/logo.png" alt="Logo de l'ENT">
+            </a>
+            <nav class="navigation">
+                <a href="#" class="btn btn-secondary" title="Accueil">
+                    <i class="ic-home"></i>
+                </a href="#">
+                <a href="#" class="btn btn-secondary d-none d-sm-block" title="Communautés">
+                    <i class="ic-community"></i>
+                </a href="#">
+                <a href="#" class="btn btn-secondary" title="Mes applis">
+                    <i class="ic-apps"></i>
+                </a href="#">
+                <a href="#" class="btn btn-secondary" title="Messagerie">
+                    <i class="ic-conversation"></i>
+                </a href="#">
+                <a href="#" class="btn btn-secondary d-none d-sm-block" title="Recherche transverse">
+                    <i class="ic-search"></i>
+                </a href="#">
+                <a href="#" class="btn btn-secondary" title="Aide en ligne">
+                    <i class="ic-help"></i>
+                </a href="#">
+                <a href="#" class="btn btn-secondary d-none d-sm-block" title="Mon compte">
+                    <i class="fas fa-user-circle"></i>
+                </a href="#">
+                <a href="#" class="btn btn-secondary d-none d-sm-block" title="Déconnexion">
+                    <i class="ic-disconnect"></i>
+                </a href="#">
+                <div class="dropdown d-inline-block d-sm-none">
+                    <button id="dropdown-label" type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-label">
+                        <a class="dropdown-item" href="#"><i class="ic-community"></i> Communautés</a>
+                        <a class="dropdown-item" href="#"><i class="ic-search"></i> Recherche transverse</a>
+                        <a class="dropdown-item" href="#"><i class="ic-user"></i> Mon compte</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="ic-disconnect"></i> Déconnexion</a>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
 
@@ -208,7 +211,7 @@
                         </div>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                    <a href="" class="btn-read-more"><span class="btn-read-more-inner">Afficher le message complet</span></a>
+                    <a href="" class="btn-expand"><span class="btn-expand-inner">Afficher le message complet</span></a>
                 </div>
 
                 <!--Widget Actualités à la une-->
@@ -857,7 +860,7 @@
                                 <span class="seemore-text">voir plus</span>
                             </a>
                         </div>
-                        <div class="tools">
+                        <div class="widget-options">
                             <a href="" class="tool tool-option" title="Options du widget">
                                 <i class="fas fa-cog"></i>
                             </a>
@@ -915,7 +918,7 @@
                                 <span class="seemore-text">voir plus</span>
                             </a>
                         </div>
-                        <div class="tools">
+                        <div class="widget-options">
                             <a href="" class="tool tool-option" title="Options du widget">
                                 <i class="fas fa-cog"></i>
                             </a>
@@ -984,7 +987,7 @@
                         <div class="subtitle">
                             Flux RSS
                         </div>
-                        <div class="tools">
+                        <div class="widget-options">
                             <a href="" class="tool tool-option" title="Options du widget">
                                 <i class="fas fa-cog"></i>
                             </a>
@@ -1030,7 +1033,7 @@
                         <div class="subtitle">
                             Flux RSS
                         </div>
-                        <div class="tools">
+                        <div class="widget-options">
                             <a href="" class="tool tool-option" title="Options du widget">
                                 <i class="fas fa-cog"></i>
                             </a>
@@ -1052,7 +1055,7 @@
                 <div class="widget widget-dashboard">
                     <div class="widget-header">
                         <div class="subtitle">Carnet de bord</div>
-                        <div class="tools">
+                        <div class="widget-options">
                             <a href="" class="tool tool-option" title="Options du widget">
                                 <i class="fas fa-cog"></i>
                             </a>
@@ -1154,7 +1157,7 @@
                         <div class="subtitle">
                             Mes applis
                         </div>
-                        <div class="tools">
+                        <div class="widget-options">
                             <a href="" class="tool tool-option" title="Options du widget">
                                 <i class="fas fa-cog"></i>
                             </a>
@@ -1216,7 +1219,7 @@
                         <div class="subtitle">
                             Mes applis
                         </div>
-                        <div class="tools">
+                        <div class="widget-options">
                             <a href="" class="tool tool-option" title="Options du widget">
                                 <i class="fas fa-cog"></i>
                             </a>
@@ -1237,7 +1240,7 @@
                 <div class="widget widget-bookmarks">
                     <div class="widget-header">
                         <div class="subtitle">Liens utiles</div>
-                        <div class="tools">
+                        <div class="widget-options">
                             <a href="" class="tool tool-option" title="Options du widget">
                                 <i class="fas fa-cog"></i>
                             </a>
@@ -1271,7 +1274,7 @@
                 <div class="widget widget-bookmarks">
                     <div class="widget-header">
                         <div class="subtitle">Liens utiles</div>
-                        <div class="tools">
+                        <div class="widget-options">
                             <a href="" class="tool tool-option" title="Options du widget">
                                 <i class="fas fa-cog"></i>
                             </a>
@@ -1293,7 +1296,7 @@
                 <div class="widget widget-recently-viewed">
                     <div class="widget-header">
                         <div class="subtitle">Consultés récemment</div>
-                        <div class="tools">
+                        <div class="widget-options">
                             <a href="" class="tool tool-option" title="Options du widget">
                                 <i class="fas fa-cog"></i>
                             </a>
@@ -1372,7 +1375,7 @@
                 <div class="widget widget-record">
                     <div class="widget-header">
                         <div class="subtitle">Enregistrement</div>
-                        <div class="tools">
+                        <div class="widget-options">
                             <a href="" class="tool tool-option" title="Options du widget">
                                 <i class="fas fa-cog"></i>
                             </a>
@@ -1406,7 +1409,7 @@
                 <div class="widget widget-record">
                     <div class="widget-header">
                         <div class="subtitle">Enregistrement</div>
-                        <div class="tools">
+                        <div class="widget-options">
                             <a href="" class="tool tool-option" title="Options du widget">
                                 <i class="fas fa-cog"></i>
                             </a>
