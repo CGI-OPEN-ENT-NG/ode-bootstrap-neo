@@ -3,13 +3,18 @@ $fonts-path: "../../fonts";
 
 @import "../../scss/index.scss";
 
+@font-face {
+    font-family: "OpenDyslexic";
+    font-style: normal;
+    font-weight: normal;
+    src: url(#{$fonts-path}/dyslexic/OpenDyslexic.woff);
+}
+
 html, body{
-    font-family: OpenDyslexic;
+    font-family: "OpenDyslexic";
 }
 
 body {
-    font-size: 11px;
-    line-height: 19px;
     .material{
         section.main{
             top: 104px;
@@ -18,7 +23,7 @@ body {
 }
 
 button, input[type=button], a.button, input[type=submit], input[type=search],input[type=file],  .drop-down-button label, .drop-down-button.hidden label {
-    font-family: OpenDyslexic;
+    font-family: "OpenDyslexic";
 }
 
 h1{
@@ -38,7 +43,7 @@ input[type=text]{
 }
 
 input[type=text], textarea, select{
-    font-family: OpenDyslexic;
+    font-family: "OpenDyslexic";
 }
 
 select{
@@ -64,7 +69,7 @@ nav.vertical.stamps article h3, nav.vertical.half-stamps article h3{
 }
 
 i side-panel{
-    font-family: OpenDyslexic;
+    font-family: "OpenDyslexic";
 }
 
 .vertical-spacing-twice label span {
