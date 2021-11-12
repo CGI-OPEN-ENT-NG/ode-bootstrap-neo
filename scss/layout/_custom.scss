@@ -1,0 +1,31 @@
+.no-2d {
+  display: none;
+}
+
+// main.main à supprimer quand on aura ajouter la classe container sur mes applis
+.container,
+main.main {
+  max-width: 1700px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+@include media-breakpoint-down(sm) {
+  main.main {
+    padding: 15px;
+  }
+}
+
+.pe-none {
+  pointer-events: none;
+}
+
+.main-content {
+  background-color: $white;
+}
+
+@include media-breakpoint-down(lg) {
+  .container {
+    padding: 0;
+  }
+}
