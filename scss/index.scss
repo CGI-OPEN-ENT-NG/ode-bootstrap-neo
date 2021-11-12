@@ -1,23 +1,21 @@
-//Get font Roboto
+/* ROBOTO FONT */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-// --- INIT VARIABLES ---
-@import "variables/colors";
-@import "variables/var-bootstrap";
-@import "variables/var-ode-bootstrap";
+/* VARIABLES */
+@import "variables/";
 
-// --- OVERRIDE VARIABLES ---
+/* OVERRIDE */
 @import "variables";
 
-// --- IMPORT ODE BOOTSTRAP Framework ---
+/* BOOTSTRAP 5 FRAMEWORK */
 @import "node_modules/ode-bootstrap/scss/index";
 
-// --- ???? A supprimer / déplacer ???? ---
-@import "custom";
+/* LAYOUT */
+@import "layout/";
 
-// --- IMPORT COMPONENTS ---
+/* LEGACY */
+@import "legacy/";
+
+/* COMPONENTS */
 // Contient tous nos composants visuels, simple ou complexe
-@import "components/dominos";
-
-//A enlever après création du bouton custom
-@import "components/filters";
+@import "components/"
