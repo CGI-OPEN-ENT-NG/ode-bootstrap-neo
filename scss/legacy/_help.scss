@@ -8,9 +8,13 @@ help {
     }
 
     p {
-        margin: 1rem 0;
+        margin: 1.6rem 0;
         color: black;
     }
+
+    h2 {
+        color: $secondary;
+    } 
 
     section.lightbox {
         z-index: 10002;
