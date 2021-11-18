@@ -12,6 +12,11 @@ $inbox-size-icon: 20px;
         padding: 0;
     }
 
+    .navbar-title {
+        color: $white;
+        font-size: 1.6rem;
+    }
+
     .navbar-nav {
         display: inline-flex;
         align-items: center;
@@ -89,13 +94,19 @@ $inbox-size-icon: 20px;
             padding: 0;
         }
 
+        .navbar-brand {
+            .logo {
+                height: 30px;
+            }
+        }
+
         .nav-link {
             padding: .5rem;
-            font-size: 2rem;
+            font-size: 2.3rem;
 
             i {
                 &.ic-help {
-                    font-size: 2.2rem;
+                    font-size: 2.3rem;
                 }
             }
         }
@@ -104,10 +115,6 @@ $inbox-size-icon: 20px;
             display: block;
             width: calc(100% - 300px); //A REVOIR
             color: $white;
-        }
-
-        .logo {
-            height: 30px;
         }
 
         .dropdown {
