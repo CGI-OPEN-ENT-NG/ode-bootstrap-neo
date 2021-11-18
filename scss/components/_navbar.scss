@@ -12,59 +12,65 @@ $inbox-size-icon: 20px;
         padding: 0;
     }
 
-    .navigation {
+    .navbar-nav {
         display: inline-flex;
         align-items: center;
+        flex-direction: row;
 
-        > .btn,
-        > .zimbra-btn {
-            padding: .6rem .8rem;
-            font-size: 3rem;
-            border-radius: 0;
-            align-items: center;
-            border-bottom: 3px solid transparent;
-    
-            > a {
-                color: inherit;
-            }
-    
-            > i {
-                color: $white;
-
-                &.ic-help {
-                    font-size: 3.2rem;
-                }
-            }
-    
-            &:hover {
-                border-bottom: 3px solid $primary;
-            }
-        }
-
-        > .zimbra-btn {
-            i {
-                &.mail {
-                    position: relative;
-                }
-            }
-
-            .new-mails {
-                position: absolute;
-                display: inline-block;
-                top: -0.8rem;
-                right: -1rem;
-                width: $inbox-size-icon;
-                height: $inbox-size-icon;
-                font: bold 1.2rem "Roboto";
-                line-height: 20px;
-                text-align: center;
-                background: $primary;
-                border-radius: 50%;
-            }
+        .dropdown-menu {
+            position: absolute;
         }
     }
 
-    &-brand {
+    .nav-link {
+        padding: .6rem .8rem;
+        font-size: 3rem;
+        border-radius: 0;
+        align-items: center;
+        border-bottom: 3px solid transparent;
+
+        > a {
+            color: inherit;
+        }
+
+        i {
+            color: $white;
+
+            &.ic-help {
+                font-size: 3.2rem;
+            }
+
+            &.mail {
+                position: relative;
+                color: $white;
+
+                .new-mails {
+                    position: absolute;
+                    display: inline-block;
+                    top: -0.8rem;
+                    right: -1rem;
+                    width: $inbox-size-icon;
+                    height: $inbox-size-icon;
+                    font: bold 1.2rem "Roboto";
+                    line-height: 20px;
+                    text-align: center;
+                    background: $primary;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        &:hover {
+            border-bottom: 3px solid $primary;
+        }
+
+        &.dropdown-toggle {
+            background: transparent;
+            border: 0;
+        }
+    }
+
+    .navbar-brand {
         padding: 0;
         margin-right: 0;
 
@@ -83,16 +89,13 @@ $inbox-size-icon: 20px;
             padding: 0;
         }
 
-        .navigation {
-            .btn,
-            .zimbra-btn {
-                padding: .5rem;
-                font-size: 2rem;
-    
-                i {
-                    &.ic-help {
-                        font-size: 2.2rem;
-                    }
+        .nav-link {
+            padding: .5rem;
+            font-size: 2rem;
+
+            i {
+                &.ic-help {
+                    font-size: 2.2rem;
                 }
             }
         }
@@ -108,6 +111,12 @@ $inbox-size-icon: 20px;
         }
 
         .dropdown {
+            &-toggle {
+                &::after {
+                    color: $white;
+                }
+            }
+
             [class*="ic-"] {
                 // margin-right: 1rem;
                 font-size: 2rem;
