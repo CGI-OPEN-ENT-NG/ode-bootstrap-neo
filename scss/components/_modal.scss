@@ -6,19 +6,25 @@ $help-button-icon-size: 40px;
     line-height: normal;
     color: $black;
 
-    .modal-header {
+    /* .modal-header {
         position: absolute;
         right: 0;
         z-index: 2;
+    } */
+
+    .modal-dialog {
+        max-width: 920px;
+    }
+
+    .modal-body {
+        > p {
+            margin: 0;
+        }
     }
 
     p {
         margin: 1.6rem 0;
         color: $black;
-    }
-
-    .modal-dialog {
-        max-width: 920px;
     }
 
     .burger-button {
