@@ -90,7 +90,7 @@ help {
             ul li {
                 padding: 1.5rem;
                 margin: 0;
-                margin-left: -4rem;
+                // margin-left: -4rem;
                 border-bottom: .1rem solid #ddd;
 
                 &:hover {
@@ -129,6 +129,7 @@ help {
 
         .burger-menu.active #TOC ul {
             display: block;
+            padding: 0;
         }
 
         section.lightbox>div.content div.section {
