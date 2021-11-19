@@ -10,81 +10,104 @@ $fonts-path: "../../fonts";
     src: url(#{$fonts-path}/dyslexic/OpenDyslexic.woff);
 }
 
-html, body{
+html,
+body,
+.btn {
     font-family: "OpenDyslexic";
 }
 
 body {
-    .material{
-        section.main{
+    .material {
+        section.main {
             top: 104px;
         }
     }
 }
 
-button, input[type=button], a.button, input[type=submit], input[type=search],input[type=file],  .drop-down-button label, .drop-down-button.hidden label {
+button,
+input[type=button],
+a.button,
+input[type=submit],
+input[type=search],
+input[type=file],
+.drop-down-button label,
+.drop-down-button.hidden label {
     font-family: "OpenDyslexic";
 }
 
-h1{
+h1 {
     font-size: 24px;
 }
 
-h2{
+h2 {
     font-size: 18px;
 }
 
-input[type=password], input[type=password], input[type=search], input[type="tel"], input[type="email"]{
+input[type=password],
+input[type=password],
+input[type=search],
+input[type="tel"],
+input[type="email"] {
     height: 35px;
 }
 
-input[type=text]{
+/* input[type=text] {
     height: 25px;
-}
+} */
 
-input[type=text], textarea, select{
+input[type=text],
+textarea,
+select {
     font-family: "OpenDyslexic";
 }
 
-select{
+select {
     padding: 0 5px !important;
     min-width: 180px;
 }
 
-.textarea-appreciation{
-    margin-top: -5px!important;
+.textarea-appreciation {
+    margin-top: -5px !important;
     min-height: 25px;
 }
 
-a:after{
+a:after {
     padding: 10px 0px;
 }
 
-.suivi-proportion{
+.suivi-proportion {
     line-height: 17px;
 }
 
-nav.vertical.stamps article h3, nav.vertical.half-stamps article h3{
+nav.vertical.stamps article h3,
+nav.vertical.half-stamps article h3 {
     font-size: 13px;
 }
 
-i side-panel{
+i side-panel {
     font-family: "OpenDyslexic";
 }
 
 .vertical-spacing-twice label span {
     line-height: 18px;
 }
-.form-section select{
+
+.form-section select {
     padding: 0;
     height: 30px;
 }
-.notification article .notification-date{
+
+.notification article .notification-date {
     top: 3px;
 }
 
-@media screen and (max-width: 550px){
-    h1.application-title{
+.btn {
+    line-height: 2.5rem;
+    padding-top: 0;
+}
+
+@media screen and (max-width: 550px) {
+    h1.application-title {
         font-size: 14px;
     }
 }
