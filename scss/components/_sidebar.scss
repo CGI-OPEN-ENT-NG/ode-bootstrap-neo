@@ -1,0 +1,56 @@
+/* DOCUMENTATION
+<aside class="sidebar sidebar--left">
+  <h1 class="sidebar__title">Titre de l'application</h1>
+  <ul class="sidebar__tree">
+    <li>Mes ressources
+      <ul>
+        <li>Dossier 1</li>
+        <li>Dossier 2
+          <ul>
+            <li>Sous-dossier 1</li>
+            <li>Sous-dossier 2</li>
+            <li>Sous-dossier 3</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Ma corbeille</li>
+  </ul>
+  <a class="btn-secondary btn-block">Créer un dossier</a>
+  <a class="btn-secondary btn-block">Importer</a>
+</aside>
+<main class="main-content"></main>
+END DOCUMENTATION */
+
+/* VARIABLES*/ 
+$sidebar-width: 250px;
+
+/* COMPONENT */
+/*aside*/.sidebar {
+  background-color: rgba($white, 0.7);
+  color: $gray-600;
+  &__title {
+    color: $secondary;
+  }
+  &__tree {
+    li {
+      a {
+        &:hover {
+          background-color: rgba($secondary, 0.075);
+          color: $secondary;
+        }
+        &.active,
+        &:active {
+          background-color: rgba($secondary, 0.2);
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .sidebar + .main-content {
+    border-radius: $border-radius;
+  }
+}
