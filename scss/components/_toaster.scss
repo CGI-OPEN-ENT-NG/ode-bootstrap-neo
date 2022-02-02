@@ -36,10 +36,10 @@
       content: "\f00c";
     }
     &:hover {
-      background-color: $secondary--lightest;
-      border-color: $secondary--light;
+      background-color: $secondary-lightest;
+      border-color: $secondary-light;
       &::before {
-        color: $secondary--darkest;
+        color: $secondary-darkest;
         opacity: 0.5;
       }
     }
