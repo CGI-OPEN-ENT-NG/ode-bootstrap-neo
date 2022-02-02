@@ -1,29 +1,99 @@
+/* VARIABLES */
+$domino-width: 240px;
+$overlay-width: $domino-width / 1.5;
+
+/* COMPONENT */
+.domino {
+  &.folder .domino__image,
+  &.item .domino__image {
+    background-color: rgba($secondary, 0.1);
+  }
+  &:hover {
+    border-color: $secondary;
+  }
+  &:active,
+  &.active {
+    background-color: rgba($secondary, 0.1);
+    border-color: $secondary;
+  }
+}
+
+.domino.blog {
+  .domino__image {
+    background-color: rgba($indigo, 0.1);
+    color: $indigo;
+  }
+}
+.domino.exercizer {
+  .domino__image {
+    background-color: rgba($purple, 0.1);
+    color: $purple;
+  }
+}
+.domino.timelinegenerator {
+  .domino__image {
+    background-color: rgba($yellow, 0.1);
+    color: $yellow;
+  }
+}
+.domino.rack {
+  .domino__image {
+    background-color: rgba($red, 0.1);
+    color: $red;
+  }
+}
+.domino.homeworks {
+  .domino__image {
+    background-color: rgba($teal, 0.1);
+    color: $teal;
+  }
+}
+
+.dominos--square .domino {
+  width: calc(16.667% - 20px);
+}
+
+@media (max-width: 1590px) {
+  .dominos--square .domino {
+    width: calc(20% - 20px);
+  }
+}
+@media (max-width: 1360px) {
+  .dominos--square .domino {
+    width: calc(25% - 20px);
+  }
+}
+@media (max-width: 1100px) {
+  .dominos--square .domino {
+    width: calc(33% - 20px);
+  }
+}
 /* COMPONENT */
 
 .dominos .domino {
-    width: calc(16.667% - 20px); // 6 per line, sidebar on
+  width: calc(16.667% - 20px); // 6 per line, sidebar on
 
-    @media (min-width: 1380px) and (max-width: 1620px) {
-        width: calc(20% - 20px); // 5 per line, sidebar on
-    }
+  @media (min-width: 1380px) and (max-width: 1620px) {
+      width: calc(20% - 20px); // 5 per line, sidebar on
+  }
 
-    @media (min-width: 1120px) and (max-width: 1380px) {
-        width: calc(25% - 20px); // 4 per line, sidebar on
-    }
+  @media (min-width: 1120px) and (max-width: 1380px) {
+      width: calc(25% - 20px); // 4 per line, sidebar on
+  }
 
-    @media (min-width: 992px) and (max-width: 1120px) {
-        width: calc(33% - 20px); // 3 per line, sidebar on
-    }
+  @media (min-width: 992px) and (max-width: 1120px) {
+      width: calc(33% - 20px); // 3 per line, sidebar on
+  }
 
-    @media (min-width: 760px) and (max-width: 992px) {
-        width: calc(25% - 10px); // 4 per line
-    }
+  @media (min-width: 760px) and (max-width: 992px) {
+      width: calc(25% - 10px); // 4 per line
+  }
 
-    @media (min-width: 520px) and (max-width: 760px) {
-        width: calc(33% - 10px); // 3 per line
-    }
+  @media (min-width: 520px) and (max-width: 760px) {
+      width: calc(33% - 10px); // 3 per line
+  }
 
-    @media (max-width: 520px) {
-        width: calc(50% - 10px); // 2 per line
-    }
+  @media (max-width: 520px) {
+      width: calc(50% - 10px); // 2 per line
+  }
 }
