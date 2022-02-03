@@ -3,3 +3,7 @@
     height: calc(100vh - 220px);
   }
 }
+ode-list-item, ode-domino-item, .explorer-view ng-transclude{
+  display: block;
+  overflow: hidden;
+}
