@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:opendigitaleducation/ode-bootstrap-neo.git"
+    "url": "git@github.com:CGI-OPEN-ENT-NG/ode-bootstrap-neo.git"
   },
   "keywords": [
     "NEO",
