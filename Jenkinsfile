@@ -37,17 +37,6 @@ pipeline {
           }
         }
       }
-      stage('Publish NPM') {
-        steps {
-          script {
-            if (params.OVERRIDE) {
-              sh "./build.sh --override=\"${params.OVERRIDE}\" publishNPM"
-            } else {
-              sh './build.sh publishNPM'
-            }
-          }
-        }
-      }
     }
 }
 

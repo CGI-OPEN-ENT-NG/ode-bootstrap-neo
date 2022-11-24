@@ -119,24 +119,6 @@ lint-fix () {
   docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm run dev:lint-fix"
 }
 
-publishNPM () {
-  LOCAL_BRANCH=`echo $GIT_BRANCH | sed -e "s|origin/||g"`
-  
-  if [ "$OVERRIDE_NAME" != "default" ];
-  then
-    # rename npm package name to OVERRIDE_MODNAME in package.json
-    mv package.json package.json.orig
-    sed "0,/ode-bootstrap-neo/{s|ode-bootstrap-neo|$OVERRIDE_MODNAME|}" package.json.orig > package.json
-  fi
-
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm publish --tag $LOCAL_BRANCH"
-
-  if [ "$OVERRIDE_NAME" != "default" ];
-  then
-    mv package.json.orig package.json
-  fi
-}
-
 publishNexus () {
   if [ -e "?/.gradle" ] && [ ! -e "?/.gradle/gradle.properties" ]
   then
@@ -179,9 +161,6 @@ do
       ;;
     lint-fix)
       lint-fix
-      ;;
-    publishNPM)
-      publishNPM
       ;;
     publishNexus)
       publishNexus
