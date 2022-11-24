@@ -18,13 +18,14 @@ case `uname -s` in
     fi
 esac
 
-if [ -e "?/.gradle" ] && [ ! -e "?/.gradle/gradle.properties" ]
-then
-  echo "cgiUsername=$NEXUS_CGI_USERNAME" > "?/.gradle/gradle.properties"
-  echo "cgiPassword=$NEXUS_CGI_PASSWORD" >> "?/.gradle/gradle.properties"
-  echo "sonatypeUsername=$NEXUS_SONATYPE_USERNAME" >> "?/.gradle/gradle.properties"
-  echo "sonatypePassword=$NEXUS_SONATYPE_PASSWORD" >> "?/.gradle/gradle.properties"
+if [[ -z "${NEXUS_CGI_USERNAME}" ]]; then
+  source ~/.bashrc
 fi
+
+echo "cgiUsername=$NEXUS_CGI_USERNAME" >> "gradle.properties"
+echo "cgiPassword=$NEXUS_CGI_PASSWORD" >> "gradle.properties"
+echo "sonatypeUsername=$NEXUS_SONATYPE_USERNAME" >> "gradle.properties"
+echo "sonatypePassword=$NEXUS_SONATYPE_PASSWORD" >> "gradle.properties"
 
 
 # OVERRIDES VARS
@@ -120,13 +121,6 @@ lint-fix () {
 }
 
 publishNexus () {
-  if [ -e "?/.gradle" ] && [ ! -e "?/.gradle/gradle.properties" ]
-  then
-    echo "cgiUsername=$NEXUS_CGI_USERNAME" > "?/.gradle/gradle.properties"
-    echo "cgiPassword=$NEXUS_CGI_PASSWORD" >> "?/.gradle/gradle.properties"
-    echo "sonatypeUsername=$NEXUS_SONATYPE_USERNAME" >> "?/.gradle/gradle.properties"
-    echo "sonatypePassword=$NEXUS_SONATYPE_PASSWORD" >> "?/.gradle/gradle.properties"
-  fi
   docker-compose run -e OVERRIDE_NAME=$OVERRIDE_NAME -e OVERRIDE_MODNAME=$OVERRIDE_MODNAME --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle deploymentJar fatJar publish"
 }
 
