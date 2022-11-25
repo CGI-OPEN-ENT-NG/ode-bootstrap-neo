@@ -57,7 +57,7 @@ task generateDeployment(type: Copy)  {
 task generateTemplate(type: Copy,dependsOn: 'generateDeployment') {
   Map<String,String> extra = new HashMap(project.properties);
   String npmTag = System.env.FRONT_TAG?.trim()? System.env.FRONT_TAG : System.env.BRANCH_NAME.replaceFirst(/^(.*)-cgi$/, "\$1");
-  String npmToken = "${System.env.NEXUS_ODE_USERNAME}:${System.env.NEXUS_ODE_PASSWORD}"
+  String npmToken = "${System.env.NEXUS_CGI_USERNAME}:${System.env.NEXUS_CGI_PASSWORD}"
   extra.put('npmToken', npmToken.bytes.encodeBase64().toString());
   extra.put('DIST_DIR', '$DIST_DIR');
   extra.put('SKIN_DIR', '$SKIN_DIR');
@@ -79,7 +79,7 @@ task generateTemplate(type: Copy,dependsOn: 'generateDeployment') {
 task generateTemplateDev(type: Copy,dependsOn: 'generateDeployment') {
   Map<String,String> extra = new HashMap(project.properties);
   String npmTag = System.env.FRONT_TAG?.trim()? System.env.FRONT_TAG : System.env.BRANCH_NAME;
-  String npmToken = "${System.env.NEXUS_ODE_USERNAME}:${System.env.NEXUS_ODE_PASSWORD}"
+  String npmToken = "${System.env.NEXUS_CGI_USERNAME}:${System.env.NEXUS_CGI_PASSWORD}"
   extra.put('npmToken', npmToken.bytes.encodeBase64().toString());
   extra.put('DIST_DIR', '$DIST_DIR');
   extra.put('SKIN_DIR', '$SKIN_DIR');
