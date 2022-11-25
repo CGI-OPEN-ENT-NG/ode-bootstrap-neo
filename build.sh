@@ -121,7 +121,13 @@ lint-fix () {
 }
 
 publishNexus () {
-  docker-compose run -e OVERRIDE_NAME=$OVERRIDE_NAME -e OVERRIDE_MODNAME=$OVERRIDE_MODNAME --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle deploymentJar fatJar publish"
+  echo "[init] Get branch name from jenkins env..."
+  BRANCH_NAME=`echo $GIT_BRANCH | sed -e "s|origin/||g"`
+  if [ "$BRANCH_NAME" = "" ]; then
+    echo "[init] Get branch name from git..."
+    BRANCH_NAME=`git branch | sed -n -e "s/^\* \(.*\)/\1/p"`
+  fi
+  docker-compose run -e OVERRIDE_NAME=$OVERRIDE_NAME -e OVERRIDE_MODNAME=$OVERRIDE_MODNAME -e BRANCH_NAME=$BRANCH_NAME --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle deploymentJar fatJar publish"
 }
 
 publishMavenLocal(){
