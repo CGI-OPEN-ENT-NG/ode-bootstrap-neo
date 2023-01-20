@@ -16,3 +16,4 @@ build-css/
 *.lock
 .pnpm-store
 pnpm-lock.yaml
+/.idea/
