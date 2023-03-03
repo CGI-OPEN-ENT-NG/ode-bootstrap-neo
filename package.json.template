@@ -1,6 +1,6 @@
 {
   "name": "ode-bootstrap-neo",
-  "version": "1.1.4-dev.%generateVersion%",
+  "version": "1.1.4-dev-cgi.%generateVersion%",
   "description": "Neo theme by Open Digital Education\"",
   "scripts": {
     "dev:lint-fix": "stylelint scss/**/*.scss --fix || echo \"lint faild for some file(s).\"",
@@ -30,7 +30,7 @@
   "author": "Open Digital Education",
   "license": "AGPL-3.0",
   "dependencies": {
-    "ode-bootstrap": "%odeBtVersion%"
+    "ode-bootstrap": "git+https://github.com/CGI-OPEN-ENT-NG/ode-bootstrap.git#dev"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "6.2.0",
